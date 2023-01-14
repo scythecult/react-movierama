@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { Route, Routes, Navigate } from "react-router-dom";
 import { Container } from "./components/container/container";
 import { Info } from "./components/info/info";
 import { Legend } from "./components/legend/legend";

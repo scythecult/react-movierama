@@ -23,20 +23,3 @@
 .legend__item small {
   margin-left: 2px;
 }
-
-.seat {
-  background-color: #444451;
-  height: 12px;
-  width: 15px;
-  margin: 3px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.seat.selected {
-  background-color: #6feaf6;
-}
-
-.seat.occupied {
-  background-color: #ffffff;
-}
