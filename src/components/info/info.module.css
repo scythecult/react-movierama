@@ -1,0 +1,7 @@
+.info {
+  margin: 5px 0;
+}
+
+.info > span {
+  color: #6feaf6;
+}
