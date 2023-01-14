@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { STORED_MOVIE_KEY } from "../../consts/consts";
 
 const initialState = {
-  selectedMovie: localStorage.getItem(STORED_MOVIE_KEY) || "",
+  selectedMovie: JSON.parse(localStorage.getItem(STORED_MOVIE_KEY)) || {},
   movies: [
     { title: "Avengers: Endgame", price: "10" },
     { title: "Joker", price: "12" },
@@ -16,13 +16,13 @@ const movieSlice = createSlice({
   name: "moviePicker",
   initialState,
   reducers: {
-    setPrice(state, action) {
+    setMovie(state, action) {
       state.selectedMovie = action.payload.selectedMovie;
     },
   },
 });
 
-const { setPrice } = movieSlice.actions;
+const { setMovie } = movieSlice.actions;
 const movieReducer = movieSlice.reducer;
 
-export { movieReducer, setPrice };
+export { movieReducer, setMovie };
