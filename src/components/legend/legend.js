@@ -7,7 +7,7 @@ const Legend = () => {
   return (
     <ul className={classes.legend}>
       <li className={classes["legend__item"]}>
-        <Seat />
+        <Seat disabled={true} />
         <small>N/A</small>
       </li>
       <li className={classes["legend__item"]}>

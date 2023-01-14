@@ -13,9 +13,9 @@ function App() {
       <Legend />
       <Container>
         <Screen />
-        <Seats>check</Seats>
-        <Info />
+        <Seats rowCount={8} colCount={14} />
       </Container>
+      <Info />
     </>
   );
 }

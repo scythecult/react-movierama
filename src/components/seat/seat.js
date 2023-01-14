@@ -18,16 +18,6 @@ const Seat = ({ selected, occupied, disabled = false }) => {
     modifierClass += ` ${classes.disabled}`;
   }
 
-  useEffect(() => {
-    if (occupied || disabled) return;
-
-    if (isActive) {
-      console.log("increase");
-    } else {
-      console.log("decrease");
-    }
-  }, [isActive, occupied, disabled]);
-
   return (
     <div
       className={`${classes.seat} ${modifierClass}`}
