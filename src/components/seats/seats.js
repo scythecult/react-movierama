@@ -1,28 +1,31 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Seat } from "../seat/seat";
 
 import classes from "./seats.module.css";
 
-let colKey = 200;
 let rowKey = 100;
 
-const Seats = ({ rowCount, colCount }) => {
-  const cols = [];
-  const rows = [];
+const Seats = () => {
+  const { seatsData } = useSelector((state) => state.seats);
 
-  for (let i = 0; i < colCount; i++) {
-    cols.push(<Seat key={colKey++} />);
-  }
+  const seats = seatsData.map((seat) => {
+    const cols = [];
 
-  for (let j = 0; j < rowCount; j++) {
-    rows.push(
+    for (let i = 0; i < seat.length; i++) {
+      const { id } = seat[i];
+
+      cols.push(<Seat key={id} {...seat[i]} />);
+    }
+
+    return (
       <div key={rowKey++} className={classes.seats}>
         {cols}
       </div>
     );
-  }
+  });
 
-  return rows;
+  return seats;
 };
 
 export { Seats };

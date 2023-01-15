@@ -1,30 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleActive } from "../../features/seats/seats-slice";
 
 import classes from "./seat.module.css";
 
-const Seat = ({ selected, occupied, disabled = false }) => {
-  const [isActive, setIsActive] = useState(false);
+const Seat = ({ id, isSelected, isOccupied, isDisabled = false }) => {
+  const dispatch = useDispatch();
+
   let modifierClass = "";
 
-  if (selected || (isActive && !occupied && !disabled)) {
+  if (isSelected) {
     modifierClass = classes.selected;
   }
 
-  if (occupied) {
+  if (isOccupied) {
     modifierClass = `${classes.occupied} ${classes.disabled}`;
   }
 
-  if (disabled) {
+  if (isDisabled) {
     modifierClass += ` ${classes.disabled}`;
   }
 
-  return (
-    <div
-      className={`${classes.seat} ${modifierClass}`}
-      onClick={() => {
-        setIsActive((prevIsActive) => !prevIsActive);
-      }}></div>
-  );
+  const handleClick = () => {
+    dispatch(toggleActive({ id }));
+  };
+
+  return <div className={`${classes.seat} ${modifierClass}`} onClick={handleClick}></div>;
 };
 
 export { Seat };

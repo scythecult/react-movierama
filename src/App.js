@@ -1,4 +1,3 @@
-import { useDispatch, useSelector } from "react-redux";
 import { Container } from "./components/container/container";
 import { Info } from "./components/info/info";
 import { Legend } from "./components/legend/legend";
@@ -13,7 +12,7 @@ function App() {
       <Legend />
       <Container>
         <Screen />
-        <Seats rowCount={8} colCount={14} />
+        <Seats />
       </Container>
       <Info />
     </>

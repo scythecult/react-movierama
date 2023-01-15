@@ -7,15 +7,15 @@ const Legend = () => {
   return (
     <ul className={classes.legend}>
       <li className={classes["legend__item"]}>
-        <Seat disabled={true} />
+        <Seat isDisabled={true} />
         <small>N/A</small>
       </li>
       <li className={classes["legend__item"]}>
-        <Seat disabled={true} selected={true} />
+        <Seat isDisabled={true} isSelected={true} />
         <small>Selected</small>
       </li>
       <li className={classes["legend__item"]}>
-        <Seat occupied={true} />
+        <Seat isOccupied={true} />
         <small>Occupied</small>
       </li>
     </ul>
