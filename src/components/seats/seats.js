@@ -1,5 +1,6 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleActive } from "../../features/seats/seats-slice";
 import { Seat } from "../seat/seat";
 
 import classes from "./seats.module.css";
@@ -8,6 +9,7 @@ let rowKey = 100;
 
 const Seats = () => {
   const { seatsData } = useSelector((state) => state.seats);
+  const dispatch = useDispatch();
 
   const seats = seatsData.map((seat) => {
     const cols = [];
@@ -15,7 +17,7 @@ const Seats = () => {
     for (let i = 0; i < seat.length; i++) {
       const { id } = seat[i];
 
-      cols.push(<Seat key={id} {...seat[i]} />);
+      cols.push(<Seat key={id} {...seat[i]} onClick={() => dispatch(toggleActive({ id }))} />);
     }
 
     return (

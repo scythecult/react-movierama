@@ -94,15 +94,19 @@ const seatsSlice = createSlice({
         const targetIndex = item.findIndex((innerItem) => innerItem.id === action.payload.id);
 
         if (targetIndex !== -1) {
-          item[targetIndex] = { ...item[targetIndex], isSelected: !item[targetIndex].isSelected };
+          const targetItem = item[targetIndex];
 
-          return item[targetIndex];
+          if (!targetItem.isOccupied) {
+            item[targetIndex] = { ...targetItem, isSelected: !targetItem.isSelected };
+
+            return item;
+          }
         }
 
         return item;
       });
 
-      state.seats = nextState;
+      state.seatsData = nextState;
     },
   },
 });

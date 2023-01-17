@@ -1,12 +1,8 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { toggleActive } from "../../features/seats/seats-slice";
 
 import classes from "./seat.module.css";
 
-const Seat = ({ id, isSelected, isOccupied, isDisabled = false }) => {
-  const dispatch = useDispatch();
-
+const Seat = ({ onClick, isSelected, isOccupied, isDisabled = false }) => {
   let modifierClass = "";
 
   if (isSelected) {
@@ -21,11 +17,7 @@ const Seat = ({ id, isSelected, isOccupied, isDisabled = false }) => {
     modifierClass += ` ${classes.disabled}`;
   }
 
-  const handleClick = () => {
-    dispatch(toggleActive({ id }));
-  };
-
-  return <div className={`${classes.seat} ${modifierClass}`} onClick={handleClick}></div>;
+  return <div className={`${classes.seat} ${modifierClass}`} onClick={onClick}></div>;
 };
 
 export { Seat };
