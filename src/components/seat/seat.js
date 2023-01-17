@@ -17,7 +17,13 @@ const Seat = ({ onClick, isSelected, isOccupied, isDisabled = false }) => {
     modifierClass += ` ${classes.disabled}`;
   }
 
-  return <div className={`${classes.seat} ${modifierClass}`} onClick={onClick}></div>;
+  return (
+    <button
+      className={`${classes.seat} ${modifierClass}`}
+      onClick={onClick}
+      type="button"
+      disabled={isOccupied}></button>
+  );
 };
 
 export { Seat };

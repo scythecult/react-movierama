@@ -2,10 +2,10 @@
   display: flex;
 }
 
-.seats > div:nth-of-type(2) {
+.seats > button:nth-of-type(2) {
   margin-right: 18px;
 }
 
-.seats > div:nth-last-of-type(2) {
+.seats > button:nth-last-of-type(2) {
   margin-left: 18px;
 }

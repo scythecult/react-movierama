@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 
 import classes from "./info.module.css";
 
-const calculatePrice = (price, seats) => {
+const getTotalPrice = (price, seats) => {
   const { selectedMovie } = price;
-  const selectedCount = calculateSelected(seats);
+  const selectedCount = getSelectedCount(seats);
 
-  return Number(selectedMovie.price) * selectedCount;
+  return Number(selectedMovie.price) * selectedCount || 0;
 };
 
-const calculateSelected = (seats) => {
+const getSelectedCount = (seats) => {
   if (seats?.seatsData) {
     return seats.seatsData.reduce((initial, rows) => {
       const selected = rows.filter((seat) => seat.isSelected);
@@ -24,9 +24,8 @@ const calculateSelected = (seats) => {
 
 const Info = () => {
   const { moviePicker, seats } = useSelector((state) => state);
-  const selectedCount = calculateSelected(seats);
-
-  const totalPrice = calculatePrice(moviePicker, seats);
+  const selectedCount = getSelectedCount(seats);
+  const totalPrice = getTotalPrice(moviePicker, seats);
 
   return (
     <p className={classes.info}>
