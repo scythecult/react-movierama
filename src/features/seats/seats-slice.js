@@ -91,6 +91,18 @@ const seatsSlice = createSlice({
   reducers: {
     toggleActive(state, action) {
       const nextState = state.seatsData.map((item) => {
+        if (action.payload?.ids?.length) {
+          return item.map((item) => {
+            if (action.payload.ids.includes(item.id)) {
+              item.isSelected = true;
+
+              return item;
+            }
+
+            return item;
+          });
+        }
+
         const targetIndex = item.findIndex((innerItem) => innerItem.id === action.payload.id);
 
         if (targetIndex !== -1) {

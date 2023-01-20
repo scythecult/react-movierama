@@ -1,3 +1,3 @@
 const STORED_MOVIE_KEY = "storedMovie";
-
-export { STORED_MOVIE_KEY };
+const STORED_SEATS_KEY = "storedSeats";
+export { STORED_MOVIE_KEY, STORED_SEATS_KEY };
