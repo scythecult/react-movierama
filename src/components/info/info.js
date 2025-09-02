@@ -29,7 +29,8 @@ const Info = () => {
 
   return (
     <p className={classes.info}>
-      You have selected <span>{selectedCount}</span> seats for a&nbsp;price&nbsp;of
+      You have selected <span>{selectedCount}</span> seats for
+      a&nbsp;price&nbsp;of
       <span> ${totalPrice}</span>
     </p>
   );
