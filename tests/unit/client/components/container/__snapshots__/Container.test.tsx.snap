@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Container > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_container_72892e"
+  />
+</div>
+`;
+
+exports[`Container > should support children 1`] = `
+<div>
+  <div
+    class="_container_72892e"
+  >
+    TEST
+  </div>
+</div>
+`;

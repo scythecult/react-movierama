@@ -1,0 +1,25 @@
+.seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.legend {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777777;
+  background-color: rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.legendItem small {
+  margin-left: 2px;
+}
