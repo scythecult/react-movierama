@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`App > should correspond default layout 1`] = `
+exports[`Order > should correspond default layout 1`] = `
 <div>
   <main
     class="_order_e24c8b"

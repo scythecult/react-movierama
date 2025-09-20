@@ -1,0 +1,14 @@
+.hall {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 32px;
+  perspective: 1000px;
+}
+
+.hallScreen {
+  height: 70px;
+  width: 100%;
+  background-color: var(--app-screen-color);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  transform: rotateX(-45deg);
+}

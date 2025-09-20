@@ -1,0 +1,29 @@
+.legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 0;
+  padding: 5px 10px;
+  color: var(--app-secondary-text);
+  border-radius: var(--app-border-radius-s);
+  background-color: var(--app-secondary-bg);
+  list-style: none;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.legendItemSeat {
+  pointer-events: none;
+}
+
+.legendItemSeat:hover {
+  border-color: transparent;
+  transform: scale(1);
+  cursor: default;
+}

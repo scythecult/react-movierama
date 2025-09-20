@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Layout > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_layout_762df9"
+  />
+</div>
+`;
+
+exports[`Layout > should support the "children" prop 1`] = `
+<div>
+  <div
+    class="_layout_762df9"
+  >
+    Children
+  </div>
+</div>
+`;
+
+exports[`Layout > should support the "className" prop 1`] = `
+<div>
+  <div
+    class="_layout_762df9 custom-class"
+  >
+    Children
+  </div>
+</div>
+`;

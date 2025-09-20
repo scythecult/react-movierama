@@ -1,9 +1,0 @@
-// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
-
-exports[`Screen > should correspond default layout 1`] = `
-<div>
-  <div
-    class="_screen_a4f98b"
-  />
-</div>
-`;

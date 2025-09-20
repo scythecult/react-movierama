@@ -1,0 +1,44 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Legend > should correspond default layout 1`] = `
+<div>
+  <ul
+    class="_legend_28be33"
+  >
+    <li
+      class="_legendItem_28be33"
+    >
+      <button
+        class="_seat_aa3898 _legendItemSeat_28be33 _disabled_aa3898"
+        type="button"
+      />
+      <small>
+        N/A
+      </small>
+    </li>
+    <li
+      class="_legendItem_28be33"
+    >
+      <button
+        class="_seat_aa3898 _legendItemSeat_28be33 _selected_aa3898 _disabled_aa3898"
+        type="button"
+      />
+      <small>
+        Selected
+      </small>
+    </li>
+    <li
+      class="_legendItem_28be33"
+    >
+      <button
+        class="_seat_aa3898 _legendItemSeat_28be33 _occupied_aa3898"
+        disabled=""
+        type="button"
+      />
+      <small>
+        Occupied
+      </small>
+    </li>
+  </ul>
+</div>
+`;

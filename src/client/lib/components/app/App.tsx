@@ -1,21 +1,9 @@
-import { Container } from '../container/Container';
-import { Info } from '../info/Info';
-import { Legend } from '../legend/Legend';
-import { MoviePicker } from '../movie-picker/MoviePicker';
-import { Screen } from '../screen/Screen';
-import { Seats } from '../seats/Seats';
-import styles from './styles.module.css';
+import { Order } from '@/client/pages/order/Order';
 
 export const App = () => {
   return (
-    <div className={styles.layout}>
-      <MoviePicker />
-      <Legend />
-      <Container>
-        <Screen />
-        <Seats />
-      </Container>
-      <Info />
-    </div>
+    // TODO Move to common "page" component
+    // TODO Add Router
+    <Order />
   );
 };

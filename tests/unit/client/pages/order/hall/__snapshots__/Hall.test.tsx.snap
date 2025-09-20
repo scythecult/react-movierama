@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Hall > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_hall_20f54f"
+  >
+    <div
+      class="_hallScreen_20f54f"
+    />
+  </div>
+</div>
+`;
+
+exports[`Hall > should support the "children" prop 1`] = `
+<div>
+  <div
+    class="_hall_20f54f"
+  >
+    <div
+      class="_hallScreen_20f54f"
+    />
+    Children
+  </div>
+</div>
+`;

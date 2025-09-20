@@ -1,0 +1,65 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Seat > should correspond default layout 1`] = `
+<div>
+  <button
+    class="_seat_aa3898"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Seat > should support the "isDisabled" prop 1`] = `
+<div>
+  <button
+    class="_seat_aa3898 _disabled_aa3898"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Seat > should support the "isDisabled" prop 2`] = `
+<div>
+  <button
+    class="_seat_aa3898"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Seat > should support the "isOccupied" prop 1`] = `
+<div>
+  <button
+    class="_seat_aa3898 _occupied_aa3898"
+    disabled=""
+    type="button"
+  />
+</div>
+`;
+
+exports[`Seat > should support the "isOccupied" prop 2`] = `
+<div>
+  <button
+    class="_seat_aa3898"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Seat > should support the "isSelected" prop 1`] = `
+<div>
+  <button
+    class="_seat_aa3898 _selected_aa3898"
+    type="button"
+  />
+</div>
+`;
+
+exports[`Seat > should support the "isSelected" prop 2`] = `
+<div>
+  <button
+    class="_seat_aa3898"
+    type="button"
+  />
+</div>
+`;

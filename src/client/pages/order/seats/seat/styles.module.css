@@ -1,0 +1,35 @@
+.seat {
+  width: 20px;
+  height: 14px;
+  padding: 8px 18px;
+  border-top-left-radius: var(--app-border-radius-m);
+  border-top-right-radius: var(--app-border-radius-m);
+  background-color: #444451;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #ffffff;
+}
+
+.seat:hover {
+  border-color: #646cff;
+
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.seat:focus,
+.seat:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.seat.disabled:hover {
+  cursor: default;
+  transform: scale(1);
+}
