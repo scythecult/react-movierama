@@ -67,8 +67,14 @@ input[type='radio'].visually-hidden {
   --app-cyan-color: #6feaf6;
   --app-blue-color: #646cff;
   --app-gray-color: #444451;
-  --app-screen-color: #ffffff;
+  --app-white-color: #ffffff;
   --app-safe-bg: transparent;
+
+  --app-screen-color: #ffffff;
+  --app-seat-text: #777777;
+  --app-seat-regular-color: #444451;
+  --app-seat-occupied-color: #ffffff;
+  --app-seat-selected-color: #6feaf6;
 
   --app-border-radius-s: 6px;
   --app-border-radius-m: 10px;
@@ -86,6 +92,8 @@ input[type='radio'].visually-hidden {
     --app-primary-text: #213547;
     --app-screen-color: #444451;
     --app-safe-bg: rgba(0, 0, 0, 0.1);
+
+    --app-seat-text: #ffffff;
   }
 }
 

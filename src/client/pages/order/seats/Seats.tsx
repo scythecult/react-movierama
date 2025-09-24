@@ -1,121 +1,43 @@
-import { useEffect } from 'react';
-import { STORED_SEATS_KEY } from '../../../lib/constants/common';
+import type { SeatData } from '@/client/lib/types/OrderData';
 import { Seat } from './seat/Seat';
 import styles from './styles.module.css';
 
 let rowKey = 100;
 
-const seatsData = [
-  [
-    { id: '200', isSelected: false, isOccupied: false },
-    { id: '201', isSelected: false, isOccupied: false },
-    { id: '202', isSelected: false, isOccupied: false },
-    { id: '203', isSelected: false, isOccupied: false },
-    { id: '204', isSelected: false, isOccupied: false },
-    { id: '205', isSelected: false, isOccupied: false },
-    { id: '206', isSelected: false, isOccupied: false },
-    { id: '207', isSelected: false, isOccupied: false },
-    { id: '208', isSelected: false, isOccupied: false },
-    { id: '209', isSelected: false, isOccupied: false },
-    { id: '2010', isSelected: false, isOccupied: true },
-    { id: '2011', isSelected: false, isOccupied: true },
-    { id: '2012', isSelected: false, isOccupied: false },
-    { id: '2013', isSelected: false, isOccupied: false },
-  ],
-  [
-    { id: '300', isSelected: false, isOccupied: false },
-    { id: '301', isSelected: false, isOccupied: false },
-    { id: '302', isSelected: false, isOccupied: false },
-    { id: '303', isSelected: false, isOccupied: false },
-    { id: '304', isSelected: false, isOccupied: false },
-    { id: '305', isSelected: false, isOccupied: false },
-    { id: '306', isSelected: false, isOccupied: false },
-    { id: '307', isSelected: false, isOccupied: false },
-    { id: '308', isSelected: false, isOccupied: false },
-    { id: '309', isSelected: false, isOccupied: false },
-    { id: '3010', isSelected: false, isOccupied: false },
-    { id: '3011', isSelected: false, isOccupied: false },
-    { id: '3012', isSelected: false, isOccupied: false },
-    { id: '3013', isSelected: false, isOccupied: false },
-  ],
-  [
-    { id: '400', isSelected: false, isOccupied: false },
-    { id: '401', isSelected: false, isOccupied: false },
-    { id: '402', isSelected: false, isOccupied: false },
-    { id: '403', isSelected: false, isOccupied: false },
-    { id: '404', isSelected: false, isOccupied: false },
-    { id: '405', isSelected: false, isOccupied: true },
-    { id: '406', isSelected: false, isOccupied: true },
-    { id: '407', isSelected: false, isOccupied: false },
-    { id: '408', isSelected: false, isOccupied: false },
-    { id: '409', isSelected: false, isOccupied: false },
-    { id: '4010', isSelected: false, isOccupied: false },
-    { id: '4011', isSelected: false, isOccupied: false },
-    { id: '4012', isSelected: false, isOccupied: false },
-    { id: '4013', isSelected: false, isOccupied: false },
-  ],
-  [
-    { id: '500', isSelected: false, isOccupied: true },
-    { id: '501', isSelected: false, isOccupied: false },
-    { id: '502', isSelected: false, isOccupied: false },
-    { id: '503', isSelected: false, isOccupied: false },
-    { id: '504', isSelected: false, isOccupied: false },
-    { id: '505', isSelected: false, isOccupied: false },
-    { id: '506', isSelected: false, isOccupied: false },
-    { id: '507', isSelected: false, isOccupied: false },
-    { id: '508', isSelected: false, isOccupied: false },
-    { id: '509', isSelected: false, isOccupied: false },
-    { id: '5010', isSelected: false, isOccupied: false },
-    { id: '5011', isSelected: false, isOccupied: false },
-    { id: '5012', isSelected: false, isOccupied: false },
-    { id: '5013', isSelected: false, isOccupied: false },
-  ],
-  [
-    { id: '600', isSelected: false, isOccupied: false },
-    { id: '601', isSelected: false, isOccupied: false },
-    { id: '602', isSelected: false, isOccupied: false },
-    { id: '603', isSelected: false, isOccupied: false },
-    { id: '604', isSelected: false, isOccupied: true },
-    { id: '605', isSelected: false, isOccupied: false },
-    { id: '606', isSelected: false, isOccupied: false },
-    { id: '607', isSelected: false, isOccupied: false },
-    { id: '608', isSelected: false, isOccupied: false },
-    { id: '609', isSelected: false, isOccupied: false },
-    { id: '6010', isSelected: false, isOccupied: false },
-    { id: '6011', isSelected: false, isOccupied: false },
-    { id: '6012', isSelected: false, isOccupied: false },
-    { id: '6013', isSelected: false, isOccupied: false },
-  ],
-];
+type SeatsProps = {
+  seats: SeatData[][];
+  onClick?: (seatId: string, isSelected: boolean) => void;
+};
 
-export const Seats = () => {
-  useEffect(() => {
-    const selectedSeats = seatsData.reduce<string[]>((initial, seat) => {
-      const selectedIds = seat.filter((item) => item.isSelected).map((item) => item.id);
+export const Seats = (props: SeatsProps) => {
+  const { seats, onClick } = props;
 
-      initial.push(...selectedIds);
+  //   const selectedSeats = seatsData.reduce<string[]>((initial, seat) => {
+  //     const selectedIds = seat.filter((item) => item.isSelected).map((item) => item.id);
 
-      return initial;
-    }, []);
+  //     initial.push(...selectedIds);
 
-    localStorage.setItem(STORED_SEATS_KEY, JSON.stringify(selectedSeats));
-  }, []);
+  //     return initial;
+  //   }, []);
 
-  const seats = seatsData.map((seat) => {
-    const cols = [];
+  //   localStorage.setItem(STORED_SEATS_KEY, JSON.stringify(selectedSeats));
+  // }, []);
+
+  const seatNodes = seats.map((seat) => {
+    const rows = [];
 
     for (let i = 0; i < seat.length; i++) {
       const { id } = seat[i];
 
-      cols.push(<Seat key={id} {...seat[i]} />);
+      rows.push(<Seat key={id} {...seat[i]} onClick={() => onClick?.(id, seat[i].isSelected)} />);
     }
 
     return (
       <div key={rowKey++} className={styles.seatsRow}>
-        {cols}
+        {rows}
       </div>
     );
   });
 
-  return <div className={styles.seats}>{seats}</div>;
+  return <div className={styles.seats}>{seatNodes}</div>;
 };

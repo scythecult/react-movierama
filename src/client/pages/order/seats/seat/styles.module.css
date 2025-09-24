@@ -1,27 +1,39 @@
 .seat {
-  width: 20px;
-  height: 14px;
-  padding: 8px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 34px;
+  padding: 4px;
+  color: var(--app-seat-text);
   border-top-left-radius: var(--app-border-radius-m);
   border-top-right-radius: var(--app-border-radius-m);
-  background-color: #444451;
+  background-color: var(--app-seat-regular-color);
   border: 1px solid transparent;
+  transition-property: scale, background-color, border-color, color;
+  transition-duration: 0.2s;
   cursor: pointer;
 }
 
 .seat.selected {
-  background-color: #6feaf6;
+  color: var(--app-secondary-text);
+  background-color: var(--app-cyan-color);
 }
 
 .seat.occupied {
-  background-color: #ffffff;
+  background-color: var(--app-white-color);
+}
+
+.seat:hover.seat.occupied {
+  border-color: transparent;
+  scale: 1;
+  cursor: not-allowed;
 }
 
 .seat:hover {
-  border-color: #646cff;
-
+  border-color: var(--app-blue-color);
+  scale: 1.2;
   cursor: pointer;
-  transform: scale(1.2);
 }
 
 .seat:focus,
@@ -30,6 +42,6 @@
 }
 
 .seat.disabled:hover {
+  scale: 1;
   cursor: default;
-  transform: scale(1);
 }
