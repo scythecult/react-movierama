@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './lib/components/app/App';
+import { AppStoreProvider } from './lib/providers/AppStoreProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 
 root.render(
   <React.StrictMode>
-    <App />
+    <AppStoreProvider>
+      <App />
+    </AppStoreProvider>
   </React.StrictMode>,
 );
