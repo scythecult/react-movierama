@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import type { SeatTypeName } from '@/client/lib/types/OrderData';
 import type { PropsWithClassName } from '@/client/lib/types/PropsWithClassName';
 import styles from './styles.module.css';
 
@@ -7,12 +8,14 @@ type SeatProps = PropsWithClassName & {
   isSelected?: boolean;
   isOccupied?: boolean;
   isDisabled?: boolean;
-  place: number;
+  place?: number;
+  type?: SeatTypeName;
 };
 
 export const Seat = (props: SeatProps) => {
-  const { place, className, onClick, isSelected, isOccupied, isDisabled = false } = props;
-  const classNameFinal = clsx(styles.seat, className, {
+  const { type = 'regular', place, className, onClick, isSelected, isOccupied, isDisabled = false } = props;
+
+  const classNameFinal = clsx(styles.seat, className, styles[type], {
     [styles.selected]: isSelected,
     [styles.occupied]: isOccupied,
     [styles.disabled]: isDisabled,
@@ -20,10 +23,12 @@ export const Seat = (props: SeatProps) => {
 
   return (
     <button className={classNameFinal} onClick={onClick} type="button" disabled={isOccupied}>
-      {place}
-      {/* <svg width="18" height="20" viewBox="0 0 18 20" class="IconBase" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16.813 0c-.434 0-1.071.578-1.33.828l-.623.611a.572.572 0 0 1-.402.16.574.574 0 0 1-.402-.16l-.633-.613C12.998.416 12.293 0 11.769 0s-1.229.416-1.654.826l-.634.613a.578.578 0 0 1-.405.16.578.578 0 0 1-.405-.16L8.036.826C7.622.426 6.901 0 6.382 0c-.52 0-1.24.426-1.654.826l-.635.613a.579.579 0 0 1-.405.16.579.579 0 0 1-.405-.16L2.648.826C2.613.793 1.772 0 1.263 0 .683 0 .461.787.461 1.461V18.54c0 .674.221 1.461.802 1.461.49 0 1.279-.742 1.365-.825l.645-.614a.585.585 0 0 1 .409-.16c.155 0 .3.057.408.16l.636.613c.414.4 1.135.826 1.655.826s1.24-.426 1.655-.826l.635-.613a.578.578 0 0 1 .405-.16c.155 0 .299.057.405.16l.635.613c.414.4 1.135.826 1.654.826.52 0 1.24-.426 1.655-.826l.634-.613a.578.578 0 0 1 .405-.16c.155 0 .299.057.405.16l.635.613c.32.308.9.826 1.309.826.478 0 .726-.519.726-1.461V1.46c0-.94-.249-1.46-.726-1.46zm-3.018 15.023H9.593v-1.735h4.2v1.735zm0-4.201H4.296V9.178h9.497v1.644zm0-4.11H4.296V4.977h9.497v1.735z"></path>
-      </svg> */}
+      <span className={styles.seatPlace}>{place}</span>
+      <svg className={styles.seatIcon} fill="currentColor" width="18" height="20" viewBox="0 0 18 20"
+           xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M16.813 0c-.434 0-1.071.578-1.33.828l-.623.611a.572.572 0 0 1-.402.16.574.574 0 0 1-.402-.16l-.633-.613C12.998.416 12.293 0 11.769 0s-1.229.416-1.654.826l-.634.613a.578.578 0 0 1-.405.16.578.578 0 0 1-.405-.16L8.036.826C7.622.426 6.901 0 6.382 0c-.52 0-1.24.426-1.654.826l-.635.613a.579.579 0 0 1-.405.16.579.579 0 0 1-.405-.16L2.648.826C2.613.793 1.772 0 1.263 0 .683 0 .461.787.461 1.461V18.54c0 .674.221 1.461.802 1.461.49 0 1.279-.742 1.365-.825l.645-.614a.585.585 0 0 1 .409-.16c.155 0 .3.057.408.16l.636.613c.414.4 1.135.826 1.655.826s1.24-.426 1.655-.826l.635-.613a.578.578 0 0 1 .405-.16c.155 0 .299.057.405.16l.635.613c.414.4 1.135.826 1.654.826.52 0 1.24-.426 1.655-.826l.634-.613a.578.578 0 0 1 .405-.16c.155 0 .299.057.405.16l.635.613c.32.308.9.826 1.309.826.478 0 .726-.519.726-1.461V1.46c0-.94-.249-1.46-.726-1.46zm-3.018 15.023H9.593v-1.735h4.2v1.735zm0-4.201H4.296V9.178h9.497v1.644zm0-4.11H4.296V4.977h9.497v1.735z"></path>
+      </svg>
     </button>
   );
 };

@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PreCheck > should correspond default layout 1`] = `<div />`;
+
+exports[`PreCheck > should support the "selectedSeats" prop 1`] = `
+<div>
+  <section
+    class="_preCheck_682d14"
+  >
+    <h2
+      class="_preCheckTitle_682d14"
+    >
+      Chosen places
+    </h2>
+    <ul
+      class="_preCheckList_682d14"
+    >
+      <li
+        class="_preCheckItem_682d14"
+      >
+        <p>
+          Place: 
+          1
+        </p>
+        <p>
+          vip
+        </p>
+        <div
+          class="_preCheckItemControls_682d14"
+        >
+          <select
+            class="_preCheckItemSelect_682d14"
+            name="ticket-type"
+          />
+          <span>
+            100
+             RUB
+          </span>
+          <button
+            class="_preCheckItemRemoveButton_682d14 _button_d1d523"
+          >
+            Remove
+          </button>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+`;
