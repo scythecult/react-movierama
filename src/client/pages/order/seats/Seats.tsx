@@ -4,9 +4,9 @@ import styles from './styles.module.css';
 
 let rowKey = 100;
 
-type SeatsProps = {
+export type SeatsProps = {
   seats: SeatData[][];
-  onClick?: (seatId: string, isSelected: boolean) => void;
+  onClick?: (payload: SeatData) => void;
 };
 
 export const Seats = (props: SeatsProps) => {
@@ -27,9 +27,9 @@ export const Seats = (props: SeatsProps) => {
     const rows = [];
 
     for (let i = 0; i < seat.length; i++) {
-      const { id } = seat[i];
+      const { id, isSelected } = seat[i];
 
-      rows.push(<Seat key={id} {...seat[i]} onClick={() => onClick?.(id, seat[i].isSelected)} />);
+      rows.push(<Seat key={id} {...seat[i]} onClick={() => onClick?.({ ...seat[i], isSelected: !isSelected })} />);
     }
 
     return (

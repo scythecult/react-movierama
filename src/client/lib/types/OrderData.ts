@@ -1,13 +1,15 @@
+export type SeatTypeName = 'regular' | 'comfort' | 'vip';
+
+export type TicketTypeName = 'child' | 'student' | 'adult';
+
 export type SeatData = {
   id: string;
   isSelected: boolean;
   isOccupied: boolean;
   place: number;
+  type: SeatTypeName;
+  typeId: number;
 };
-
-export type SeatTypeName = 'Regular' | 'Comfort' | 'Premium';
-
-export type TicketTypeName = 'Child' | 'Student' | 'Adult';
 
 export type TicketType = {
   id: number;
@@ -20,3 +22,5 @@ export type SeatType = {
   name: SeatTypeName;
   ticketTypes: TicketType[];
 };
+
+export type SelectedSeat = SeatData & { price: number, ticketTypeId: number, seatType: SeatType };

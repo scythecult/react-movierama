@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > should correspond default layout 1`] = `
+<div>
+  <button
+    class="_button_d1d523"
+  />
+</div>
+`;
+
+exports[`Button > should support the "children" prop 1`] = `
+<div>
+  <button
+    class="_button_d1d523"
+  >
+    Children
+  </button>
+</div>
+`;
+
+exports[`Button > should support the "className" prop 1`] = `
+<div>
+  <button
+    class="custom-class _button_d1d523"
+  >
+    Children
+  </button>
+</div>
+`;

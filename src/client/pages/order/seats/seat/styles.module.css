@@ -1,47 +1,94 @@
 .seat {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 34px;
-  padding: 4px;
-  color: var(--app-seat-text);
-  border-top-left-radius: var(--app-border-radius-m);
-  border-top-right-radius: var(--app-border-radius-m);
-  background-color: var(--app-seat-regular-color);
-  border: 1px solid transparent;
-  transition-property: scale, background-color, border-color, color;
-  transition-duration: 0.2s;
-  cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 34px;
+    padding: 4px;
+    color: var(--app-seat-text);
+    border-top-left-radius: var(--app-border-radius-m);
+    border-top-right-radius: var(--app-border-radius-m);
+    background-color: var(--app-seat-regular-color);
+    border: 1px solid transparent;
+    transition-property: scale, background-color, border-color, color, opacity;
+    transition-duration: 0.2s;
+    cursor: pointer;
 }
 
 .seat.selected {
-  color: var(--app-secondary-text);
-  background-color: var(--app-cyan-color);
+    color: var(--app-secondary-text);
+    background-color: var(--app-cyan-color);
 }
 
 .seat.occupied {
-  background-color: var(--app-white-color);
+    background-color: var(--app-white-color);
 }
 
 .seat:hover.seat.occupied {
-  border-color: transparent;
-  scale: 1;
-  cursor: not-allowed;
+    border-color: transparent;
+    scale: 1;
+    cursor: not-allowed;
 }
 
 .seat:hover {
-  border-color: var(--app-blue-color);
-  scale: 1.2;
-  cursor: pointer;
+    border-color: var(--app-blue-color);
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.seat:hover .seatPlace {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.seat:hover .seatIcon {
+    opacity: 1;
 }
 
 .seat:focus,
 .seat:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+    outline: 4px auto -webkit-focus-ring-color;
 }
 
 .seat.disabled:hover {
-  scale: 1;
-  cursor: default;
+    scale: 1;
+    cursor: default;
 }
+
+.seat.selected:hover .seatIcon {
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.seat.selected:hover .seatPlace {
+    opacity: 1;
+}
+
+.regular {
+    background-color: var(--app-seat-regular-color);
+}
+
+.comfort {
+    background-color: var(--app-seat-comfort-color);
+}
+
+.vip {
+    background-color: var(--app-seat-vip-color);
+}
+
+.seatIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 20px;
+    color: var(--app-white-color);
+    transform: translate(-50%, -50%);
+    transition-property: opacity, left, transform;
+    transition-duration: 0.2s;
+    opacity: 0;
+    pointer-events: none;
+}
+

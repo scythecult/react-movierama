@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body,
@@ -16,98 +16,105 @@ figcaption,
 blockquote,
 dl,
 dd {
-  margin: 0;
+    margin: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 .visually-hidden:not(:focus):not(:active),
 input[type='checkbox'].visually-hidden,
 input[type='radio'].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 :root {
-  --app-font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
+    --app-font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
-  --app-primary-bg: #242424;
-  --app-secondary-bg: rgba(0, 0, 0, 0.1);
-  --app-primary-text: rgba(255, 255, 255, 0.87);
-  --app-secondary-text: #777777;
-  --app-primary-link: #646cff;
-  --app-secondary-link: #535bf2;
-  --app-cyan-color: #6feaf6;
-  --app-blue-color: #646cff;
-  --app-gray-color: #444451;
-  --app-white-color: #ffffff;
-  --app-safe-bg: transparent;
+    --app-primary-bg: #242424;
+    --app-secondary-bg: rgba(0, 0, 0, 0.2);
+    --app-primary-text: rgba(255, 255, 255, 0.87);
+    --app-secondary-text: #777777;
+    --app-primary-link: #646cff;
+    --app-secondary-link: #535bf2;
+    --app-primary-button: #646cff;
+    --app-primary-button-hover: #4d55fd;
+    --app-secondary-button: #535bf2;
+    --app-cyan-color: #6feaf6;
+    --app-blue-color: #646cff;
+    --app-gray-color: #444451;
+    --app-white-color: #ffffff;
+    --app-safe-bg: transparent;
 
-  --app-screen-color: #ffffff;
-  --app-seat-text: #777777;
-  --app-seat-regular-color: #444451;
-  --app-seat-occupied-color: #ffffff;
-  --app-seat-selected-color: #6feaf6;
+    --app-screen-color: #ffffff;
+    --app-seat-text: #777777;
+    --app-seat-regular-color: #444451;
+    --app-seat-comfort-color: #971859;
+    --app-seat-vip-color: #ff9a2a;
+    --app-seat-occupied-color: #ffffff;
+    --app-seat-selected-color: #6feaf6;
 
-  --app-border-radius-s: 6px;
-  --app-border-radius-m: 10px;
-  --app-border-radius-l: 16px;
+    --app-border-color: #777777;
+    --app-border-radius-s: 6px;
+    --app-border-radius-m: 10px;
+    --app-border-radius-l: 16px;
 }
 
 @media (prefers-color-scheme: light) {
-  /* слишком яркое изображение дискомфортно для глаз */
-  img {
-    filter: brightness(90%);
-  }
+    /* слишком яркое изображение дискомфортно для глаз */
+    img {
+        filter: brightness(90%);
+    }
 
-  :root {
-    --app-primary-bg: #ffffff;
-    --app-primary-text: #213547;
-    --app-screen-color: #444451;
-    --app-safe-bg: rgba(0, 0, 0, 0.1);
+    :root {
+        --app-primary-bg: #ffffff;
+        --app-secondary-bg: rgba(0, 0, 0, 0.1);
+        --app-primary-text: #213547;
+        --app-screen-color: #444451;
+        --app-safe-bg: rgba(0, 0, 0, 0.1);
 
-    --app-seat-text: #ffffff;
-  }
+        --app-seat-text: #ffffff;
+    }
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100dvh;
-  line-height: 1.3;
-  font-weight: 400;
-  font-family: var(--app-font-family);
-  font-synthesis: none;
-  color: var(--app-primary-text);
-  background-color: var(--app-primary-bg);
-  transition-property: background-color, color;
-  transition-duration: 0.2s;
-  color-scheme: light dark;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100dvh;
+    line-height: 1.3;
+    font-weight: 400;
+    font-family: var(--app-font-family, 'Segoe UI'), sans-serif;
+    font-synthesis: none;
+    color: var(--app-primary-text);
+    background-color: var(--app-primary-bg);
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+    color-scheme: light dark;
 }
