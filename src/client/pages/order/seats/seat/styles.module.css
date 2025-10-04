@@ -1,5 +1,5 @@
 .seat {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +23,7 @@
 
 .seat.occupied {
     background-color: var(--app-white-color);
+    pointer-events: none;
 }
 
 .seat:hover.seat.occupied {
@@ -76,6 +77,10 @@
 
 .vip {
     background-color: var(--app-seat-vip-color);
+}
+
+.wheelchair {
+    background-color: var(--app-seat-wheelchair-color);
 }
 
 .seatIcon {

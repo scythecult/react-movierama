@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react';
+import { STATIC_SEAT_TYPES } from '@/client/lib/utils/mocks';
 import { Legend, type LegendProps } from '@/client/pages/order/legend/Legend';
-import { SEAT_TYPES } from '../../../../constants/common';
-
 
 const DEFAULT_PROPS: LegendProps = {
   seatTypes: [],
@@ -15,7 +14,7 @@ describe('Legend', () => {
   });
 
   test('should support the "seatTypes" prop', () => {
-    const result = render(<Legend seatTypes={SEAT_TYPES} />);
+    const result = render(<Legend seatTypes={STATIC_SEAT_TYPES} />);
     expect(result.container).toMatchSnapshot();
   });
 });

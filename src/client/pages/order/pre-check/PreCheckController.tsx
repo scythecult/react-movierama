@@ -1,25 +1,24 @@
 import { useAppStore } from '@/client/lib/hooks/useAppStore';
-import type { SelectedSeat } from '@/client/lib/types/OrderData';
+import type { CartItem } from '@/client/lib/types/OrderPageData';
 import { PreCheck } from '@/client/pages/order/pre-check/PreCheck';
 
 export const PreCheckController = () => {
-  const selectedSeats = useAppStore((state) => state.selectedSeats);
-  const updateSelectedSeatPrice = useAppStore((state) => state.updateSelectedSeatPrice);
-  const calculateTotalPrice = useAppStore((state) => state.calculateTotalPrice);
+  const cart = useAppStore((state) => state.cart);
+  const updateCart = useAppStore((state) => state.updateCart);
+  const updateCartTicketType = useAppStore((state) => state.updateCartTicketType);
+  const updateCartTotalPrice = useAppStore((state) => state.updateCartTotalPrice);
   const setIsSelected = useAppStore((state) => state.setIsSelected);
-  const updateSelectedSeats = useAppStore((state) => state.updateSelectedSeats);
 
-  const handleTicketTypeChange = (payload: SelectedSeat) => {
-    updateSelectedSeatPrice(payload);
-    calculateTotalPrice();
+  const handleTicketTypeChange = (payload: CartItem) => {
+    updateCartTicketType(payload);
+    updateCartTotalPrice();
   };
 
-  const handleRemoveSeat = (payload: SelectedSeat) => {
-    setIsSelected(payload);
-    updateSelectedSeats(payload);
-    calculateTotalPrice();
+  const handleRemoveSeat = (id: number) => {
+    setIsSelected(id);
+    updateCart();
+    updateCartTotalPrice();
   };
 
-  return <PreCheck selectedSeats={selectedSeats} onTicketTypeChange={handleTicketTypeChange}
-                   onRemoveSeatClick={handleRemoveSeat} />;
+  return <PreCheck cart={cart} onTicketTypeChange={handleTicketTypeChange} onRemoveSeatClick={handleRemoveSeat} />;
 };

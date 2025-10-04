@@ -78,6 +78,7 @@ input[type='radio'].visually-hidden {
     --app-seat-regular-color: #444451;
     --app-seat-comfort-color: #971859;
     --app-seat-vip-color: #ff9a2a;
+    --app-seat-wheelchair-color: #ff6347;
     --app-seat-occupied-color: #ffffff;
     --app-seat-selected-color: #6feaf6;
 

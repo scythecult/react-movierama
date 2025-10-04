@@ -1,57 +1,68 @@
-import { type ChangeEvent } from 'react';
+import type { ChangeEvent } from 'react';
 import { Button } from '@/client/lib/components/button/Button';
-import type { SelectedSeat } from '@/client/lib/types/OrderData';
+import { SEAT_TYPE } from '@/client/lib/constants/common';
+import type { CartItem } from '@/client/lib/types/OrderPageData';
 import styles from './styles.module.css';
 
 export type PreCheckProps = {
-  selectedSeats: SelectedSeat[];
-  onTicketTypeChange: (payload: SelectedSeat) => void;
-  onRemoveSeatClick: (payload: SelectedSeat) => void;
-}
+  cart: CartItem[];
+  onTicketTypeChange: (payload: CartItem) => void;
+  onRemoveSeatClick: (id: number) => void;
+};
 
 export const PreCheck = (props: PreCheckProps) => {
-  const { selectedSeats, onRemoveSeatClick, onTicketTypeChange } = props;
+  const { cart, onRemoveSeatClick, onTicketTypeChange } = props;
 
-  if (selectedSeats.length === 0) {
+  if (cart.length === 0) {
     return null;
   }
 
-  const selectedSeatNodes = selectedSeats.map((seat) => {
-      const { id, place, type, seatType, price, ticketTypeId } = seat;
-      const { ticketTypes } = seatType;
+  const selectedSeatNodes = cart.map((cartItem) => {
+    const { id, place, row, type, seatType, price, ticketTypeId } = cartItem;
+    const { ticketTypes = [] } = seatType;
+    const seatTypeName = SEAT_TYPE[type];
 
-      return <li className={styles.preCheckItem} key={id}>
-        <p>Place: {place}</p>
-        <p>{type}</p>
+    return (
+      <li className={styles.preCheckItem} key={id}>
+        <p>
+          {row} row, {place} place
+        </p>
+        <p>{seatTypeName}</p>
 
         <div className={styles.preCheckItemControls}>
-          <select className={styles.preCheckItemSelect} name="ticket-type" defaultValue={ticketTypeId}
-                  onChange={(evt: ChangeEvent<HTMLSelectElement>) => {
-                    const ticketTypeId = Number(evt.target.value);
+          <select
+            className={styles.preCheckItemSelect}
+            name="ticket-type"
+            defaultValue={ticketTypeId}
+            onChange={(evt: ChangeEvent<HTMLSelectElement>) => {
+              const ticketTypeId = Number(evt.target.value);
 
-                    onTicketTypeChange({ ...seat, ticketTypeId });
-                  }}>
+              onTicketTypeChange({ ...cartItem, ticketTypeId });
+            }}
+          >
             {ticketTypes.map((ticketType) => {
-                const { id, name } = ticketType;
+              const { id, name } = ticketType;
 
-                return <option key={id} value={id}>{name}</option>;
-              },
-            )}
-
+              return (
+                <option key={id} value={id}>
+                  {name}
+                </option>
+              );
+            })}
           </select>
           <span>{price} RUB</span>
-          <Button className={styles.preCheckItemRemoveButton}
-                  onClick={() => onRemoveSeatClick({ ...seat, isSelected: !seat.isSelected })}>Remove
+          <Button className={styles.preCheckItemRemoveButton} onClick={() => onRemoveSeatClick(id)}>
+            Remove
           </Button>
         </div>
-      </li>;
-    },
-  );
+      </li>
+    );
+  });
 
-  return <section className={styles.preCheck}>
-    <h2 className={styles.preCheckTitle}>Chosen places</h2>
-    <ul className={styles.preCheckList}>
-      {selectedSeatNodes}
-    </ul>
-  </section>;
+  return (
+    <section className={styles.preCheck}>
+      <h2 className={styles.preCheckTitle}>Chosen places</h2>
+      <ul className={styles.preCheckList}>{selectedSeatNodes}</ul>
+    </section>
+  );
 };

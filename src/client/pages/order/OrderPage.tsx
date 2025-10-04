@@ -1,4 +1,3 @@
-// import { MoviePicker } from '../movie-picker/MoviePicker';
 import { Button } from '@/client/lib/components/button/Button';
 import { Layout } from '@/client/lib/components/layout/Layout';
 import { Hall } from '@/client/pages/order/hall/Hall';
@@ -9,7 +8,7 @@ import styles from './styles.module.css';
 
 export type OrderPageProps = {
   totalPrice: number;
-}
+};
 export const OrderPage = (props: OrderPageProps) => {
   const { totalPrice } = props;
   const isPaymentButtonDisabled = totalPrice === 0;
@@ -25,10 +24,8 @@ export const OrderPage = (props: OrderPageProps) => {
         <LegendController />
         <PreCheckController />
         <div className={styles.orderFooter}>
-
           <Button disabled={isPaymentButtonDisabled}>{paymentButtonText}</Button>
         </div>
-
       </Layout>
     </main>
   );

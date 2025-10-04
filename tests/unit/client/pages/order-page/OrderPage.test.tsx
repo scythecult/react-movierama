@@ -19,7 +19,11 @@ describe('OrderPage', () => {
   });
 
   test('should support the "totalPrice" prop', () => {
-    const result = render(buildWrappedComponent({ totalPrice: 10 }));
+    let result = render(buildWrappedComponent({ totalPrice: 10 }));
+
+    expect(result.container).toMatchSnapshot();
+
+    result = render(buildWrappedComponent({ totalPrice: 5 }));
 
     expect(result.container).toMatchSnapshot();
   });

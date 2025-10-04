@@ -1,18 +1,18 @@
 import { useAppStore } from '@/client/lib/hooks/useAppStore';
-import type { SeatData } from '@/client/lib/types/OrderData';
 import { Seats } from '@/client/pages/order/seats/Seats';
 
 export const SeatsController = () => {
   const seats = useAppStore((state) => state.seats);
+  const { width, height } = useAppStore((state) => state.canvas);
   const setIsSelected = useAppStore((state) => state.setIsSelected);
-  const updateSelectedSeats = useAppStore((state) => state.updateSelectedSeats);
-  const calculateTotalPrice = useAppStore((state) => state.calculateTotalPrice);
+  const updateCart = useAppStore((state) => state.updateCart);
+  const calculateTotalPrice = useAppStore((state) => state.updateCartTotalPrice);
 
-  const handleSeatClick = (payload: SeatData) => {
-    setIsSelected(payload);
-    updateSelectedSeats(payload);
+  const handleSeatClick = (id: number) => {
+    setIsSelected(id);
+    updateCart();
     calculateTotalPrice();
   };
 
-  return <Seats seats={seats} onClick={handleSeatClick} />;
+  return <Seats seats={seats} canvasWidth={width} canvasHeight={height} onClick={handleSeatClick} />;
 };

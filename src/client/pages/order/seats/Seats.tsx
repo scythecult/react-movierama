@@ -1,43 +1,27 @@
-import type { SeatData } from '@/client/lib/types/OrderData';
-import { Seat } from './seat/Seat';
+import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH } from '@/client/lib/constants/common';
+import type { SeatData } from '@/client/lib/types/OrderPageData';
+import { Seat } from '@/client/pages/order/seats/seat/Seat';
 import styles from './styles.module.css';
 
-let rowKey = 100;
-
 export type SeatsProps = {
-  seats: SeatData[][];
-  onClick?: (payload: SeatData) => void;
+  seats: SeatData[];
+  onClick?: (id: number) => void;
+  canvasWidth: number;
+  canvasHeight: number;
 };
 
 export const Seats = (props: SeatsProps) => {
-  const { seats, onClick } = props;
+  const { seats, canvasWidth = DEFAULT_CANVAS_WIDTH, canvasHeight = DEFAULT_CANVAS_HEIGHT, onClick } = props;
 
-  //   const selectedSeats = seatsData.reduce<string[]>((initial, seat) => {
-  //     const selectedIds = seat.filter((item) => item.isSelected).map((item) => item.id);
+  const seatNodes = seats.map((seatNode) => {
+    const { id } = seatNode;
 
-  //     initial.push(...selectedIds);
-
-  //     return initial;
-  //   }, []);
-
-  //   localStorage.setItem(STORED_SEATS_KEY, JSON.stringify(selectedSeats));
-  // }, []);
-
-  const seatNodes = seats.map((seat) => {
-    const rows = [];
-
-    for (let i = 0; i < seat.length; i++) {
-      const { id, isSelected } = seat[i];
-
-      rows.push(<Seat key={id} {...seat[i]} onClick={() => onClick?.({ ...seat[i], isSelected: !isSelected })} />);
-    }
-
-    return (
-      <div key={rowKey++} className={styles.seatsRow}>
-        {rows}
-      </div>
-    );
+    return <Seat key={id} {...seatNode} onClick={() => onClick?.(id)} />;
   });
 
-  return <div className={styles.seats}>{seatNodes}</div>;
+  return (
+    <div className={styles.canvas} style={{ width: canvasWidth, height: canvasHeight }}>
+      {seatNodes}
+    </div>
+  );
 };

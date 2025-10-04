@@ -1,106 +1,118 @@
 import type { StateCreator } from 'zustand';
-import { STATIC_SEAT_TYPES, STATIC_SEATS } from '@/client/lib/utils/mocks';
-import type { SeatData, SeatType, SelectedSeat } from '../../types/OrderData';
+import { CANVAS_SIZE, SEATS, STATIC_SEAT_TYPES } from '@/client/lib/utils/mocks';
+import { DEFAULT_TICKET_TYPE_ID, SeatStateMap } from '../../constants/common';
+import type { Canvas, CartItem, SeatData, SeatType } from '../../types/OrderPageData';
 
-// TODO Move to flat seats data-structure
 type OrderSliceState = {
-  seats: SeatData[][];
+  seats: SeatData[];
   seatTypes: SeatType[];
-  totalPrice: number;
-  selectedSeats: SelectedSeat[];
+  canvas: Canvas;
+  cart: CartItem[];
+  cartTotalPrice: number;
 };
 
 type OrderSliceActions = {
-  setIsSelected: (payload: SeatData) => void;
-  calculateTotalPrice: () => void;
-  updateSelectedSeats: (payload: SeatData) => void;
-  updateSelectedSeatPrice: (payload: SelectedSeat) => void;
+  setIsSelected: (id: number) => void;
+  updateCart: () => void;
+  updateCartTotalPrice: () => void;
+  updateCartTicketType: (payload: CartItem) => void;
 };
 
 export type OrderSlice = OrderSliceState & OrderSliceActions;
 
 export const createOrderSlice: StateCreator<OrderSlice> = (set) => ({
-  seats: STATIC_SEATS,
+  canvas: CANVAS_SIZE,
+  seats: SEATS,
   seatTypes: STATIC_SEAT_TYPES,
-  totalPrice: 0,
-  selectedSeats: [],
+  cartTotalPrice: 0,
+  cart: [],
 
-  setIsSelected: ({ isSelected, id }: SeatData) =>
+  setIsSelected: (id) =>
     set(({ seats }) => {
-      const nextSeats = seats.map((seatRows) => {
-        const targetSeatIndex = seatRows.findIndex((seat) => seat.id === id);
+      const nextSeats = seats.map((seat) => {
+        if (seat.id === id) {
+          const isSelected = seat.state === SeatStateMap.SELECTED;
+          const nextState = isSelected ? SeatStateMap.FREE : SeatStateMap.SELECTED;
 
-        if (targetSeatIndex !== -1) {
-          const targetSeat = seatRows[targetSeatIndex];
-          const newSeat = { ...targetSeat, isSelected };
-
-          return [...seatRows.slice(0, targetSeatIndex), newSeat, ...seatRows.slice(targetSeatIndex + 1)];
+          return {
+            ...seat,
+            state: nextState,
+          };
         }
 
-        return seatRows;
+        return seat;
       });
-
 
       return {
         seats: nextSeats,
       };
     }),
 
-  updateSelectedSeats: (payload: SeatData) =>
-    set(({ selectedSeats, seatTypes }) => {
-      const currentSelectedSeatIndex = selectedSeats.findIndex((selectedSeat) => selectedSeat.id === payload.id);
-      const currentSeatType = seatTypes.find((seatType) => seatType.name === payload.type);
-      let nextSelectedSeats = selectedSeats;
+  updateCart: () =>
+    set(({ seats, seatTypes }) => {
+      const selectedSeats = seats.filter((seat) => seat.state === SeatStateMap.SELECTED);
+      const nextCartItems = selectedSeats
+        .map((seat) => {
+          const { id, row, place, type } = seat;
+          const seatType = seatTypes.find((seatType) => seatType.id === type);
 
-      if (currentSeatType) {
-        if (currentSelectedSeatIndex === -1) {
-          const [defaultTicketType] = currentSeatType.ticketTypes;
+          if (seatType) {
+            const [defaultTicketType] = seatType.ticketTypes;
+            const { price } = defaultTicketType;
 
-          nextSelectedSeats = [...nextSelectedSeats, {
-            ...payload,
-            price: defaultTicketType.price,
-            seatType: currentSeatType,
-            ticketTypeId: 1,
-          }];
-        } else {
-          nextSelectedSeats = nextSelectedSeats.filter((_, index) => index !== currentSelectedSeatIndex);
-        }
-      }
+            return {
+              id,
+              place,
+              row,
+              type,
+              seatType,
+              ticketTypeId: DEFAULT_TICKET_TYPE_ID,
+              price,
+            };
+          }
+        })
+        .filter((cartItem) => cartItem !== undefined);
 
-      return { selectedSeats: nextSelectedSeats };
+      return {
+        cart: nextCartItems,
+      };
     }),
 
-  updateSelectedSeatPrice: (payload: SelectedSeat) => set(({ selectedSeats }) => {
-    const currentSelectedSeatIndex = selectedSeats.findIndex((selectedSeat) => selectedSeat.id === payload.id);
-    let nextSelectedSeats = selectedSeats;
+  updateCartTicketType: ({ id, ticketTypeId }: CartItem) =>
+    set(({ cart, seatTypes }) => {
+      const nextCartItems = cart.map((cartItem) => {
+        if (cartItem.id === id) {
+          const seatType = seatTypes.find((seatType) => seatType.id === cartItem.type);
 
-    if (currentSelectedSeatIndex !== -1) {
-      const { seatType: { ticketTypes } } = payload;
-      const currentTicketType = ticketTypes.find((ticketType) => ticketType.id === payload.ticketTypeId);
+          if (seatType) {
+            const { price, id } = seatType.ticketTypes.find((ticketType) => ticketType.id === ticketTypeId)!;
 
-      if (currentTicketType) {
-        const newSelectedSeat = {
-          ...payload,
-          price: currentTicketType.price,
-        };
+            return {
+              ...cartItem,
+              ticketTypeId: id,
+              price,
+            };
+          }
 
-        nextSelectedSeats = [...nextSelectedSeats.slice(0, currentSelectedSeatIndex), newSelectedSeat, ...nextSelectedSeats.slice(currentSelectedSeatIndex + 1)];
-      }
-    }
+          return cartItem;
+        }
 
-    return { selectedSeats: nextSelectedSeats };
-  }),
+        return cartItem;
+      });
 
-  calculateTotalPrice: () =>
-    set(({ selectedSeats }) => {
-      const nextTotalPrice = selectedSeats.reduce((initial, current) => {
+      return { cart: nextCartItems };
+    }),
+
+  updateCartTotalPrice: () =>
+    set(({ cart }) => {
+      const nextCartTotalPrice = cart.reduce((initial, current) => {
         initial += current.price;
 
         return initial;
       }, 0);
 
       return {
-        totalPrice: nextTotalPrice,
+        cartTotalPrice: nextCartTotalPrice,
       };
     }),
 });

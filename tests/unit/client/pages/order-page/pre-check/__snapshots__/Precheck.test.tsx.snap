@@ -2,7 +2,9 @@
 
 exports[`PreCheck > should correspond default layout 1`] = `<div />`;
 
-exports[`PreCheck > should support the "selectedSeats" prop 1`] = `
+exports[`PreCheck > should support the "cart" prop 1`] = `<div />`;
+
+exports[`PreCheck > should support the "cart" prop 2`] = `
 <div>
   <section
     class="_preCheck_682d14"
@@ -19,11 +21,13 @@ exports[`PreCheck > should support the "selectedSeats" prop 1`] = `
         class="_preCheckItem_682d14"
       >
         <p>
-          Place: 
           1
+           row, 
+          1
+           place
         </p>
         <p>
-          vip
+          regular
         </p>
         <div
           class="_preCheckItemControls_682d14"

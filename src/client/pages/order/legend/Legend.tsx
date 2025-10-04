@@ -1,4 +1,5 @@
-import type { SeatType } from '@/client/lib/types/OrderData';
+import { SeatStateMap } from '@/client/lib/constants/common';
+import type { SeatType } from '@/client/lib/types/OrderPageData';
 import { Seat } from '../seats/seat/Seat';
 import styles from './styles.module.css';
 
@@ -14,7 +15,7 @@ export const Legend = (props: LegendProps) => {
     const [defaultTicketType] = ticketTypes;
 
     return <li className={styles.legendItem} key={id}>
-      <Seat className={styles.legendItemSeat} type={name} />
+      <Seat className={styles.legendItemSeat} type={id} />
       <div className={styles.legendItemWrap}>
         <small className={styles.legendItemName}>{name}</small>
         <small className={styles.legendItemPrice}>{defaultTicketType.price} RUB</small>
@@ -26,15 +27,15 @@ export const Legend = (props: LegendProps) => {
     <ul className={styles.legend}>
       {seatTypeNodes}
       <li className={styles.legendItem}>
-        <Seat className={styles.legendItemSeat} isDisabled />
+        <Seat className={styles.legendItemSeat} state={SeatStateMap.FREE} />
         <small className={styles.legendItemName}>N/A</small>
       </li>
       <li className={styles.legendItem}>
-        <Seat className={styles.legendItemSeat} isDisabled isSelected />
+        <Seat className={styles.legendItemSeat} state={SeatStateMap.SELECTED} />
         <small className={styles.legendItemName}>Selected</small>
       </li>
       <li className={styles.legendItem}>
-        <Seat className={styles.legendItemSeat} isOccupied />
+        <Seat className={styles.legendItemSeat} state={SeatStateMap.OCCUPIED} />
         <small className={styles.legendItemName}>Occupied</small>
       </li>
     </ul>

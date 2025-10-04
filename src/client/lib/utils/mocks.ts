@@ -1,37 +1,12 @@
-import type { SeatData, SeatType, SeatTypeName } from '@/client/lib/types/OrderData';
+import type { SeatType } from '@/client/lib/types/OrderPageData';
+import { HALL_PLAN_MATRIX, SEAT_HEIGHT, SEAT_OFFSET, SEAT_WIDTH } from '@/client/lib/utils/mocks/constants';
+import { Hall } from '@/client/lib/utils/mocks/Hall';
+import { SeatNode } from '@/client/lib/utils/mocks/SeatNode';
 
-export const getRandomInteger = (min: number, max: number): number => Math.floor(Math.random() * (max - min + 1)) + min;
-
-const MOCK_SEAT_TYPES: SeatTypeName[] = ['vip', 'regular', 'comfort'];
-const MOCK_SEAT_TYPE_IDS = [342, 2542, 3422];
-
-export const generateMockSeatData = (rowCount = 5, seatCount = 20): SeatData[][] => {
-  const rows = [];
-  let id = 0;
-  let seatNumber = 1;
-
-  for (let i = 0; i < rowCount; i++) {
-    rows.push(
-      Array.from({ length: seatCount }, () => ({
-        id: `${id++}`,
-        isSelected: false,
-        isOccupied: false,
-        place: seatNumber++,
-        type: MOCK_SEAT_TYPES[getRandomInteger(0, MOCK_SEAT_TYPES.length - 1)],
-        typeId: MOCK_SEAT_TYPE_IDS[getRandomInteger(0, MOCK_SEAT_TYPE_IDS.length - 1)],
-      })),
-    );
-  }
-
-  return rows;
-};
-
-export const STATIC_SEATS = generateMockSeatData(5, 10);
-
-export const generateMockSeatTypes = (): SeatType[] => {
+export const getMockSeatTypes = (): SeatType[] => {
   return [
     {
-      id: 342,
+      id: 1,
       name: 'regular',
       ticketTypes: [
         {
@@ -47,7 +22,7 @@ export const generateMockSeatTypes = (): SeatType[] => {
       ],
     },
     {
-      id: 2542,
+      id: 2,
       name: 'comfort',
       ticketTypes: [
         {
@@ -63,7 +38,7 @@ export const generateMockSeatTypes = (): SeatType[] => {
       ],
     },
     {
-      id: 3422,
+      id: 3,
       name: 'vip',
       ticketTypes: [
         {
@@ -78,7 +53,34 @@ export const generateMockSeatTypes = (): SeatType[] => {
         },
       ],
     },
+    {
+      id: 4,
+      name: 'wheelchair',
+      ticketTypes: [
+        {
+          id: 1,
+          name: 'adult',
+          price: 230,
+        },
+        {
+          id: 2,
+          name: 'child',
+          price: 65,
+        },
+      ],
+    },
   ];
 };
 
-export const STATIC_SEAT_TYPES = generateMockSeatTypes();
+export const STATIC_SEAT_TYPES = getMockSeatTypes();
+
+const hall = new Hall({
+  Seat: SeatNode,
+  hallPlanMatrix: HALL_PLAN_MATRIX,
+  seatWidth: SEAT_WIDTH,
+  seatHeight: SEAT_HEIGHT,
+  seatOffset: SEAT_OFFSET,
+});
+
+export const SEATS = hall.createSeats();
+export const CANVAS_SIZE = hall.getCanvasSize();
