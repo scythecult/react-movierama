@@ -1,4 +1,4 @@
-import { OrderPageController } from '@/client/pages/order/OrderPageController';
+import { OrderPageController } from '@/client/pages/order-page/OrderPageController';
 
 export const App = () => {
   return (

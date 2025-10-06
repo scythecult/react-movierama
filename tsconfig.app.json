@@ -34,5 +34,5 @@
     "alwaysStrict": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "tests"]
+  "include": ["src", "src/tests"]
 }

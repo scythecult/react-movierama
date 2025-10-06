@@ -27,3 +27,5 @@ dist-ssr
 # Other
 
 .todo.md
+*storybook.log
+storybook-static

@@ -1,0 +1,64 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PreCheck > should correspond default layout 1`] = `<div />`;
+
+exports[`PreCheck > should support the "cart" prop 1`] = `<div />`;
+
+exports[`PreCheck > should support the "cart" prop 2`] = `
+<div>
+  <section
+    class="_preCheck_9484b4"
+  >
+    <h2
+      class="_preCheckTitle_9484b4"
+    >
+      Chosen places
+    </h2>
+    <ul
+      class="_preCheckList_9484b4"
+    >
+      <li
+        class="_preCheckItem_9484b4"
+      >
+        <p>
+          1
+           row, 
+          1
+           place
+        </p>
+        <p>
+          regular
+        </p>
+        <div
+          class="_preCheckItemControls_9484b4"
+        >
+          <select
+            class="_preCheckItemSelect_9484b4"
+            name="ticket-type"
+          >
+            <option
+              value="1"
+            >
+              student
+            </option>
+            <option
+              value="2"
+            >
+              adult
+            </option>
+          </select>
+          <span>
+            100
+             RUB
+          </span>
+          <button
+            class="_preCheckItemRemoveButton_9484b4 _button_d1d523"
+          >
+            Remove
+          </button>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+`;
