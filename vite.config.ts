@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 /// <reference types="vitest" />
 import react from '@vitejs/plugin-react-swc';
 import { resolve } from 'path';
@@ -20,11 +21,12 @@ export default defineConfig({
     globals: true,
     css: false,
     environment: 'happy-dom',
-    testTimeout: 30 * 1000, // 30 seconds.
+    // 30 seconds.
+    testTimeout: 30 * 1000,
     clearMocks: true,
     // fileParallelism: false,
-    include: ['tests/unit/**/*.test.ts(x)?'],
-    setupFiles: 'tests/unit/utils/globalSetup.ts',
+    include: ['src/**/*.test.ts(x)?'],
+    setupFiles: 'src/tests/globalSetup.ts',
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],

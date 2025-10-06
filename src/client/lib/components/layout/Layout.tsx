@@ -3,7 +3,7 @@ import type { PropsWithChildren } from 'react';
 import type { PropsWithClassName } from '../../types/PropsWithClassName';
 import styles from './styles.module.css';
 
-type LayoutProps = PropsWithChildren<PropsWithClassName>;
+export type LayoutProps = PropsWithChildren<PropsWithClassName>;
 
 export const Layout = (props: LayoutProps) => {
   const { className, children } = props;
