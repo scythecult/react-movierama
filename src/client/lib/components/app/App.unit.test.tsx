@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { App } from '@/client/lib/components/app/App';
-import { AppStoreProvider } from '@/client/lib/providers/AppStoreProvider';
+import { AppStoreProvider } from '@/client/lib/contexts/app-store/AppStoreProvider';
 
 const buildWrappedComponent = () => (
   <AppStoreProvider>

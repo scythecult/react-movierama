@@ -8,51 +8,69 @@ exports[`PreCheck > should support the "cart" prop 2`] = `
 <div>
   <section
     class="_preCheck_9484b4"
+    data-test-id="pre-check"
   >
     <h2
       class="_preCheckTitle_9484b4"
+      data-test-id="pre-check-title"
     >
       Chosen places
     </h2>
     <ul
       class="_preCheckList_9484b4"
+      data-test-id="pre-check-list"
     >
       <li
         class="_preCheckItem_9484b4"
+        data-test-id="pre-check-item"
       >
-        <p>
+        <p
+          data-test-id="pre-check-item-place"
+        >
           1
            row, 
           1
            place
         </p>
-        <p>
+        <p
+          data-test-id="pre-check-item-seat-type"
+        >
           regular
         </p>
         <div
           class="_preCheckItemControls_9484b4"
+          data-test-id="pre-check-item-controls"
         >
           <select
             class="_preCheckItemSelect_9484b4"
+            data-test-id="pre-check-item-select"
+            data-test-value="1"
             name="ticket-type"
           >
             <option
+              data-test-id="pre-check-item-select-option"
+              data-test-value="adult"
               value="1"
-            >
-              student
-            </option>
-            <option
-              value="2"
             >
               adult
             </option>
+            <option
+              data-test-id="pre-check-item-select-option"
+              data-test-value="child"
+              value="2"
+            >
+              child
+            </option>
           </select>
-          <span>
+          <span
+            data-test-id="pre-check-item-price"
+          >
             100
              RUB
           </span>
           <button
             class="_preCheckItemRemoveButton_9484b4 _button_d1d523"
+            data-test-id="pre-check-remove-button"
           >
             Remove
           </button>

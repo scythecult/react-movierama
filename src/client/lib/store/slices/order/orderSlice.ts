@@ -1,17 +1,22 @@
 import type { StateCreator } from 'zustand';
 import { CANVAS_SIZE, SEATS, STATIC_SEAT_TYPES } from '@/client/lib/utils/mocks';
-import { DEFAULT_TICKET_TYPE_ID, SeatStateMap } from '../../constants/common';
-import type { Canvas, CartItem, SeatData, SeatType } from '../../types/OrderPageData';
+import { DEFAULT_TICKET_TYPE_ID, SeatStateMap } from '../../../constants/common';
+import type { Canvas, CartItem, SeatData, SeatType } from '../../../types/OrderPageData';
 
 type OrderSliceState = {
-  seats: SeatData[];
-  seatTypes: SeatType[];
-  canvas: Canvas;
+  seats: SeatData[] | [];
+  seatTypes: SeatType[] | [];
+  canvas: Canvas | object;
+
   cart: CartItem[];
   cartTotalPrice: number;
 };
 
 type OrderSliceActions = {
+  setSeats: (seats: SeatData[]) => void;
+  setSeatTypes: (seatTypes: SeatType[]) => void;
+  setCanvas: (canvas: Canvas) => void;
+
   setIsSelected: (id: number) => void;
   updateCart: () => void;
   updateCartTotalPrice: () => void;
@@ -21,11 +26,21 @@ type OrderSliceActions = {
 export type OrderSlice = OrderSliceState & OrderSliceActions;
 
 export const createOrderSlice: StateCreator<OrderSlice> = (set) => ({
-  canvas: CANVAS_SIZE,
   seats: SEATS,
   seatTypes: STATIC_SEAT_TYPES,
-  cartTotalPrice: 0,
+  canvas: CANVAS_SIZE,
+
   cart: [],
+  cartTotalPrice: 0,
+
+  setSeats: (seats: SeatData[]) =>
+    set(() => ({
+      seats,
+    })),
+
+  setSeatTypes: (seatTypes: SeatType[]) => set(() => ({ seatTypes })),
+
+  setCanvas: (canvas: Canvas) => set(() => ({ canvas })),
 
   setIsSelected: (id) =>
     set(({ seats }) => {

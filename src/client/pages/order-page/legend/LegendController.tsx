@@ -1,4 +1,4 @@
-import { useAppStore } from '@/client/lib/hooks/useAppStore';
+import { useAppStore } from '@/client/lib/contexts/app-store/useAppStore';
 import { Legend } from './Legend';
 
 export const LegendController = () => {

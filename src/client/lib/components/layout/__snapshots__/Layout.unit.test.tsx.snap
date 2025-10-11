@@ -4,6 +4,7 @@ exports[`Layout > should correspond default layout 1`] = `
 <div>
   <div
     class="_layout_762df9"
+    data-test-id="layout"
   />
 </div>
 `;
@@ -12,6 +13,7 @@ exports[`Layout > should support the "children" prop 1`] = `
 <div>
   <div
     class="_layout_762df9"
+    data-test-id="layout"
   >
     Children
   </div>
@@ -22,6 +24,7 @@ exports[`Layout > should support the "className" prop 1`] = `
 <div>
   <div
     class="_layout_762df9 custom-class"
+    data-test-id="layout"
   >
     Children
   </div>

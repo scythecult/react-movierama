@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { describe } from 'vitest';
-import { AppStoreProvider } from '@/client/lib/providers/AppStoreProvider';
-import { CART_ITEMS } from '../../../../tests/constants';
+import { AppStoreProvider } from '@/client/lib/contexts/app-store/AppStoreProvider';
+import { TEST_CART_ITEMS } from '../../../../tests/constants';
 import { PreCheck, type PreCheckProps } from './PreCheck';
 
 const DEFAULT_PROPS: PreCheckProps = {
@@ -28,7 +28,7 @@ describe('PreCheck', () => {
 
     expect(result.container).toMatchSnapshot();
 
-    result = render(buildWrappedComponent({ ...DEFAULT_PROPS, cart: CART_ITEMS }));
+    result = render(buildWrappedComponent({ ...DEFAULT_PROPS, cart: TEST_CART_ITEMS }));
 
     expect(result.container).toMatchSnapshot();
   });

@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { useStore } from 'zustand';
-import { AppStoreContext } from '../contexts/AppStoreContext';
-import type { AppStore } from '../store/appStore';
+import type { AppStore } from '../../store/appStore';
+import { AppStoreContext } from './AppStoreContext';
 
 // TODO Rename generic name
 export const useAppStore = <T,>(selector: (state: AppStore) => T): T => {

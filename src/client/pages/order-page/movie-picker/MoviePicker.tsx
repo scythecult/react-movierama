@@ -21,7 +21,7 @@ export const MoviePicker = () => {
   };
 
   return (
-    <div className={styles.moviePicker}>
+    <div className={styles.moviePicker} data-test-id="movie-picker">
       <label htmlFor="movie">Pick a&nbsp;movie:</label>
       <select id="movie" value={selectedMovie} onChange={handleChange}>
         {movies.map((movie) => {

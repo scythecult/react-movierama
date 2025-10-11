@@ -25,7 +25,7 @@ export default defineConfig({
     testTimeout: 30 * 1000,
     clearMocks: true,
     // fileParallelism: false,
-    include: ['src/**/*.test.ts(x)?'],
+    include: ['src/**/*.unit.test.ts(x)?'],
     setupFiles: 'src/tests/globalSetup.ts',
     coverage: {
       provider: 'v8',

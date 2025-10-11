@@ -1,6 +1,9 @@
 import type { CartItem, TicketType } from '@/client/lib/types/OrderPageData';
+import { STATIC_SEAT_TYPES } from '@/client/lib/utils/mocks';
 
-export const TICKET_TYPES: TicketType[] = [
+export const TEST_SEAT_ID = 532;
+
+export const TEST_TICKET_TYPES: TicketType[] = [
   {
     id: 1,
     name: 'student',
@@ -13,14 +16,14 @@ export const TICKET_TYPES: TicketType[] = [
   },
 ];
 
-export const CART_ITEMS: CartItem[] = [
+export const TEST_CART_ITEMS: CartItem[] = [
   {
-    id: 1,
+    id: TEST_SEAT_ID,
     place: 1,
     type: 1,
     row: 1,
-    seatType: { id: 1, name: 'vip', ticketTypes: TICKET_TYPES },
-    price: 100,
+    seatType: STATIC_SEAT_TYPES[0],
     ticketTypeId: 1,
+    price: 100,
   },
 ];

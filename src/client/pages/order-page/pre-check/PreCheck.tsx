@@ -23,13 +23,13 @@ export const PreCheck = (props: PreCheckProps) => {
     const seatTypeName = SEAT_TYPE[type];
 
     return (
-      <li className={styles.preCheckItem} key={id}>
-        <p>
+      <li className={styles.preCheckItem} key={id} data-test-id="pre-check-item">
+        <p data-test-id="pre-check-item-place">
           {row} row, {place} place
         </p>
-        <p>{seatTypeName}</p>
+        <p data-test-id="pre-check-item-seat-type">{seatTypeName}</p>
 
-        <div className={styles.preCheckItemControls}>
+        <div className={styles.preCheckItemControls} data-test-id="pre-check-item-controls">
           <select
             className={styles.preCheckItemSelect}
             name="ticket-type"
@@ -39,19 +39,25 @@ export const PreCheck = (props: PreCheckProps) => {
 
               onTicketTypeChange({ ...cartItem, ticketTypeId });
             }}
+            data-test-id="pre-check-item-select"
+            data-test-value={ticketTypeId}
           >
             {ticketTypes.map((ticketType) => {
               const { id, name } = ticketType;
 
               return (
-                <option key={id} value={id}>
+                <option key={id} value={id} data-test-id="pre-check-item-select-option" data-test-value={name}>
                   {name}
                 </option>
               );
             })}
           </select>
-          <span>{price} RUB</span>
-          <Button className={styles.preCheckItemRemoveButton} onClick={() => onRemoveSeatClick(id)}>
+          <span data-test-id="pre-check-item-price">{price} RUB</span>
+          <Button
+            className={styles.preCheckItemRemoveButton}
+            onClick={() => onRemoveSeatClick(id)}
+            data-test-id="pre-check-remove-button"
+          >
             Remove
           </Button>
         </div>
@@ -60,9 +66,13 @@ export const PreCheck = (props: PreCheckProps) => {
   });
 
   return (
-    <section className={styles.preCheck}>
-      <h2 className={styles.preCheckTitle}>Chosen places</h2>
-      <ul className={styles.preCheckList}>{selectedSeatNodes}</ul>
+    <section className={styles.preCheck} data-test-id="pre-check">
+      <h2 className={styles.preCheckTitle} data-test-id="pre-check-title">
+        Chosen places
+      </h2>
+      <ul className={styles.preCheckList} data-test-id="pre-check-list">
+        {selectedSeatNodes}
+      </ul>
     </section>
   );
 };

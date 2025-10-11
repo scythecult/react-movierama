@@ -4,9 +4,11 @@ exports[`Hall > should correspond default layout 1`] = `
 <div>
   <div
     class="_hall_23b2aa"
+    data-test-id="hall"
   >
     <div
       class="_hallScreen_23b2aa"
+      data-test-id="hall-screen"
     />
   </div>
 </div>
@@ -16,9 +18,11 @@ exports[`Hall > should support the "children" prop 1`] = `
 <div>
   <div
     class="_hall_23b2aa"
+    data-test-id="hall"
   >
     <div
       class="_hallScreen_23b2aa"
+      data-test-id="hall-screen"
     />
     Children
   </div>

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { AppStoreProvider } from '@/client/lib/providers/AppStoreProvider';
+import { AppStoreProvider } from '@/client/lib/contexts/app-store/AppStoreProvider';
 import { OrderPage, type OrderPageProps } from './OrderPage';
 
 const DEFAULT_PROPS: OrderPageProps = {

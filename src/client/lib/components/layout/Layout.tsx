@@ -9,5 +9,9 @@ export const Layout = (props: LayoutProps) => {
   const { className, children } = props;
   const classNameFinal = clsx(styles.layout, className);
 
-  return <div className={classNameFinal}>{children}</div>;
+  return (
+    <div className={classNameFinal} data-test-id="layout">
+      {children}
+    </div>
+  );
 };
