@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
-import { AppStoreProvider } from '@/client/lib/providers/AppStoreProvider';
+import { AppStoreProvider } from '@/client/lib/contexts/app-store/AppStoreProvider';
 import { OrderPage, type OrderPageProps } from './OrderPage';
 
 export default {

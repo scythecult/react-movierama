@@ -4,32 +4,42 @@ exports[`OrderPage > should correspond default layout 1`] = `
 <div>
   <main
     class="_order_638992"
+    data-test-id="order-page"
   >
     <div
       class="_layout_762df9 _orderLayout_638992"
+      data-test-id="layout"
     >
       <div
         class="_hall_23b2aa"
+        data-test-id="hall"
       >
         <div
           class="_hallScreen_23b2aa"
+          data-test-id="hall-screen"
         />
         <div
           class="_canvas_8ed2c1"
+          data-test-id="seats-container"
           style="width: 640px; height: 166px;"
         >
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -43,16 +53,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -66,16 +81,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -89,16 +109,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -112,16 +137,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -135,16 +165,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -158,16 +193,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -181,16 +221,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 450px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               10
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -204,16 +249,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 500px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               11
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -227,16 +277,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 550px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               12
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -250,16 +305,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 600px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               13
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -273,16 +333,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -296,16 +361,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -319,16 +389,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -342,16 +417,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -365,16 +445,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -388,16 +473,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -411,16 +501,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -434,16 +529,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -457,16 +557,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -480,16 +585,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -503,16 +613,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -526,16 +641,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -549,16 +669,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -572,16 +697,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -595,16 +725,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -618,16 +753,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -641,16 +781,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -664,16 +809,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -687,16 +837,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -710,16 +865,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -733,16 +893,21 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -758,19 +923,26 @@ exports[`OrderPage > should correspond default layout 1`] = `
       </div>
       <ul
         class="_legend_8dc83b"
+        data-test-id="legend"
       >
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -784,14 +956,17 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               regular
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               330
                RUB
@@ -800,16 +975,22 @@ exports[`OrderPage > should correspond default layout 1`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -823,14 +1004,17 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               comfort
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               380
                RUB
@@ -839,16 +1023,22 @@ exports[`OrderPage > should correspond default layout 1`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -862,14 +1052,17 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               vip
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               430
                RUB
@@ -878,16 +1071,22 @@ exports[`OrderPage > should correspond default layout 1`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -901,14 +1100,17 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               wheelchair
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               230
                RUB
@@ -917,16 +1119,22 @@ exports[`OrderPage > should correspond default layout 1`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -940,22 +1148,29 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             N/A
           </small>
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _selected_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="true"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -969,23 +1184,30 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             Selected
           </small>
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _occupied_35b3f7"
+            data-test-disabled="true"
+            data-test-id="seat"
+            data-test-selected="false"
             disabled=""
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -999,6 +1221,7 @@ exports[`OrderPage > should correspond default layout 1`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             Occupied
           </small>
@@ -1006,9 +1229,11 @@ exports[`OrderPage > should correspond default layout 1`] = `
       </ul>
       <div
         class="_orderFooter_638992"
+        data-test-id="order-footer"
       >
         <button
           class="_button_d1d523"
+          data-test-id="payment-button"
           disabled=""
         >
           Select seats
@@ -1023,32 +1248,42 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
 <div>
   <main
     class="_order_638992"
+    data-test-id="order-page"
   >
     <div
       class="_layout_762df9 _orderLayout_638992"
+      data-test-id="layout"
     >
       <div
         class="_hall_23b2aa"
+        data-test-id="hall"
       >
         <div
           class="_hallScreen_23b2aa"
+          data-test-id="hall-screen"
         />
         <div
           class="_canvas_8ed2c1"
+          data-test-id="seats-container"
           style="width: 640px; height: 166px;"
         >
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1062,16 +1297,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1085,16 +1325,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1108,16 +1353,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1131,16 +1381,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1154,16 +1409,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1177,16 +1437,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1200,16 +1465,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 450px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               10
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1223,16 +1493,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 500px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               11
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1246,16 +1521,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 550px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               12
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1269,16 +1549,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 600px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               13
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1292,16 +1577,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1315,16 +1605,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1338,16 +1633,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1361,16 +1661,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1384,16 +1689,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1407,16 +1717,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1430,16 +1745,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1453,16 +1773,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1476,16 +1801,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1499,16 +1829,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1522,16 +1857,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1545,16 +1885,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1568,16 +1913,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1591,16 +1941,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1614,16 +1969,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1637,16 +1997,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1660,16 +2025,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1683,16 +2053,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1706,16 +2081,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1729,16 +2109,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1752,16 +2137,21 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1777,19 +2167,26 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
       </div>
       <ul
         class="_legend_8dc83b"
+        data-test-id="legend"
       >
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1803,14 +2200,17 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               regular
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               330
                RUB
@@ -1819,16 +2219,22 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1842,14 +2248,17 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               comfort
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               380
                RUB
@@ -1858,16 +2267,22 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1881,14 +2296,17 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               vip
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               430
                RUB
@@ -1897,16 +2315,22 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1920,14 +2344,17 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               wheelchair
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               230
                RUB
@@ -1936,16 +2363,22 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1959,22 +2392,29 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             N/A
           </small>
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _selected_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="true"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -1988,23 +2428,30 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             Selected
           </small>
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _occupied_35b3f7"
+            data-test-disabled="true"
+            data-test-id="seat"
+            data-test-selected="false"
             disabled=""
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2018,6 +2465,7 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             Occupied
           </small>
@@ -2025,9 +2473,11 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
       </ul>
       <div
         class="_orderFooter_638992"
+        data-test-id="order-footer"
       >
         <button
           class="_button_d1d523"
+          data-test-id="payment-button"
         >
           Proceed to payment: 10 RUB
         </button>
@@ -2041,32 +2491,42 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
 <div>
   <main
     class="_order_638992"
+    data-test-id="order-page"
   >
     <div
       class="_layout_762df9 _orderLayout_638992"
+      data-test-id="layout"
     >
       <div
         class="_hall_23b2aa"
+        data-test-id="hall"
       >
         <div
           class="_hallScreen_23b2aa"
+          data-test-id="hall-screen"
         />
         <div
           class="_canvas_8ed2c1"
+          data-test-id="seats-container"
           style="width: 640px; height: 166px;"
         >
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2080,16 +2540,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2103,16 +2568,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2126,16 +2596,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2149,16 +2624,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2172,16 +2652,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2195,16 +2680,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2218,16 +2708,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 450px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               10
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2241,16 +2736,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 500px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               11
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2264,16 +2764,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 550px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               12
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2287,16 +2792,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 600px; top: 0px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               13
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2310,16 +2820,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2333,16 +2848,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2356,16 +2876,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2379,16 +2904,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2402,16 +2932,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2425,16 +2960,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2448,16 +2988,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 44px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2471,16 +3016,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2494,16 +3044,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2517,16 +3072,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2540,16 +3100,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2563,16 +3128,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2586,16 +3156,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2609,16 +3184,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 88px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2632,16 +3212,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 0px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               1
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2655,16 +3240,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 50px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               2
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2678,16 +3268,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 150px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               4
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2701,16 +3296,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 200px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               5
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2724,16 +3324,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 250px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               6
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2747,16 +3352,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 300px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               7
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2770,16 +3380,21 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <button
             class="_seat_35b3f7 _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             style="left: 400px; top: 132px; width: 40px; height: 34px;"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             >
               9
             </span>
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2795,19 +3410,26 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
       </div>
       <ul
         class="_legend_8dc83b"
+        data-test-id="legend"
       >
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2821,14 +3443,17 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               regular
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               330
                RUB
@@ -2837,16 +3462,22 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _comfort_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2860,14 +3491,17 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               comfort
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               380
                RUB
@@ -2876,16 +3510,22 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _vip_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2899,14 +3539,17 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               vip
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               430
                RUB
@@ -2915,16 +3558,22 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _wheelchair_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2938,14 +3587,17 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <div
             class="_legendItemWrap_8dc83b"
+            data-test-id="legend-item-wrap"
           >
             <small
               class="_legendItemName_8dc83b"
+              data-test-id="legend-item-name"
             >
               wheelchair
             </small>
             <small
               class="_legendItemPrice_8dc83b"
+              data-test-id="legend-item-price"
             >
               230
                RUB
@@ -2954,16 +3606,22 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="false"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -2977,22 +3635,29 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             N/A
           </small>
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _selected_35b3f7"
+            data-test-disabled="false"
+            data-test-id="seat"
+            data-test-selected="true"
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -3006,23 +3671,30 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             Selected
           </small>
         </li>
         <li
           class="_legendItem_8dc83b"
+          data-test-id="legend-item"
         >
           <button
             class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _occupied_35b3f7"
+            data-test-disabled="true"
+            data-test-id="seat"
+            data-test-selected="false"
             disabled=""
             type="button"
           >
             <span
               class="_seatPlace_35b3f7"
+              data-test-id="seat-place"
             />
             <svg
               class="_seatIcon_35b3f7"
+              data-test-id="seat-icon"
               fill="currentColor"
               height="20"
               viewBox="0 0 18 20"
@@ -3036,6 +3708,7 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
           </button>
           <small
             class="_legendItemName_8dc83b"
+            data-test-id="legend-item-name"
           >
             Occupied
           </small>
@@ -3043,9 +3716,11 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
       </ul>
       <div
         class="_orderFooter_638992"
+        data-test-id="order-footer"
       >
         <button
           class="_button_d1d523"
+          data-test-id="payment-button"
         >
           Proceed to payment: 5 RUB
         </button>

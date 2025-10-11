@@ -4,19 +4,26 @@ exports[`Legend > should correspond default layout 1`] = `
 <div>
   <ul
     class="_legend_8dc83b"
+    data-test-id="legend"
   >
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+        data-test-disabled="false"
+        data-test-id="seat"
+        data-test-selected="false"
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -30,22 +37,29 @@ exports[`Legend > should correspond default layout 1`] = `
       </button>
       <small
         class="_legendItemName_8dc83b"
+        data-test-id="legend-item-name"
       >
         N/A
       </small>
     </li>
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _selected_35b3f7"
+        data-test-disabled="false"
+        data-test-id="seat"
+        data-test-selected="true"
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -59,23 +73,30 @@ exports[`Legend > should correspond default layout 1`] = `
       </button>
       <small
         class="_legendItemName_8dc83b"
+        data-test-id="legend-item-name"
       >
         Selected
       </small>
     </li>
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _occupied_35b3f7"
+        data-test-disabled="true"
+        data-test-id="seat"
+        data-test-selected="false"
         disabled=""
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -89,6 +110,7 @@ exports[`Legend > should correspond default layout 1`] = `
       </button>
       <small
         class="_legendItemName_8dc83b"
+        data-test-id="legend-item-name"
       >
         Occupied
       </small>
@@ -101,19 +123,26 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
 <div>
   <ul
     class="_legend_8dc83b"
+    data-test-id="legend"
   >
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+        data-test-disabled="false"
+        data-test-id="seat"
+        data-test-selected="false"
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -127,14 +156,17 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
       </button>
       <div
         class="_legendItemWrap_8dc83b"
+        data-test-id="legend-item-wrap"
       >
         <small
           class="_legendItemName_8dc83b"
+          data-test-id="legend-item-name"
         >
           regular
         </small>
         <small
           class="_legendItemPrice_8dc83b"
+          data-test-id="legend-item-price"
         >
           330
            RUB
@@ -143,16 +175,22 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
     </li>
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _comfort_35b3f7 _free_35b3f7"
+        data-test-disabled="false"
+        data-test-id="seat"
+        data-test-selected="false"
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -166,14 +204,17 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
       </button>
       <div
         class="_legendItemWrap_8dc83b"
+        data-test-id="legend-item-wrap"
       >
         <small
           class="_legendItemName_8dc83b"
+          data-test-id="legend-item-name"
         >
           comfort
         </small>
         <small
           class="_legendItemPrice_8dc83b"
+          data-test-id="legend-item-price"
         >
           380
            RUB
@@ -182,16 +223,22 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
     </li>
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _vip_35b3f7 _free_35b3f7"
+        data-test-disabled="false"
+        data-test-id="seat"
+        data-test-selected="false"
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -205,14 +252,17 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
       </button>
       <div
         class="_legendItemWrap_8dc83b"
+        data-test-id="legend-item-wrap"
       >
         <small
           class="_legendItemName_8dc83b"
+          data-test-id="legend-item-name"
         >
           vip
         </small>
         <small
           class="_legendItemPrice_8dc83b"
+          data-test-id="legend-item-price"
         >
           430
            RUB
@@ -221,16 +271,22 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
     </li>
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _wheelchair_35b3f7 _free_35b3f7"
+        data-test-disabled="false"
+        data-test-id="seat"
+        data-test-selected="false"
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -244,14 +300,17 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
       </button>
       <div
         class="_legendItemWrap_8dc83b"
+        data-test-id="legend-item-wrap"
       >
         <small
           class="_legendItemName_8dc83b"
+          data-test-id="legend-item-name"
         >
           wheelchair
         </small>
         <small
           class="_legendItemPrice_8dc83b"
+          data-test-id="legend-item-price"
         >
           230
            RUB
@@ -260,16 +319,22 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
     </li>
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _free_35b3f7"
+        data-test-disabled="false"
+        data-test-id="seat"
+        data-test-selected="false"
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -283,22 +348,29 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
       </button>
       <small
         class="_legendItemName_8dc83b"
+        data-test-id="legend-item-name"
       >
         N/A
       </small>
     </li>
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _selected_35b3f7"
+        data-test-disabled="false"
+        data-test-id="seat"
+        data-test-selected="true"
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -312,23 +384,30 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
       </button>
       <small
         class="_legendItemName_8dc83b"
+        data-test-id="legend-item-name"
       >
         Selected
       </small>
     </li>
     <li
       class="_legendItem_8dc83b"
+      data-test-id="legend-item"
     >
       <button
         class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _occupied_35b3f7"
+        data-test-disabled="true"
+        data-test-id="seat"
+        data-test-selected="false"
         disabled=""
         type="button"
       >
         <span
           class="_seatPlace_35b3f7"
+          data-test-id="seat-place"
         />
         <svg
           class="_seatIcon_35b3f7"
+          data-test-id="seat-icon"
           fill="currentColor"
           height="20"
           viewBox="0 0 18 20"
@@ -342,6 +421,7 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
       </button>
       <small
         class="_legendItemName_8dc83b"
+        data-test-id="legend-item-name"
       >
         Occupied
       </small>

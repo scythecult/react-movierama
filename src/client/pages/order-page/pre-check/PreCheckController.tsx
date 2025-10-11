@@ -1,4 +1,4 @@
-import { useAppStore } from '@/client/lib/hooks/useAppStore';
+import { useAppStore } from '@/client/lib/contexts/app-store/useAppStore';
 import type { CartItem } from '@/client/lib/types/OrderPageData';
 import { PreCheck } from './PreCheck';
 

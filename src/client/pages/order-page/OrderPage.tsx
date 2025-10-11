@@ -16,15 +16,17 @@ export const OrderPage = (props: OrderPageProps) => {
 
   return (
     // TODO Use common "page" component
-    <main className={styles.order}>
+    <main className={styles.order} data-test-id="order-page">
       <Layout className={styles.orderLayout}>
         <Hall>
           <SeatsController />
         </Hall>
         <LegendController />
         <PreCheckController />
-        <div className={styles.orderFooter}>
-          <Button disabled={isPaymentButtonDisabled}>{paymentButtonText}</Button>
+        <div className={styles.orderFooter} data-test-id="order-footer">
+          <Button disabled={isPaymentButtonDisabled} data-test-id="payment-button">
+            {paymentButtonText}
+          </Button>
         </div>
       </Layout>
     </main>

@@ -20,7 +20,7 @@ export const Seats = (props: SeatsProps) => {
   });
 
   return (
-    <div className={styles.canvas} style={{ width: canvasWidth, height: canvasHeight }}>
+    <div className={styles.canvas} style={{ width: canvasWidth, height: canvasHeight }} data-test-id="seats-container">
       {seatNodes}
     </div>
   );

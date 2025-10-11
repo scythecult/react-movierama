@@ -1,6 +1,6 @@
 import { create, type StoreApi, type UseBoundStore } from 'zustand';
-import { createOrderSlice, type OrderSlice } from './slices/seatsSlice';
-import { createUserSlice, type UserSlice } from './slices/userSlice';
+import { createOrderSlice, type OrderSlice } from './slices/order/orderSlice';
+import { createUserSlice, type UserSlice } from './slices/user/userSlice';
 
 export type AppStore = OrderSlice & UserSlice;
 
@@ -14,5 +14,3 @@ export const createAppStore = create<AppStore>()(
     ...createUserSlice(...store),
   }),
 );
-
-createAppStore.getState();
