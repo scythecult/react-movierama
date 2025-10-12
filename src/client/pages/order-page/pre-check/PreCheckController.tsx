@@ -1,23 +1,17 @@
 import { useAppStore } from '@/client/lib/contexts/app-store/useAppStore';
-import type { CartItem } from '@/client/lib/types/OrderPageData';
 import { PreCheck } from './PreCheck';
 
 export const PreCheckController = () => {
   const cart = useAppStore((state) => state.cart);
-  const updateCart = useAppStore((state) => state.updateCart);
+  const removeFromCart = useAppStore((state) => state.removeFromCart);
   const updateCartTicketType = useAppStore((state) => state.updateCartTicketType);
-  const updateCartTotalPrice = useAppStore((state) => state.updateCartTotalPrice);
-  const setIsSelected = useAppStore((state) => state.setIsSelected);
 
-  const handleTicketTypeChange = (payload: CartItem) => {
-    updateCartTicketType(payload);
-    updateCartTotalPrice();
+  const handleTicketTypeChange = (seatId: number, ticketTypeId: number) => {
+    updateCartTicketType(seatId, ticketTypeId);
   };
 
-  const handleRemoveSeat = (id: number) => {
-    setIsSelected(id);
-    updateCart();
-    updateCartTotalPrice();
+  const handleRemoveSeat = (seatId: number) => {
+    removeFromCart(seatId);
   };
 
   return <PreCheck cart={cart} onTicketTypeChange={handleTicketTypeChange} onRemoveSeatClick={handleRemoveSeat} />;

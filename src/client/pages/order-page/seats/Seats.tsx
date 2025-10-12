@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 
 export type SeatsProps = {
   seats: SeatData[];
-  onClick?: (id: number) => void;
+  onClick?: (seatId: number) => void;
   canvasWidth: number;
   canvasHeight: number;
 };

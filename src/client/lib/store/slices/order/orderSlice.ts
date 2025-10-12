@@ -1,34 +1,53 @@
-import type { StateCreator } from 'zustand';
-import { CANVAS_SIZE, SEATS, STATIC_SEAT_TYPES } from '@/client/lib/utils/mocks';
-import { DEFAULT_TICKET_TYPE_ID, SeatStateMap } from '../../../constants/common';
-import type { Canvas, CartItem, SeatData, SeatType } from '../../../types/OrderPageData';
+import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH, SeatStateMap } from '../../../constants/common';
+import type { Canvas, SeatData } from '../../../types/OrderPageData';
+import type { WithMiddlewareStateCreator } from '../../appStore';
+
+const toggleSeatStateById = (seats: SeatData[], seatId: number) =>
+  seats.map((seat) => {
+    if (seat.id === seatId) {
+      const isSelected = seat.state === SeatStateMap.SELECTED;
+      const nextState = isSelected ? SeatStateMap.FREE : SeatStateMap.SELECTED;
+
+      return {
+        ...seat,
+        state: nextState,
+      };
+    }
+
+    return seat;
+  });
+
+const calculateCartTotalPrice = (cart: SeatData[]) =>
+  cart.reduce((initial, current) => {
+    initial += current.price;
+
+    return initial;
+  }, 0);
 
 type OrderSliceState = {
   seats: SeatData[] | [];
-  seatTypes: SeatType[] | [];
-  canvas: Canvas | object;
+  canvas: Canvas;
 
-  cart: CartItem[];
+  cart: SeatData[];
   cartTotalPrice: number;
 };
 
 type OrderSliceActions = {
   setSeats: (seats: SeatData[]) => void;
-  setSeatTypes: (seatTypes: SeatType[]) => void;
   setCanvas: (canvas: Canvas) => void;
 
-  setIsSelected: (id: number) => void;
-  updateCart: () => void;
-  updateCartTotalPrice: () => void;
-  updateCartTicketType: (payload: CartItem) => void;
+  addToCart: (seatId: number) => void;
+  removeFromCart: (seatId: number) => void;
+  clearCart: () => void;
+  updateCartTicketType: (seatId: number, ticketTypeId: number) => void;
 };
 
 export type OrderSlice = OrderSliceState & OrderSliceActions;
 
-export const createOrderSlice: StateCreator<OrderSlice> = (set) => ({
-  seats: SEATS,
-  seatTypes: STATIC_SEAT_TYPES,
-  canvas: CANVAS_SIZE,
+export const createOrderSlice: WithMiddlewareStateCreator<OrderSlice> = (set) => ({
+  seats: [],
+  seatTypes: [],
+  canvas: { width: DEFAULT_CANVAS_WIDTH, height: DEFAULT_CANVAS_HEIGHT },
 
   cart: [],
   cartTotalPrice: 0,
@@ -38,95 +57,64 @@ export const createOrderSlice: StateCreator<OrderSlice> = (set) => ({
       seats,
     })),
 
-  setSeatTypes: (seatTypes: SeatType[]) => set(() => ({ seatTypes })),
-
   setCanvas: (canvas: Canvas) => set(() => ({ canvas })),
 
-  setIsSelected: (id) =>
+  addToCart: (seatId) =>
     set(({ seats }) => {
-      const nextSeats = seats.map((seat) => {
-        if (seat.id === id) {
-          const isSelected = seat.state === SeatStateMap.SELECTED;
-          const nextState = isSelected ? SeatStateMap.FREE : SeatStateMap.SELECTED;
-
-          return {
-            ...seat,
-            state: nextState,
-          };
-        }
-
-        return seat;
-      });
+      const nextSeats = toggleSeatStateById(seats, seatId);
+      const nextCart = nextSeats.filter((seat) => seat.state === SeatStateMap.SELECTED);
+      const nextCartTotalPrice = calculateCartTotalPrice(nextCart);
 
       return {
         seats: nextSeats,
+        cart: nextCart,
+        cartTotalPrice: nextCartTotalPrice,
       };
     }),
 
-  updateCart: () =>
-    set(({ seats, seatTypes }) => {
-      const selectedSeats = seats.filter((seat) => seat.state === SeatStateMap.SELECTED);
-      const nextCartItems = selectedSeats
-        .map((seat) => {
-          const { id, row, place, type } = seat;
-          const seatType = seatTypes.find((seatType) => seatType.id === type);
-
-          if (seatType) {
-            const [defaultTicketType] = seatType.ticketTypes;
-            const { price } = defaultTicketType;
-
-            return {
-              id,
-              place,
-              row,
-              type,
-              seatType,
-              ticketTypeId: DEFAULT_TICKET_TYPE_ID,
-              price,
-            };
-          }
-        })
-        .filter((cartItem) => cartItem !== undefined);
+  removeFromCart: (seatId) =>
+    set(({ seats, cart }) => {
+      const nextSeats = toggleSeatStateById(seats, seatId);
+      const nextCart = cart.filter((cartItem) => cartItem.id !== seatId);
+      const nextCartTotalPrice = calculateCartTotalPrice(nextCart);
 
       return {
-        cart: nextCartItems,
+        seats: nextSeats,
+        cart: nextCart,
+        cartTotalPrice: nextCartTotalPrice,
       };
     }),
 
-  updateCartTicketType: ({ id, ticketTypeId }: CartItem) =>
-    set(({ cart, seatTypes }) => {
-      const nextCartItems = cart.map((cartItem) => {
-        if (cartItem.id === id) {
-          const seatType = seatTypes.find((seatType) => seatType.id === cartItem.type);
+  clearCart: () =>
+    set(({ seats }) => {
+      const nextSeats = seats.map((seat) => ({ ...seat, state: SeatStateMap.FREE }));
 
-          if (seatType) {
-            const { price, id } = seatType.ticketTypes.find((ticketType) => ticketType.id === ticketTypeId)!;
+      return {
+        seats: nextSeats,
+        cart: [],
+        cartTotalPrice: 0,
+      };
+    }),
 
-            return {
-              ...cartItem,
-              ticketTypeId: id,
-              price,
-            };
-          }
+  updateCartTicketType: (seatId, ticketTypeId) =>
+    set(({ cart }) => {
+      const nextCart = cart.map((cartItem) => {
+        if (cartItem.id === seatId) {
+          const { price, id } = cartItem.seatType.ticketTypes.find((ticketType) => ticketType.id === ticketTypeId)!;
 
-          return cartItem;
+          return {
+            ...cartItem,
+            ticketTypeId: id,
+            price,
+          };
         }
 
         return cartItem;
       });
-
-      return { cart: nextCartItems };
-    }),
-
-  updateCartTotalPrice: () =>
-    set(({ cart }) => {
-      const nextCartTotalPrice = cart.reduce((initial, current) => {
-        initial += current.price;
-
-        return initial;
-      }, 0);
+      const nextCartTotalPrice = calculateCartTotalPrice(nextCart);
 
       return {
+        cart: nextCart,
         cartTotalPrice: nextCartTotalPrice,
       };
     }),
