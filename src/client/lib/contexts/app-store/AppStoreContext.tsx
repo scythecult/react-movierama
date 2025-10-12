@@ -1,4 +1,4 @@
 import { createContext } from 'react';
-import type { CreateAppStore } from '../../store/appStore';
+import type { UseAppStore } from '../../store/appStore';
 
-export const AppStoreContext = createContext<CreateAppStore | null>(null);
+export const AppStoreContext = createContext<UseAppStore | null>(null);

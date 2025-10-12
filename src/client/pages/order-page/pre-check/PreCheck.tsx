@@ -6,8 +6,8 @@ import styles from './styles.module.css';
 
 export type PreCheckProps = {
   cart: CartItem[];
-  onTicketTypeChange: (payload: CartItem) => void;
-  onRemoveSeatClick: (id: number) => void;
+  onTicketTypeChange: (seatId: number, ticketTypeId: number) => void;
+  onRemoveSeatClick: (seatId: number, ticketTypeId: number) => void;
 };
 
 export const PreCheck = (props: PreCheckProps) => {
@@ -37,7 +37,7 @@ export const PreCheck = (props: PreCheckProps) => {
             onChange={(evt: ChangeEvent<HTMLSelectElement>) => {
               const ticketTypeId = Number(evt.target.value);
 
-              onTicketTypeChange({ ...cartItem, ticketTypeId });
+              onTicketTypeChange(id, ticketTypeId);
             }}
             data-test-id="pre-check-item-select"
             data-test-value={ticketTypeId}
@@ -55,7 +55,7 @@ export const PreCheck = (props: PreCheckProps) => {
           <span data-test-id="pre-check-item-price">{price} RUB</span>
           <Button
             className={styles.preCheckItemRemoveButton}
-            onClick={() => onRemoveSeatClick(id)}
+            onClick={() => onRemoveSeatClick(id, ticketTypeId)}
             data-test-id="pre-check-remove-button"
           >
             Remove

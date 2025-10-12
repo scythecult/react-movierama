@@ -1,4 +1,4 @@
-import type { StateCreator } from 'zustand';
+import type { WithMiddlewareStateCreator } from '../../appStore';
 
 type UserSliceState = {
   user: {
@@ -12,7 +12,7 @@ type UserSliceActions = {
 
 export type UserSlice = UserSliceState & UserSliceActions;
 
-export const createUserSlice: StateCreator<UserSlice> = (set) => ({
+export const createUserSlice: WithMiddlewareStateCreator<UserSlice> = (set) => ({
   user: { name: 'check' },
   setUsername: (name) =>
     set(({ user }) => ({

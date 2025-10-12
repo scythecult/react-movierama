@@ -17,6 +17,9 @@ export type SeatData = {
   type: number;
   state: number;
   row: number;
+  seatType: SeatType;
+  price: number;
+  ticketTypeId: number;
 };
 
 export type TicketType = {
@@ -39,4 +42,9 @@ export type CartItem = {
   seatType: SeatType;
   price: number;
   ticketTypeId: number;
+};
+
+export type CartItemUpdatePayload = {
+  id?: number;
+  ticketTypeId?: number;
 };

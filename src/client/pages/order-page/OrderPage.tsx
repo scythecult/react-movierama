@@ -8,10 +8,12 @@ import styles from './styles.module.css';
 
 export type OrderPageProps = {
   totalPrice: number;
+  onClearCart: () => void;
 };
 export const OrderPage = (props: OrderPageProps) => {
-  const { totalPrice } = props;
+  const { totalPrice, onClearCart } = props;
   const isPaymentButtonDisabled = totalPrice === 0;
+  const isClearCartButtonVisible = totalPrice !== 0;
   const paymentButtonText = isPaymentButtonDisabled ? 'Select seats' : `Proceed to payment: ${totalPrice} RUB`;
 
   return (
@@ -27,6 +29,11 @@ export const OrderPage = (props: OrderPageProps) => {
           <Button disabled={isPaymentButtonDisabled} data-test-id="payment-button">
             {paymentButtonText}
           </Button>
+          {isClearCartButtonVisible && (
+            <Button onClick={onClearCart} data-test-id="clear-cart-button">
+              Clear cart
+            </Button>
+          )}
         </div>
       </Layout>
     </main>

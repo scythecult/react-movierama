@@ -1,4 +1,4 @@
-import type { SeatType } from '@/client/lib/types/OrderPageData';
+import type { SeatData, SeatType } from '@/client/lib/types/OrderPageData';
 import { HALL_PLAN_MATRIX, SEAT_HEIGHT, SEAT_OFFSET, SEAT_WIDTH } from '@/client/lib/utils/mocks/constants';
 import { Hall } from '@/client/lib/utils/mocks/Hall';
 import { SeatNode } from '@/client/lib/utils/mocks/SeatNode';
@@ -84,3 +84,12 @@ const hall = new Hall({
 
 export const SEATS = hall.createSeats();
 export const CANVAS_SIZE = hall.getCanvasSize();
+
+export const SEATS_DATA: SeatData[] = SEATS.map((seat) => {
+  const { type } = seat;
+  const seatType = STATIC_SEAT_TYPES.find((seatType) => seatType.id === type)!;
+  const [defaultTicketType] = seatType.ticketTypes;
+  const { price, id: ticketTypeId } = defaultTicketType;
+
+  return { ...seat, seatType, ticketTypeId, price };
+});
