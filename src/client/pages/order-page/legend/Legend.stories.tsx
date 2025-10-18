@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
-import { STATIC_SEAT_TYPES } from '@/client/lib/utils/mocks';
+import { STATIC_SEAT_TYPES } from '../../../lib/utils/mocks';
 import { Legend, type LegendProps } from './Legend';
 
 export default {

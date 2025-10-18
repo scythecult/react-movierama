@@ -1,5 +1,5 @@
-import type { SeatData, TicketType } from '@/client/lib/types/OrderPageData';
-import { SEATS_DATA, STATIC_SEAT_TYPES } from '@/client/lib/utils/mocks';
+import type { SeatData, TicketType } from '../client/lib/types/OrderPageData';
+import { SEATS_DATA, STATIC_SEAT_TYPES } from '../client/lib/utils/mocks';
 
 export const TEST_SEAT_ID = 532;
 

@@ -1,5 +1,5 @@
 import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH, SeatStateMap } from '../../../constants/common';
-import type { Canvas, SeatData } from '../../../types/OrderPageData';
+import type { Canvas, SeatData, SeatType } from '../../../types/OrderPageData';
 import type { WithMiddlewareStateCreator } from '../../appStore';
 
 const toggleSeatStateById = (seats: SeatData[], seatId: number) =>
@@ -27,6 +27,7 @@ const calculateCartTotalPrice = (cart: SeatData[]) =>
 type OrderSliceState = {
   seats: SeatData[] | [];
   canvas: Canvas;
+  seatTypes: SeatType[];
 
   cart: SeatData[];
   cartTotalPrice: number;
@@ -34,6 +35,7 @@ type OrderSliceState = {
 
 type OrderSliceActions = {
   setSeats: (seats: SeatData[]) => void;
+  setSeatTypes: (seatTypes: SeatType[]) => void;
   setCanvas: (canvas: Canvas) => void;
 
   addToCart: (seatId: number) => void;
@@ -46,8 +48,8 @@ export type OrderSlice = OrderSliceState & OrderSliceActions;
 
 export const createOrderSlice: WithMiddlewareStateCreator<OrderSlice> = (set) => ({
   seats: [],
-  seatTypes: [],
   canvas: { width: DEFAULT_CANVAS_WIDTH, height: DEFAULT_CANVAS_HEIGHT },
+  seatTypes: [],
 
   cart: [],
   cartTotalPrice: 0,
@@ -55,6 +57,11 @@ export const createOrderSlice: WithMiddlewareStateCreator<OrderSlice> = (set) =>
   setSeats: (seats: SeatData[]) =>
     set(() => ({
       seats,
+    })),
+
+  setSeatTypes: (seatTypes: SeatType[]) =>
+    set(() => ({
+      seatTypes,
     })),
 
   setCanvas: (canvas: Canvas) => set(() => ({ canvas })),

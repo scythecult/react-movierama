@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { describe } from 'vitest';
-import { AppStoreProvider } from '@/client/lib/contexts/app-store/AppStoreProvider';
 import { TEST_CART_ITEMS } from '../../../../tests/constants';
+import { AppStoreProvider } from '../../../lib/contexts/app-store/AppStoreProvider';
 import { PreCheck, type PreCheckProps } from './PreCheck';
 
 const DEFAULT_PROPS: PreCheckProps = {

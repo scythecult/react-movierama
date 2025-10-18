@@ -1,7 +1,7 @@
 import type { ChangeEvent } from 'react';
-import { Button } from '@/client/lib/components/button/Button';
-import { SEAT_TYPE } from '@/client/lib/constants/common';
-import type { CartItem } from '@/client/lib/types/OrderPageData';
+import { Button } from '../../../lib/components/button/Button';
+import { SEAT_TYPE } from '../../../lib/constants/common';
+import type { CartItem } from '../../../lib/types/OrderPageData';
 import styles from './styles.module.css';
 
 export type PreCheckProps = {

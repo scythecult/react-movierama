@@ -9,9 +9,6 @@
     "forceConsistentCasingInFileNames": true,
     "rewriteRelativeImportExtensions": true,
     "types": ["vitest/globals", "node", "vite/client"],
-    "paths": {
-      "@/*": ["./src/*"]
-    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -34,5 +31,5 @@
     "alwaysStrict": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "src/tests"]
+  "include": ["src", "src/tests", "mocks", "mockServiceWorker.js"]
 }

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Layout } from '@/client/lib/components/layout/Layout';
+import { Layout } from './Layout';
 
 describe('Layout', () => {
   test('should correspond default layout', () => {

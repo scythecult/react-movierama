@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import type { ButtonHTMLAttributes, PropsWithChildren } from 'react';
-import type { PropsWithClassName } from '@/client/lib/types/PropsWithClassName';
+import type { PropsWithClassName } from '../../types/PropsWithClassName';
 import styles from './styles.module.css';
 
 export type ButtonProps = PropsWithClassName & PropsWithChildren<ButtonHTMLAttributes<HTMLButtonElement>>;

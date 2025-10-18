@@ -1,4 +1,4 @@
-import { SEAT_HEIGHT, SEAT_WIDTH } from '@/client/lib/utils/mocks/constants';
+import { SEAT_HEIGHT, SEAT_WIDTH } from './constants';
 
 export class SeatNode {
   id: number;

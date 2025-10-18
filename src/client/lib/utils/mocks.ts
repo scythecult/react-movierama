@@ -1,7 +1,7 @@
-import type { SeatData, SeatType } from '@/client/lib/types/OrderPageData';
-import { HALL_PLAN_MATRIX, SEAT_HEIGHT, SEAT_OFFSET, SEAT_WIDTH } from '@/client/lib/utils/mocks/constants';
-import { Hall } from '@/client/lib/utils/mocks/Hall';
-import { SeatNode } from '@/client/lib/utils/mocks/SeatNode';
+import type { SeatData, SeatType } from '../types/OrderPageData';
+import { HALL_PLAN_MATRIX, SEAT_HEIGHT, SEAT_OFFSET, SEAT_WIDTH } from './mocks/constants';
+import { Hall } from './mocks/Hall';
+import { SeatNode } from './mocks/SeatNode';
 
 export const getMockSeatTypes = (): SeatType[] => {
   return [

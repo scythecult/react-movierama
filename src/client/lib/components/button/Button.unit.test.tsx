@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { Button } from '@/client/lib/components/button/Button';
+import { Button } from './Button';
 
 describe('Button', () => {
   test('should correspond default layout', () => {

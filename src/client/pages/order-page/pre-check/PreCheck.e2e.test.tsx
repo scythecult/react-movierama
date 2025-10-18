@@ -1,6 +1,6 @@
 import { expect, type Page, test } from '@playwright/test';
-import { AppRoute } from '@/client/lib/constants/routes';
-import { selectFirstSeat } from '@/tests/utils';
+import { AppRoute } from '../../../../common/routes';
+import { selectFirstSeat } from '../../../../tests/utils';
 
 test.describe('PreCheck', () => {
   let page: Page;

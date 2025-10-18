@@ -1,5 +1,5 @@
 import { expect, type Page, test } from '@playwright/test';
-import { AppRoute } from '@/client/lib/constants/routes';
+import { AppRoute } from '../../../../common/routes';
 
 test.describe('Legend', () => {
   let page: Page;

@@ -1,6 +1,6 @@
-import { SeatStateMap } from '@/client/lib/constants/common';
-import { SEATS_DATA } from '@/client/lib/utils/mocks';
-import { TEST_CART_ITEMS, TEST_SEAT_ID } from '@/tests/constants';
+import { TEST_CART_ITEMS, TEST_SEAT_ID } from '../../../../../tests/constants';
+import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH, SeatStateMap } from '../../../constants/common';
+import { SEATS_DATA } from '../../../utils/mocks';
 import { type AppStore, getAppStore } from '../../appStore';
 
 describe('orderSlice', () => {
@@ -8,7 +8,7 @@ describe('orderSlice', () => {
     const state = getAppStore.getState();
 
     expect(state.seats).toEqual([]);
-    expect(state.canvas).toEqual({ width: 0, height: 0 });
+    expect(state.canvas).toEqual({ width: DEFAULT_CANVAS_WIDTH, height: DEFAULT_CANVAS_HEIGHT });
     expect(state.cartTotalPrice).toBe(0);
     expect(state.cart).toEqual([]);
   });

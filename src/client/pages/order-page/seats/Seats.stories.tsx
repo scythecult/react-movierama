@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
-import { CANVAS_SIZE, SEATS } from '@/client/lib/utils/mocks';
+import { CANVAS_SIZE, SEATS } from '../../../lib/utils/mocks';
 import { Seats, type SeatsProps } from './Seats';
 
 export default {

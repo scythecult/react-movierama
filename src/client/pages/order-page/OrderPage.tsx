@@ -1,5 +1,5 @@
-import { Button } from '@/client/lib/components/button/Button';
-import { Layout } from '@/client/lib/components/layout/Layout';
+import { Button } from '../../lib/components/button/Button';
+import { Layout } from '../../lib/components/layout/Layout';
 import { Hall } from './hall/Hall';
 import { LegendController } from './legend/LegendController';
 import { PreCheckController } from './pre-check/PreCheckController';
