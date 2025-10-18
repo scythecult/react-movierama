@@ -21,7 +21,7 @@ exports[`OrderPage > should correspond default layout 1`] = `
         <div
           class="_canvas_8ed2c1"
           data-test-id="seats-container"
-          style="width: 0px; height: 0px;"
+          style="width: 400px; height: 400px;"
         />
       </div>
       <ul
@@ -176,7 +176,7 @@ exports[`OrderPage > should support the "totalPrice" prop 1`] = `
         <div
           class="_canvas_8ed2c1"
           data-test-id="seats-container"
-          style="width: 0px; height: 0px;"
+          style="width: 400px; height: 400px;"
         />
       </div>
       <ul
@@ -336,7 +336,7 @@ exports[`OrderPage > should support the "totalPrice" prop 2`] = `
         <div
           class="_canvas_8ed2c1"
           data-test-id="seats-container"
-          style="width: 0px; height: 0px;"
+          style="width: 400px; height: 400px;"
         />
       </div>
       <ul

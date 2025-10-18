@@ -1,5 +1,5 @@
-import { SeatStateMap } from '@/client/lib/constants/common';
-import type { SeatType } from '@/client/lib/types/OrderPageData';
+import { SeatStateMap } from '../../../lib/constants/common';
+import type { SeatType } from '../../../lib/types/OrderPageData';
 import { Seat } from '../seats/seat/Seat';
 import styles from './styles.module.css';
 

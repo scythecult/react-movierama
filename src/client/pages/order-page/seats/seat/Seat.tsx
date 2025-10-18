@@ -1,6 +1,6 @@
 import clsx from 'clsx';
-import { SEAT_STATE, SEAT_TYPE, SeatStateMap } from '@/client/lib/constants/common';
-import type { PropsWithClassName } from '@/client/lib/types/PropsWithClassName';
+import { SEAT_STATE, SEAT_TYPE, SeatStateMap } from '../../../../lib/constants/common';
+import type { PropsWithClassName } from '../../../../lib/types/PropsWithClassName';
 import styles from './styles.module.css';
 
 export type SeatProps = PropsWithClassName & {

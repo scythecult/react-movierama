@@ -1,7 +1,6 @@
 /// <reference types="vitest/config" />
 /// <reference types="vitest" />
 import react from '@vitejs/plugin-react-swc';
-import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -11,18 +10,13 @@ export default defineConfig({
       generateScopedName: 'styles_[local]--[hash:base64:4]',
     },
   },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-    },
-  },
+
   plugins: [react()],
   test: {
     globals: true,
     css: false,
     environment: 'happy-dom',
-    // 30 seconds.
-    testTimeout: 30 * 1000,
+    testTimeout: 30 * 1000, // 30 seconds
     clearMocks: true,
     // fileParallelism: false,
     include: ['src/**/*.unit.test.ts(x)?'],

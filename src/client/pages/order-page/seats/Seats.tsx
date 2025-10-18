@@ -1,5 +1,5 @@
-import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH } from '@/client/lib/constants/common';
-import type { SeatData } from '@/client/lib/types/OrderPageData';
+import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH } from '../../../lib/constants/common';
+import type { SeatData } from '../../../lib/types/OrderPageData';
 import { Seat } from './seat/Seat';
 import styles from './styles.module.css';
 

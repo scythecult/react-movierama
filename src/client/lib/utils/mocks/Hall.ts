@@ -1,4 +1,4 @@
-import type { SeatNode } from '@/client/lib/utils/mocks/SeatNode';
+import type { SeatNode } from './SeatNode';
 
 type HallOptions = {
   Seat: typeof SeatNode;
@@ -6,7 +6,7 @@ type HallOptions = {
   seatWidth: number;
   seatHeight: number;
   seatOffset: number;
-}
+};
 
 export class Hall {
   #hallPlanMatrix: number[][];
@@ -26,7 +26,7 @@ export class Hall {
     this.#seatHeight = options.seatHeight;
     this.#seatOffset = options.seatOffset;
   }
-  
+
   createSeats() {
     for (let i = 0; i < this.#hallPlanMatrix.length; i++) {
       const currentRowLength = this.#hallPlanMatrix[i].length - 1;
@@ -43,18 +43,22 @@ export class Hall {
         this.#canvasHeight = i * (this.#seatHeight + this.#seatOffset) + this.#seatHeight;
 
         if (!isGap) {
-          const seatXOffset = isGap ? (this.#seatWidth + this.#seatOffset) + this.#seatWidth / 2 : this.#seatWidth + this.#seatOffset;
+          const seatXOffset = isGap
+            ? this.#seatWidth + this.#seatOffset + this.#seatWidth / 2
+            : this.#seatWidth + this.#seatOffset;
           const x = j * seatXOffset;
           const y = i * (this.#seatHeight + this.#seatOffset);
 
-          this.#hall.push(new this.#Seat({
-            id: x + y,
-            x,
-            y,
-            place: j + 1,
-            type: seatMatrixValue,
-            row: i + 1,
-          }));
+          this.#hall.push(
+            new this.#Seat({
+              id: x + y,
+              x,
+              y,
+              place: j + 1,
+              type: seatMatrixValue,
+              row: i + 1,
+            }),
+          );
         }
       }
     }

@@ -1,4 +1,4 @@
-import { useAppStore } from '@/client/lib/contexts/app-store/useAppStore';
+import { useAppStore } from '../../../lib/contexts/app-store/useAppStore';
 import { PreCheck } from './PreCheck';
 
 export const PreCheckController = () => {

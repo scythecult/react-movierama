@@ -1,9 +1,10 @@
 import { render } from '@testing-library/react';
-import { AppStoreProvider } from '@/client/lib/contexts/app-store/AppStoreProvider';
+import { AppStoreProvider } from '../../lib/contexts/app-store/AppStoreProvider';
 import { OrderPage, type OrderPageProps } from './OrderPage';
 
 const DEFAULT_PROPS: OrderPageProps = {
   totalPrice: 0,
+  onClearCart: () => {},
 };
 const buildWrappedComponent = (props = DEFAULT_PROPS) => (
   <AppStoreProvider>
@@ -19,11 +20,11 @@ describe('OrderPage', () => {
   });
 
   test('should support the "totalPrice" prop', () => {
-    let result = render(buildWrappedComponent({ totalPrice: 10 }));
+    let result = render(buildWrappedComponent({ ...DEFAULT_PROPS, totalPrice: 10 }));
 
     expect(result.container).toMatchSnapshot();
 
-    result = render(buildWrappedComponent({ totalPrice: 5 }));
+    result = render(buildWrappedComponent({ ...DEFAULT_PROPS, totalPrice: 5 }));
 
     expect(result.container).toMatchSnapshot();
   });

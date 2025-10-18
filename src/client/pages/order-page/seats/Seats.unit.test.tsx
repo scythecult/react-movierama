@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH } from '@/client/lib/constants/common';
-import { SEATS } from '@/client/lib/utils/mocks';
+import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH } from '../../../lib/constants/common';
+import { SEATS } from '../../../lib/utils/mocks';
 import { Seats, type SeatsProps } from './Seats';
 
 const DEFAULT_PROPS: SeatsProps = {
