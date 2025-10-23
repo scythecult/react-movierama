@@ -83,7 +83,7 @@ exports[`Legend > should correspond default layout 1`] = `
       data-test-id="legend-item"
     >
       <button
-        class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _occupied_35b3f7"
+        class="_seat_35b3f7 _legendItemSeat_8dc83b _occupied_35b3f7 _free_35b3f7"
         data-test-disabled="true"
         data-test-id="seat"
         data-test-selected="false"
@@ -394,7 +394,7 @@ exports[`Legend > should support the "seatTypes" prop 1`] = `
       data-test-id="legend-item"
     >
       <button
-        class="_seat_35b3f7 _legendItemSeat_8dc83b _regular_35b3f7 _occupied_35b3f7"
+        class="_seat_35b3f7 _legendItemSeat_8dc83b _occupied_35b3f7 _free_35b3f7"
         data-test-disabled="true"
         data-test-id="seat"
         data-test-selected="false"

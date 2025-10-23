@@ -13,12 +13,12 @@ export const SeatTypeMap = {
   COMFORT: 2,
   VIP: 3,
   WHEELCHAIR: 4,
+  OCCUPIED: 5,
 } as const;
 
 export const SeatStateMap = {
   FREE: 1,
-  OCCUPIED: 2,
-  SELECTED: 3,
+  SELECTED: 2,
 } as const;
 
 export const SEAT_TYPE: Record<string, string> = {
@@ -26,10 +26,10 @@ export const SEAT_TYPE: Record<string, string> = {
   [SeatTypeMap.COMFORT]: 'comfort',
   [SeatTypeMap.VIP]: 'vip',
   [SeatTypeMap.WHEELCHAIR]: 'wheelchair',
+  [SeatTypeMap.OCCUPIED]: 'occupied',
 } as const;
 
 export const SEAT_STATE: Record<string, string> = {
   [SeatStateMap.FREE]: 'free',
-  [SeatStateMap.OCCUPIED]: 'occupied',
   [SeatStateMap.SELECTED]: 'selected',
 } as const;

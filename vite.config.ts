@@ -2,8 +2,28 @@
 /// <reference types="vitest" />
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
+import { DEFAULT_APP_PORT } from './src/common/constants/defaults';
+
+const devServerPort = Number(process.env.APP_PORT || DEFAULT_APP_PORT);
 
 export default defineConfig({
+  // Expose vars here to use it in /client/env.ts
+  define: {
+    global: 'window',
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.APP_PORT': JSON.stringify(process.env.APP_PORT),
+    'process.env.SSR_PORT': JSON.stringify(process.env.SSR_PORT),
+    'process.env.APP_URL': JSON.stringify(process.env.APP_URL),
+    'process.env.SSR_URL': JSON.stringify(process.env.SSR_URL),
+    'process.env.IS_WATCH_MODE': JSON.stringify(process.env.IS_WATCH_MODE),
+    'process.env.IS_TEST_MODE': JSON.stringify(process.env.IS_TEST_MODE),
+    'process.env.IS_E2E_TEST_DEBUG_MODE': JSON.stringify(process.env.IS_E2E_TEST_DEBUG_MODE),
+  },
+
+  server: {
+    port: devServerPort,
+  },
+
   css: {
     modules: {
       localsConvention: 'camelCaseOnly',

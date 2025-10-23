@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { STATIC_SEAT_TYPES } from '../../../lib/utils/mocks';
+import { staticSeatTypes } from '../../../../server/service/serverMockData';
 import { Legend, type LegendProps } from './Legend';
 
 const DEFAULT_PROPS: LegendProps = {
@@ -14,7 +14,7 @@ describe('Legend', () => {
   });
 
   test('should support the "seatTypes" prop', () => {
-    const result = render(<Legend seatTypes={STATIC_SEAT_TYPES} />);
+    const result = render(<Legend seatTypes={staticSeatTypes} />);
     expect(result.container).toMatchSnapshot();
   });
 });

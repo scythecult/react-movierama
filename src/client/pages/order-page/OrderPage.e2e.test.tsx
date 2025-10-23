@@ -1,5 +1,5 @@
 import { expect, type Page, test } from '@playwright/test';
-import { AppRoute } from '../../../common/routes';
+import { AppRoute } from '../../../common/constants/routes';
 import { selectFirstSeat } from '../../../tests/utils';
 
 test.describe('OrderPage', () => {

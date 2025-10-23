@@ -1,10 +1,12 @@
 import { render } from '@testing-library/react';
+import { seatsData } from '../../../../server/service/serverMockData';
+import { TEST_CART_ITEMS } from '../../../../tests/constants';
 import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH } from '../../../lib/constants/common';
-import { SEATS } from '../../../lib/utils/mocks';
 import { Seats, type SeatsProps } from './Seats';
 
 const DEFAULT_PROPS: SeatsProps = {
-  seats: SEATS,
+  seats: seatsData,
+  cart: TEST_CART_ITEMS,
   canvasWidth: DEFAULT_CANVAS_WIDTH,
   canvasHeight: DEFAULT_CANVAS_HEIGHT,
   onClick: (_: number) => {},
@@ -22,7 +24,17 @@ describe('Seats', () => {
 
     expect(result.container).toMatchSnapshot();
 
-    result = render(<Seats {...DEFAULT_PROPS} seats={SEATS} />);
+    result = render(<Seats {...DEFAULT_PROPS} seats={seatsData} />);
+
+    expect(result.container).toMatchSnapshot();
+  });
+
+  test('should support the "cart" prop', () => {
+    let result = render(<Seats {...DEFAULT_PROPS} cart={[]} />);
+
+    expect(result.container).toMatchSnapshot();
+
+    result = render(<Seats {...DEFAULT_PROPS} cart={TEST_CART_ITEMS} />);
 
     expect(result.container).toMatchSnapshot();
   });

@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
-import { STATIC_SEAT_TYPES } from '../../../lib/utils/mocks';
+import { MOCK_SEAT_TYPES } from '../../../../../mocks/data/seats';
 import { Legend, type LegendProps } from './Legend';
 
 export default {
@@ -18,5 +18,5 @@ const Template: StoryFn<LegendProps> = (props) => (
 
 export const Default = Template.bind(null);
 Default.args = {
-  seatTypes: STATIC_SEAT_TYPES,
+  seatTypes: MOCK_SEAT_TYPES,
 };

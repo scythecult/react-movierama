@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { SEAT_STATE, SEAT_TYPE, SeatStateMap } from '../../../../lib/constants/common';
+import { SEAT_STATE, SEAT_TYPE, SeatStateMap, SeatTypeMap } from '../../../../lib/constants/common';
 import type { PropsWithClassName } from '../../../../lib/types/PropsWithClassName';
 import styles from './styles.module.css';
 
@@ -18,7 +18,7 @@ export const Seat = (props: SeatProps) => {
   const { x, y, w, h, type = 1, state = 1, place, className, onClick } = props;
   const seatType = SEAT_TYPE[type];
   const seatState = SEAT_STATE[state];
-  const isOccupied = seatState === SEAT_STATE[SeatStateMap.OCCUPIED];
+  const isOccupied = seatType === SEAT_TYPE[SeatTypeMap.OCCUPIED];
   const isSelected = seatState === SEAT_STATE[SeatStateMap.SELECTED];
   const classNameFinal = clsx(styles.seat, className, styles[seatType], styles[seatState]);
 
