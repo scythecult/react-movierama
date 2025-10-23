@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
 import { AppStoreProvider } from '../../lib/contexts/app-store/AppStoreProvider';
-import { OrderPage, type OrderPageProps } from './OrderPage';
+import { OrderPage } from './OrderPage';
 
 export default {
   title: 'Pages/OrderPage',
@@ -11,9 +11,9 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<OrderPageProps>;
+} satisfies Meta;
 
-const Template: StoryFn<OrderPageProps> = (props) => (
+const Template: StoryFn = (props) => (
   <AppStoreProvider>
     <OrderPage {...props} />
   </AppStoreProvider>

@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
-
+import { ClientConfig } from './src/client/env';
+import { DEFAULT_APP_URL } from './src/common/constants/defaults';
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -12,7 +13,8 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 
-const TEST_PORT = process.env.TEST_PORT || 5173;
+const TEST_APP_URL = ClientConfig.appUrl || DEFAULT_APP_URL;
+const IS_HEADLESS_MODE = !ClientConfig.isE2eTestDebugMode;
 
 export default defineConfig({
   testDir: './src',
@@ -31,18 +33,17 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: `http://localhost:${TEST_PORT}`,
+    baseURL: TEST_APP_URL,
     testIdAttribute: 'data-test-id',
-    headless: true,
+    headless: IS_HEADLESS_MODE,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
     ...devices['Desktop Chrome'],
   },
   /* Run your local dev server before starting the tests */
   webServer: {
-    // TODO Temporary until mockServer is installed
     command: 'npm run dev',
-    url: `http://localhost:${TEST_PORT}`,
+    url: TEST_APP_URL,
     reuseExistingServer: !process.env.CI,
   },
   /* Configure projects for major browsers */

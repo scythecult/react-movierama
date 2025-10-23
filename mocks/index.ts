@@ -1,5 +1,8 @@
+import { ClientConfig } from '../src/client/env';
+
 export const enableMocks = async () => {
-  if (process.env.NODE_ENV === 'production') {
+  if (ClientConfig.nodeEnv === 'production' || ClientConfig.isWatchMode) {
+    console.info('Mocks are disabled');
     return;
   }
 

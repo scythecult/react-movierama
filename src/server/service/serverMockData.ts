@@ -1,8 +1,9 @@
-import type { SeatData, SeatType } from '../types/OrderPageData';
-import { HALL_PLAN_MATRIX, SEAT_HEIGHT, SEAT_OFFSET, SEAT_WIDTH } from './mocks/constants';
-import { Hall } from './mocks/Hall';
-import { SeatNode } from './mocks/SeatNode';
+import type { SeatData, SeatType } from '../../common/types/hallplan';
+import { HALL_PLAN_MATRIX, SEAT_HEIGHT, SEAT_OFFSET, SEAT_WIDTH } from './constants';
+import { Hall } from './Hall';
+import { SeatNode } from './SeatNode';
 
+// Temporary file
 export const getMockSeatTypes = (): SeatType[] => {
   return [
     {
@@ -72,7 +73,7 @@ export const getMockSeatTypes = (): SeatType[] => {
   ];
 };
 
-export const STATIC_SEAT_TYPES = getMockSeatTypes();
+export const staticSeatTypes = getMockSeatTypes();
 
 const hall = new Hall({
   Seat: SeatNode,
@@ -82,14 +83,22 @@ const hall = new Hall({
   seatOffset: SEAT_OFFSET,
 });
 
-export const SEATS = hall.createSeats();
-export const CANVAS_SIZE = hall.getCanvasSize();
+const seats = hall.createSeats();
+export const canvasSize = hall.getCanvasSize();
 
-export const SEATS_DATA: SeatData[] = SEATS.map((seat) => {
+export const seatsData: SeatData[] = seats.map((seat) => {
   const { type } = seat;
-  const seatType = STATIC_SEAT_TYPES.find((seatType) => seatType.id === type)!;
-  const [defaultTicketType] = seatType.ticketTypes;
-  const { price, id: ticketTypeId } = defaultTicketType;
+  const seatType = staticSeatTypes.find((seatType) => seatType.id === type);
+  let initialPrice = null;
+  let initialTicketTypeId = null;
 
-  return { ...seat, seatType, ticketTypeId, price };
+  if (seatType) {
+    const [defaultTicketType] = seatType.ticketTypes;
+    const { price, id: ticketTypeId } = defaultTicketType;
+
+    initialPrice = price;
+    initialTicketTypeId = ticketTypeId;
+  }
+
+  return { ...seat, seatType, ticketTypeId: initialTicketTypeId, price: initialPrice };
 });

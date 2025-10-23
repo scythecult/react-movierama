@@ -1,5 +1,5 @@
-import { SeatStateMap } from '../../../lib/constants/common';
-import type { SeatType } from '../../../lib/types/OrderPageData';
+import type { SeatType } from '../../../../common/types/hallplan';
+import { SeatStateMap, SeatTypeMap } from '../../../lib/constants/common';
 import { Seat } from '../seats/seat/Seat';
 import styles from './styles.module.css';
 
@@ -45,7 +45,7 @@ export const Legend = (props: LegendProps) => {
         </small>
       </li>
       <li className={styles.legendItem} data-test-id="legend-item">
-        <Seat className={styles.legendItemSeat} state={SeatStateMap.OCCUPIED} />
+        <Seat className={styles.legendItemSeat} type={SeatTypeMap.OCCUPIED} />
         <small className={styles.legendItemName} data-test-id="legend-item-name">
           Occupied
         </small>

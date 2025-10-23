@@ -1,11 +1,11 @@
 import type { ChangeEvent } from 'react';
+import type { SeatData } from '../../../../common/types/hallplan';
 import { Button } from '../../../lib/components/button/Button';
 import { SEAT_TYPE } from '../../../lib/constants/common';
-import type { CartItem } from '../../../lib/types/OrderPageData';
 import styles from './styles.module.css';
 
 export type PreCheckProps = {
-  cart: CartItem[];
+  cart: SeatData[];
   onTicketTypeChange: (seatId: number, ticketTypeId: number) => void;
   onRemoveSeatClick: (seatId: number, ticketTypeId: number) => void;
 };
@@ -17,53 +17,59 @@ export const PreCheck = (props: PreCheckProps) => {
     return null;
   }
 
-  const selectedSeatNodes = cart.map((cartItem) => {
-    const { id, place, row, type, seatType, price, ticketTypeId } = cartItem;
-    const { ticketTypes = [] } = seatType;
-    const seatTypeName = SEAT_TYPE[type];
+  const selectedSeatNodes = cart
+    .map((cartItem) => {
+      const { id, place, row, type, seatType, price, ticketTypeId } = cartItem;
 
-    return (
-      <li className={styles.preCheckItem} key={id} data-test-id="pre-check-item">
-        <p data-test-id="pre-check-item-place">
-          {row} row, {place} place
-        </p>
-        <p data-test-id="pre-check-item-seat-type">{seatTypeName}</p>
+      if (seatType && seatType.ticketTypes && ticketTypeId) {
+        const { ticketTypes = [] } = seatType;
+        const seatTypeName = SEAT_TYPE[type];
 
-        <div className={styles.preCheckItemControls} data-test-id="pre-check-item-controls">
-          <select
-            className={styles.preCheckItemSelect}
-            name="ticket-type"
-            defaultValue={ticketTypeId}
-            onChange={(evt: ChangeEvent<HTMLSelectElement>) => {
-              const ticketTypeId = Number(evt.target.value);
+        return (
+          // TODO Mb move to component
+          <li className={styles.preCheckItem} key={id} data-test-id="pre-check-item">
+            <p data-test-id="pre-check-item-place">
+              {row} row, {place} place
+            </p>
+            <p data-test-id="pre-check-item-seat-type">{seatTypeName}</p>
 
-              onTicketTypeChange(id, ticketTypeId);
-            }}
-            data-test-id="pre-check-item-select"
-            data-test-value={ticketTypeId}
-          >
-            {ticketTypes.map((ticketType) => {
-              const { id, name } = ticketType;
+            <div className={styles.preCheckItemControls} data-test-id="pre-check-item-controls">
+              <select
+                className={styles.preCheckItemSelect}
+                name="ticket-type"
+                defaultValue={ticketTypeId}
+                onChange={(evt: ChangeEvent<HTMLSelectElement>) => {
+                  const ticketTypeId = Number(evt.target.value);
 
-              return (
-                <option key={id} value={id} data-test-id="pre-check-item-select-option" data-test-value={name}>
-                  {name}
-                </option>
-              );
-            })}
-          </select>
-          <span data-test-id="pre-check-item-price">{price} RUB</span>
-          <Button
-            className={styles.preCheckItemRemoveButton}
-            onClick={() => onRemoveSeatClick(id, ticketTypeId)}
-            data-test-id="pre-check-remove-button"
-          >
-            Remove
-          </Button>
-        </div>
-      </li>
-    );
-  });
+                  onTicketTypeChange(id, ticketTypeId);
+                }}
+                data-test-id="pre-check-item-select"
+                data-test-value={ticketTypeId}
+              >
+                {ticketTypes.map((ticketType) => {
+                  const { id, name } = ticketType;
+
+                  return (
+                    <option key={id} value={id} data-test-id="pre-check-item-select-option" data-test-value={name}>
+                      {name}
+                    </option>
+                  );
+                })}
+              </select>
+              <span data-test-id="pre-check-item-price">{price} RUB</span>
+              <Button
+                className={styles.preCheckItemRemoveButton}
+                onClick={() => onRemoveSeatClick(id, ticketTypeId)}
+                data-test-id="pre-check-remove-button"
+              >
+                Remove
+              </Button>
+            </div>
+          </li>
+        );
+      }
+    })
+    .filter(Boolean);
 
   return (
     <section className={styles.preCheck} data-test-id="pre-check">

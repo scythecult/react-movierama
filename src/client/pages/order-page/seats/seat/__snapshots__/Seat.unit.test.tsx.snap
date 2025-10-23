@@ -201,11 +201,10 @@ exports[`Seat > should support the "state" prop 1`] = `
 exports[`Seat > should support the "state" prop 2`] = `
 <div>
   <button
-    class="_seat_35b3f7 _undefined_35b3f7 _occupied_35b3f7"
-    data-test-disabled="true"
+    class="_seat_35b3f7 _undefined_35b3f7 _selected_35b3f7"
+    data-test-disabled="false"
     data-test-id="seat"
-    data-test-selected="false"
-    disabled=""
+    data-test-selected="true"
     style="left: 0px; top: 0px; width: 0px; height: 0px;"
     type="button"
   >
