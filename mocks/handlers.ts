@@ -1,6 +1,6 @@
 import { http, HttpResponse } from 'msw';
 import { AppRoute } from '../src/common/constants/routes';
-import { SSR_URL } from '../src/common/constants/url';
+import { Config } from '../src/common/env';
 import { MOCK_CANVAS_SIZE, MOCK_SEAT_TYPES, MOCK_SEATS_DATA } from './data/seats';
 
 export const handlers = [
@@ -8,7 +8,7 @@ export const handlers = [
     return HttpResponse.json({ ok: true });
   }),
 
-  http.get(`${SSR_URL}${AppRoute.HALLPLAN}`, () => {
+  http.get(`${Config.ssrUrl}${AppRoute.HALLPLAN}`, () => {
     return HttpResponse.json({
       data: {
         seats: MOCK_SEATS_DATA,

@@ -1,5 +1,5 @@
+import { Config } from '../../../common/env';
 import type { ServerPayload } from '../../../common/types/http';
-import { ClientConfig } from '../../env';
 
 type CreateFetcherOptions = {
   baseUrl: string;
@@ -39,4 +39,4 @@ const createFetcher = (options: CreateFetcherOptions) => {
   };
 };
 
-export const fetcher = createFetcher({ baseUrl: ClientConfig.ssrUrl });
+export const fetcher = createFetcher({ baseUrl: Config.ssrUrl });
