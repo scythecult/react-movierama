@@ -1,16 +1,12 @@
-import { ClientConfig } from '../src/client/env';
+import { Config } from '../src/common/env';
 
 export const enableMocks = async () => {
-  if (ClientConfig.nodeEnv === 'production' || ClientConfig.isWatchMode) {
-    console.info('Mocks are disabled');
+  if (Config.nodeEnv === 'production' || Config.isWatchMode) {
     return;
   }
 
   const { worker } = await import('./browser');
-
-  // worker.events.on('request:start', ({ request }) => {
-  //   console.log('Outgoing:', request.method, request.url);
-  // });
+  // We could init here worker events listeners.
 
   return worker.start();
 };

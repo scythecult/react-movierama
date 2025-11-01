@@ -2,12 +2,12 @@
 /// <reference types="vitest" />
 import react from '@vitejs/plugin-react-swc';
 import { defineConfig } from 'vite';
-import { DEFAULT_APP_PORT } from './src/common/constants/defaults';
+import { Config } from './src/common/env';
 
-const devServerPort = Number(process.env.APP_PORT || DEFAULT_APP_PORT);
+const isProduction = Config.nodeEnv === 'production';
 
 export default defineConfig({
-  // Expose vars here to use it in /client/env.ts
+  // Expose vars here to use it in /common/env.ts
   define: {
     global: 'window',
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
@@ -18,10 +18,12 @@ export default defineConfig({
     'process.env.IS_WATCH_MODE': JSON.stringify(process.env.IS_WATCH_MODE),
     'process.env.IS_TEST_MODE': JSON.stringify(process.env.IS_TEST_MODE),
     'process.env.IS_E2E_TEST_DEBUG_MODE': JSON.stringify(process.env.IS_E2E_TEST_DEBUG_MODE),
+    'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
   },
 
-  server: {
-    port: devServerPort,
+  build: {
+    sourcemap: true,
+    minify: isProduction,
   },
 
   css: {
@@ -32,6 +34,7 @@ export default defineConfig({
   },
 
   plugins: [react()],
+
   test: {
     globals: true,
     css: false,

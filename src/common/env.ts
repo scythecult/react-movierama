@@ -17,6 +17,7 @@ const env = {
   ssrPort: process.env.SSR_PORT,
   appUrl: process.env.APP_URL,
   ssrUrl: process.env.SSR_URL,
+  baseUrl: process.env.BASE_URL,
 } as const;
 
 const envSchema = z.object({
@@ -28,6 +29,7 @@ const envSchema = z.object({
   ssrPort: z.coerce.number().default(DEFAULT_SSR_PORT),
   appUrl: z.url().default(DEFAULT_APP_URL),
   ssrUrl: z.url().default(DEFAULT_SSR_URL),
+  baseUrl: z.string().default(DEFAULT_APP_URL),
 });
 
-export const ClientConfig = envSchema.parse(env);
+export const Config = envSchema.parse(env);

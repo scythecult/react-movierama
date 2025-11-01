@@ -1,6 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { ClientConfig } from './src/client/env';
-import { DEFAULT_APP_URL } from './src/common/constants/defaults';
+import { Config } from './src/common/env';
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -13,8 +12,8 @@ import { DEFAULT_APP_URL } from './src/common/constants/defaults';
  * See https://playwright.dev/docs/test-configuration.
  */
 
-const TEST_APP_URL = ClientConfig.appUrl || DEFAULT_APP_URL;
-const IS_HEADLESS_MODE = !ClientConfig.isE2eTestDebugMode;
+const TEST_APP_URL = Config.appUrl;
+const IS_HEADLESS_MODE = !Config.isE2eTestDebugMode;
 
 export default defineConfig({
   testDir: './src',
