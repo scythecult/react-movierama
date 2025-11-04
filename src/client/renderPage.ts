@@ -11,6 +11,7 @@ export const renderPage = async (request: Request, vite: ViteDevServer | undefin
   let template: string;
   let render: RenderSsrTemplate;
 
+  // TODO Think about move to tsx as dev-server (only build phase)
   if (!isProduction && vite) {
     // Dev - always read fresh template
     template = await readFile('./index.html', 'utf-8');
@@ -35,8 +36,15 @@ export const renderPage = async (request: Request, vite: ViteDevServer | undefin
     }
   }
 
-  const renderedHtml = render();
-  const finalHtml = template.replace('<!-- app html -->', renderedHtml.html ?? '');
+  const { html, dehydratedQueryState, zustandState } = await render();
+
+  const finalHtml = template.replace('<!-- app html -->', html ?? '').replace(
+    '<!--app-initial-data-->',
+    `<script>
+        window.__pageQueryData__=${JSON.stringify(dehydratedQueryState)}
+        window.__appInitialState__=${JSON.stringify(zustandState)}
+    </script>`,
+  );
 
   return finalHtml;
 };

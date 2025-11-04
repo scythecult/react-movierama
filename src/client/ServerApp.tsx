@@ -4,11 +4,11 @@ import { StrictMode } from 'react';
 import { AppStoreProvider } from './lib/contexts/app-store/AppStoreProvider';
 import { OrderPage } from './pages/order-page/OrderPage';
 
-type AppProps = {
+type ServerAppProps = {
   queryClient: QueryClient;
 };
 
-export const App = (props: AppProps) => {
+export const ServerApp = (props: ServerAppProps) => {
   const { queryClient } = props;
 
   return (

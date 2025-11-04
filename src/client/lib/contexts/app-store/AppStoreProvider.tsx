@@ -1,12 +1,17 @@
 import type { PropsWithChildren } from 'react';
 import { useState } from 'react';
-import { getAppStore, type UseAppStore } from '../../store/appStore';
+import { type AppStore, getAppStore, type UseAppStore } from '../../store/appStore';
 import { AppStoreContext } from './AppStoreContext';
 
-// TODO Update props to get initial store data from SSR
-export const AppStoreProvider = (props: PropsWithChildren) => {
-  const { children } = props;
+type AppStoreProviderProps = PropsWithChildren<{ initialState?: Partial<AppStore> }>;
+
+export const AppStoreProvider = (props: AppStoreProviderProps) => {
+  const { children, initialState } = props;
   const [appStore] = useState<UseAppStore>(() => getAppStore);
+
+  if (initialState) {
+    appStore.setState(initialState);
+  }
 
   return <AppStoreContext value={appStore}>{children}</AppStoreContext>;
 };

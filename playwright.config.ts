@@ -12,7 +12,7 @@ import { Config } from './src/common/env';
  * See https://playwright.dev/docs/test-configuration.
  */
 
-const TEST_APP_URL = Config.appUrl;
+const TEST_URL = Config.ssrUrl;
 const IS_HEADLESS_MODE = !Config.isE2eTestDebugMode;
 
 export default defineConfig({
@@ -32,7 +32,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: TEST_APP_URL,
+    baseURL: TEST_URL,
     testIdAttribute: 'data-test-id',
     headless: IS_HEADLESS_MODE,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
@@ -41,8 +41,8 @@ export default defineConfig({
   },
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm run dev',
-    url: TEST_APP_URL,
+    command: 'npm run preview',
+    url: TEST_URL,
     reuseExistingServer: !process.env.CI,
   },
   /* Configure projects for major browsers */

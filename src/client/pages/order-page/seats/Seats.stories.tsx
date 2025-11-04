@@ -7,6 +7,7 @@ export default {
   component: Seats,
   args: {
     seats: MOCK_SEATS_DATA,
+    cart: [],
     canvasWidth: MOCK_CANVAS_SIZE.width,
     canvasHeight: MOCK_CANVAS_SIZE.height,
   },
