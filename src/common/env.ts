@@ -1,5 +1,6 @@
 import z from 'zod';
 import {
+  DEFAULT_APP_MODE,
   DEFAULT_APP_PORT,
   DEFAULT_APP_URL,
   DEFAULT_NODE_ENV,
@@ -9,10 +10,9 @@ import {
 import { validateBoolean } from '../common/schemas/common';
 
 const env = {
-  isWatchMode: process.env.IS_WATCH_MODE,
-  isTestMode: process.env.IS_TEST_MODE,
   isE2eTestDebugMode: process.env.IS_E2E_TEST_DEBUG_MODE,
   nodeEnv: process.env.NODE_ENV,
+  appMode: process.env.APP_MODE,
   appPort: process.env.APP_PORT,
   ssrPort: process.env.SSR_PORT,
   appUrl: process.env.APP_URL,
@@ -21,10 +21,9 @@ const env = {
 } as const;
 
 const envSchema = z.object({
-  isWatchMode: validateBoolean().default(false),
-  isTestMode: validateBoolean().default(false),
   isE2eTestDebugMode: validateBoolean().default(false),
   nodeEnv: z.enum(['development', 'test', 'production']).default(DEFAULT_NODE_ENV),
+  appMode: z.enum(['local', 'watch', 'test']).default(DEFAULT_APP_MODE),
   appPort: z.coerce.number().default(DEFAULT_APP_PORT),
   ssrPort: z.coerce.number().default(DEFAULT_SSR_PORT),
   appUrl: z.url().default(DEFAULT_APP_URL),

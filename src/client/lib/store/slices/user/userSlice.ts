@@ -13,7 +13,7 @@ type UserSliceActions = {
 export type UserSlice = UserSliceState & UserSliceActions;
 
 export const createUserSlice: WithMiddlewareStateCreator<UserSlice> = (set) => ({
-  user: { name: 'check' },
+  user: { name: '' },
   setUsername: (name) =>
     set(({ user }) => ({
       user: { ...user, name },

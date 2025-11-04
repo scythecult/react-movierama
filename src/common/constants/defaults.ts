@@ -2,6 +2,8 @@ export const DEFAULT_BASE_URL = '/';
 
 export const DEFAULT_NODE_ENV = 'development';
 
+export const DEFAULT_APP_MODE = 'local';
+
 export const DEFAULT_APP_PORT = 5173;
 
 export const DEFAULT_SSR_PORT = 3001;

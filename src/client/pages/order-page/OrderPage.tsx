@@ -23,7 +23,7 @@ export const OrderPage = () => {
   }
 
   // TODO Add proper check or add fallback values to hook
-  if (!data) {
+  if (!data && typeof data !== 'object') {
     return <div>Error</div>;
   }
 

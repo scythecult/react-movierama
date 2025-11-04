@@ -1,7 +1,7 @@
 import { Config } from '../src/common/env';
 
 export const enableMocks = async () => {
-  if (Config.nodeEnv === 'production' || Config.isWatchMode) {
+  if (Config.nodeEnv === 'production' || Config.appMode === 'watch') {
     return;
   }
 

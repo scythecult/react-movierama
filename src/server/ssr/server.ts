@@ -3,6 +3,7 @@ import cors from 'cors';
 import express, { json, urlencoded } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { ViteDevServer } from 'vite';
+import { serverMocks } from '../../../mocks/node';
 import { Dir } from '../../common/constants/common';
 import { AppRoute } from '../../common/constants/routes';
 import { Config } from '../../common/env';
@@ -12,6 +13,9 @@ import { canvasSize, seatsData, staticSeatTypes } from '../service/serverMockDat
 export const createSsrServer = async () => {
   const ssrServer = express();
   const isProduction = Config.nodeEnv === 'production';
+  const isWatchMode = Config.appMode === 'watch';
+  const isTestMode = Config.appMode === 'test';
+  const isMockServerEnabled = (!isProduction && !isWatchMode) || isTestMode;
   let vite: ViteDevServer | undefined;
 
   // Init common middlewares
@@ -20,6 +24,11 @@ export const createSsrServer = async () => {
   ssrServer.use(compression());
   ssrServer.use(json());
   ssrServer.use(urlencoded({ extended: true }));
+
+  // Init mocks
+  if (isMockServerEnabled) {
+    serverMocks.listen();
+  }
 
   if (!isProduction) {
     // Create vite dev server

@@ -5,6 +5,7 @@ type CreateFetcherOptions = {
   baseUrl: string;
 };
 
+// TODO Refactor/upgrade
 const createFetcher = (options: CreateFetcherOptions) => {
   const { baseUrl = '' } = options;
 
