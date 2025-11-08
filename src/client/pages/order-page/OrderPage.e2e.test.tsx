@@ -1,5 +1,5 @@
 import { expect, type Page, test } from '@playwright/test';
-import { AppRoute } from '../../../common/constants/routes';
+import { AppPath, AppRoute } from '../../../common/constants/routes';
 import { selectFirstSeat } from '../../../tests/utils';
 
 test.describe('OrderPage', () => {
@@ -18,15 +18,21 @@ test.describe('OrderPage', () => {
     await expect(page.getByTestId('order-page')).toBeVisible();
     await expect(page.getByTestId('order-footer')).toBeVisible();
 
-    const paymentElement = page.getByTestId('payment-button').and(page.getByRole('button'));
+    const paymentElement = page.getByTestId('payment-button').and(page.getByRole('link'));
 
     await expect(paymentElement).toBeVisible();
-    await expect(paymentElement).toBeDisabled();
+    await expect(paymentElement).toHaveAttribute('href', `${AppRoute.ORDER_PAGE}/${AppPath.CHECKOUT}`);
+
+    await expect(paymentElement).toHaveAttribute('data-test-disabled', 'true');
   });
 
   test('should enable payment button on seat select', async () => {
     await selectFirstSeat(page);
 
-    await expect(page.getByTestId('payment-button').and(page.getByRole('button'))).toBeEnabled();
+    const paymentElement = page.getByTestId('payment-button').and(page.getByRole('link'));
+
+    await expect(paymentElement).toBeVisible();
+    await expect(paymentElement).toHaveAttribute('href', `${AppRoute.ORDER_PAGE}/${AppPath.CHECKOUT}`);
+    await expect(paymentElement).toHaveAttribute('data-test-disabled', 'false');
   });
 });

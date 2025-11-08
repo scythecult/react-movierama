@@ -7,7 +7,6 @@ import type { RenderSsrTemplate } from './entryServer';
 
 export const renderPage = async (request: Request, vite: ViteDevServer | undefined) => {
   const isProduction = Config.nodeEnv === 'production';
-  const url = request.originalUrl.replace(Config.baseUrl, '');
   let template: string;
   let render: RenderSsrTemplate;
 
@@ -15,7 +14,7 @@ export const renderPage = async (request: Request, vite: ViteDevServer | undefin
   if (!isProduction && vite) {
     // Dev - always read fresh template
     template = await readFile('./index.html', 'utf-8');
-    template = await vite.transformIndexHtml(url, template);
+    template = await vite.transformIndexHtml(Config.baseUrl, template);
 
     const { renderSsrTemplate } = await vite.ssrLoadModule(`.${Dir.SOURCE_CLIENT}/entryServer.tsx`);
     render = renderSsrTemplate;
@@ -36,7 +35,7 @@ export const renderPage = async (request: Request, vite: ViteDevServer | undefin
     }
   }
 
-  const { html, dehydratedQueryState, zustandState } = await render();
+  const { html, dehydratedQueryState, zustandState } = await render(request.originalUrl);
 
   const finalHtml = template.replace('<!-- app html -->', html ?? '').replace(
     '<!--app-initial-data-->',

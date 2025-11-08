@@ -9,7 +9,7 @@ export type RenderSsrTemplate = typeof renderSsrTemplate;
 // we need to dehydrate that data into a serializable format we can embed in the markup,
 // and on the client we need to hydrate that data into a React Query cache
 // so we can avoid doing a new fetch on the client.
-export const renderSsrTemplate = async () => {
+export const renderSsrTemplate = async (url: string) => {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
@@ -20,7 +20,7 @@ export const renderSsrTemplate = async () => {
 
   const currentPageData = queryClient.getQueryData(QueryKey.hallplan.all);
   const dehydratedQueryState = dehydrate(queryClient);
-  const html = renderToString(<ServerApp queryClient={queryClient} />);
+  const html = renderToString(<ServerApp queryClient={queryClient} url={url} />);
 
   const zustandState = {
     ...(typeof currentPageData === 'undefined' ? {} : currentPageData),

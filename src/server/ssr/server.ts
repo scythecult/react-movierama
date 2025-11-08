@@ -40,7 +40,7 @@ export const createSsrServer = async () => {
       base: Config.baseUrl,
     });
 
-    ssrServer.use(vite.middlewares);
+    ssrServer.use(Config.baseUrl, vite.middlewares);
   } else {
     // Serve static files
     const sirv = (await import('sirv')).default;

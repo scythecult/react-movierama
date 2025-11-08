@@ -1232,13 +1232,15 @@ exports[`OrderPage > should correspond default layout 1`] = `
         class="_orderFooter_638992"
         data-test-id="order-footer"
       >
-        <button
-          class="_button_d1d523"
+        <a
+          class="_button_d1d523 _isDisabled_d1d523"
+          data-discover="true"
+          data-test-disabled="true"
           data-test-id="payment-button"
-          disabled=""
+          href="/checkout"
         >
           Select seats
-        </button>
+        </a>
       </div>
     </div>
   </main>

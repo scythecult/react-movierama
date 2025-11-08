@@ -4,3 +4,7 @@ export const AppRoute = {
   HEALTH: '/health',
   HALLPLAN: '/hallplan',
 };
+
+export const AppPath = {
+  CHECKOUT: 'checkout',
+};

@@ -1,5 +1,7 @@
+import { AppPath } from '../../../common/constants/routes';
 import { useHallplanQuery } from '../../lib/api/hallplan/hooks';
 import { Button } from '../../lib/components/button/Button';
+import { LinkButton } from '../../lib/components/button/LinkButton';
 import { Layout } from '../../lib/components/layout/Layout';
 import { useAppStore } from '../../lib/contexts/app-store/useAppStore';
 import { Hall } from './hall/Hall';
@@ -67,9 +69,14 @@ export const OrderPage = () => {
         <PreCheck cart={cart} onTicketTypeChange={handleTicketTypeChange} onRemoveSeatClick={handleRemoveSeat} />
 
         <div className={styles.orderFooter} data-test-id="order-footer">
-          <Button disabled={isPaymentButtonDisabled} data-test-id="payment-button">
+          <LinkButton
+            isDisabled={isPaymentButtonDisabled}
+            to={AppPath.CHECKOUT}
+            data-test-id="payment-button"
+            data-test-disabled={isPaymentButtonDisabled}
+          >
             {paymentButtonText}
-          </Button>
+          </LinkButton>
 
           {isClearCartButtonVisible && (
             <Button onClick={handleClearCart} data-test-id="clear-cart-button">
