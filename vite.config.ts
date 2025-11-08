@@ -10,16 +10,17 @@ export default defineConfig({
   // Expose vars here to use it in /common/env.ts
   define: {
     global: 'window',
+    'process.env.IS_E2E_TEST_DEBUG_MODE': JSON.stringify(process.env.IS_E2E_TEST_DEBUG_MODE),
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+    'process.env.APP_MODE': JSON.stringify(process.env.APP_MODE),
     'process.env.APP_PORT': JSON.stringify(process.env.APP_PORT),
     'process.env.SSR_PORT': JSON.stringify(process.env.SSR_PORT),
     'process.env.APP_URL': JSON.stringify(process.env.APP_URL),
     'process.env.SSR_URL': JSON.stringify(process.env.SSR_URL),
-    'process.env.IS_WATCH_MODE': JSON.stringify(process.env.IS_WATCH_MODE),
-    'process.env.IS_TEST_MODE': JSON.stringify(process.env.IS_TEST_MODE),
-    'process.env.IS_E2E_TEST_DEBUG_MODE': JSON.stringify(process.env.IS_E2E_TEST_DEBUG_MODE),
     'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
   },
+
+  base: Config.baseUrl,
 
   build: {
     sourcemap: true,
@@ -41,7 +42,6 @@ export default defineConfig({
     environment: 'happy-dom',
     testTimeout: 30 * 1000, // 30 seconds
     clearMocks: true,
-    // fileParallelism: false,
     include: ['src/**/*.unit.test.ts(x)?'],
     setupFiles: 'src/tests/globalSetup.ts',
     coverage: {

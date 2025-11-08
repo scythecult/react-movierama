@@ -1,0 +1,83 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LinkButton > should correspond default layout 1`] = `
+<div>
+  <a
+    class="_button_d1d523"
+    data-discover="true"
+    href="/"
+  />
+</div>
+`;
+
+exports[`LinkButton > should support the "children" prop 1`] = `
+<div>
+  <a
+    class="_button_d1d523"
+    data-discover="true"
+    href="/"
+  >
+    Children
+  </a>
+</div>
+`;
+
+exports[`LinkButton > should support the "className" prop 1`] = `
+<div>
+  <a
+    class="custom-class _button_d1d523"
+    data-discover="true"
+    href="/"
+  >
+    Children
+  </a>
+</div>
+`;
+
+exports[`LinkButton > should support the "isDisabled" prop 1`] = `
+<div>
+  <a
+    class="_button_d1d523 _isDisabled_d1d523"
+    data-discover="true"
+    href="/"
+  >
+    Children
+  </a>
+</div>
+`;
+
+exports[`LinkButton > should support the "isDisabled" prop 2`] = `
+<div>
+  <a
+    class="_button_d1d523"
+    data-discover="true"
+    href="/"
+  >
+    Children
+  </a>
+</div>
+`;
+
+exports[`LinkButton > should support the "to" prop 1`] = `
+<div>
+  <a
+    class="_button_d1d523"
+    data-discover="true"
+    href="/test"
+  >
+    Children
+  </a>
+</div>
+`;
+
+exports[`LinkButton > should support the "to" prop 2`] = `
+<div>
+  <a
+    class="_button_d1d523"
+    data-discover="true"
+    href="/test100500"
+  >
+    Children
+  </a>
+</div>
+`;
