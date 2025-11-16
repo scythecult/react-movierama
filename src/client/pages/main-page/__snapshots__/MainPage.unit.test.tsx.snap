@@ -1,0 +1,309 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`OrderPage > should correspond default layout 1`] = `
+<div>
+  <p
+    data-test-id="slider"
+    style="width: 100%; min-height: 450px; background-color: tomato;"
+  >
+    whole page width slider
+  </p>
+  <div
+    class="_linkBar_7ee16c"
+    data-test-id="link-bar"
+  >
+    <div
+      class="_linkBarContent_7ee16c"
+    >
+      <a
+        aria-current="page"
+        class="_siteNavLink_e89f10 _isActive_e89f10"
+        data-discover="true"
+        data-test-id="site-nav-link"
+        href="/"
+      >
+        Today
+      </a>
+      <a
+        class="_siteNavLink_e89f10"
+        data-discover="true"
+        data-test-id="site-nav-link"
+        href="/films"
+      >
+        Soon
+      </a>
+      <a
+        class="_siteNavLink_e89f10"
+        data-discover="true"
+        data-test-id="site-nav-link"
+        href="/giftcard"
+      >
+        Gift card
+      </a>
+    </div>
+  </div>
+  <div
+    class="_filmsList_d096a8"
+    data-test-id="films-list"
+  >
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8681"
+      >
+        to 
+        8681
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8801"
+      >
+        to 
+        8801
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8711"
+      >
+        to 
+        8711
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8812"
+      >
+        to 
+        8812
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8661"
+      >
+        to 
+        8661
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8834"
+      >
+        to 
+        8834
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8833"
+      >
+        to 
+        8833
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8710"
+      >
+        to 
+        8710
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8813"
+      >
+        to 
+        8813
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8835"
+      >
+        to 
+        8835
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8836"
+      >
+        to 
+        8836
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8709"
+      >
+        to 
+        8709
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8777"
+      >
+        to 
+        8777
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8837"
+      >
+        to 
+        8837
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/6396"
+      >
+        to 
+        6396
+      </a>
+    </div>
+  </div>
+  <div
+    class="_newsList_021754"
+    data-test-id="news-list"
+  >
+    <div
+      class="_newsListItem_7dec2b"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11384"
+      />
+      <div
+        class="_newsListItemImage_7dec2b"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Следите за важными анонсами в наших социальных сетях!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-16 11:37:21
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11389"
+      />
+      <div
+        class="_newsListItemImage_7dec2b"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Оставь отзыв — получи подарок!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 11:27:29
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11392"
+      />
+      <div
+        class="_newsListItemImage_7dec2b"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Шагаем, как в кино! 
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-11-07 16:26:03
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11390"
+      />
+      <div
+        class="_newsListItemImage_7dec2b"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Больше никаких звонков!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 12:06:58
+      </small>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,14 @@
+.newsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-items: center;
+  align-items: start;
+  align-content: start;
+  gap: 24px;
+  width: 100%;
+  max-width: 1300px;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-bottom: 56px;
+  padding-left: 24px;
+}

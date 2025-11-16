@@ -35,7 +35,7 @@ export const renderPage = async (request: Request, vite: ViteDevServer | undefin
     }
   }
 
-  const { html, dehydratedQueryState, zustandState } = await render(request.originalUrl);
+  const { html, dehydratedQueryState, zustandState } = await render(request);
 
   const finalHtml = template.replace('<!-- app html -->', html ?? '').replace(
     '<!--app-initial-data-->',

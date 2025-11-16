@@ -4,11 +4,29 @@ import { TEST_CART_ITEMS } from '../../../../tests/constants';
 import { PreCheck, type PreCheckProps } from './PreCheck';
 
 export default {
-  title: 'Pages/PreCheck',
+  title: 'Pages/Order-Page/PreCheck',
   component: PreCheck,
+
   args: {
     onRemoveSeatClick: fn(),
     onTicketTypeChange: fn(),
+  },
+  argTypes: {
+    onRemoveSeatClick: {
+      table: {
+        disable: true,
+      },
+    },
+    onTicketTypeChange: {
+      table: {
+        disable: true,
+      },
+    },
+    cart: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } satisfies Meta<PreCheckProps>;
 

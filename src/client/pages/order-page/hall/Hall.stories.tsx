@@ -2,7 +2,7 @@ import type { Meta, StoryFn } from '@storybook/react-vite';
 import { Hall, type HallProps } from './Hall';
 
 export default {
-  title: 'Pages/Hall',
+  title: 'Pages/Order-Page/Hall',
   component: Hall,
 } satisfies Meta<typeof Hall>;
 

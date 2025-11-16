@@ -1,0 +1,244 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Header > should correspond default layout 1`] = `
+<div>
+  <header
+    class="_header_ede614"
+  >
+    <div
+      class="_headerContent_ede614"
+    >
+      <a
+        class="_logo_18636e"
+        data-discover="true"
+        href="/"
+      >
+        MOVIERAMA
+      </a>
+      <button
+        class="_iconButton_cab355"
+      >
+        <span>
+          location
+        </span>
+         
+        Current Location
+      </button>
+      <nav
+        class="_siteNavigation_36ef23"
+      >
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/finder"
+        >
+          Theaters
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/discounts"
+        >
+          Sale
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/kids"
+        >
+          Kids
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/art"
+        >
+          Art
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/multicard"
+        >
+          Multi-card
+        </a>
+      </nav>
+      <button
+        class="_iconButton_cab355"
+      >
+        <span>
+          login
+        </span>
+         
+      </button>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header > should support the "className" prop 1`] = `
+<div>
+  <header
+    class="_header_ede614 custom-class"
+  >
+    <div
+      class="_headerContent_ede614"
+    >
+      <a
+        class="_logo_18636e"
+        data-discover="true"
+        href="/"
+      >
+        MOVIERAMA
+      </a>
+      <button
+        class="_iconButton_cab355"
+      >
+        <span>
+          location
+        </span>
+         
+        Current Location
+      </button>
+      <nav
+        class="_siteNavigation_36ef23"
+      >
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/finder"
+        >
+          Theaters
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/discounts"
+        >
+          Sale
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/kids"
+        >
+          Kids
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/art"
+        >
+          Art
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/multicard"
+        >
+          Multi-card
+        </a>
+      </nav>
+      <button
+        class="_iconButton_cab355"
+      >
+        <span>
+          login
+        </span>
+         
+      </button>
+    </div>
+  </header>
+</div>
+`;
+
+exports[`Header > should support the "className" prop 2`] = `
+<div>
+  <header
+    class="_header_ede614 custom-class-v2"
+  >
+    <div
+      class="_headerContent_ede614"
+    >
+      <a
+        class="_logo_18636e"
+        data-discover="true"
+        href="/"
+      >
+        MOVIERAMA
+      </a>
+      <button
+        class="_iconButton_cab355"
+      >
+        <span>
+          location
+        </span>
+         
+        Current Location
+      </button>
+      <nav
+        class="_siteNavigation_36ef23"
+      >
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/finder"
+        >
+          Theaters
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/discounts"
+        >
+          Sale
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/kids"
+        >
+          Kids
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/art"
+        >
+          Art
+        </a>
+        <a
+          class="_siteNavLink_e89f10"
+          data-discover="true"
+          data-test-id="site-nav-link"
+          href="/multicard"
+        >
+          Multi-card
+        </a>
+      </nav>
+      <button
+        class="_iconButton_cab355"
+      >
+        <span>
+          login
+        </span>
+         
+      </button>
+    </div>
+  </header>
+</div>
+`;

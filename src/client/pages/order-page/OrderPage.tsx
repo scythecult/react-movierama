@@ -30,6 +30,9 @@ export const OrderPage = () => {
   }
 
   const { seats, canvas, seatTypes } = data;
+
+  // console.info('order page data', { seats, canvas, seatTypes });
+
   const isPaymentButtonDisabled = totalPrice === 0;
   const isClearCartButtonVisible = totalPrice !== 0;
   const paymentButtonText = isPaymentButtonDisabled ? 'Select seats' : `Proceed to payment: ${totalPrice} RUB`;
@@ -51,40 +54,37 @@ export const OrderPage = () => {
   };
 
   return (
-    // TODO Use common "page" component
-    <main className={styles.order} data-test-id="order-page">
-      <Layout className={styles.orderLayout}>
-        <Hall>
-          <Seats
-            seats={seats}
-            cart={cart}
-            canvasWidth={canvas.width}
-            canvasHeight={canvas.height}
-            onClick={handleSeatClick}
-          />
-        </Hall>
+    <Layout className={styles.orderLayout}>
+      <Hall>
+        <Seats
+          seats={seats}
+          cart={cart}
+          canvasWidth={canvas.width}
+          canvasHeight={canvas.height}
+          onClick={handleSeatClick}
+        />
+      </Hall>
 
-        <Legend seatTypes={seatTypes} />
+      <Legend seatTypes={seatTypes} />
 
-        <PreCheck cart={cart} onTicketTypeChange={handleTicketTypeChange} onRemoveSeatClick={handleRemoveSeat} />
+      <PreCheck cart={cart} onTicketTypeChange={handleTicketTypeChange} onRemoveSeatClick={handleRemoveSeat} />
 
-        <div className={styles.orderFooter} data-test-id="order-footer">
-          <LinkButton
-            isDisabled={isPaymentButtonDisabled}
-            to={AppPath.CHECKOUT}
-            data-test-id="payment-button"
-            data-test-disabled={isPaymentButtonDisabled}
-          >
-            {paymentButtonText}
-          </LinkButton>
+      <div className={styles.orderFooter} data-test-id="order-footer">
+        <LinkButton
+          isDisabled={isPaymentButtonDisabled}
+          to={AppPath.CHECKOUT}
+          data-test-id="payment-button"
+          data-test-disabled={isPaymentButtonDisabled}
+        >
+          {paymentButtonText}
+        </LinkButton>
 
-          {isClearCartButtonVisible && (
-            <Button onClick={handleClearCart} data-test-id="clear-cart-button">
-              Clear cart
-            </Button>
-          )}
-        </div>
-      </Layout>
-    </main>
+        {isClearCartButtonVisible && (
+          <Button onClick={handleClearCart} data-test-id="clear-cart-button">
+            Clear cart
+          </Button>
+        )}
+      </div>
+    </Layout>
   );
 };

@@ -1,0 +1,93 @@
+.pageContentContainer {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: var(--app-container-max-width);
+  padding: 0 16px;
+}
+
+.pageContentContainerFooter {
+  flex-direction: column;
+}
+
+.pageMain {
+  display: grid;
+  grid-template-columns: 100%;
+  align-content: start;
+  justify-items: center;
+  min-height: 100dvh;
+}
+
+.pageFooter {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 424px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: var(--app-secondary-bg);
+  border-top: 1px solid var(--app-border-color);
+}
+
+.pageFooterLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+.pageFooterNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 190px;
+}
+
+.pageFooterNavigationLink {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--app-secondary-text);
+}
+
+.pageFooterClientInfo {
+  display: flex;
+  gap: 32px;
+}
+
+.pageFooterNavigationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pageFooterNavigationTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--app-primary-text);
+}
+
+.socials {
+  /* Separate to component */
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socialsItemLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--app-primary-text);
+  background-color: tomato;
+  border-radius: 50%;
+}

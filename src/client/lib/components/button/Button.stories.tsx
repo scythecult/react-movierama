@@ -7,6 +7,19 @@ export default {
   args: {
     children: 'Check',
   },
+  argTypes: {
+    onClick: {
+      table: {
+        disable: true,
+      },
+    },
+
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 const Template: StoryFn<ButtonProps> = (props) => <Button {...props} />;

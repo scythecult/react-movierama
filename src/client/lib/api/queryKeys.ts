@@ -7,4 +7,16 @@ export const QueryKey = {
     seats: ['hallplan', 'seats'] as const,
     seatTypes: ['hallplan', 'seatTypes'] as const,
   },
+
+  films: {
+    all: ['films'] as const,
+  },
+
+  user: {
+    all: ['user'] as const,
+  },
+
+  news: {
+    all: ['news'] as const,
+  },
 };

@@ -1,21 +1,12 @@
+import type { User } from '../../../../../common/types/user';
 import type { WithMiddlewareStateCreator } from '../../appStore';
 
 type UserSliceState = {
-  user: {
-    name: string;
-  };
+  user: User;
 };
 
-type UserSliceActions = {
-  setUsername: (name: string) => void;
-};
+export type UserSlice = UserSliceState;
 
-export type UserSlice = UserSliceState & UserSliceActions;
-
-export const createUserSlice: WithMiddlewareStateCreator<UserSlice> = (set) => ({
-  user: { name: '' },
-  setUsername: (name) =>
-    set(({ user }) => ({
-      user: { ...user, name },
-    })),
+export const createUserSlice: WithMiddlewareStateCreator<UserSlice> = () => ({
+  user: { firstName: '', lastName: '', email: '', password: '', gender: '', wantsPromotions: false, phone: '' },
 });

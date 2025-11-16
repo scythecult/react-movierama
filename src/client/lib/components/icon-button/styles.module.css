@@ -1,0 +1,11 @@
+.iconButton {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  width: 100%;
+  max-width: max-content;
+  padding: 1px 6px;
+  border: none;
+  background-color: green;
+  cursor: pointer;
+}

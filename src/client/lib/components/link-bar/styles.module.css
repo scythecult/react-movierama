@@ -1,0 +1,17 @@
+.linkBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid var(--app-border-color);
+}
+
+.linkBarContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 62px;
+  padding: 16px 24px;
+}

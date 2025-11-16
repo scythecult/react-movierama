@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Logo > should correspond default layout 1`] = `
+<div>
+  <a
+    class="_logo_18636e"
+    data-discover="true"
+    href="/"
+  >
+    MOVIERAMA
+  </a>
+</div>
+`;

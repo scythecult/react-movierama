@@ -1,0 +1,13 @@
+.filmsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+  justify-items: center;
+  align-items: start;
+  align-content: start;
+  gap: 24px;
+  width: 100%;
+  max-width: 1300px;
+  min-height: 1600px;
+  padding: 24px;
+  padding-bottom: 56px;
+}
