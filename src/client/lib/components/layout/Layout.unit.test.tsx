@@ -15,7 +15,11 @@ describe('Layout', () => {
   });
 
   test('should support the "className" prop', () => {
-    const result = render(<Layout className="custom-class">Children</Layout>);
+    let result = render(<Layout className="custom-class">Children</Layout>);
+
+    expect(result.container).toMatchSnapshot();
+
+    result = render(<Layout className="custom-class-v2">Children</Layout>);
 
     expect(result.container).toMatchSnapshot();
   });

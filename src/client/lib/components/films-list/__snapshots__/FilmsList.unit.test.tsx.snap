@@ -1,0 +1,360 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FilmsList > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_filmsList_d096a8"
+    data-test-id="films-list"
+  >
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8681"
+      >
+        to 
+        8681
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8801"
+      >
+        to 
+        8801
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8711"
+      >
+        to 
+        8711
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8812"
+      >
+        to 
+        8812
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8661"
+      >
+        to 
+        8661
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8834"
+      >
+        to 
+        8834
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8833"
+      >
+        to 
+        8833
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8710"
+      >
+        to 
+        8710
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8813"
+      >
+        to 
+        8813
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8835"
+      >
+        to 
+        8835
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8836"
+      >
+        to 
+        8836
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8709"
+      >
+        to 
+        8709
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8777"
+      >
+        to 
+        8777
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8837"
+      >
+        to 
+        8837
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/6396"
+      >
+        to 
+        6396
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FilmsList > should support the "films" prop 1`] = `
+<div>
+  <div
+    class="_filmsList_d096a8"
+    data-test-id="films-list"
+  />
+</div>
+`;
+
+exports[`FilmsList > should support the "films" prop 2`] = `
+<div>
+  <div
+    class="_filmsList_d096a8"
+    data-test-id="films-list"
+  >
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8681"
+      >
+        to 
+        8681
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8801"
+      >
+        to 
+        8801
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8711"
+      >
+        to 
+        8711
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8812"
+      >
+        to 
+        8812
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8661"
+      >
+        to 
+        8661
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8834"
+      >
+        to 
+        8834
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8833"
+      >
+        to 
+        8833
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8710"
+      >
+        to 
+        8710
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8813"
+      >
+        to 
+        8813
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8835"
+      >
+        to 
+        8835
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8836"
+      >
+        to 
+        8836
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8709"
+      >
+        to 
+        8709
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8777"
+      >
+        to 
+        8777
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/8837"
+      >
+        to 
+        8837
+      </a>
+    </div>
+    <div
+      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    >
+      <a
+        data-discover="true"
+        href="/films/6396"
+      >
+        to 
+        6396
+      </a>
+    </div>
+  </div>
+</div>
+`;

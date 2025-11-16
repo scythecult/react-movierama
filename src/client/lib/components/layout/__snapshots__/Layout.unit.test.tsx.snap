@@ -30,3 +30,14 @@ exports[`Layout > should support the "className" prop 1`] = `
   </div>
 </div>
 `;
+
+exports[`Layout > should support the "className" prop 2`] = `
+<div>
+  <div
+    class="_layout_762df9 custom-class-v2"
+    data-test-id="layout"
+  >
+    Children
+  </div>
+</div>
+`;

@@ -1,0 +1,50 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SiteNavigation > should correspond default layout 1`] = `
+<div>
+  <nav
+    class="_siteNavigation_36ef23"
+  >
+    <a
+      class="_siteNavLink_e89f10"
+      data-discover="true"
+      data-test-id="site-nav-link"
+      href="/finder"
+    >
+      Theaters
+    </a>
+    <a
+      class="_siteNavLink_e89f10"
+      data-discover="true"
+      data-test-id="site-nav-link"
+      href="/discounts"
+    >
+      Sale
+    </a>
+    <a
+      class="_siteNavLink_e89f10"
+      data-discover="true"
+      data-test-id="site-nav-link"
+      href="/kids"
+    >
+      Kids
+    </a>
+    <a
+      class="_siteNavLink_e89f10"
+      data-discover="true"
+      data-test-id="site-nav-link"
+      href="/art"
+    >
+      Art
+    </a>
+    <a
+      class="_siteNavLink_e89f10"
+      data-discover="true"
+      data-test-id="site-nav-link"
+      href="/multicard"
+    >
+      Multi-card
+    </a>
+  </nav>
+</div>
+`;

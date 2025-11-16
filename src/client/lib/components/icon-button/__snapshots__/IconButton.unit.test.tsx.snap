@@ -1,0 +1,71 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Location > should correspond default layout 1`] = `
+<div>
+  <button
+    class="_iconButton_cab355"
+  >
+    <span>
+      location
+    </span>
+     
+    Current Location
+  </button>
+</div>
+`;
+
+exports[`Location > should support the "children" prop 1`] = `
+<div>
+  <button
+    class="_iconButton_cab355"
+  >
+    <span>
+      location
+    </span>
+     
+    check
+  </button>
+</div>
+`;
+
+exports[`Location > should support the "children" prop 2`] = `
+<div>
+  <button
+    class="_iconButton_cab355"
+  >
+    <span>
+      location
+    </span>
+     
+    check v2
+  </button>
+</div>
+`;
+
+exports[`Location > should support the "name" prop 1`] = `
+<div>
+  <button
+    class="_iconButton_cab355"
+  >
+    <span>
+      location
+    </span>
+     
+    Current Location
+  </button>
+</div>
+`;
+
+exports[`Location > should support the "name" prop 2`] = `
+<div>
+  <button
+    class="_iconButton_cab355"
+  >
+    <span>
+      location
+    </span>
+     
+    Current Location
+  </button>
+</div>
+`;

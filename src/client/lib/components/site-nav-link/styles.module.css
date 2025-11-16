@@ -1,0 +1,20 @@
+.siteNavLink {
+  padding: 2px 10px;
+  color: var(--app-primary-text);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-property: text-decoration;
+  transition-duration: 1s;
+}
+
+.siteNavLink:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--app-underline-color);
+}
+
+.isActive {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--app-underline-color);
+}

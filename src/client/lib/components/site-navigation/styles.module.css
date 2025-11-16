@@ -1,0 +1,23 @@
+.siteNavigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 724px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--app-primary-text);
+}
+
+.siteNavigationLink {
+  color: var(--app-primary-text);
+  text-decoration: none;
+  transition-property: text-decoration;
+  transition-duration: 1s;
+}
+
+.siteNavigationLink:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--app-underline-color);
+}

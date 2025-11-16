@@ -1,0 +1,298 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NewsListItem > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "addedAt" prop 1`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      addedAt
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "addedAt" prop 2`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      addedAt v2
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "headline" prop 1`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      headline
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "headline" prop 2`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      headline v2
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "id" prop 1`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/1"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "id" prop 2`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/2"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "image" prop 1`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "image" prop 2`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "preview" prop 1`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;
+
+exports[`NewsListItem > should support the "preview" prop 2`] = `
+<div>
+  <div
+    class="_newsListItem_7dec2b"
+  >
+    <a
+      class="_newsListItemLink_7dec2b"
+      data-discover="true"
+      href="/news/11384"
+    />
+    <div
+      class="_newsListItemImage_7dec2b"
+    />
+    <h3
+      class="_newsListItemTitle_7dec2b"
+    >
+      Следите за важными анонсами в наших социальных сетях!
+    </h3>
+    <small
+      class="_newsListItemDate_7dec2b"
+    >
+      2025-10-16 11:37:21
+    </small>
+  </div>
+</div>
+`;

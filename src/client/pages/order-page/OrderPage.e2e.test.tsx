@@ -15,7 +15,7 @@ test.describe('OrderPage', () => {
   });
 
   test('should have all necessary elements', async () => {
-    await expect(page.getByTestId('order-page')).toBeVisible();
+    await expect(page.getByTestId('layout')).toBeVisible();
     await expect(page.getByTestId('order-footer')).toBeVisible();
 
     const paymentElement = page.getByTestId('payment-button').and(page.getByRole('link'));

@@ -3,8 +3,15 @@ import { MOCK_SEAT_TYPES } from '../../../../../mocks/data/seats';
 import { Legend, type LegendProps } from './Legend';
 
 export default {
-  title: 'Pages/Legend',
+  title: 'Pages/Order-Page/Legend',
   component: Legend,
+  argTypes: {
+    seatTypes: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     layout: 'fullscreen',
   },

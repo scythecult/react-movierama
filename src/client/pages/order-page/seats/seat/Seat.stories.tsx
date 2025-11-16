@@ -2,10 +2,57 @@ import type { Meta, StoryFn } from '@storybook/react-vite';
 import { Seat, type SeatProps } from './Seat';
 
 export default {
-  title: 'Pages/Seat',
+  title: 'Pages/Order-Page/Seat',
   component: Seat,
   args: {
     place: 1,
+  },
+  argTypes: {
+    onClick: {
+      table: {
+        disable: true,
+      },
+    },
+    place: {
+      table: {
+        disable: true,
+      },
+    },
+    className: {
+      table: {
+        disable: true,
+      },
+    },
+    state: {
+      table: {
+        disable: true,
+      },
+    },
+    type: {
+      table: {
+        disable: true,
+      },
+    },
+    x: {
+      table: {
+        disable: true,
+      },
+    },
+    y: {
+      table: {
+        disable: true,
+      },
+    },
+    w: {
+      table: {
+        disable: true,
+      },
+    },
+    h: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } satisfies Meta<SeatProps>;
 

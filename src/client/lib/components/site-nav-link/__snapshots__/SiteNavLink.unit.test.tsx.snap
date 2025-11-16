@@ -1,0 +1,88 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SiteNavLink > should correspond default layout 1`] = `
+<div>
+  <a
+    aria-current="page"
+    class="_siteNavLink_e89f10 _isActive_e89f10"
+    data-discover="true"
+    data-test-id="site-nav-link"
+    href="/"
+  />
+</div>
+`;
+
+exports[`SiteNavLink > should support the "children" prop 1`] = `
+<div>
+  <a
+    aria-current="page"
+    class="_siteNavLink_e89f10 _isActive_e89f10"
+    data-discover="true"
+    data-test-id="site-nav-link"
+    href="/"
+  >
+    Children
+  </a>
+</div>
+`;
+
+exports[`SiteNavLink > should support the "children" prop 2`] = `
+<div>
+  <a
+    aria-current="page"
+    class="_siteNavLink_e89f10 _isActive_e89f10"
+    data-discover="true"
+    data-test-id="site-nav-link"
+    href="/"
+  >
+    Children v2
+  </a>
+</div>
+`;
+
+exports[`SiteNavLink > should support the "className" prop 1`] = `
+<div>
+  <a
+    aria-current="page"
+    class="_siteNavLink_e89f10 custom-class _isActive_e89f10"
+    data-discover="true"
+    data-test-id="site-nav-link"
+    href="/"
+  />
+</div>
+`;
+
+exports[`SiteNavLink > should support the "className" prop 2`] = `
+<div>
+  <a
+    aria-current="page"
+    class="_siteNavLink_e89f10 custom-class-v2 _isActive_e89f10"
+    data-discover="true"
+    data-test-id="site-nav-link"
+    href="/"
+  />
+</div>
+`;
+
+exports[`SiteNavLink > should support the "to" prop 1`] = `
+<div>
+  <a
+    aria-current="page"
+    class="_siteNavLink_e89f10 _isActive_e89f10"
+    data-discover="true"
+    data-test-id="site-nav-link"
+    href="/"
+  />
+</div>
+`;
+
+exports[`SiteNavLink > should support the "to" prop 2`] = `
+<div>
+  <a
+    class="_siteNavLink_e89f10"
+    data-discover="true"
+    data-test-id="site-nav-link"
+    href="/v2"
+  />
+</div>
+`;

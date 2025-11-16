@@ -1,5 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter } from 'react-router';
 import { enableMocks } from '../../../../mocks';
 import { AppStoreProvider } from '../../lib/contexts/app-store/AppStoreProvider';
 import { OrderPage } from './OrderPage';
@@ -19,7 +20,9 @@ enableMocks();
 const Template: StoryFn = (props) => (
   <QueryClientProvider client={queryClient}>
     <AppStoreProvider>
-      <OrderPage {...props} />
+      <BrowserRouter>
+        <OrderPage {...props} />
+      </BrowserRouter>
     </AppStoreProvider>
   </QueryClientProvider>
 );

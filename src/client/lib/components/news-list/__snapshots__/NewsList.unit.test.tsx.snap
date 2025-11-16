@@ -1,0 +1,99 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`NewsList > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_newsList_021754"
+    data-test-id="news-list"
+  >
+    <div
+      class="_newsListItem_7dec2b"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11384"
+      />
+      <div
+        class="_newsListItemImage_7dec2b"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Следите за важными анонсами в наших социальных сетях!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-16 11:37:21
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11389"
+      />
+      <div
+        class="_newsListItemImage_7dec2b"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Оставь отзыв — получи подарок!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 11:27:29
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11392"
+      />
+      <div
+        class="_newsListItemImage_7dec2b"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Шагаем, как в кино! 
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-11-07 16:26:03
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11390"
+      />
+      <div
+        class="_newsListItemImage_7dec2b"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Больше никаких звонков!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 12:06:58
+      </small>
+    </div>
+  </div>
+</div>
+`;

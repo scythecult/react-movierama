@@ -3,6 +3,9 @@ import cors from 'cors';
 import express, { json, urlencoded } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { ViteDevServer } from 'vite';
+import { MOCK_FILMS } from '../../../mocks/data/films';
+import { MOCK_NEWS } from '../../../mocks/data/news';
+import { MOCK_USER } from '../../../mocks/data/user';
 import { serverMocks } from '../../../mocks/node';
 import { Dir } from '../../common/constants/common';
 import { AppRoute } from '../../common/constants/routes';
@@ -54,13 +57,44 @@ export const createSsrServer = async () => {
 
   // Temporary move to separate route
   ssrServer.get(AppRoute.HALLPLAN, (_, response) => {
-    console.info('real response');
+    console.info('real response hallplan');
 
     response.status(StatusCodes.OK).json({
       data: {
         canvas: canvasSize,
         seats: seatsData,
         seatTypes: staticSeatTypes,
+      },
+    });
+  });
+
+  // Temporary move to separate route
+  ssrServer.get(AppRoute.USER, (_, response) => {
+    console.info('real response user');
+
+    response.status(StatusCodes.OK).json({
+      data: {
+        user: MOCK_USER,
+      },
+    });
+  });
+
+  ssrServer.get(AppRoute.FILMS, (_, response) => {
+    console.info('real response films');
+
+    response.status(StatusCodes.OK).json({
+      data: {
+        films: MOCK_FILMS,
+      },
+    });
+  });
+
+  ssrServer.get(AppRoute.NEWS, (_, response) => {
+    console.info('real response news');
+
+    response.status(StatusCodes.OK).json({
+      data: {
+        news: MOCK_NEWS,
       },
     });
   });
