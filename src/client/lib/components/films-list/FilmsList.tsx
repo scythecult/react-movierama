@@ -1,8 +1,7 @@
 import clsx from 'clsx';
-import { Link } from 'react-router';
-import { AppRoute } from '../../../../common/constants/routes';
 import type { Film } from '../../../../common/types/film';
 import type { PropsWithClassName } from '../../types/PropsWithClassName';
+import { FilmItem } from './film-item/FilmItem';
 import styles from './styles.module.css';
 export type FilmsListProps = PropsWithClassName & {
   films: Film[];
@@ -18,21 +17,7 @@ export const FilmsList = (props: FilmsListProps) => {
       {films.map((film) => {
         const { id } = film;
 
-        return (
-          <div
-            key={id}
-            onClick={() => onFilmClick(film)}
-            style={{
-              width: '100%',
-              maxWidth: '295px',
-              minHeight: '380px',
-              backgroundColor: 'chocolate',
-              borderRadius: '12px',
-            }}
-          >
-            <Link to={`${AppRoute.FILMS}/${id}`}>to {id}</Link>
-          </div>
-        );
+        return <FilmItem key={id} film={film} onClick={onFilmClick} />;
       })}
     </div>
   );

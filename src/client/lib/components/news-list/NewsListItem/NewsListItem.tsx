@@ -6,13 +6,12 @@ import styles from './styles.module.css';
 export type NewsListItemProps = NewsItem;
 
 export const NewsListItem = (props: NewsListItemProps) => {
-  const { id, headline, addedAt } = props;
+  const { id, headline, addedAt, image, preview } = props;
 
   return (
-    <div className={styles.newsListItem}>
+    <div className={styles.newsListItem} data-test-id="news-list-item">
       <Link className={styles.newsListItemLink} to={`${AppRoute.NEWS}/${id}`} />
-      <div className={styles.newsListItemImage}></div>
-      {/* <img src={image} alt={preview} /> */}
+      <img className={styles.newsListItemImage} src={image} alt={preview} />
       <h3 className={styles.newsListItemTitle}>{headline}</h3>
       <small className={styles.newsListItemDate}>{addedAt}</small>
     </div>

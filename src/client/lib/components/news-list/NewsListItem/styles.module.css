@@ -8,12 +8,12 @@
 }
 
 .newsListItem:hover .newsListItemTitle {
-  color: var(--app-underline-color);
+  color: var(--app-accent-color);
 }
 
 .newsListItemImage {
   width: 100%;
-  min-height: 220px;
+  max-height: 220px;
   background-color: blueviolet;
   border-radius: 14px;
 }

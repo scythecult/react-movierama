@@ -6,171 +6,576 @@ exports[`FilmsList > should correspond default layout 1`] = `
     class="_filmsList_d096a8"
     data-test-id="films-list"
   >
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8681"
     >
-      <a
-        data-discover="true"
-        href="/films/8681"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8681
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Горыныч"
+        src="https://images.kinomax.ru/550/films/8/8681/p_7adde84.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Горыныч
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Приключения, Фэнтези, Сказка
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8801"
     >
-      <a
-        data-discover="true"
-        href="/films/8801"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8801
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Папины дочки. Мама вернулась"
+        src="https://images.kinomax.ru/550/films/8/8801/p_3ed056a.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Папины дочки. Мама вернулась
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Комедия
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8711"
     >
-      <a
-        data-discover="true"
-        href="/films/8711"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8711
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Алиса в Стране Чудес  "
+        src="https://images.kinomax.ru/550/films/8/8711/p_5f5f3d8.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Алиса в Стране Чудес  
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Фэнтези, Приключения, Музыка
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8812"
     >
-      <a
-        data-discover="true"
-        href="/films/8812"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8812
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        16+
+      </div>
+      <img
+        alt="Мажор в Дубае"
+        src="https://images.kinomax.ru/550/films/8/8812/p_5b723ab.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Мажор в Дубае
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Комедия, Приключения
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8661"
     >
-      <a
-        data-discover="true"
-        href="/films/8661"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8661
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        16+
+      </div>
+      <img
+        alt="Август"
+        src="https://images.kinomax.ru/550/films/8/8661/p_129c806.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Август
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Драма
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8834"
     >
-      <a
-        data-discover="true"
-        href="/films/8834"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8834
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Кролецып и Сурок Времени"
+        src="https://images.kinomax.ru/550/films/8/8834/p_a1b0c86.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Кролецып и Сурок Времени
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Анимация
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8833"
     >
-      <a
-        data-discover="true"
-        href="/films/8833"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8833
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        18+
+      </div>
+      <img
+        alt="Голосовой помощник"
+        src="https://images.kinomax.ru/550/films/8/8833/p_90c604a.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Голосовой помощник
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Триллер
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8710"
     >
-      <a
-        data-discover="true"
-        href="/films/8710"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8710
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Финник 2"
+        src="https://images.kinomax.ru/550/films/8/8710/p_5883f01.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Финник 2
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Анимация
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8813"
     >
-      <a
-        data-discover="true"
-        href="/films/8813"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8813
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        18+
+      </div>
+      <img
+        alt="Хэллоуин. Ночной кошмар"
+        src="https://images.kinomax.ru/550/films/8/8813/p_43f76df.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Хэллоуин. Ночной кошмар
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Хоррор
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8835"
     >
-      <a
-        data-discover="true"
-        href="/films/8835"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8835
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        12+
+      </div>
+      <img
+        alt="Наш папа – Дед Мороз"
+        src="https://images.kinomax.ru/550/films/8/8835/p_edb50d9.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Наш папа – Дед Мороз
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Семейный, Комедия
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8836"
     >
-      <a
-        data-discover="true"
-        href="/films/8836"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8836
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        12+
+      </div>
+      <img
+        alt="Попутчики"
+        src="https://images.kinomax.ru/550/films/8/8836/p_5061e83.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Попутчики
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Комедия
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8709"
     >
-      <a
-        data-discover="true"
-        href="/films/8709"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8709
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        12+
+      </div>
+      <img
+        alt="Первый на Олимпе"
+        src="https://images.kinomax.ru/550/films/8/8709/p_171be5b.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Первый на Олимпе
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Драма, Экшн
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8777"
     >
-      <a
-        data-discover="true"
-        href="/films/8777"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8777
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        18+
+      </div>
+      <img
+        alt="Новая волна"
+        src="https://images.kinomax.ru/550/films/8/8777/p_a0cdcb4.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Новая волна
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Комедия
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8837"
     >
-      <a
-        data-discover="true"
-        href="/films/8837"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8837
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        18+
+      </div>
+      <img
+        alt="Мой сын"
+        src="https://images.kinomax.ru/550/films/8/8837/p_d466778.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Мой сын
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Драма
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/6396"
     >
-      <a
-        data-discover="true"
-        href="/films/6396"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        6396
-      </a>
-    </div>
+        16+
+      </div>
+      <img
+        alt="TheatreHD: Сирано де Бержерак"
+        src="https://images.kinomax.ru/550/films/6/6396/p_921cd21.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          TheatreHD: Сирано де Бержерак
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Спектакль
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
   </div>
 </div>
 `;
@@ -190,171 +595,576 @@ exports[`FilmsList > should support the "films" prop 2`] = `
     class="_filmsList_d096a8"
     data-test-id="films-list"
   >
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8681"
     >
-      <a
-        data-discover="true"
-        href="/films/8681"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8681
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Горыныч"
+        src="https://images.kinomax.ru/550/films/8/8681/p_7adde84.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Горыныч
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Приключения, Фэнтези, Сказка
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8801"
     >
-      <a
-        data-discover="true"
-        href="/films/8801"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8801
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Папины дочки. Мама вернулась"
+        src="https://images.kinomax.ru/550/films/8/8801/p_3ed056a.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Папины дочки. Мама вернулась
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Комедия
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8711"
     >
-      <a
-        data-discover="true"
-        href="/films/8711"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8711
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Алиса в Стране Чудес  "
+        src="https://images.kinomax.ru/550/films/8/8711/p_5f5f3d8.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Алиса в Стране Чудес  
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Фэнтези, Приключения, Музыка
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8812"
     >
-      <a
-        data-discover="true"
-        href="/films/8812"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8812
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        16+
+      </div>
+      <img
+        alt="Мажор в Дубае"
+        src="https://images.kinomax.ru/550/films/8/8812/p_5b723ab.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Мажор в Дубае
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Комедия, Приключения
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8661"
     >
-      <a
-        data-discover="true"
-        href="/films/8661"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8661
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        16+
+      </div>
+      <img
+        alt="Август"
+        src="https://images.kinomax.ru/550/films/8/8661/p_129c806.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Август
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Драма
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8834"
     >
-      <a
-        data-discover="true"
-        href="/films/8834"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8834
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Кролецып и Сурок Времени"
+        src="https://images.kinomax.ru/550/films/8/8834/p_a1b0c86.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Кролецып и Сурок Времени
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Анимация
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8833"
     >
-      <a
-        data-discover="true"
-        href="/films/8833"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8833
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        18+
+      </div>
+      <img
+        alt="Голосовой помощник"
+        src="https://images.kinomax.ru/550/films/8/8833/p_90c604a.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Голосовой помощник
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Триллер
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8710"
     >
-      <a
-        data-discover="true"
-        href="/films/8710"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8710
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        6+
+      </div>
+      <img
+        alt="Финник 2"
+        src="https://images.kinomax.ru/550/films/8/8710/p_5883f01.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Финник 2
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Анимация
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8813"
     >
-      <a
-        data-discover="true"
-        href="/films/8813"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8813
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        18+
+      </div>
+      <img
+        alt="Хэллоуин. Ночной кошмар"
+        src="https://images.kinomax.ru/550/films/8/8813/p_43f76df.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Хэллоуин. Ночной кошмар
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Хоррор
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8835"
     >
-      <a
-        data-discover="true"
-        href="/films/8835"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8835
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        12+
+      </div>
+      <img
+        alt="Наш папа – Дед Мороз"
+        src="https://images.kinomax.ru/550/films/8/8835/p_edb50d9.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Наш папа – Дед Мороз
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Семейный, Комедия
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8836"
     >
-      <a
-        data-discover="true"
-        href="/films/8836"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8836
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        12+
+      </div>
+      <img
+        alt="Попутчики"
+        src="https://images.kinomax.ru/550/films/8/8836/p_5061e83.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Попутчики
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Комедия
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8709"
     >
-      <a
-        data-discover="true"
-        href="/films/8709"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8709
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        12+
+      </div>
+      <img
+        alt="Первый на Олимпе"
+        src="https://images.kinomax.ru/550/films/8/8709/p_171be5b.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Первый на Олимпе
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Драма, Экшн
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8777"
     >
-      <a
-        data-discover="true"
-        href="/films/8777"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8777
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        18+
+      </div>
+      <img
+        alt="Новая волна"
+        src="https://images.kinomax.ru/550/films/8/8777/p_a0cdcb4.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Новая волна
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Комедия
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/8837"
     >
-      <a
-        data-discover="true"
-        href="/films/8837"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        8837
-      </a>
-    </div>
-    <div
-      style="width: 100%; max-width: 295px; min-height: 380px; background-color: chocolate; border-radius: 12px;"
+        18+
+      </div>
+      <img
+        alt="Мой сын"
+        src="https://images.kinomax.ru/550/films/8/8837/p_d466778.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          Мой сын
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Драма
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
+    <a
+      class="_filmItem_7f3d6e"
+      data-discover="true"
+      href="/films/6396"
     >
-      <a
-        data-discover="true"
-        href="/films/6396"
+      <div
+        class="_badge_3d325c _filmItemBadge_7f3d6e"
       >
-        to 
-        6396
-      </a>
-    </div>
+        16+
+      </div>
+      <img
+        alt="TheatreHD: Сирано де Бержерак"
+        src="https://images.kinomax.ru/550/films/6/6396/p_921cd21.ebp"
+      />
+      <span
+        class="_filmItemContent_7f3d6e"
+      >
+        <span
+          class="_filmItemName_7f3d6e"
+        >
+          TheatreHD: Сирано де Бержерак
+        </span>
+        <span
+          class="_filmItemMetaInfo_7f3d6e"
+        >
+          Спектакль
+          <span
+            class="_filmItemFormat_7f3d6e"
+          >
+            <span
+              class="_filmItemFormat_7f3d6e"
+            >
+              2D
+            </span>
+          </span>
+        </span>
+      </span>
+    </a>
   </div>
 </div>
 `;

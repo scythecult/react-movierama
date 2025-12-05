@@ -1,5 +1,5 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
-import { fn } from 'storybook/internal/test';
+import { fn } from 'storybook/test';
 import { TEST_CART_ITEMS } from '../../../../tests/constants';
 import { PreCheck, type PreCheckProps } from './PreCheck';
 

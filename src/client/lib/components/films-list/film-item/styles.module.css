@@ -1,0 +1,65 @@
+.filmItem {
+  position: relative;
+  width: 100%;
+  max-width: 295px;
+  min-height: 380px;
+  background-color: 'chocolate';
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.filmItem:hover .filmItemContent {
+  transform: translateY(0);
+}
+
+.filmItemBadge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.filmItemContent {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  min-height: 135px;
+  padding: 0 16px 16px;
+  background-color: var(--app-accent-color);
+  transform: translateY(40%);
+  transition-property: transform;
+  transition-duration: 0.2s;
+}
+
+.filmItemName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  padding-top: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--app-primary-text);
+}
+
+.filmItemMetaInfo {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--app-primary-text);
+}
+
+.filmItemFormat {
+  font-weight: 600;
+}

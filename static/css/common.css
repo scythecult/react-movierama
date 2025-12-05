@@ -72,7 +72,7 @@ input[type='radio'].visually-hidden {
   --app-gray-color: #444451;
   --app-white-color: #ffffff;
   --app-safe-bg: transparent;
-  --app-underline-color: rgb(241, 4, 241);
+  --app-accent-color: rgb(241, 4, 241);
 
   --app-screen-color: #ffffff;
   --app-seat-text: #777777;

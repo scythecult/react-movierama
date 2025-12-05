@@ -10,11 +10,11 @@
 .siteNavLink:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--app-underline-color);
+  text-decoration-color: var(--app-accent-color);
 }
 
 .isActive {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-decoration-color: var(--app-underline-color);
+  text-decoration-color: var(--app-accent-color);
 }

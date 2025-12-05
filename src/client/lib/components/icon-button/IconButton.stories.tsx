@@ -1,5 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
-import { IconButton, IconButtonName, type IconButtonProps } from './IconButton';
+import { CustomIconName } from '../custom-icon/constants';
+import { IconButton, type IconButtonProps } from './IconButton';
 
 export default {
   title: 'Components/IconButton',
@@ -8,7 +9,7 @@ export default {
     layout: 'fullscreen',
   },
   args: {
-    name: IconButtonName.LOCATION,
+    name: CustomIconName.ACCOUNT,
   },
   argTypes: {
     className: {
@@ -28,12 +29,12 @@ const Template: StoryFn<IconButtonProps> = (props) => <IconButton {...props} />;
 
 export const Default = Template.bind(null);
 Default.args = {
-  name: IconButtonName.LOCATION,
+  name: CustomIconName.PIN,
   children: 'Current Location',
 };
 
 export const Login = Template.bind(null);
 Login.args = {
-  name: IconButtonName.LOGIN,
+  name: CustomIconName.ACCOUNT,
   children: 'User Name',
 };

@@ -30,7 +30,7 @@ export const MOCK_FILMS = [
     ],
     nameFiscal: '',
     ageCategory: '6+',
-    poster: '/films/8/8681/p_7adde84.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8681/p_7adde84.ebp',
   },
   {
     id: 8801,
@@ -63,7 +63,7 @@ export const MOCK_FILMS = [
     ],
     nameFiscal: '',
     ageCategory: '6+',
-    poster: '/films/8/8801/p_3ed056a.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8801/p_3ed056a.ebp',
   },
   {
     id: 8711,
@@ -96,7 +96,7 @@ export const MOCK_FILMS = [
     ],
     nameFiscal: '',
     ageCategory: '6+',
-    poster: '/films/8/8711/p_5f5f3d8.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8711/p_5f5f3d8.ebp',
   },
   {
     id: 8812,
@@ -121,7 +121,7 @@ export const MOCK_FILMS = [
     stickers: [],
     nameFiscal: '',
     ageCategory: '16+',
-    poster: '/films/8/8812/p_5b723ab.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8812/p_5b723ab.ebp',
   },
   {
     id: 8661,
@@ -154,7 +154,7 @@ export const MOCK_FILMS = [
     ],
     nameFiscal: '',
     ageCategory: '16+',
-    poster: '/films/8/8661/p_129c806.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8661/p_129c806.ebp',
   },
   {
     id: 8834,
@@ -179,7 +179,7 @@ export const MOCK_FILMS = [
     stickers: [],
     nameFiscal: '',
     ageCategory: '6+',
-    poster: '/films/8/8834/p_a1b0c86.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8834/p_a1b0c86.ebp',
   },
   {
     id: 8833,
@@ -204,7 +204,7 @@ export const MOCK_FILMS = [
     stickers: [],
     nameFiscal: '',
     ageCategory: '18+',
-    poster: '/films/8/8833/p_90c604a.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8833/p_90c604a.ebp',
   },
   {
     id: 8710,
@@ -237,7 +237,7 @@ export const MOCK_FILMS = [
     ],
     nameFiscal: '',
     ageCategory: '6+',
-    poster: '/films/8/8710/p_5883f01.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8710/p_5883f01.ebp',
   },
   {
     id: 8813,
@@ -262,7 +262,7 @@ export const MOCK_FILMS = [
     stickers: [],
     nameFiscal: '',
     ageCategory: '18+',
-    poster: '/films/8/8813/p_43f76df.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8813/p_43f76df.ebp',
   },
   {
     id: 8835,
@@ -295,7 +295,7 @@ export const MOCK_FILMS = [
     ],
     nameFiscal: '',
     ageCategory: '12+',
-    poster: '/films/8/8835/p_edb50d9.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8835/p_edb50d9.ebp',
   },
   {
     id: 8836,
@@ -320,7 +320,7 @@ export const MOCK_FILMS = [
     stickers: [],
     nameFiscal: '',
     ageCategory: '12+',
-    poster: '/films/8/8836/p_5061e83.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8836/p_5061e83.ebp',
   },
   {
     id: 8709,
@@ -353,7 +353,7 @@ export const MOCK_FILMS = [
     ],
     nameFiscal: '',
     ageCategory: '12+',
-    poster: '/films/8/8709/p_171be5b.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8709/p_171be5b.ebp',
   },
   {
     id: 8777,
@@ -378,7 +378,7 @@ export const MOCK_FILMS = [
     stickers: [],
     nameFiscal: '',
     ageCategory: '18+',
-    poster: '/films/8/8777/p_a0cdcb4.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8777/p_a0cdcb4.ebp',
   },
   {
     id: 8837,
@@ -403,7 +403,7 @@ export const MOCK_FILMS = [
     stickers: [],
     nameFiscal: '',
     ageCategory: '18+',
-    poster: '/films/8/8837/p_d466778.ebp',
+    poster: 'https://images.kinomax.ru/550/films/8/8837/p_d466778.ebp',
   },
   {
     id: 6396,
@@ -428,6 +428,6 @@ export const MOCK_FILMS = [
     stickers: [],
     nameFiscal: '',
     ageCategory: '16+',
-    poster: '/films/6/6396/p_921cd21.ebp',
+    poster: 'https://images.kinomax.ru/550/films/6/6396/p_921cd21.ebp',
   },
 ];

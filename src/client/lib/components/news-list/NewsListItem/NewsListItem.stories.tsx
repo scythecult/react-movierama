@@ -13,7 +13,7 @@ export default {
 
 const Template: StoryFn<NewsListItemProps> = (props) => (
   <BrowserRouter>
-    <NewsListItem {...props} />;
+    <NewsListItem {...props} />
   </BrowserRouter>
 );
 
