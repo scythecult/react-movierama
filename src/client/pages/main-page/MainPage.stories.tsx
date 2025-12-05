@@ -14,6 +14,7 @@ export default {
 } satisfies Meta;
 
 // TODO Temporary
+// TODO Remove whole story?
 const queryClient = new QueryClient();
 
 enableMocks();

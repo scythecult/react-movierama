@@ -14,8 +14,10 @@ exports[`NewsList > should correspond default layout 1`] = `
         data-discover="true"
         href="/news/11384"
       />
-      <div
+      <img
+        alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
         class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
       />
       <h3
         class="_newsListItemTitle_7dec2b"
@@ -36,8 +38,10 @@ exports[`NewsList > should correspond default layout 1`] = `
         data-discover="true"
         href="/news/11389"
       />
-      <div
+      <img
+        alt="Каждому, кто недавно был у нас в кино, мы дарим скидку 20% на следующий поход!"
         class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291011_300894.webp"
       />
       <h3
         class="_newsListItemTitle_7dec2b"
@@ -58,8 +62,10 @@ exports[`NewsList > should correspond default layout 1`] = `
         data-discover="true"
         href="/news/11392"
       />
-      <div
+      <img
+        alt="С 10 по 23 ноября нахаживайте шаги и совершайте тренировки с использованием приложения «Мой фитнес», зарабатывайте Баллы Здоровья и получайте ценные призы!"
         class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/11/071116_259408.webp"
       />
       <h3
         class="_newsListItemTitle_7dec2b"
@@ -80,8 +86,10 @@ exports[`NewsList > should correspond default layout 1`] = `
         data-discover="true"
         href="/news/11390"
       />
-      <div
+      <img
+        alt="Теперь подтверждение списания бонусов — по пин-коду в приложении Киномакс."
         class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291012_982530.webp"
       />
       <h3
         class="_newsListItemTitle_7dec2b"

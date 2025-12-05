@@ -1,4 +1,5 @@
 .filmsList {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
   justify-items: center;

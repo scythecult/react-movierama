@@ -10,8 +10,10 @@ exports[`NewsListItem > should correspond default layout 1`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -37,8 +39,10 @@ exports[`NewsListItem > should support the "addedAt" prop 1`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -64,8 +68,10 @@ exports[`NewsListItem > should support the "addedAt" prop 2`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -91,8 +97,10 @@ exports[`NewsListItem > should support the "headline" prop 1`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -118,8 +126,10 @@ exports[`NewsListItem > should support the "headline" prop 2`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -145,8 +155,10 @@ exports[`NewsListItem > should support the "id" prop 1`] = `
       data-discover="true"
       href="/news/1"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -172,8 +184,10 @@ exports[`NewsListItem > should support the "id" prop 2`] = `
       data-discover="true"
       href="/news/2"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -199,8 +213,10 @@ exports[`NewsListItem > should support the "image" prop 1`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="/"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -226,8 +242,10 @@ exports[`NewsListItem > should support the "image" prop 2`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
       class="_newsListItemImage_7dec2b"
+      src="/v2"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -253,8 +271,10 @@ exports[`NewsListItem > should support the "preview" prop 1`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="preview"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"
@@ -280,8 +300,10 @@ exports[`NewsListItem > should support the "preview" prop 2`] = `
       data-discover="true"
       href="/news/11384"
     />
-    <div
+    <img
+      alt="preview v2"
       class="_newsListItemImage_7dec2b"
+      src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
     />
     <h3
       class="_newsListItemTitle_7dec2b"

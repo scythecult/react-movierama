@@ -1,8 +1,9 @@
 import { render } from '@testing-library/react';
-import { IconButton, IconButtonName, type IconButtonProps } from './IconButton';
+import { CustomIconName } from '../custom-icon/constants';
+import { IconButton, type IconButtonProps } from './IconButton';
 
 const DEFAULT_PROPS: IconButtonProps = {
-  name: IconButtonName.LOCATION,
+  name: CustomIconName.PIN,
   children: 'Current Location',
 };
 
@@ -24,11 +25,11 @@ describe('Location', () => {
   });
 
   test('should support the "name" prop', () => {
-    let result = render(<IconButton {...DEFAULT_PROPS} name={IconButtonName.LOCATION} />);
+    let result = render(<IconButton {...DEFAULT_PROPS} name={CustomIconName.ACCOUNT} />);
 
     expect(result.container).toMatchSnapshot();
 
-    result = render(<IconButton {...DEFAULT_PROPS} name={IconButtonName.LOCATION} />);
+    result = render(<IconButton {...DEFAULT_PROPS} name={CustomIconName.PIN} />);
 
     expect(result.container).toMatchSnapshot();
   });

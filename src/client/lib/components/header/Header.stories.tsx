@@ -1,5 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
 import { BrowserRouter } from 'react-router';
+import { AppStoreProvider } from '../../contexts/app-store/AppStoreProvider';
 import { Header, type HeaderProps } from './Header';
 
 export default {
@@ -18,9 +19,11 @@ export default {
 } satisfies Meta<typeof Header>;
 
 const Template: StoryFn<HeaderProps> = (props) => (
-  <BrowserRouter>
-    <Header {...props} />;
-  </BrowserRouter>
+  <AppStoreProvider>
+    <BrowserRouter>
+      <Header {...props} />;
+    </BrowserRouter>
+  </AppStoreProvider>
 );
 
 export const Default = Template.bind(null);

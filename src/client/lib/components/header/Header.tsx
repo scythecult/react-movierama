@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import { useAppStore } from '../../contexts/app-store/useAppStore';
 import type { PropsWithClassName } from '../../types/PropsWithClassName';
-import { IconButton, IconButtonName } from '../icon-button/IconButton';
+import { CustomIconName } from '../custom-icon/constants';
+import { IconButton } from '../icon-button/IconButton';
 import { Logo } from '../logo/Logo';
 import { SiteNavigation } from '../site-navigation/SiteNavigation';
 import styles from './styles.module.css';
@@ -12,17 +13,18 @@ export const Header = (props: HeaderProps) => {
   const user = useAppStore((state) => state.user);
   const { className } = props;
   const classNameFinal = clsx(styles.header, className);
+  const userTextFinal = user.email ? `${user.firstName} ${user.lastName}` : 'Personal Account';
 
   return (
     <header className={classNameFinal}>
       <div className={styles.headerContent}>
         <Logo />
 
-        <IconButton name={IconButtonName.LOCATION}>Current Location</IconButton>
+        <IconButton name={CustomIconName.PIN}>Current Location</IconButton>
 
         <SiteNavigation />
 
-        <IconButton name={IconButtonName.LOGIN}>{user.firstName}</IconButton>
+        <IconButton name={CustomIconName.ACCOUNT}>{userTextFinal}</IconButton>
       </div>
     </header>
   );

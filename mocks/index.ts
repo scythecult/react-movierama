@@ -8,5 +8,19 @@ export const enableMocks = async () => {
   const { worker } = await import('./browser');
   // We could init here worker events listeners.
 
-  return worker.start();
+  return worker.start({
+    onUnhandledRequest(request, print) {
+      if (
+        request.url.includes('kinomax') ||
+        request.url.includes('static') ||
+        request.url.includes('styles') ||
+        request.url.includes('client')
+      ) {
+        return;
+      }
+
+      // For other unhandled requests, print a warning
+      print.warning();
+    },
+  });
 };
