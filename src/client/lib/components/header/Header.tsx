@@ -11,16 +11,18 @@ export type HeaderProps = PropsWithClassName;
 
 export const Header = (props: HeaderProps) => {
   const user = useAppStore((state) => state.user);
+  const location = useAppStore((state) => state.location);
   const { className } = props;
   const classNameFinal = clsx(styles.header, className);
   const userTextFinal = user.email ? `${user.firstName} ${user.lastName}` : 'Personal Account';
+  const locationTextFinal = location.city ? location.city : 'Choose City';
 
   return (
     <header className={classNameFinal}>
       <div className={styles.headerContent}>
         <Logo />
 
-        <IconButton name={CustomIconName.PIN}>Current Location</IconButton>
+        <IconButton name={CustomIconName.PIN}>{locationTextFinal}</IconButton>
 
         <SiteNavigation />
 

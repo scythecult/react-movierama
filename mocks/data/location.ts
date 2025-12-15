@@ -1,0 +1,16 @@
+export const MOCK_LOCATION = {
+  status: 'success',
+  country: 'Russia',
+  countryCode: 'RU',
+  region: 'YAR',
+  regionName: 'Yaroslavl Oblast',
+  city: 'Yaroslavl',
+  zip: '150048',
+  lat: 57.6299,
+  lon: 39.8737,
+  timezone: 'Europe/Moscow',
+  isp: 'PJSC Rostelecom',
+  org: 'OJSC Rostelecom',
+  as: 'AS12389 PJSC Rostelecom',
+  query: '217.15.129.41',
+};
