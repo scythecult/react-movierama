@@ -55,6 +55,23 @@ export const createSsrServer = async () => {
     response.status(StatusCodes.OK).json({ ok: true });
   });
 
+  ssrServer.get(AppRoute.LOCATION, async (_, response) => {
+    // Temporary
+    // TODO Cache request by some key
+    const geolocationResponse = await fetch('http://ip-api.com/json/');
+    if (!geolocationResponse.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const result = await geolocationResponse.json();
+
+    response.status(StatusCodes.OK).json({
+      data: {
+        location: result,
+      },
+    });
+  });
+
   // Temporary move to separate route
   ssrServer.get(AppRoute.HALLPLAN, (_, response) => {
     console.info('real response hallplan');

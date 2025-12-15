@@ -4,6 +4,7 @@ import { renderToString } from 'react-dom/server';
 import { AppRoute } from '../common/constants/routes';
 import { fetchFilms } from './lib/api/films/requests';
 import { fetchHallplan } from './lib/api/hallplan/requests';
+import { fetchLocation } from './lib/api/location/requests';
 import { fetchNews } from './lib/api/news/requests';
 import { QueryKey } from './lib/api/queryKeys';
 import { fetchUser } from './lib/api/user/requests';
@@ -51,6 +52,11 @@ export const renderSsrTemplate = async (request: Request) => {
     queryFn: fetchUser,
   });
 
+  await queryClient.prefetchQuery({
+    queryKey: QueryKey.location.all,
+    queryFn: fetchLocation,
+  });
+
   // await queryClient.prefetchQuery({
   //   queryKey: QueryKey.films.all,
   //   queryFn: fetchFilms,
@@ -66,6 +72,7 @@ export const renderSsrTemplate = async (request: Request) => {
   // const filmsData = queryClient.getQueryData(QueryKey.films.all);
   // const newsData = queryClient.getQueryData(QueryKey.news.all);
   const userData = queryClient.getQueryData(QueryKey.user.all);
+  const locationData = queryClient.getQueryData(QueryKey.location.all);
   const dehydratedQueryState = dehydrate(queryClient);
 
   const html = renderToString(<ServerApp queryClient={queryClient} url={url} />);
@@ -73,6 +80,7 @@ export const renderSsrTemplate = async (request: Request) => {
   const zustandState = {
     ...(typeof hallplanData === 'undefined' ? {} : hallplanData),
     ...(typeof userData === 'undefined' ? {} : userData),
+    ...(typeof locationData === 'undefined' ? {} : locationData),
     // ...(typeof filmsData === 'undefined' ? {} : filmsData),
     // ...(typeof newsData === 'undefined' ? {} : newsData),
   };

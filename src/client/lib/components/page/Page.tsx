@@ -1,23 +1,33 @@
 import { useLayoutEffect } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router';
+import { useLocationQuery } from '../../api/location/hooks';
 import { Header } from '../header/Header';
 import { Logo } from '../logo/Logo';
 import styles from './styles.module.css';
 export const Page = () => {
   const location = useLocation();
+  const { data: locationData, isLoading: isLocationDataLoading } = useLocationQuery();
 
   useLayoutEffect(() => {
     document.documentElement.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [location.pathname]);
 
+  if (isLocationDataLoading) {
+    // TODO Add skeletons
+    return <div>Loading...</div>;
+  }
+
+  // TODO Add proper check or add fallback values to hook
+  if (!locationData) {
+    return <div>Error</div>;
+  }
+
   return (
     <>
       <Header />
-
       <main className={styles.pageMain}>
         <Outlet />
       </main>
-
       {/* Separate to component */}
       <footer className={styles.pageFooter}>
         <div className={`${styles.pageContentContainer} ${styles.pageContentContainerFooter}`}>
