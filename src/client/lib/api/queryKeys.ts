@@ -19,4 +19,8 @@ export const QueryKey = {
   news: {
     all: ['news'] as const,
   },
+
+  location: {
+    all: ['location'] as const,
+  },
 };

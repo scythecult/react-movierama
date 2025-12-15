@@ -12,6 +12,8 @@ export const AppRoute = {
   ART: '/art',
   MULTI_CARD: '/multicard',
   GIFT_CARD: '/giftcard',
+  LOCATIONS: '/locations',
+  LOCATION: '/location',
 };
 
 export const AppPath = {
