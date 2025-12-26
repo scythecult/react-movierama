@@ -5,8 +5,9 @@ import { AppRoute } from '../common/constants/routes';
 import { fetchFilms } from './lib/api/films/requests';
 import { fetchHallplan } from './lib/api/hallplan/requests';
 import { fetchLocation } from './lib/api/location/requests';
+import { fetchLocations } from './lib/api/locations/requests';
 import { fetchNews } from './lib/api/news/requests';
-import { QueryKey } from './lib/api/queryKeys';
+import { MainPageQueryKey, OrderPageQueryKey } from './lib/api/queryKeys';
 import { fetchUser } from './lib/api/user/requests';
 import { ServerApp } from './ServerApp';
 
@@ -28,19 +29,19 @@ export const renderSsrTemplate = async (request: Request) => {
   switch (url) {
     case AppRoute.ROOT:
       await queryClient.prefetchQuery({
-        queryKey: QueryKey.films.all,
+        queryKey: MainPageQueryKey.films(),
         queryFn: fetchFilms,
       });
 
       await queryClient.prefetchQuery({
-        queryKey: QueryKey.news.all,
+        queryKey: MainPageQueryKey.news(),
         queryFn: fetchNews,
       });
 
       break;
     case AppRoute.ORDER_PAGE:
       await queryClient.prefetchQuery({
-        queryKey: QueryKey.hallplan.all,
+        queryKey: OrderPageQueryKey.all,
         queryFn: fetchHallplan,
       });
 
@@ -48,31 +49,24 @@ export const renderSsrTemplate = async (request: Request) => {
   }
 
   await queryClient.prefetchQuery({
-    queryKey: QueryKey.user.all,
+    queryKey: MainPageQueryKey.user(),
     queryFn: fetchUser,
   });
 
   await queryClient.prefetchQuery({
-    queryKey: QueryKey.location.all,
+    queryKey: MainPageQueryKey.location(),
     queryFn: fetchLocation,
   });
 
-  // await queryClient.prefetchQuery({
-  //   queryKey: QueryKey.films.all,
-  //   queryFn: fetchFilms,
-  // });
-
-  // await queryClient.prefetchQuery({
-  //   queryKey: QueryKey.news.all,
-  //   queryFn: fetchNews,
-  // });
+  await queryClient.prefetchQuery({
+    queryKey: MainPageQueryKey.locations(),
+    queryFn: fetchLocations,
+  });
 
   // Get current page data to pass to zustand
-  const hallplanData = queryClient.getQueryData(QueryKey.hallplan.all);
-  // const filmsData = queryClient.getQueryData(QueryKey.films.all);
-  // const newsData = queryClient.getQueryData(QueryKey.news.all);
-  const userData = queryClient.getQueryData(QueryKey.user.all);
-  const locationData = queryClient.getQueryData(QueryKey.location.all);
+  const hallplanData = queryClient.getQueryData(OrderPageQueryKey.all);
+  const userData = queryClient.getQueryData(MainPageQueryKey.user());
+  const locationData = queryClient.getQueryData(MainPageQueryKey.location());
   const dehydratedQueryState = dehydrate(queryClient);
 
   const html = renderToString(<ServerApp queryClient={queryClient} url={url} />);
@@ -81,8 +75,6 @@ export const renderSsrTemplate = async (request: Request) => {
     ...(typeof hallplanData === 'undefined' ? {} : hallplanData),
     ...(typeof userData === 'undefined' ? {} : userData),
     ...(typeof locationData === 'undefined' ? {} : locationData),
-    // ...(typeof filmsData === 'undefined' ? {} : filmsData),
-    // ...(typeof newsData === 'undefined' ? {} : newsData),
   };
 
   return { html, dehydratedQueryState, zustandState };

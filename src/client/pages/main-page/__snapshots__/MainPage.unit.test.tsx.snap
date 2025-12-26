@@ -623,6 +623,7 @@ exports[`OrderPage > should correspond default layout 1`] = `
   >
     <div
       class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
     >
       <a
         class="_newsListItemLink_7dec2b"
@@ -647,6 +648,7 @@ exports[`OrderPage > should correspond default layout 1`] = `
     </div>
     <div
       class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
     >
       <a
         class="_newsListItemLink_7dec2b"
@@ -671,6 +673,7 @@ exports[`OrderPage > should correspond default layout 1`] = `
     </div>
     <div
       class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
     >
       <a
         class="_newsListItemLink_7dec2b"
@@ -695,6 +698,7 @@ exports[`OrderPage > should correspond default layout 1`] = `
     </div>
     <div
       class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
     >
       <a
         class="_newsListItemLink_7dec2b"

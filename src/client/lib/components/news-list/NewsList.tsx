@@ -3,10 +3,10 @@ import type { PropsWithClassName } from '../../types/PropsWithClassName';
 import { NewsListItem } from './NewsListItem/NewsListItem';
 import styles from './styles.module.css';
 
-export type NewsListProps = PropsWithClassName & {
+export type NewsListProps = PropsWithClassName<{
   news: NewsItem[];
   onNewsClick: (id: number) => void;
-};
+}>;
 
 export const NewsList = (props: NewsListProps) => {
   const { news } = props;

@@ -5,6 +5,11 @@ import { Header, type HeaderProps } from './Header';
 
 const DEFAULT_PROPS: HeaderProps = {
   className: '',
+  location: {
+    id: 0,
+    name: '',
+  },
+  onLocationClick: () => {},
 };
 
 const buildWrappedComponent = (props: HeaderProps = DEFAULT_PROPS) => (
@@ -28,6 +33,16 @@ describe('Header', () => {
     expect(result.container).toMatchSnapshot();
 
     result = render(buildWrappedComponent({ ...DEFAULT_PROPS, className: 'custom-class-v2' }));
+
+    expect(result.container).toMatchSnapshot();
+  });
+
+  test('should support the "location" prop', () => {
+    let result = render(buildWrappedComponent({ ...DEFAULT_PROPS, location: { name: 'Yaroslavl', id: 1 } }));
+
+    expect(result.container).toMatchSnapshot();
+
+    result = render(buildWrappedComponent({ ...DEFAULT_PROPS, location: { name: 'Moscow', id: 2 } }));
 
     expect(result.container).toMatchSnapshot();
   });

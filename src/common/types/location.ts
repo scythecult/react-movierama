@@ -1,7 +1,8 @@
 export type LocationData = {
-  country: string;
-  city: string;
-  lat: number;
-  lon: number;
-  query: string;
+  id: number;
+  name: string;
+};
+
+export type LocationResponse = {
+  location: LocationData;
 };

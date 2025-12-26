@@ -34,6 +34,6 @@ export type Film = {
   poster: string;
 };
 
-export type FilmsData = {
+export type FilmsResponse = {
   films: Film[];
 };

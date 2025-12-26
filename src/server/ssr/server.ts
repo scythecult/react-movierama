@@ -4,6 +4,12 @@ import express, { json, urlencoded } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { ViteDevServer } from 'vite';
 import { MOCK_FILMS } from '../../../mocks/data/films';
+import {
+  MOCK_CITY_TO_ID_MAP,
+  MOCK_CURRENT_LOCATION,
+  MOCK_LOCATIONS,
+  type MockCityToIdMapKey,
+} from '../../../mocks/data/locations';
 import { MOCK_NEWS } from '../../../mocks/data/news';
 import { MOCK_USER } from '../../../mocks/data/user';
 import { serverMocks } from '../../../mocks/node';
@@ -58,16 +64,42 @@ export const createSsrServer = async () => {
   ssrServer.get(AppRoute.LOCATION, async (_, response) => {
     // Temporary
     // TODO Cache request by some key
-    const geolocationResponse = await fetch('http://ip-api.com/json/');
-    if (!geolocationResponse.ok) {
-      throw new Error('Network response was not ok');
+    // TODO Get request.ip and conditionally use it
+    // Check if ip same as before, return cached data
+
+    let currentLocation = MOCK_CURRENT_LOCATION.getLocation();
+
+    if (currentLocation.id <= 0) {
+      const geolocationResponse = await fetch('http://ip-api.com/json/');
+
+      if (!geolocationResponse.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const result = await geolocationResponse.json();
+      const { city = 'Yaroslavl' }: { city: MockCityToIdMapKey } = result;
+
+      currentLocation = MOCK_LOCATIONS.find((location) => MOCK_CITY_TO_ID_MAP[city] === location.id)!;
     }
 
-    const result = await geolocationResponse.json();
+    MOCK_CURRENT_LOCATION.setLocation(currentLocation);
 
     response.status(StatusCodes.OK).json({
       data: {
-        location: result,
+        location: currentLocation,
+      },
+    });
+  });
+
+  ssrServer.post(AppRoute.LOCATION, async (request, response) => {
+    const { id } = request.body;
+    const newCurrentLocation = MOCK_LOCATIONS.find((location) => id === location.id)!;
+
+    MOCK_CURRENT_LOCATION.setLocation(newCurrentLocation);
+
+    response.status(StatusCodes.OK).json({
+      data: {
+        location: newCurrentLocation,
       },
     });
   });
@@ -116,6 +148,16 @@ export const createSsrServer = async () => {
     });
   });
 
+  ssrServer.get(AppRoute.LOCATIONS, (_, response) => {
+    console.info('real response locations');
+
+    response.status(StatusCodes.OK).json({
+      data: {
+        locations: MOCK_LOCATIONS,
+      },
+    });
+  });
+
   // Render content
   ssrServer.use(
     AppRoute.ROOT,
@@ -138,6 +180,10 @@ export const createSsrServer = async () => {
     // },
     renderMiddlewareBuilder(vite),
   );
+
+  ssrServer.use('*splat', (_, response) => {
+    response.status(StatusCodes.NOT_FOUND).send('Not found');
+  });
 
   return ssrServer;
 };

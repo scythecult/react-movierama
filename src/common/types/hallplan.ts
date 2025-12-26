@@ -34,7 +34,7 @@ export type SeatData = {
   ticketTypeId: number | null;
 };
 
-export type HallplanData = {
+export type HallplanResponse = {
   canvas: Canvas;
   seats: SeatData[];
   seatTypes: SeatType[];

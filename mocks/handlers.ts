@@ -75,4 +75,17 @@ export const handlers = [
       },
     });
   }),
+
+  http.post(`${Config.ssrUrl}${AppRoute.LOCATION}`, async ({ request }) => {
+    const result = await request.json();
+
+    console.info({ result });
+    // TODO Mutate MOCK_LOCATION by setting incoming data
+
+    return HttpResponse.json({
+      data: {
+        location: 'check',
+      },
+    });
+  }),
 ];

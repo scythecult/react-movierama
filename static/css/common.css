@@ -21,6 +21,7 @@ dd {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -61,6 +62,7 @@ input[type='radio'].visually-hidden {
   --app-primary-bg: #242424;
   --app-secondary-bg: rgba(0, 0, 0, 0.2);
   --app-primary-text: rgba(255, 255, 255, 0.87);
+  --app-primary-text-inverse: #213547;
   --app-secondary-text: #777777;
   --app-primary-link: #646cff;
   --app-secondary-link: #535bf2;
@@ -101,6 +103,7 @@ input[type='radio'].visually-hidden {
     --app-primary-bg: #ffffff;
     --app-secondary-bg: rgba(0, 0, 0, 0.1);
     --app-primary-text: #213547;
+    --app-primary-text-inverse: rgba(255, 255, 255, 0.87);
     --app-screen-color: #444451;
     --app-safe-bg: rgba(0, 0, 0, 0.1);
 
@@ -121,4 +124,8 @@ body {
   transition-property: background-color, color;
   transition-duration: 0.2s;
   color-scheme: light dark;
+}
+
+body:has([data-modal]) {
+  overflow: hidden;
 }

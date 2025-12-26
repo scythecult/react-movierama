@@ -1,3 +1,37 @@
+import type { LocationData } from '../../src/common/types/location';
+
+export const MOCK_CITY_TO_ID_MAP = {
+  Yaroslavl: 20,
+  Moscow: 1,
+  Astrakhan: 23,
+  Vladivostok: 30,
+  Vladimir: 3,
+  Volgograd: 5,
+  Ekaterinburg: 6,
+  Izhevsk: 21,
+  Irkutsk: 29,
+  Kazan: 7,
+  Krasnodar: 8,
+  Krasnoyarsk: 9,
+  Perm: 10,
+} as const;
+
+export type MockCityToIdMapKey = keyof typeof MOCK_CITY_TO_ID_MAP;
+
+export const MOCK_CURRENT_LOCATION = {
+  location: {
+    id: -1,
+    name: '',
+  },
+  setLocation(location: LocationData) {
+    this.location = location;
+  },
+
+  getLocation() {
+    return this.location;
+  },
+};
+
 export const MOCK_LOCATIONS = [
   {
     id: 1,

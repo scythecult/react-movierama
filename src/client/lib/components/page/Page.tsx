@@ -1,30 +1,48 @@
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router';
-import { useLocationQuery } from '../../api/location/hooks';
+import { useLocationMutation, useLocationQuery } from '../../api/location/hooks';
+import { useLocationsQuery } from '../../api/locations/hooks';
 import { Header } from '../header/Header';
+import { LocationList } from '../location/LocationList';
 import { Logo } from '../logo/Logo';
+import { Modal } from '../modal/Modal';
 import styles from './styles.module.css';
 export const Page = () => {
   const location = useLocation();
+  const { mutate } = useLocationMutation();
   const { data: locationData, isLoading: isLocationDataLoading } = useLocationQuery();
+  const { data: locationsData, isLoading: isLocationsDataLoading } = useLocationsQuery();
+  const [isLocationModalVisible, setIsLocationModalVisible] = useState(false);
+
+  const handleLocationModalClose = () => {
+    setIsLocationModalVisible((prevIsLocationModalVisible) => !prevIsLocationModalVisible);
+  };
 
   useLayoutEffect(() => {
     document.documentElement.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [location.pathname]);
 
-  if (isLocationDataLoading) {
+  if (isLocationDataLoading || isLocationsDataLoading) {
     // TODO Add skeletons
     return <div>Loading...</div>;
   }
 
   // TODO Add proper check or add fallback values to hook
-  if (!locationData) {
+  if (!locationData || !locationsData?.locations.length) {
     return <div>Error</div>;
   }
 
+  const { location: currentLocation } = locationData;
+  const { locations } = locationsData;
+
+  const handleLocationClick = (id: number) => {
+    mutate(id);
+  };
+
   return (
     <>
-      <Header />
+      <Header location={currentLocation} onLocationClick={handleLocationModalClose} />
+
       <main className={styles.pageMain}>
         <Outlet />
       </main>
@@ -117,6 +135,16 @@ export const Page = () => {
           </div>
         </div>
       </footer>
+
+      {isLocationModalVisible && (
+        <Modal
+          renderHeader={() => <h3>Location</h3>}
+          renderBody={() => (
+            <LocationList currentLocation={currentLocation} locations={locations} onClick={handleLocationClick} />
+          )}
+          onClose={handleLocationModalClose}
+        />
+      )}
     </>
   );
 };

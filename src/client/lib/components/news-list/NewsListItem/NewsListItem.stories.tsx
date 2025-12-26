@@ -8,6 +8,32 @@ export default {
   args: {
     ...MOCK_NEWS[0],
   },
+
+  argTypes: {
+    id: {
+      table: {
+        disable: true,
+      },
+    },
+
+    addedAt: {
+      table: {
+        disable: true,
+      },
+    },
+
+    image: {
+      table: {
+        disable: true,
+      },
+    },
+
+    preview: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   component: NewsListItem,
 } satisfies Meta<typeof NewsListItem>;
 

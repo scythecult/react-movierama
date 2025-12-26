@@ -34,3 +34,8 @@ export const Pin = Template.bind(null);
 Pin.args = {
   name: CustomIconName.PIN,
 };
+
+export const Cross = Template.bind(null);
+Cross.args = {
+  name: CustomIconName.CROSS,
+};

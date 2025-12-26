@@ -4,6 +4,7 @@ exports[`NewsListItem > should correspond default layout 1`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -33,6 +34,7 @@ exports[`NewsListItem > should support the "addedAt" prop 1`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -62,6 +64,7 @@ exports[`NewsListItem > should support the "addedAt" prop 2`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -91,6 +94,7 @@ exports[`NewsListItem > should support the "headline" prop 1`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -120,6 +124,7 @@ exports[`NewsListItem > should support the "headline" prop 2`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -149,6 +154,7 @@ exports[`NewsListItem > should support the "id" prop 1`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -178,6 +184,7 @@ exports[`NewsListItem > should support the "id" prop 2`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -207,6 +214,7 @@ exports[`NewsListItem > should support the "image" prop 1`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -236,6 +244,7 @@ exports[`NewsListItem > should support the "image" prop 2`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -265,6 +274,7 @@ exports[`NewsListItem > should support the "preview" prop 1`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"
@@ -294,6 +304,7 @@ exports[`NewsListItem > should support the "preview" prop 2`] = `
 <div>
   <div
     class="_newsListItem_7dec2b"
+    data-test-id="news-list-item"
   >
     <a
       class="_newsListItemLink_7dec2b"

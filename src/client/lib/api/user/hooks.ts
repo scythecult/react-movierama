@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { QueryKey } from '../queryKeys';
+import { MainPageQueryKey } from '../queryKeys';
 import { fetchUser } from './requests';
 
 export const useUserQuery = () => {
   return useQuery({
-    queryKey: QueryKey.user.all,
+    queryKey: MainPageQueryKey.user(),
     queryFn: fetchUser,
     staleTime: Infinity,
   });
