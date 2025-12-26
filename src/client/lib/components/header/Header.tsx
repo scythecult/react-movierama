@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import type { LocationData } from '../../../../common/types/location';
 import { useAppStore } from '../../contexts/app-store/useAppStore';
 import type { PropsWithClassName } from '../../types/PropsWithClassName';
 import { CustomIconName } from '../custom-icon/constants';
@@ -7,22 +8,27 @@ import { Logo } from '../logo/Logo';
 import { SiteNavigation } from '../site-navigation/SiteNavigation';
 import styles from './styles.module.css';
 
-export type HeaderProps = PropsWithClassName;
+export type HeaderProps = PropsWithClassName<{
+  location: LocationData;
+  onLocationClick: () => void;
+}>;
 
 export const Header = (props: HeaderProps) => {
+  const { location } = props;
   const user = useAppStore((state) => state.user);
-  const location = useAppStore((state) => state.location);
-  const { className } = props;
+  const { className, onLocationClick } = props;
   const classNameFinal = clsx(styles.header, className);
   const userTextFinal = user.email ? `${user.firstName} ${user.lastName}` : 'Personal Account';
-  const locationTextFinal = location.city ? location.city : 'Choose City';
+  const locationTextFinal = location.name ? location.name : 'Choose City';
 
   return (
     <header className={classNameFinal}>
       <div className={styles.headerContent}>
         <Logo />
 
-        <IconButton name={CustomIconName.PIN}>{locationTextFinal}</IconButton>
+        <IconButton name={CustomIconName.PIN} onClick={onLocationClick}>
+          {locationTextFinal}
+        </IconButton>
 
         <SiteNavigation />
 

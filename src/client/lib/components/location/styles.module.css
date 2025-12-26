@@ -1,0 +1,25 @@
+.locationList {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.locationButton {
+  font-size: 20px;
+  color: currentColor;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.locationButton:hover {
+  color: var(--app-accent-color);
+}
+
+.locationButtonActive {
+  color: var(--app-accent-color);
+}

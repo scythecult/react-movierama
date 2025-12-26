@@ -5,10 +5,10 @@ import { CustomIcon, type CustomIconNameValue } from '../custom-icon/CustomIcon'
 import styles from './styles.module.css';
 
 export type IconButtonProps = PropsWithChildren<
-  PropsWithClassName & {
+  PropsWithClassName<{
     name: CustomIconNameValue;
     onClick?: () => void;
-  }
+  }>
 >;
 
 export const IconButton = (props: IconButtonProps) => {

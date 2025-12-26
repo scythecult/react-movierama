@@ -8,6 +8,7 @@ import { AppStoreProvider } from '../../lib/contexts/app-store/AppStoreProvider'
 import { MainPage } from './MainPage';
 
 const queryClient = new QueryClient();
+
 const buildWrappedComponent = () => (
   <QueryClientProvider client={queryClient}>
     <AppStoreProvider>

@@ -3,7 +3,7 @@ import { SEAT_STATE, SEAT_TYPE, SeatStateMap, SeatTypeMap } from '../../../../li
 import type { PropsWithClassName } from '../../../../lib/types/PropsWithClassName';
 import styles from './styles.module.css';
 
-export type SeatProps = PropsWithClassName & {
+export type SeatProps = PropsWithClassName<{
   onClick?: () => void;
   x?: number;
   y?: number;
@@ -12,7 +12,7 @@ export type SeatProps = PropsWithClassName & {
   type?: number;
   place?: number;
   state?: number;
-};
+}>;
 
 export const Seat = (props: SeatProps) => {
   const { x, y, w, h, type = 1, state = 1, place, className, onClick } = props;

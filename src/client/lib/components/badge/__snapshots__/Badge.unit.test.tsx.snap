@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Badge > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_badge_3d325c"
+  />
+</div>
+`;
+
+exports[`Badge > should support the "children" prop 1`] = `
+<div>
+  <div
+    class="_badge_3d325c"
+  >
+    Children
+  </div>
+</div>
+`;
+
+exports[`Badge > should support the "children" prop 2`] = `
+<div>
+  <div
+    class="_badge_3d325c"
+  >
+    Children v2
+  </div>
+</div>
+`;
+
+exports[`Badge > should support the "className" prop 1`] = `
+<div>
+  <div
+    class="_badge_3d325c custom-class"
+  >
+    Children
+  </div>
+</div>
+`;
+
+exports[`Badge > should support the "className" prop 2`] = `
+<div>
+  <div
+    class="_badge_3d325c custom-class-v2"
+  >
+    Children
+  </div>
+</div>
+`;

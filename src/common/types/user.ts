@@ -8,6 +8,6 @@ export type User = {
   wantsPromotions: boolean;
 };
 
-export type UserData = {
+export type UserResponse = {
   user: User;
 };

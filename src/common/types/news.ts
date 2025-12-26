@@ -6,6 +6,6 @@ export type NewsItem = {
   addedAt: string;
 };
 
-export type NewsData = {
+export type NewsResponse = {
   news: NewsItem[];
 };

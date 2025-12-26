@@ -13,11 +13,8 @@ export type AppSlice = AppSliceState;
 
 export const createAppSlice: WithMiddlewareStateCreator<AppSlice> = (set) => ({
   location: {
-    country: '',
-    city: '',
-    lat: 0,
-    lon: 0,
-    query: '',
+    name: '',
+    id: -1,
   },
   seats: [],
   canvas: { width: 0, height: 0 },

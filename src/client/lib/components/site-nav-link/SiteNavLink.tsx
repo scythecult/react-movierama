@@ -5,9 +5,11 @@ import { AppRoute } from '../../../../common/constants/routes';
 import type { PropsWithClassName } from '../../types/PropsWithClassName';
 import styles from './styles.module.css';
 
-export type SiteNavLinkProps = PropsWithChildren<PropsWithClassName> & {
-  to: string;
-};
+export type SiteNavLinkProps = PropsWithChildren<
+  PropsWithClassName<{
+    to: string;
+  }>
+>;
 
 export const SiteNavLink = (props: SiteNavLinkProps) => {
   const { className, children, to = AppRoute.ROOT } = props;
