@@ -1,3 +1,4 @@
+import { ApiVersion } from '../../../common/constants/routes';
 import { Config } from '../../../common/env';
 import type { ServerPayload } from '../../../common/types/http';
 
@@ -6,6 +7,7 @@ type CreateFetcherOptions = {
 };
 
 // TODO Refactor/upgrade
+// TODO Move to common
 const createFetcher = (options: CreateFetcherOptions) => {
   const { baseUrl = '' } = options;
 
@@ -21,7 +23,8 @@ const createFetcher = (options: CreateFetcherOptions) => {
       });
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        // TODO Update error
+        throw new Error(`Network response was not ok, ${response.status} ${response.statusText}`);
       }
 
       const data = await response.json();
@@ -40,4 +43,4 @@ const createFetcher = (options: CreateFetcherOptions) => {
   };
 };
 
-export const fetcher = createFetcher({ baseUrl: Config.ssrUrl });
+export const fetcher = createFetcher({ baseUrl: `${Config.apiUrl}${ApiVersion.V1}` });

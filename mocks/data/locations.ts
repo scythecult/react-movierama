@@ -1,4 +1,4 @@
-import type { LocationData } from '../../src/common/types/location';
+import type { GeolocationData } from '../../src/common/types/geolocation';
 
 export const MOCK_CITY_TO_ID_MAP = {
   Yaroslavl: 20,
@@ -23,7 +23,7 @@ export const MOCK_CURRENT_LOCATION = {
     id: -1,
     name: '',
   },
-  setLocation(location: LocationData) {
+  setLocation(location: GeolocationData) {
     this.location = location;
   },
 

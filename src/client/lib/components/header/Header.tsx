@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { LocationData } from '../../../../common/types/location';
+import type { GeolocationData } from '../../../../common/types/geolocation';
 import { useAppStore } from '../../contexts/app-store/useAppStore';
 import type { PropsWithClassName } from '../../types/PropsWithClassName';
 import { CustomIconName } from '../custom-icon/constants';
@@ -9,7 +9,7 @@ import { SiteNavigation } from '../site-navigation/SiteNavigation';
 import styles from './styles.module.css';
 
 export type HeaderProps = PropsWithClassName<{
-  location: LocationData;
+  location: GeolocationData;
   onLocationClick: () => void;
 }>;
 

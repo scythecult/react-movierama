@@ -2,7 +2,7 @@ import { http, HttpResponse } from 'msw';
 import { AppRoute } from '../src/common/constants/routes';
 import { Config } from '../src/common/env';
 import { MOCK_FILMS } from './data/films';
-import { MOCK_LOCATION } from './data/location';
+import { MOCK_GEOLOCATION } from './data/geolocation';
 import { MOCK_LOCATIONS } from './data/locations';
 import { MOCK_NEWS } from './data/news';
 import { MOCK_CANVAS_SIZE, MOCK_SEAT_TYPES, MOCK_SEATS_DATA } from './data/seats';
@@ -71,7 +71,7 @@ export const handlers = [
   http.get(`${Config.ssrUrl}${AppRoute.LOCATION}`, () => {
     return HttpResponse.json({
       data: {
-        location: MOCK_LOCATION,
+        location: MOCK_GEOLOCATION,
       },
     });
   }),

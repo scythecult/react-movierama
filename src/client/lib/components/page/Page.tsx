@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router';
-import { useLocationMutation, useLocationQuery } from '../../api/location/hooks';
+import { useGeolocationMutation, useGeolocationQuery } from '../../api/geolocation/hooks';
 import { useLocationsQuery } from '../../api/locations/hooks';
 import { Header } from '../header/Header';
 import { LocationList } from '../location/LocationList';
@@ -9,8 +9,8 @@ import { Modal } from '../modal/Modal';
 import styles from './styles.module.css';
 export const Page = () => {
   const location = useLocation();
-  const { mutate } = useLocationMutation();
-  const { data: locationData, isLoading: isLocationDataLoading } = useLocationQuery();
+  const { mutate } = useGeolocationMutation();
+  const { data: geolocationData, isLoading: isGeolocationDataLoading } = useGeolocationQuery();
   const { data: locationsData, isLoading: isLocationsDataLoading } = useLocationsQuery();
   const [isLocationModalVisible, setIsLocationModalVisible] = useState(false);
 
@@ -22,17 +22,18 @@ export const Page = () => {
     document.documentElement.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [location.pathname]);
 
-  if (isLocationDataLoading || isLocationsDataLoading) {
+  if (isLocationsDataLoading) {
     // TODO Add skeletons
     return <div>Loading...</div>;
   }
 
   // TODO Add proper check or add fallback values to hook
-  if (!locationData || !locationsData?.locations.length) {
+
+  if (!geolocationData || !locationsData?.locations?.length) {
     return <div>Error</div>;
   }
 
-  const { location: currentLocation } = locationData;
+  const { location: currentLocation } = geolocationData;
   const { locations } = locationsData;
 
   const handleLocationClick = (id: number) => {

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { staticSeatTypes } from '../../../../server/service/serverMockData';
+import { staticSeatTypes } from '../../../../server/services/serverMockData';
 import { Legend, type LegendProps } from './Legend';
 
 const DEFAULT_PROPS: LegendProps = {

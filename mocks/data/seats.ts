@@ -1,6 +1,6 @@
 import type { SeatData, SeatType } from '../../src/common/types/hallplan';
-import { Hall } from '../../src/server/service/Hall';
-import { SeatNode } from '../../src/server/service/SeatNode';
+import { Hall } from '../../src/server/services/Hall';
+import { SeatNode } from '../../src/server/services/SeatNode';
 
 export const MOCK_SEAT_WIDTH = 40;
 

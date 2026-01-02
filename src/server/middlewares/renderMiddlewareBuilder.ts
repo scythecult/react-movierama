@@ -14,6 +14,7 @@ export const renderMiddlewareBuilder = (vite: ViteDevServer | undefined) => {
       if (
         url.includes('/static/') ||
         url.includes('/src/') ||
+        url.includes('/v1') ||
         url.endsWith('.css') ||
         url.endsWith('.js') ||
         url.endsWith('.svg') ||

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { seatsData } from '../../../../server/service/serverMockData';
+import { seatsData } from '../../../../server/services/serverMockData';
 import { TEST_CART_ITEMS } from '../../../../tests/constants';
 import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH } from '../../../lib/constants/common';
 import { Seats, type SeatsProps } from './Seats';

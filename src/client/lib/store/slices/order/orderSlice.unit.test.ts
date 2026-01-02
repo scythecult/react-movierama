@@ -1,4 +1,4 @@
-import { seatsData } from '../../../../../server/service/serverMockData';
+import { seatsData } from '../../../../../server/services/serverMockData';
 import { TEST_CART_ITEMS, TEST_SEAT_ID } from '../../../../../tests/constants';
 import { type AppStore, getAppStore } from '../../appStore';
 

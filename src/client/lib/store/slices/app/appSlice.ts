@@ -1,9 +1,9 @@
 import type { Canvas, SeatData, SeatType } from '../../../../../common/types/hallplan';
-import type { LocationData } from '../../../../../common/types/location';
+import type { GeolocationData } from '../../../../../common/types/geolocation';
 import type { WithMiddlewareStateCreator } from '../../appStore';
 
 type AppSliceState = {
-  location: LocationData;
+  location: GeolocationData;
   seats: SeatData[];
   canvas: Canvas;
   seatTypes: SeatType[];

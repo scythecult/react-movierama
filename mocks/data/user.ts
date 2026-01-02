@@ -1,4 +1,5 @@
 export const MOCK_USER = {
+  id: 1,
   phone: '+79991234567',
   firstName: 'Алексей',
   lastName: 'Иванов',

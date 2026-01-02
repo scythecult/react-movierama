@@ -3,12 +3,12 @@ import type { Request } from 'express';
 import { renderToString } from 'react-dom/server';
 import { AppRoute } from '../common/constants/routes';
 import { fetchFilms } from './lib/api/films/requests';
+import { fetchGeolocation } from './lib/api/geolocation/requests';
 import { fetchHallplan } from './lib/api/hallplan/requests';
-import { fetchLocation } from './lib/api/location/requests';
 import { fetchLocations } from './lib/api/locations/requests';
 import { fetchNews } from './lib/api/news/requests';
 import { MainPageQueryKey, OrderPageQueryKey } from './lib/api/queryKeys';
-import { fetchUser } from './lib/api/user/requests';
+import { fetchUser } from './lib/api/users/requests';
 import { ServerApp } from './ServerApp';
 
 export type RenderSsrTemplate = typeof renderSsrTemplate;
@@ -54,8 +54,8 @@ export const renderSsrTemplate = async (request: Request) => {
   });
 
   await queryClient.prefetchQuery({
-    queryKey: MainPageQueryKey.location(),
-    queryFn: fetchLocation,
+    queryKey: MainPageQueryKey.geolocation(),
+    queryFn: fetchGeolocation,
   });
 
   await queryClient.prefetchQuery({
@@ -66,7 +66,7 @@ export const renderSsrTemplate = async (request: Request) => {
   // Get current page data to pass to zustand
   const hallplanData = queryClient.getQueryData(OrderPageQueryKey.all);
   const userData = queryClient.getQueryData(MainPageQueryKey.user());
-  const locationData = queryClient.getQueryData(MainPageQueryKey.location());
+  // const locationData = queryClient.getQueryData(MainPageQueryKey.location());
   const dehydratedQueryState = dehydrate(queryClient);
 
   const html = renderToString(<ServerApp queryClient={queryClient} url={url} />);
@@ -74,7 +74,7 @@ export const renderSsrTemplate = async (request: Request) => {
   const zustandState = {
     ...(typeof hallplanData === 'undefined' ? {} : hallplanData),
     ...(typeof userData === 'undefined' ? {} : userData),
-    ...(typeof locationData === 'undefined' ? {} : locationData),
+    // ...(typeof locationData === 'undefined' ? {} : locationData),
   };
 
   return { html, dehydratedQueryState, zustandState };
