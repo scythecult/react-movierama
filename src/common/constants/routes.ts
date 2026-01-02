@@ -5,6 +5,7 @@ export const AppRoute = {
   HALLPLAN: '/hallplan',
   FILMS: '/films',
   USER: '/user',
+  USERS: '/users',
   NEWS: '/news',
   FINDER: '/finder',
   DISCOUNTS: '/discounts',
@@ -14,8 +15,13 @@ export const AppRoute = {
   GIFT_CARD: '/giftcard',
   LOCATIONS: '/locations',
   LOCATION: '/location',
+  GEOLOCATION: '/geolocation',
 };
 
 export const AppPath = {
   CHECKOUT: 'checkout',
+};
+
+export const ApiVersion = {
+  V1: '/v1',
 };

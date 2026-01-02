@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import type { LocationData } from '../../../../common/types/location';
+import type { GeolocationData } from '../../../../common/types/geolocation';
 import type { LocationsData } from '../../../../common/types/locations';
 import type { PropsWithClassName } from '../../types/PropsWithClassName';
 import styles from './styles.module.css';
 
 export type LocationListProps = PropsWithClassName<{
-  currentLocation: LocationData;
+  currentLocation: GeolocationData;
   locations: LocationsData[];
   onClick: (id: number) => void;
 }>;

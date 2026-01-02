@@ -12,6 +12,8 @@ export const MainPageQueryKey = {
 
   location: () => [MainPageQueryKey.all, 'location'] as const,
 
+  geolocation: () => [MainPageQueryKey.all, 'geolocation'] as const,
+
   locations: () => [MainPageQueryKey.all, 'locations'] as const,
 };
 

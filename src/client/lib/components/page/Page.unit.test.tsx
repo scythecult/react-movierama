@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
-import { MOCK_LOCATION } from '../../../../../mocks/data/location';
+import { MOCK_GEOLOCATION } from '../../../../../mocks/data/geolocation';
 import { MOCK_LOCATIONS } from '../../../../../mocks/data/locations';
 import { AppStoreProvider } from '../../contexts/app-store/AppStoreProvider';
 import { Page } from './Page';
@@ -20,7 +20,7 @@ const buildWrappedComponent = () => (
 
 vi.mock('../../api/location/hooks', () => ({
   useLocationQuery: () => ({
-    data: { location: MOCK_LOCATION },
+    data: { location: MOCK_GEOLOCATION },
   }),
 
   useLocationMutation: () => ({

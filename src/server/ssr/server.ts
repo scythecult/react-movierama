@@ -3,21 +3,18 @@ import cors from 'cors';
 import express, { json, urlencoded } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { ViteDevServer } from 'vite';
-import { MOCK_FILMS } from '../../../mocks/data/films';
 import {
   MOCK_CITY_TO_ID_MAP,
   MOCK_CURRENT_LOCATION,
   MOCK_LOCATIONS,
   type MockCityToIdMapKey,
 } from '../../../mocks/data/locations';
-import { MOCK_NEWS } from '../../../mocks/data/news';
-import { MOCK_USER } from '../../../mocks/data/user';
 import { serverMocks } from '../../../mocks/node';
 import { Dir } from '../../common/constants/common';
 import { AppRoute } from '../../common/constants/routes';
 import { Config } from '../../common/env';
 import { renderMiddlewareBuilder } from '../middlewares/renderMiddlewareBuilder';
-import { canvasSize, seatsData, staticSeatTypes } from '../service/serverMockData';
+import { canvasSize, seatsData, staticSeatTypes } from '../services/serverMockData';
 
 export const createSsrServer = async () => {
   const ssrServer = express();
@@ -28,6 +25,7 @@ export const createSsrServer = async () => {
   let vite: ViteDevServer | undefined;
 
   // Init common middlewares
+  // TODO Remove unused
   ssrServer.disable('x-powered-by');
   ssrServer.use(cors({ origin: Config.appUrl, credentials: true }));
   ssrServer.use(compression());
@@ -117,47 +115,6 @@ export const createSsrServer = async () => {
     });
   });
 
-  // Temporary move to separate route
-  ssrServer.get(AppRoute.USER, (_, response) => {
-    console.info('real response user');
-
-    response.status(StatusCodes.OK).json({
-      data: {
-        user: MOCK_USER,
-      },
-    });
-  });
-
-  ssrServer.get(AppRoute.FILMS, (_, response) => {
-    console.info('real response films');
-
-    response.status(StatusCodes.OK).json({
-      data: {
-        films: MOCK_FILMS,
-      },
-    });
-  });
-
-  ssrServer.get(AppRoute.NEWS, (_, response) => {
-    console.info('real response news');
-
-    response.status(StatusCodes.OK).json({
-      data: {
-        news: MOCK_NEWS,
-      },
-    });
-  });
-
-  ssrServer.get(AppRoute.LOCATIONS, (_, response) => {
-    console.info('real response locations');
-
-    response.status(StatusCodes.OK).json({
-      data: {
-        locations: MOCK_LOCATIONS,
-      },
-    });
-  });
-
   // Render content
   ssrServer.use(
     AppRoute.ROOT,
@@ -180,10 +137,6 @@ export const createSsrServer = async () => {
     // },
     renderMiddlewareBuilder(vite),
   );
-
-  ssrServer.use('*splat', (_, response) => {
-    response.status(StatusCodes.NOT_FOUND).send('Not found');
-  });
 
   return ssrServer;
 };
