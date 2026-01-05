@@ -3,7 +3,7 @@ import { MOCK_CANVAS_SIZE, MOCK_SEATS_DATA } from '../../../../../mocks/data/sea
 import { Seats, type SeatsProps } from './Seats';
 
 export default {
-  title: 'Pages/Order-Page/Seats',
+  title: 'Pages/OrderPage/Seats',
   component: Seats,
   args: {
     seats: MOCK_SEATS_DATA,

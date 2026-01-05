@@ -2,7 +2,7 @@ import type { Meta, StoryFn } from '@storybook/react-vite';
 import { Seat, type SeatProps } from './Seat';
 
 export default {
-  title: 'Pages/Order-Page/Seat',
+  title: 'Pages/OrderPage/Seat',
   component: Seat,
   args: {
     place: 1,

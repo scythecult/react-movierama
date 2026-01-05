@@ -1,5 +1,5 @@
 import { http, HttpResponse } from 'msw';
-import { AppRoute } from '../src/common/constants/routes';
+import { ApiVersion, AppRoute } from '../src/common/constants/routes';
 import { Config } from '../src/common/env';
 import { MOCK_FILMS } from './data/films';
 import { MOCK_GEOLOCATION } from './data/geolocation';
@@ -13,7 +13,7 @@ export const handlers = [
     return HttpResponse.json({ ok: true });
   }),
 
-  http.get(`${Config.ssrUrl}${AppRoute.HALLPLAN}`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.HALLPLAN}`, () => {
     return HttpResponse.json({
       data: {
         seats: MOCK_SEATS_DATA,
@@ -28,7 +28,7 @@ export const handlers = [
   // TODO Extend request to /films?limit=100&listing=art
   // TODO Extend request to /films?limit=100&listing=kids
   // Sync with app route
-  http.get(`${Config.ssrUrl}${AppRoute.FILMS}`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.FILMS}`, () => {
     return HttpResponse.json({
       data: {
         films: MOCK_FILMS,
@@ -36,7 +36,7 @@ export const handlers = [
     });
   }),
 
-  http.get(`${Config.ssrUrl}${AppRoute.FILMS}/:id/sessions`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.FILMS}/:id/sessions`, () => {
     return HttpResponse.json({
       data: {
         sessions: 'sessions',
@@ -44,7 +44,7 @@ export const handlers = [
     });
   }),
 
-  http.get(`${Config.ssrUrl}${AppRoute.NEWS}`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.NEWS}`, () => {
     return HttpResponse.json({
       data: {
         news: MOCK_NEWS,
@@ -52,7 +52,7 @@ export const handlers = [
     });
   }),
 
-  http.get(`${Config.ssrUrl}${AppRoute.USER}`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.USER}`, () => {
     return HttpResponse.json({
       data: {
         user: MOCK_USER,
@@ -60,7 +60,7 @@ export const handlers = [
     });
   }),
 
-  http.get(`${Config.ssrUrl}${AppRoute.LOCATIONS}`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.LOCATIONS}`, () => {
     return HttpResponse.json({
       data: {
         locations: MOCK_LOCATIONS,
@@ -68,7 +68,7 @@ export const handlers = [
     });
   }),
 
-  http.get(`${Config.ssrUrl}${AppRoute.LOCATION}`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.GEOLOCATION}`, () => {
     return HttpResponse.json({
       data: {
         location: MOCK_GEOLOCATION,
@@ -76,7 +76,7 @@ export const handlers = [
     });
   }),
 
-  http.post(`${Config.ssrUrl}${AppRoute.LOCATION}`, async ({ request }) => {
+  http.post(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.GEOLOCATION}`, async ({ request }) => {
     const result = await request.json();
 
     console.info({ result });

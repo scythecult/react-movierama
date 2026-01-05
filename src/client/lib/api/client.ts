@@ -43,4 +43,6 @@ const createFetcher = (options: CreateFetcherOptions) => {
   };
 };
 
-export const fetcher = createFetcher({ baseUrl: `${Config.apiUrl}${ApiVersion.V1}` });
+const baseUrl = Config.appMode === 'watch' ? Config.apiUrl : Config.ssrUrl;
+
+export const fetcher = createFetcher({ baseUrl: `${baseUrl}${ApiVersion.V1}` });

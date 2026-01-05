@@ -220,7 +220,7 @@ exports[`LocationList > should correspond default layout 1`] = `
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b _locationButtonActive_32c71b"
+        class="_locationButton_32c71b"
       >
         Ярославль
       </button>
@@ -915,7 +915,7 @@ exports[`LocationList > should support the "locations" prop 2`] = `
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b _locationButtonActive_32c71b"
+        class="_locationButton_32c71b"
       >
         Ярославль
       </button>

@@ -18,12 +18,12 @@ const buildWrappedComponent = () => (
   </QueryClientProvider>
 );
 
-vi.mock('../../api/location/hooks', () => ({
-  useLocationQuery: () => ({
+vi.mock('../../api/geolocation/hooks', () => ({
+  useGeolocationQuery: () => ({
     data: { location: MOCK_GEOLOCATION },
   }),
 
-  useLocationMutation: () => ({
+  useGeolocationMutation: () => ({
     mutate: vi.fn(),
   }),
 }));

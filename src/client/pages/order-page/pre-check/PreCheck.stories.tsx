@@ -4,7 +4,7 @@ import { TEST_CART_ITEMS } from '../../../../tests/constants';
 import { PreCheck, type PreCheckProps } from './PreCheck';
 
 export default {
-  title: 'Pages/Order-Page/PreCheck',
+  title: 'Pages/OrderPage/PreCheck',
   component: PreCheck,
 
   args: {
