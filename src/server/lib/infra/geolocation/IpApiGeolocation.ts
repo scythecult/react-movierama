@@ -7,7 +7,7 @@ export class IpApiGeolocation implements GeolocationInterface {
     const response = await fetch('http://ip-api.com/json/');
 
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error(`Ip-detection service network response was not ok, clientIp: ${clientIp}`);
     }
 
     const result = await response.json();

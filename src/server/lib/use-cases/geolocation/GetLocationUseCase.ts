@@ -7,31 +7,34 @@ import type { GeolocationInterface } from '../../domain/geolocation/Geolocation'
 export class GetLocationUseCase {
   #geolocationService: GeolocationService;
   #locationService: LocationService;
-  #geolocation: GeolocationInterface;
+  #geolocationApi: GeolocationInterface;
+
   constructor(
     geolocationService: GeolocationService,
     locationService: LocationService,
-    geolocation: GeolocationInterface,
+    geolocationApi: GeolocationInterface,
   ) {
     this.#geolocationService = geolocationService;
     this.#locationService = locationService;
-    this.#geolocation = geolocation;
+    this.#geolocationApi = geolocationApi;
   }
 
   async execute(request: Request) {
+    // TODO Get current user location by request user id or ip??
+    const { ip } = request;
+    // Try to find current location
     let currentLocation = await this.#geolocationService.getOne();
 
-    if (currentLocation.id <= 0) {
-      const cityName = await this.#geolocation.getLocation('1.1.1.1');
-      const prevLocation = await this.#locationService.getOne(CityToIdMap[cityName]);
+    if (currentLocation.id <= 0 && ip) {
+      // If current location is not found, try to find it by ip with ip-api-service
+      const cityName = await this.#geolocationApi.getLocation(ip);
+      // Try to find location-info in locations-db by id
+      const location = await this.#locationService.getOne(CityToIdMap[cityName]);
 
-      console.log({ prevLocation, cityName });
-      currentLocation = prevLocation ? prevLocation : currentLocation;
+      currentLocation = location ? location : currentLocation;
+
+      await this.#geolocationService.update(currentLocation);
     }
-
-    console.log({ currentLocation });
-
-    await this.#geolocationService.update(currentLocation);
 
     return currentLocation;
   }

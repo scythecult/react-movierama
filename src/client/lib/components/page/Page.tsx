@@ -22,7 +22,7 @@ export const Page = () => {
     document.documentElement.scrollTo({ top: 0, left: 0, behavior: 'instant' });
   }, [location.pathname]);
 
-  if (isLocationsDataLoading) {
+  if (isLocationsDataLoading || isGeolocationDataLoading) {
     // TODO Add skeletons
     return <div>Loading...</div>;
   }
@@ -33,7 +33,7 @@ export const Page = () => {
     return <div>Error</div>;
   }
 
-  const { location: currentLocation } = geolocationData;
+  const { location: currentGeolocation } = geolocationData;
   const { locations } = locationsData;
 
   const handleLocationClick = (id: number) => {
@@ -42,7 +42,7 @@ export const Page = () => {
 
   return (
     <>
-      <Header location={currentLocation} onLocationClick={handleLocationModalClose} />
+      <Header location={currentGeolocation} onLocationClick={handleLocationModalClose} />
 
       <main className={styles.pageMain}>
         <Outlet />
@@ -141,7 +141,7 @@ export const Page = () => {
         <Modal
           renderHeader={() => <h3>Location</h3>}
           renderBody={() => (
-            <LocationList currentLocation={currentLocation} locations={locations} onClick={handleLocationClick} />
+            <LocationList currentLocation={currentGeolocation} locations={locations} onClick={handleLocationClick} />
           )}
           onClose={handleLocationModalClose}
         />

@@ -1,5 +1,5 @@
-import type { SeatType } from '../../common/types/hallplan';
-import type { SeatNode } from './SeatNode';
+import type { SeatType } from '../../../common/types/hallplan';
+import type { SeatNode } from './Seat';
 
 type HallOptions = {
   Seat: typeof SeatNode;
