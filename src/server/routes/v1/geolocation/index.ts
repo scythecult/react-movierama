@@ -9,8 +9,9 @@ import { GeolocationController } from './GeolocationController';
 const geolocation = Router();
 
 const getLocationUseCase = new GetLocationUseCase(geolocationService, locationService, ipApiGeolocation);
-const geolocationController = new GeolocationController(locationService, { getLocationUseCase });
+const geolocationController = new GeolocationController(geolocationService, locationService, { getLocationUseCase });
 
 geolocation.get(AppRoute.ROOT, geolocationController.getGeolocation);
+geolocation.post(AppRoute.ROOT, geolocationController.postGeolocation);
 
 export { geolocation };

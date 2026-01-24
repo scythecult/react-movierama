@@ -66,7 +66,7 @@ export const renderSsrTemplate = async (request: Request) => {
   // Get current page data to pass to zustand
   const hallplanData = queryClient.getQueryData(OrderPageQueryKey.all);
   const userData = queryClient.getQueryData(MainPageQueryKey.user());
-  // const locationData = queryClient.getQueryData(MainPageQueryKey.location());
+  const geolocationData = queryClient.getQueryData(MainPageQueryKey.geolocation());
   const dehydratedQueryState = dehydrate(queryClient);
 
   const html = renderToString(<ServerApp queryClient={queryClient} url={url} />);
@@ -74,7 +74,7 @@ export const renderSsrTemplate = async (request: Request) => {
   const zustandState = {
     ...(typeof hallplanData === 'undefined' ? {} : hallplanData),
     ...(typeof userData === 'undefined' ? {} : userData),
-    // ...(typeof locationData === 'undefined' ? {} : locationData),
+    ...(typeof geolocationData === 'undefined' ? {} : geolocationData),
   };
 
   return { html, dehydratedQueryState, zustandState };

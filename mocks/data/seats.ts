@@ -20,7 +20,7 @@ export const MOCK_HALL_PLAN_MATRIX =
     // ROW
     [1, 1, 0, 3, 3, 3, 3, 0, 1],
   ];
-
+// TODO MOVE HALL
 export const MOCK_SEAT_TYPES: SeatType[] = [
   {
     id: 1,
