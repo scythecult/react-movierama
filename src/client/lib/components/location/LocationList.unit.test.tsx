@@ -1,37 +1,51 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render } from '@testing-library/react';
+import { BrowserRouter } from 'react-router';
 import { MOCK_GEOLOCATION } from '../../../../../mocks/data/geolocation';
 import { MOCK_LOCATIONS } from '../../../../../mocks/data/locations';
+import { AppStoreProvider } from '../../contexts/app-store/AppStoreProvider';
 import { LocationList, type LocationListProps } from './LocationList';
 
+const queryClient = new QueryClient();
+
 const DEFAULT_PROPS: LocationListProps = {
-  currentLocation: MOCK_GEOLOCATION,
-  locations: MOCK_LOCATIONS,
-  onClick: () => {},
+  className: '',
 };
+
+const state = {
+  location: MOCK_GEOLOCATION,
+  locations: MOCK_LOCATIONS,
+};
+
+const buildWrappedComponent = (props: LocationListProps = DEFAULT_PROPS) => (
+  <QueryClientProvider client={queryClient}>
+    <AppStoreProvider initialState={state}>
+      <BrowserRouter>
+        <LocationList {...props} />
+      </BrowserRouter>
+    </AppStoreProvider>
+  </QueryClientProvider>
+);
+
+vi.mock('../../api/geolocation/hooks', () => ({
+  useGeolocationMutation: () => ({
+    mutate: vi.fn(),
+  }),
+}));
 
 describe('LocationList', () => {
   test('should correspond default layout', () => {
-    const result = render(<LocationList {...DEFAULT_PROPS} />);
+    const result = render(buildWrappedComponent());
 
     expect(result.container).toMatchSnapshot();
   });
 
-  test('should support the "locations" prop', () => {
-    let result = render(<LocationList {...DEFAULT_PROPS} locations={[]} />);
+  test('should support the "className" prop', () => {
+    let result = render(buildWrappedComponent({ className: 'custom-class' }));
 
     expect(result.container).toMatchSnapshot();
 
-    result = render(<LocationList {...DEFAULT_PROPS} locations={MOCK_LOCATIONS} />);
-
-    expect(result.container).toMatchSnapshot();
-  });
-
-  test('should support the "currentLocation" prop', () => {
-    let result = render(<LocationList {...DEFAULT_PROPS} currentLocation={{ id: 1, name: 'Yaroslavl' }} />);
-
-    expect(result.container).toMatchSnapshot();
-
-    result = render(<LocationList {...DEFAULT_PROPS} currentLocation={{ id: 2, name: 'Moscow' }} />);
+    result = render(buildWrappedComponent({ className: 'custom-class-v2' }));
 
     expect(result.container).toMatchSnapshot();
   });

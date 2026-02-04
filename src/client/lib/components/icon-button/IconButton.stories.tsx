@@ -4,19 +4,24 @@ import { IconButton, type IconButtonProps } from './IconButton';
 
 export default {
   title: 'Components/IconButton',
+
   component: IconButton,
+
   parameters: {
     layout: 'fullscreen',
   },
+
   args: {
     name: CustomIconName.ACCOUNT,
   },
+
   argTypes: {
     className: {
       table: {
         disable: true,
       },
     },
+
     onClick: {
       table: {
         disable: true,

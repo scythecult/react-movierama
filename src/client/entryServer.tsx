@@ -17,8 +17,7 @@ export type RenderSsrTemplate = typeof renderSsrTemplate;
 // and on the client we need to hydrate that data into a React Query cache
 // so we can avoid doing a new fetch on the client.
 export const renderSsrTemplate = async (request: Request) => {
-  const url = request.originalUrl;
-
+  const url = request.path.replace(/\/$/, '');
   const queryClient = new QueryClient();
 
   // TODO Think about pass query params to prefetch
@@ -39,7 +38,7 @@ export const renderSsrTemplate = async (request: Request) => {
       });
 
       break;
-    case AppRoute.ORDER_PAGE:
+    case AppRoute.ORDER:
       await queryClient.prefetchQuery({
         queryKey: OrderPageQueryKey.all,
         queryFn: fetchHallplan,
@@ -67,14 +66,16 @@ export const renderSsrTemplate = async (request: Request) => {
   const hallplanData = queryClient.getQueryData(OrderPageQueryKey.all);
   const userData = queryClient.getQueryData(MainPageQueryKey.user());
   const geolocationData = queryClient.getQueryData(MainPageQueryKey.geolocation());
+  const locationsData = queryClient.getQueryData(MainPageQueryKey.locations());
   const dehydratedQueryState = dehydrate(queryClient);
 
   const html = renderToString(<ServerApp queryClient={queryClient} url={url} />);
 
   const zustandState = {
     ...(typeof hallplanData === 'undefined' ? {} : hallplanData),
-    ...(typeof userData === 'undefined' ? {} : userData),
-    ...(typeof geolocationData === 'undefined' ? {} : geolocationData),
+    ...(typeof userData === 'undefined' ? {} : { user: userData }),
+    ...(typeof geolocationData === 'undefined' ? {} : { location: geolocationData }),
+    ...(typeof locationsData === 'undefined' ? {} : { locations: locationsData }),
   };
 
   return { html, dehydratedQueryState, zustandState };

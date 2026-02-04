@@ -4,7 +4,9 @@ import { LinkBar } from './LinkBar';
 
 export default {
   title: 'Components/LinkBar',
+
   component: LinkBar,
+
   argTypes: {
     children: {
       table: {

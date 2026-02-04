@@ -5,7 +5,9 @@ import { SiteNavLink } from './SiteNavLink';
 
 export default {
   title: 'Components/SiteNavLink',
+
   component: SiteNavLink,
+
   argTypes: {
     className: {
       table: {

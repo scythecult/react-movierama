@@ -24,7 +24,9 @@ export const FilmItem = (props: FilmItemProps) => {
   return (
     <Link className={styles.filmItem} to={`${AppRoute.FILMS}/${id}`}>
       <Badge className={styles.filmItemBadge}>{ageCategory}</Badge>
+
       <img src={poster} alt={name} />
+
       <span className={styles.filmItemContent}>
         <span className={styles.filmItemName}>{name}</span>
         <span className={styles.filmItemMetaInfo}>

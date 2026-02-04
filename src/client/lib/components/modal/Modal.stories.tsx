@@ -3,7 +3,9 @@ import { Modal, type ModalProps } from './Modal';
 
 export default {
   title: 'Components/Modal',
+
   component: Modal,
+
   argTypes: {
     className: {
       table: {
@@ -35,11 +37,13 @@ export default {
       },
     },
   },
+
   args: {
     renderHeader: () => <div>Header</div>,
     renderBody: () => <div>Body</div>,
     onClose: () => {},
   },
+
   parameters: {
     layout: 'fullscreen',
   },
