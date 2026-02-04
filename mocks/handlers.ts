@@ -1,4 +1,4 @@
-import { http, HttpResponse } from 'msw';
+import { http, HttpResponse, type PathParams } from 'msw';
 import { ApiVersion, AppRoute } from '../src/common/constants/routes';
 import { Config } from '../src/common/env';
 import { MOCK_FILMS } from './data/films';
@@ -76,16 +76,17 @@ export const handlers = [
     });
   }),
 
-  http.post(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.GEOLOCATION}`, async ({ request }) => {
-    const result = await request.json();
+  http.post<PathParams<never>, { id: number }>(
+    `${Config.ssrUrl}${ApiVersion.V1}${AppRoute.GEOLOCATION}`,
+    async ({ request }) => {
+      const result = await request.json();
+      const location = MOCK_LOCATIONS.find((location) => location.id === result.id);
 
-    console.info({ result });
-    // TODO Mutate MOCK_LOCATION by setting incoming data
-
-    return HttpResponse.json({
-      data: {
-        location: 'check',
-      },
-    });
-  }),
+      return HttpResponse.json({
+        data: {
+          location,
+        },
+      });
+    },
+  ),
 ];

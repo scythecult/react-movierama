@@ -3,10 +3,13 @@ import { Button, type ButtonProps } from './Button';
 
 export default {
   title: 'Components/Button',
+
   component: Button,
+
   args: {
     children: 'Check',
   },
+
   argTypes: {
     onClick: {
       table: {

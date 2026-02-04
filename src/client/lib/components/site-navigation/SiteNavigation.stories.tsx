@@ -4,6 +4,7 @@ import { SiteNavigation } from './SiteNavigation';
 
 export default {
   title: 'Components/SiteNavigation',
+
   component: SiteNavigation,
 } satisfies Meta<typeof SiteNavigation>;
 

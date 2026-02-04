@@ -1,6 +1,6 @@
 export const AppRoute = {
   ROOT: '/',
-  ORDER_PAGE: '/order',
+  ORDER: '/order',
   HEALTH: '/health',
   HALLPLAN: '/hallplan',
   FILMS: '/films',

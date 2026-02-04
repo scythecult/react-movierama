@@ -8,5 +8,5 @@ type UserSliceState = {
 export type UserSlice = UserSliceState;
 
 export const createUserSlice: WithMiddlewareStateCreator<UserSlice> = () => ({
-  user: { firstName: '', lastName: '', email: '', password: '', gender: '', wantsPromotions: false, phone: '' },
+  user: { id: -1, firstName: '', lastName: '', email: '', password: '', gender: '', wantsPromotions: false, phone: '' },
 });

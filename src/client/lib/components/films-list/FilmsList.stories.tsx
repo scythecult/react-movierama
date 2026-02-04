@@ -5,27 +5,33 @@ import { FilmsList, type FilmsListProps } from './FilmsList';
 
 export default {
   title: 'Components/FilmsList',
+
   args: {
     films: MOCK_FILMS.slice(0, 5),
+    isLoading: false,
     onFilmClick: () => {},
   },
+
   argTypes: {
     films: {
       table: {
         disable: true,
       },
     },
+
     onFilmClick: {
       table: {
         disable: true,
       },
     },
+
     className: {
       table: {
         disable: true,
       },
     },
   },
+
   component: FilmsList,
 } satisfies Meta<typeof FilmsList>;
 

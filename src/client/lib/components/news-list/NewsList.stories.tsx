@@ -5,26 +5,32 @@ import { NewsList, type NewsListProps } from './NewsList';
 
 export default {
   title: 'Components/NewsList',
+
   args: {
     news: MOCK_NEWS,
+    isLoading: false,
   },
+
   argTypes: {
     onNewsClick: {
       table: {
         disable: true,
       },
     },
+
     news: {
       table: {
         disable: true,
       },
     },
+
     className: {
       table: {
         disable: true,
       },
     },
   },
+
   component: NewsList,
 } satisfies Meta<typeof NewsList>;
 

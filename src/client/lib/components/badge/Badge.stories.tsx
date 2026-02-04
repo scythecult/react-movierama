@@ -3,21 +3,25 @@ import { Badge, type BadgeProps } from './Badge';
 
 export default {
   title: 'Components/Badge',
+
   args: {
     children: 22,
   },
+
   argTypes: {
     children: {
       table: {
         disable: true,
       },
     },
+
     className: {
       table: {
         disable: true,
       },
     },
   },
+
   component: Badge,
 } satisfies Meta<typeof Badge>;
 

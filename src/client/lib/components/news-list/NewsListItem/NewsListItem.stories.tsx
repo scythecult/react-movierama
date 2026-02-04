@@ -5,35 +5,19 @@ import { NewsListItem, type NewsListItemProps } from './NewsListItem';
 
 export default {
   title: 'Components/NewsListItem',
+
   args: {
-    ...MOCK_NEWS[0],
+    newsItem: MOCK_NEWS[0],
   },
 
   argTypes: {
-    id: {
-      table: {
-        disable: true,
-      },
-    },
-
-    addedAt: {
-      table: {
-        disable: true,
-      },
-    },
-
-    image: {
-      table: {
-        disable: true,
-      },
-    },
-
-    preview: {
+    newsItem: {
       table: {
         disable: true,
       },
     },
   },
+
   component: NewsListItem,
 } satisfies Meta<typeof NewsListItem>;
 

@@ -5,7 +5,9 @@ import { Header, type HeaderProps } from './Header';
 
 export default {
   title: 'Components/Header',
+
   component: Header,
+
   argTypes: {
     className: {
       table: {
@@ -13,6 +15,7 @@ export default {
       },
     },
   },
+
   parameters: {
     layout: 'fullscreen',
   },

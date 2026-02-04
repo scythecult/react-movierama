@@ -1,11 +1,11 @@
 import { AppRoute } from '../../../../common/constants/routes';
-import type { NewsResponse } from '../../../../common/types/news';
+import type { NewsItem, NewsResponse } from '../../../../common/types/news';
 import { fetcher } from '../client';
 
 // For specific parameters use "queryKey"
-export const fetchNews = async (): Promise<NewsResponse> => {
+export const fetchNews = async (): Promise<NewsItem[]> => {
   const serverPayload = await fetcher.get<NewsResponse>(AppRoute.NEWS);
   const { data } = serverPayload;
 
-  return data;
+  return data.news ?? [];
 };

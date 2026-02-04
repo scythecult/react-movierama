@@ -4,10 +4,13 @@ import { CustomIcon, type CustomIconProps } from './CustomIcon';
 
 export default {
   title: 'Components/CustomIcon',
+
   component: CustomIcon,
+
   args: {
     name: CustomIconName.ACCOUNT,
   },
+
   argTypes: {
     className: {
       table: {
@@ -15,6 +18,7 @@ export default {
       },
     },
   },
+
   parameters: {
     layout: 'fullscreen',
   },

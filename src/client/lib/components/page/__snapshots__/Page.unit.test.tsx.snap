@@ -35,7 +35,7 @@ exports[`Page > should correspond default layout 1`] = `
           </svg>
         </div>
          
-        Yaroslavl
+        Choose City
       </button>
       <nav
         class="_siteNavigation_36ef23"

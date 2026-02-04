@@ -3,7 +3,9 @@ import { Layout, type LayoutProps } from './Layout';
 
 export default {
   title: 'Components/Layout',
+
   component: Layout,
+
   parameters: {
     layout: 'fullscreen',
   },

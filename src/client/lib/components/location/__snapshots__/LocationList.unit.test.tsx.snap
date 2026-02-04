@@ -2,924 +2,690 @@
 
 exports[`LocationList > should correspond default layout 1`] = `
 <div>
-  <ul
+  <div
     class="_locationList_32c71b"
+    data-test-id="location-list"
   >
-    <li
-      class="_locationListItem_32c71b"
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Москва и МО
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Астрахань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Владивосток
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Владимир
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Волгоград
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Волжский
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Екатеринбург
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ижевск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Иркутск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Казань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Красноярск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Липецк
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Пермь
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ростов-на-Дону
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Рязань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Самара
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Тамбов
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Томск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Тюмень
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Уфа
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Челябинск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ярославль
       </button>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
-exports[`LocationList > should support the "currentLocation" prop 1`] = `
+exports[`LocationList > should support the "className" prop 1`] = `
 <div>
-  <ul
-    class="_locationList_32c71b"
+  <div
+    class="_locationList_32c71b custom-class"
+    data-test-id="location-list"
   >
-    <li
-      class="_locationListItem_32c71b"
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b _locationButtonActive_32c71b"
+        class="_locationButton_ecec66"
       >
         Москва и МО
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Астрахань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Владивосток
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Владимир
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Волгоград
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Волжский
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Екатеринбург
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ижевск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Иркутск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Казань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Красноярск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Липецк
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Пермь
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ростов-на-Дону
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Рязань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Самара
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Тамбов
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Томск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Тюмень
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Уфа
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Челябинск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ярославль
       </button>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;
 
-exports[`LocationList > should support the "currentLocation" prop 2`] = `
+exports[`LocationList > should support the "className" prop 2`] = `
 <div>
-  <ul
-    class="_locationList_32c71b"
+  <div
+    class="_locationList_32c71b custom-class-v2"
+    data-test-id="location-list"
   >
-    <li
-      class="_locationListItem_32c71b"
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Москва и МО
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Астрахань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Владивосток
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Владимир
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Волгоград
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Волжский
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Екатеринбург
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ижевск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Иркутск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Казань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Красноярск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Липецк
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Пермь
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ростов-на-Дону
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Рязань
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Самара
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Тамбов
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Томск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Тюмень
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Уфа
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Челябинск
       </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
+    </div>
+    <div
+      class="_locationListItem_ecec66"
       data-test-id="location-list-item"
     >
       <button
-        class="_locationButton_32c71b"
+        class="_locationButton_ecec66"
       >
         Ярославль
       </button>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`LocationList > should support the "locations" prop 1`] = `
-<div>
-  <ul
-    class="_locationList_32c71b"
-  />
-</div>
-`;
-
-exports[`LocationList > should support the "locations" prop 2`] = `
-<div>
-  <ul
-    class="_locationList_32c71b"
-  >
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Москва и МО
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Астрахань
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Владивосток
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Владимир
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Волгоград
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Волжский
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Екатеринбург
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Ижевск
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Иркутск
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Казань
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Красноярск
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Липецк
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Пермь
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Ростов-на-Дону
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Рязань
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Самара
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Тамбов
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Томск
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Тюмень
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Уфа
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Челябинск
-      </button>
-    </li>
-    <li
-      class="_locationListItem_32c71b"
-      data-test-id="location-list-item"
-    >
-      <button
-        class="_locationButton_32c71b"
-      >
-        Ярославль
-      </button>
-    </li>
-  </ul>
+    </div>
+  </div>
 </div>
 `;

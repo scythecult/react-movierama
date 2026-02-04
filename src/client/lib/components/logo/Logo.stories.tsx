@@ -4,6 +4,7 @@ import { Logo } from './Logo';
 
 export default {
   title: 'Components/Logo',
+
   component: Logo,
 } satisfies Meta<typeof Logo>;
 

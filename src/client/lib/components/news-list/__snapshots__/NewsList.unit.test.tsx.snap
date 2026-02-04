@@ -109,3 +109,459 @@ exports[`NewsList > should correspond default layout 1`] = `
   </div>
 </div>
 `;
+
+exports[`NewsList > should support the "className" prop 1`] = `
+<div>
+  <div
+    class="_newsList_021754 custom-class"
+    data-test-id="news-list"
+  >
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11384"
+      />
+      <img
+        alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Следите за важными анонсами в наших социальных сетях!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-16 11:37:21
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11389"
+      />
+      <img
+        alt="Каждому, кто недавно был у нас в кино, мы дарим скидку 20% на следующий поход!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291011_300894.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Оставь отзыв — получи подарок!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 11:27:29
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11392"
+      />
+      <img
+        alt="С 10 по 23 ноября нахаживайте шаги и совершайте тренировки с использованием приложения «Мой фитнес», зарабатывайте Баллы Здоровья и получайте ценные призы!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/11/071116_259408.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Шагаем, как в кино! 
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-11-07 16:26:03
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11390"
+      />
+      <img
+        alt="Теперь подтверждение списания бонусов — по пин-коду в приложении Киномакс."
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291012_982530.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Больше никаких звонков!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 12:06:58
+      </small>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NewsList > should support the "className" prop 2`] = `
+<div>
+  <div
+    class="_newsList_021754 custom-class-v2"
+    data-test-id="news-list"
+  >
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11384"
+      />
+      <img
+        alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Следите за важными анонсами в наших социальных сетях!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-16 11:37:21
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11389"
+      />
+      <img
+        alt="Каждому, кто недавно был у нас в кино, мы дарим скидку 20% на следующий поход!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291011_300894.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Оставь отзыв — получи подарок!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 11:27:29
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11392"
+      />
+      <img
+        alt="С 10 по 23 ноября нахаживайте шаги и совершайте тренировки с использованием приложения «Мой фитнес», зарабатывайте Баллы Здоровья и получайте ценные призы!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/11/071116_259408.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Шагаем, как в кино! 
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-11-07 16:26:03
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11390"
+      />
+      <img
+        alt="Теперь подтверждение списания бонусов — по пин-коду в приложении Киномакс."
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291012_982530.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Больше никаких звонков!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 12:06:58
+      </small>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NewsList > should support the "isLoading" prop 1`] = `
+<div>
+  <div>
+    Loading...
+  </div>
+</div>
+`;
+
+exports[`NewsList > should support the "isLoading" prop 2`] = `
+<div>
+  <div
+    class="_newsList_021754"
+    data-test-id="news-list"
+  >
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11384"
+      />
+      <img
+        alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Следите за важными анонсами в наших социальных сетях!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-16 11:37:21
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11389"
+      />
+      <img
+        alt="Каждому, кто недавно был у нас в кино, мы дарим скидку 20% на следующий поход!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291011_300894.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Оставь отзыв — получи подарок!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 11:27:29
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11392"
+      />
+      <img
+        alt="С 10 по 23 ноября нахаживайте шаги и совершайте тренировки с использованием приложения «Мой фитнес», зарабатывайте Баллы Здоровья и получайте ценные призы!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/11/071116_259408.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Шагаем, как в кино! 
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-11-07 16:26:03
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11390"
+      />
+      <img
+        alt="Теперь подтверждение списания бонусов — по пин-коду в приложении Киномакс."
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291012_982530.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Больше никаких звонков!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 12:06:58
+      </small>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NewsList > should support the "news" prop 1`] = `
+<div>
+  <div>
+    Error
+  </div>
+</div>
+`;
+
+exports[`NewsList > should support the "news" prop 2`] = `
+<div>
+  <div
+    class="_newsList_021754"
+    data-test-id="news-list"
+  >
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11384"
+      />
+      <img
+        alt="Хотите первыми узнавать о новых фильмах и специальных показах? Подписывайтесь на наши VK и MAX!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/161011_234470.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Следите за важными анонсами в наших социальных сетях!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-16 11:37:21
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11389"
+      />
+      <img
+        alt="Каждому, кто недавно был у нас в кино, мы дарим скидку 20% на следующий поход!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291011_300894.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Оставь отзыв — получи подарок!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 11:27:29
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11392"
+      />
+      <img
+        alt="С 10 по 23 ноября нахаживайте шаги и совершайте тренировки с использованием приложения «Мой фитнес», зарабатывайте Баллы Здоровья и получайте ценные призы!"
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/11/071116_259408.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Шагаем, как в кино! 
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-11-07 16:26:03
+      </small>
+    </div>
+    <div
+      class="_newsListItem_7dec2b"
+      data-test-id="news-list-item"
+    >
+      <a
+        class="_newsListItemLink_7dec2b"
+        data-discover="true"
+        href="/news/11390"
+      />
+      <img
+        alt="Теперь подтверждение списания бонусов — по пин-коду в приложении Киномакс."
+        class="_newsListItemImage_7dec2b"
+        src="https://images.kinomax.ru/800/news/2025/10/291012_982530.webp"
+      />
+      <h3
+        class="_newsListItemTitle_7dec2b"
+      >
+        Больше никаких звонков!
+      </h3>
+      <small
+        class="_newsListItemDate_7dec2b"
+      >
+        2025-10-29 12:06:58
+      </small>
+    </div>
+  </div>
+</div>
+`;

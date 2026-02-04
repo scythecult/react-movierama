@@ -6,16 +6,6 @@ const DEFAULT_PROPS: SiteNavLinkProps = {
   to: '/',
 };
 
-//  const buildWrappedComponent = (props: OfferPageProps = DEFAULT_PROPS) => (
-//     <BrowserRouter>
-//       <ReduxProvider store={store}>
-//         <HelmetProvider>
-//           <OfferPage {...props} />
-//         </HelmetProvider>
-//       </ReduxProvider>
-//     </BrowserRouter>
-//   );
-
 const buildWrappedComponent = (props: SiteNavLinkProps = DEFAULT_PROPS) => (
   <BrowserRouter>
     <SiteNavLink {...props} />

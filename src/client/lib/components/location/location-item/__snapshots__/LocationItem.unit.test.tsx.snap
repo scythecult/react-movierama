@@ -1,0 +1,76 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LocationItem > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_locationListItem_ecec66"
+    data-test-id="location-list-item"
+  >
+    <button
+      class="_locationButton_ecec66 _locationButtonActive_ecec66"
+    >
+      Москва и МО
+    </button>
+  </div>
+</div>
+`;
+
+exports[`LocationItem > should support the "currentLocationId" prop 1`] = `
+<div>
+  <div
+    class="_locationListItem_ecec66"
+    data-test-id="location-list-item"
+  >
+    <button
+      class="_locationButton_ecec66 _locationButtonActive_ecec66"
+    >
+      Москва и МО
+    </button>
+  </div>
+</div>
+`;
+
+exports[`LocationItem > should support the "currentLocationId" prop 2`] = `
+<div>
+  <div
+    class="_locationListItem_ecec66"
+    data-test-id="location-list-item"
+  >
+    <button
+      class="_locationButton_ecec66"
+    >
+      Москва и МО
+    </button>
+  </div>
+</div>
+`;
+
+exports[`LocationItem > should support the "locationItem" prop 1`] = `
+<div>
+  <div
+    class="_locationListItem_ecec66"
+    data-test-id="location-list-item"
+  >
+    <button
+      class="_locationButton_ecec66 _locationButtonActive_ecec66"
+    >
+      Москва и МО
+    </button>
+  </div>
+</div>
+`;
+
+exports[`LocationItem > should support the "locationItem" prop 2`] = `
+<div>
+  <div
+    class="_locationListItem_ecec66"
+    data-test-id="location-list-item"
+  >
+    <button
+      class="_locationButton_ecec66"
+    >
+      Астрахань
+    </button>
+  </div>
+</div>
+`;
