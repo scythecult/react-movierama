@@ -1,0 +1,16 @@
+.cart {
+  width: 100%;
+  background-color: var(--app-gray-color);
+  border-radius: var(--app-border-radius-m);
+  color: var(--app-white-color);
+}
+
+.cartTitle {
+  padding: 24px;
+}
+
+.cartList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

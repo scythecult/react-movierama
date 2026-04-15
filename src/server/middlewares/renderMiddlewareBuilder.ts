@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { ViteDevServer } from 'vite';
-import { renderPage } from '../../client/renderPage';
+import { renderPage } from '../../client/app/entrypoint/renderPage';
 import { AppRoute } from '../../common/constants/routes';
 
 export const renderMiddlewareBuilder = (vite: ViteDevServer | undefined) => {

@@ -1,8 +1,8 @@
-import type { User } from '../../../common/types/user';
+import type { UserData } from '../../../client/entities/user';
 
 export class MockUserDb {
-  #users: User[] = [];
-  constructor(users: User[]) {
+  #users: UserData[] = [];
+  constructor(users: UserData[]) {
     this.#users = users;
   }
 
@@ -14,7 +14,7 @@ export class MockUserDb {
     return this.#users.find((item) => item.id === id);
   }
 
-  async create(user: User) {
+  async create(user: UserData) {
     return this.#users.push(user);
   }
 

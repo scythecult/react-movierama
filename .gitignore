@@ -28,6 +28,9 @@ dist-ssr
 # Other
 
 .todo.md
+.patterns.md
+.fsd.md
+.fsd
 *storybook.log
 storybook-static
 

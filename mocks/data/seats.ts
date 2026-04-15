@@ -1,4 +1,4 @@
-import type { SeatData, SeatType } from '../../src/common/types/hallplan';
+import type { SeatData, SeatType } from '../../src/client/entities/hallplan/model/types';
 import { Hall } from '../../src/server/services/Hall';
 import { SeatNode } from '../../src/server/services/SeatNode';
 
@@ -16,7 +16,7 @@ export const MOCK_HALL_PLAN_MATRIX =
     // ROW
     [2, 2, 0, 1, 1, 1, 1, 0, 1],
     // ROW
-    [1, 1, 0, 4, 4, 4, 2, 0, 5],
+    [1, 1, 0, 4, 4, 4, 2, 0, 4],
     // ROW
     [1, 1, 0, 3, 3, 3, 3, 0, 1],
   ];
@@ -102,17 +102,9 @@ export const MOCK_CANVAS_SIZE = mockHall.getCanvasSize();
 
 export const MOCK_SEATS_DATA: SeatData[] = mockSeats.map((mockSeat) => {
   const { type } = mockSeat;
-  const seatType = MOCK_SEAT_TYPES.find((seatType) => seatType.id === type);
-  let initialPrice = null;
-  let initialTicketTypeId = null;
+  const seatType = MOCK_SEAT_TYPES.find((seatType) => seatType.id === type)!;
+  const [defaultTicketType] = seatType.ticketTypes;
+  const { price, id: ticketTypeId } = defaultTicketType;
 
-  if (seatType) {
-    const [defaultTicketType] = seatType.ticketTypes;
-    const { price, id: ticketTypeId } = defaultTicketType;
-
-    initialPrice = price;
-    initialTicketTypeId = ticketTypeId;
-  }
-
-  return { ...mockSeat, seatType, ticketTypeId: initialTicketTypeId, price: initialPrice };
+  return { ...mockSeat, seatType, ticketTypeId, price };
 });

@@ -1,0 +1,29 @@
+export const DEFAULT_CANVAS_WIDTH = 400;
+
+export const DEFAULT_CANVAS_HEIGHT = 400;
+
+export const SeatTypeMap = {
+  REGULAR: 1,
+  COMFORT: 2,
+  VIP: 3,
+  WHEELCHAIR: 4,
+  OCCUPIED: 5,
+} as const;
+
+export const SeatStateMap = {
+  FREE: 1,
+  SELECTED: 2,
+} as const;
+
+export const SEAT_TYPE: Record<string, string> = {
+  [SeatTypeMap.REGULAR]: 'regular',
+  [SeatTypeMap.COMFORT]: 'comfort',
+  [SeatTypeMap.VIP]: 'vip',
+  [SeatTypeMap.WHEELCHAIR]: 'wheelchair',
+  [SeatTypeMap.OCCUPIED]: 'occupied',
+} as const;
+
+export const SEAT_STATE: Record<string, string> = {
+  [SeatStateMap.FREE]: 'free',
+  [SeatStateMap.SELECTED]: 'selected',
+} as const;

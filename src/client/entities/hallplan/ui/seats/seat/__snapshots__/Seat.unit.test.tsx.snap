@@ -1,0 +1,286 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Seat > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "h" prop 1`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 0px; height: 100px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "h" prop 2`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 0px; height: 200px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "place" prop 1`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      1
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "place" prop 2`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      2
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "state" prop 1`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _free_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "state" prop 2`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _selected_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="true"
+    style="left: 0px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "type" prop 1`] = `
+<div>
+  <div
+    class="_seat_e52c81 _regular_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "type" prop 2`] = `
+<div>
+  <div
+    class="_seat_e52c81 _comfort_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "w" prop 1`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 100px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "w" prop 2`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 0px; width: 200px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "x" prop 1`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 10px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "x" prop 2`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 20px; top: 0px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "y" prop 1`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 10px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Seat > should support the "y" prop 2`] = `
+<div>
+  <div
+    class="_seat_e52c81 _undefined_e52c81 _undefined_e52c81"
+    data-test-disabled="false"
+    data-test-id="seat"
+    data-test-selected="false"
+    style="left: 0px; top: 20px; width: 0px; height: 0px;"
+  >
+    <span
+      class="_seatPlace_e52c81"
+      data-test-id="seat-place"
+    >
+      0
+    </span>
+  </div>
+</div>
+`;

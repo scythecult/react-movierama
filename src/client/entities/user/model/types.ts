@@ -1,0 +1,14 @@
+export type UserData = {
+  id: number;
+  phone: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  gender: 'male' | 'female' | 'other' | string;
+  wantsPromotions: boolean;
+};
+
+export type UserResponse = {
+  user: UserData;
+};

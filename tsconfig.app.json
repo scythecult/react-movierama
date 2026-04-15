@@ -31,5 +31,5 @@
     "alwaysStrict": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "src/tests", "mocks", "mockServiceWorker.js"]
+  "include": ["src", "src/tests", "mocks"]
 }

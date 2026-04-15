@@ -12,7 +12,7 @@
     "api": "dotenv -- tsx watch ./src/server/api/index.ts",
     "build": "npm run build:client && npm run build:ssr",
     "build:client": "vite build --outDir dist/client",
-    "build:ssr": "vite build --ssr ./src/client/entryServer.tsx --outDir dist/server",
+    "build:ssr": "vite build --ssr ./src/client/app/entrypoint/entryServer.tsx --outDir dist/server",
     "build:ci": "tsc -b && vite build",
     "lint": "eslint .",
     "e2e": "dotenv -- npm run build && NODE_ENV=test APP_MODE=test tsx watch ./src/server/ssr/index.ts",
@@ -79,8 +79,7 @@
   },
   "msw": {
     "workerDirectory": [
-      "./",
-      "./mocks"
+      "./"
     ]
   }
 }

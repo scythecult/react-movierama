@@ -1,0 +1,44 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FilmItem > should correspond default layout 1`] = `
+<div>
+  <a
+    class="_filmItem_c3f9b7"
+    data-discover="true"
+    href="/films/8681"
+  >
+    <div
+      class="_badge_c4612c _filmItemBadge_c3f9b7"
+    >
+      6+
+    </div>
+    <img
+      alt="Горыныч"
+      src="https://images.kinomax.ru/550/films/8/8681/p_7adde84.ebp"
+    />
+    <span
+      class="_filmItemContent_c3f9b7"
+    >
+      <span
+        class="_filmItemName_c3f9b7"
+      >
+        Горыныч
+      </span>
+      <span
+        class="_filmItemMetaInfo_c3f9b7"
+      >
+        Приключения, Фэнтези, Сказка
+        <span
+          class="_filmItemFormat_c3f9b7"
+        >
+          <span
+            class="_filmItemFormat_c3f9b7"
+          >
+            2D
+          </span>
+        </span>
+      </span>
+    </span>
+  </a>
+</div>
+`;

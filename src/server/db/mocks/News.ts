@@ -1,8 +1,8 @@
-import type { NewsItem } from '../../../common/types/news';
+import type { NewsData } from '../../../client/entities/news';
 
 export class MockNewsDb {
-  #news: NewsItem[] = [];
-  constructor(news: NewsItem[]) {
+  #news: NewsData[] = [];
+  constructor(news: NewsData[]) {
     this.#news = news;
   }
 
@@ -14,7 +14,7 @@ export class MockNewsDb {
     return this.#news.find((item) => item.id === id);
   }
 
-  async create(news: NewsItem) {
+  async create(news: NewsData) {
     return this.#news.push(news);
   }
 
