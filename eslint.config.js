@@ -11,8 +11,10 @@ import pluginQuery from '@tanstack/eslint-plugin-query';
 
 export default defineConfig([
   globalIgnores(['dist']),
+
   {
     files: ['**/*.{ts,tsx}'],
+
     extends: [
       js.configs.recommended,
       tslint.configs.recommended,
@@ -21,14 +23,17 @@ export default defineConfig([
       ...storybook.configs['flat/recommended'],
       ...pluginQuery.configs['flat/recommended'],
     ],
+
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+
     plugins: {
       'unused-imports': eslintPluginUnusedImports,
       'simple-import-sort': eslintPluginSimpleImportSort,
     },
+
     rules: {
       // no-console statements
       'no-console': [
@@ -70,9 +75,13 @@ export default defineConfig([
       ],
 
       'arrow-parens': ['error', 'always'],
+
       '@typescript-eslint/no-var-requires': 'off',
+
       '@typescript-eslint/no-require-imports': 'off',
+
       '@typescript-eslint/consistent-type-imports': 'error',
+
       'simple-import-sort/imports': [
         'error',
         {
@@ -80,6 +89,9 @@ export default defineConfig([
           groups: [['^\\u0000', '^@?\\w', '^[^.]', '^\\.']],
         },
       ],
+
+      'simple-import-sort/exports': ['error'],
+
       '@typescript-eslint/no-unused-vars': [
         'error',
         {

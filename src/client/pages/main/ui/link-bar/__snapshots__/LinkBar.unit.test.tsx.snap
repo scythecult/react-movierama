@@ -1,0 +1,44 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LinkBar > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_linkBar_15fbd9"
+    data-test-id="link-bar"
+  >
+    <div
+      class="_linkBarContent_15fbd9"
+    />
+  </div>
+</div>
+`;
+
+exports[`LinkBar > should support the "children" prop 1`] = `
+<div>
+  <div
+    class="_linkBar_15fbd9"
+    data-test-id="link-bar"
+  >
+    <div
+      class="_linkBarContent_15fbd9"
+    >
+      Children
+    </div>
+  </div>
+</div>
+`;
+
+exports[`LinkBar > should support the "children" prop 2`] = `
+<div>
+  <div
+    class="_linkBar_15fbd9"
+    data-test-id="link-bar"
+  >
+    <div
+      class="_linkBarContent_15fbd9"
+    >
+      Children v2
+    </div>
+  </div>
+</div>
+`;

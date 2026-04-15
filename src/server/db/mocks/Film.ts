@@ -1,8 +1,8 @@
-import type { Film } from '../../../common/types/film';
+import type { FilmData } from '../../../client/entities/films';
 
 export class MockFilmDb {
-  #films: Film[] = [];
-  constructor(films: Film[]) {
+  #films: FilmData[] = [];
+  constructor(films: FilmData[]) {
     this.#films = films;
   }
 
@@ -14,7 +14,7 @@ export class MockFilmDb {
     return this.#films.find((item) => item.id === id);
   }
 
-  async create(film: Film) {
+  async create(film: FilmData) {
     return this.#films.push(film);
   }
 

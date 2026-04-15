@@ -1,5 +1,4 @@
-import type { GeolocationData } from '../../../common/types/geolocation';
-import type { LocationsData } from '../../../common/types/locations';
+import type { GeolocationData, LocationsData } from '../../../client/entities/locations/model';
 
 export class MockGeolocationDb {
   #geolocation: LocationsData;

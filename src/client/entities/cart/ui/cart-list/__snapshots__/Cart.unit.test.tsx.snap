@@ -1,0 +1,82 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Cart > should correspond default layout 1`] = `<div />`;
+
+exports[`Cart > should support the "cart" prop 1`] = `<div />`;
+
+exports[`Cart > should support the "cart" prop 2`] = `
+<div>
+  <section
+    class="_cart_dce89d"
+    data-test-id="cart"
+  >
+    <h2
+      class="_cartTitle_dce89d"
+      data-test-id="cart-title"
+    >
+      Chosen places
+    </h2>
+    <ul
+      class="_cartList_dce89d"
+      data-test-id="cart-list"
+    >
+      <li
+        class="_cartItem_e26664"
+        data-test-id="cart-item"
+      >
+        <p
+          data-test-id="cart-item-place"
+        >
+          1
+           row, 
+          1
+           place
+        </p>
+        <p
+          data-test-id="cart-item-seat-type"
+        >
+          regular
+        </p>
+        <div
+          class="_cartItemControls_e26664"
+          data-test-id="cart-item-controls"
+        >
+          <select
+            class="_cartItemSelect_e26664"
+            data-test-id="cart-item-select"
+            data-test-value="1"
+            name="ticket-type"
+          >
+            <option
+              data-test-id="cart-item-select-option"
+              data-test-value="adult"
+              value="1"
+            >
+              adult
+            </option>
+            <option
+              data-test-id="cart-item-select-option"
+              data-test-value="child"
+              value="2"
+            >
+              child
+            </option>
+          </select>
+          <span
+            data-test-id="cart-item-price"
+          >
+            100
+             RUB
+          </span>
+          <button
+            class="_cartRemoveButton_e26664 _button_545c64"
+            data-test-id="cart-remove-button"
+          >
+            Remove
+          </button>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+`;

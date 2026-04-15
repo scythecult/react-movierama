@@ -1,5 +1,5 @@
 import { MOCK_SEAT_TYPES, MOCK_SEATS_DATA } from '../../mocks/data/seats';
-import type { SeatData, TicketType } from '../common/types/hallplan';
+import type { SeatData, TicketType } from '../client/entities/hallplan/model/types';
 
 export const TEST_SEAT_ID = 532;
 

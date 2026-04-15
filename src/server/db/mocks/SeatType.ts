@@ -1,4 +1,4 @@
-import type { SeatType } from '../../../common/types/hallplan';
+import type { SeatType } from '../../../client/entities/hallplan/model';
 
 export class MockSeatTypeDb {
   #seatTypes: SeatType[];

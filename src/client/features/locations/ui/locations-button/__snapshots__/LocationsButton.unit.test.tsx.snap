@@ -1,0 +1,108 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LocationsButton > should correspond default layout 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <button
+        class="_iconButton_d28ccf"
+      >
+        <div
+          class="_customIcon_a7f5a2 _customIcon_a7f5a2--pin"
+        >
+          <svg
+            fill="currentColor"
+            viewBox="0 0 12 12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 0a4.221 4.221 0 0 0-3.59 6.438l3.352 5.394a.344.344 0 0 0 .297.168h.003a.348.348 0 0 0 .297-.172l3.266-5.45A4.221 4.221 0 0 0 6 0zm3.02 6.02l-2.965 4.953-3.047-4.907A3.5 3.5 0 0 1 2.48 4.22 3.528 3.528 0 0 1 6 .699a3.528 3.528 0 0 1 3.52 3.52c0 .636-.176 1.258-.5 1.8zm0 0"
+            />
+            <path
+              d="M6 2.11a2.11 2.11 0 1 0 .002 4.22A2.11 2.11 0 0 0 6 2.11zm0 3.519a1.41 1.41 0 1 1-.001-2.82A1.41 1.41 0 0 1 6 5.63zm0 0"
+            />
+          </svg>
+        </div>
+         
+        Choose City
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <button
+      class="_iconButton_d28ccf"
+    >
+      <div
+        class="_customIcon_a7f5a2 _customIcon_a7f5a2--pin"
+      >
+        <svg
+          fill="currentColor"
+          viewBox="0 0 12 12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 0a4.221 4.221 0 0 0-3.59 6.438l3.352 5.394a.344.344 0 0 0 .297.168h.003a.348.348 0 0 0 .297-.172l3.266-5.45A4.221 4.221 0 0 0 6 0zm3.02 6.02l-2.965 4.953-3.047-4.907A3.5 3.5 0 0 1 2.48 4.22 3.528 3.528 0 0 1 6 .699a3.528 3.528 0 0 1 3.52 3.52c0 .636-.176 1.258-.5 1.8zm0 0"
+          />
+          <path
+            d="M6 2.11a2.11 2.11 0 1 0 .002 4.22A2.11 2.11 0 0 0 6 2.11zm0 3.519a1.41 1.41 0 1 1-.001-2.82A1.41 1.41 0 0 1 6 5.63zm0 0"
+          />
+        </svg>
+      </div>
+       
+      Choose City
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

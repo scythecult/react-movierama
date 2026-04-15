@@ -1,4 +1,4 @@
-import type { LocationsData } from '../../../common/types/locations';
+import type { LocationsData } from '../../../client/entities/locations/ui';
 
 export class MockLocationDb {
   #locations: LocationsData[] = [];

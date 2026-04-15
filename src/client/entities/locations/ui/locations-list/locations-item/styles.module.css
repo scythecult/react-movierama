@@ -1,0 +1,16 @@
+.locationsButton {
+  font-size: 20px;
+  color: currentColor;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.locationsButton:hover {
+  color: var(--app-accent-color);
+}
+
+.locationsButtonActive {
+  color: var(--app-accent-color);
+}

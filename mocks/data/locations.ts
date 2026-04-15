@@ -1,4 +1,4 @@
-import type { GeolocationData } from '../../src/common/types/geolocation';
+import type { GeolocationData } from '../../src/client/entities/locations/model';
 
 export const MOCK_CITY_TO_ID_MAP = {
   Yaroslavl: 20,
