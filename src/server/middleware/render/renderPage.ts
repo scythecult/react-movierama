@@ -1,9 +1,9 @@
 import type { Request } from 'express';
 import { access, constants, readFile } from 'fs/promises';
 import type { ViteDevServer } from 'vite';
-import { Dir } from '../../../common/constants/common.js';
+import type { RenderSsrTemplate } from '../../../client/app/entrypoint/entryServer.js';
+import { CLIENT_DIST_DIR, CLIENT_ENTRY_SOURCE_DIR, SERVER_DIST_DIR } from '../../../common/constants/common.js';
 import { Config } from '../../../common/env.js';
-import type { RenderSsrTemplate } from './entryServer.js';
 
 export const renderPage = async (request: Request, vite: ViteDevServer | undefined) => {
   const isProduction = Config.nodeEnv === 'production';
@@ -16,16 +16,16 @@ export const renderPage = async (request: Request, vite: ViteDevServer | undefin
     template = await readFile('./index.html', 'utf-8');
     template = await vite.transformIndexHtml(Config.baseUrl, template);
 
-    const { renderSsrTemplate } = await vite.ssrLoadModule(`.${Dir.SOURCE_CLIENT}/entryServer.tsx`);
+    const { renderSsrTemplate } = await vite.ssrLoadModule(`${CLIENT_ENTRY_SOURCE_DIR}/entryServer.tsx`);
     render = renderSsrTemplate;
   } else {
     // Prod
-    template = await readFile(`.${Dir.DIST_CLIENT}/index.html`, 'utf-8');
+    template = await readFile(`${CLIENT_DIST_DIR}/index.html`, 'utf-8');
 
     try {
-      await access('../../../../dist/server/entryServer.js', constants.R_OK);
+      await access(`${SERVER_DIST_DIR}/entryServer.js`, constants.R_OK);
 
-      const { renderSsrTemplate } = await import('../../../../dist/server/entryServer.js');
+      const { renderSsrTemplate } = await import(`${SERVER_DIST_DIR}/entryServer.js`);
       render = renderSsrTemplate;
     } catch {
       console.error('⚠️ entryServer.js not found — did you forget to build the project?');

@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { ViteDevServer } from 'vite';
-import { renderPage } from '../../client/app/entrypoint/renderPage';
-import { AppRoute } from '../../common/constants/routes';
+import { AppRoute } from '../../../common/constants/routes';
+import { renderPage } from './renderPage';
 
 export const renderMiddlewareBuilder = (vite: ViteDevServer | undefined) => {
   const renderMiddleware = Router();
