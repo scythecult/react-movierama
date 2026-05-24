@@ -1,2 +1,2 @@
-export type { UserData } from './types';
-export { createUserSlice, type UserSlice } from './userSlice';
+export { createUserSlice, type UserSlice } from './user.slice';
+export type { UserData } from './user.types';

@@ -1,6 +1,6 @@
 import { AppPath } from '../../../../../common/constants/routes';
+import { useAppStore } from '../../../../shared/lib/store';
 import { LinkButton } from '../../../../shared/ui/button/LinkButton';
-import { useAppStore } from '../../../../shared/zustand/useAppStore';
 
 export const CartPaymentButton = () => {
   const totalPrice = useAppStore((state) => state.cartTotalPrice);

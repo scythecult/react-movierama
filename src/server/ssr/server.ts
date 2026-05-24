@@ -24,7 +24,12 @@ export const createSsrServer = async () => {
     serverMocks.listen();
   }
 
-  if (!isProduction) {
+  if (isProduction) {
+    // Serve static files
+    const sirv = (await import('sirv')).default;
+
+    ssrServer.use(AppRoute.ROOT, sirv(CLIENT_DIST_DIR, { extensions: [] }));
+  } else {
     // Create vite dev server
     const { createServer: createViteDevServer } = await import('vite');
 
@@ -35,11 +40,6 @@ export const createSsrServer = async () => {
     });
 
     ssrServer.use(Config.baseUrl, vite.middlewares);
-  } else {
-    // Serve static files
-    const sirv = (await import('sirv')).default;
-
-    ssrServer.use(AppRoute.ROOT, sirv(CLIENT_DIST_DIR, { extensions: [] }));
   }
 
   ssrServer.get(AppRoute.HEALTH, (_, response) => {

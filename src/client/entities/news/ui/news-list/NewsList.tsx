@@ -1,5 +1,6 @@
+import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
-import { useNewsQuery } from '../../../../entities/news/api';
+import { newsQueries } from '../../../../entities/news/api';
 import { List } from '../../../../shared/ui/list/List';
 import { NewsListItem } from './news-list-item/NewsListItem';
 import styles from './styles.module.css';
@@ -7,7 +8,7 @@ import styles from './styles.module.css';
 export type NewsListProps = PropsWithClassName;
 
 export const NewsList = (props: NewsListProps) => {
-  const { data: news = [], isLoading } = useNewsQuery();
+  const { data: news = [], isLoading } = useQuery(newsQueries.list());
   const { className } = props;
   const classNameFinal = clsx(styles.newsList, className);
 

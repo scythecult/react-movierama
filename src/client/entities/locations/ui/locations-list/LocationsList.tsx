@@ -1,24 +1,24 @@
+import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
-import { useGeolocationMutation } from '../../../../entities/locations/api';
+import { locationsQueries, useGeolocationMutation } from '../../../../entities/locations/api';
 import { List } from '../../../../shared/ui/list/List';
-import { useAppStore } from '../../../../shared/zustand/useAppStore';
 import { LocationsItem } from './locations-item/LocationsItem';
 import styles from './styles.module.css';
 
 export type LocationsListProps = PropsWithClassName;
 
 export const LocationsList = (props: LocationsListProps) => {
-  // TODO Mb should move data fetching to component
   const { className } = props;
-  const geolocation = useAppStore((state) => state.location);
-  const locations = useAppStore((state) => state.locations);
-  const { mutate } = useGeolocationMutation();
-  const { id } = geolocation;
   const classNameFinal = clsx(styles.locationsList, className);
+  const { data: geolocation } = useQuery(locationsQueries.getOne());
+  const { data: locations } = useQuery(locationsQueries.list());
+  const { mutate } = useGeolocationMutation();
 
-  // TODO Think about data fetching/updating strategy
-  // Should we invalidate data "in place" on mutation?
-  // Or should store updated data in zustand in onSuccess mutation handler?
+  if (!geolocation || !locations) {
+    return null;
+  }
+
+  const { id } = geolocation;
 
   const handleLocationClick = (id: number) => {
     mutate(id);

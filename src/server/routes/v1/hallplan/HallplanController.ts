@@ -6,11 +6,16 @@
 // на основе гео ищем в БД текущий план-театра, сеансы, всё что зависит от гео
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import { SeatSizeOption } from '../../../lib/constants/seats';
-import { Hall } from '../../../services/Hall';
+import { Hall } from '../../../lib/helpers/Hall';
+import { SeatNode } from '../../../lib/helpers/SeatNode';
 import type { HallplanMatrixService } from '../../../services/hallplan-matrix/HallplanMatrixService';
 import type { SeatTypeService } from '../../../services/seat-type/SeatTypeService';
-import { SeatNode } from '../../../services/SeatNode';
+
+const SeatSizeOption = {
+  WIDTH: 40,
+  HEIGHT: 34,
+  OFFSET: 10,
+};
 
 export class HallplanController {
   #hallplanMatrixService;

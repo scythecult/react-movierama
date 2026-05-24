@@ -1,23 +1,45 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_GEOLOCATION } from '../../../../../../mocks/data/geolocation';
 import { MOCK_LOCATIONS } from '../../../../../../mocks/data/locations';
 import { AppStore } from '../../../../app/store/AppStore';
-import { AppStoreProvider } from '../../../../shared/zustand/AppStoreProvider';
+import { AppStoreProvider } from '../../../../shared/lib/store';
 import { LocationsList, type LocationsListProps } from './LocationsList';
+
+const getGeolocationMock = vi.fn().mockResolvedValue(MOCK_GEOLOCATION);
+const getLocationsMock = vi.fn().mockResolvedValue(MOCK_LOCATIONS);
+
+vi.mock('../../api', () => ({
+  locationsQueries: {
+    getOne: () => ({
+      queryKey: ['geolocation'],
+      queryFn: getGeolocationMock,
+    }),
+    list: () => ({
+      queryKey: ['locations'],
+      queryFn: getLocationsMock,
+    }),
+  },
+
+  useGeolocationMutation: () => ({
+    mutate: vi.fn(),
+  }),
+}));
 
 const DEFAULT_PROPS: LocationsListProps = {
   className: '',
 };
 
 const state = {
-  location: MOCK_GEOLOCATION,
+  location: MOCK_GEOLOCATION.current,
   locations: MOCK_LOCATIONS,
 };
 
+let queryClient: QueryClient;
+
 const buildWrappedComponent = (props: LocationsListProps = DEFAULT_PROPS) => {
-  const queryClient = new QueryClient();
+  queryClient = new QueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -30,25 +52,43 @@ const buildWrappedComponent = (props: LocationsListProps = DEFAULT_PROPS) => {
   );
 };
 
-vi.mock('../../../../entities/locations/api', () => ({
-  useGeolocationMutation: () => ({
-    mutate: vi.fn(),
-  }),
-}));
-
 describe('LocationsList', () => {
-  test('should correspond default layout', () => {
+  test('should correspond default layout', async () => {
     const result = render(buildWrappedComponent());
+
+    await waitFor(() => {
+      expect(queryClient.isFetching()).toBe(0);
+    });
 
     expect(result.container).toMatchSnapshot();
   });
 
-  test('should support the "className" prop', () => {
+  test('should support the "className" prop', async () => {
     let result = render(buildWrappedComponent({ className: 'custom-class' }));
+
+    await waitFor(() => {
+      expect(queryClient.isFetching()).toBe(0);
+    });
 
     expect(result.container).toMatchSnapshot();
 
     result = render(buildWrappedComponent({ className: 'custom-class-v2' }));
+
+    await waitFor(() => {
+      expect(queryClient.isFetching()).toBe(0);
+    });
+
+    expect(result.container).toMatchSnapshot();
+  });
+
+  test('should not appear if there are no locations', async () => {
+    getGeolocationMock.mockResolvedValueOnce(null);
+
+    const result = render(buildWrappedComponent());
+
+    await waitFor(() => {
+      expect(queryClient.isFetching()).toBe(0);
+    });
 
     expect(result.container).toMatchSnapshot();
   });

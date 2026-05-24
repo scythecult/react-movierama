@@ -1,6 +1,6 @@
+import { useAppStore } from '../../../../shared/lib/store';
 import { CustomIconName } from '../../../../shared/ui/custom-icon/constants';
 import { IconButton } from '../../../../shared/ui/icon-button/IconButton';
-import { useAppStore } from '../../../../shared/zustand/useAppStore';
 
 export type UserButtonProps = PropsWithClassName;
 

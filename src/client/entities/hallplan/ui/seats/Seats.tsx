@@ -1,5 +1,5 @@
 import type { JSX } from 'react';
-import type { SeatData } from '../../model/types';
+import type { SeatData } from '../../model/hallplan.types';
 import { DEFAULT_CANVAS_HEIGHT, DEFAULT_CANVAS_WIDTH, SeatStateMap } from './const';
 import { Seat } from './seat/Seat';
 import styles from './styles.module.css';

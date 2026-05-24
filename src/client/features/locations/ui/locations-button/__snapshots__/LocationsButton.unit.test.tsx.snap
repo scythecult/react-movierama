@@ -25,7 +25,7 @@ exports[`LocationsButton > should correspond default layout 1`] = `
           </svg>
         </div>
          
-        Choose City
+        MOCK_GEOLOCATION
       </button>
     </div>
   </body>,
@@ -50,7 +50,7 @@ exports[`LocationsButton > should correspond default layout 1`] = `
         </svg>
       </div>
        
-      Choose City
+      MOCK_GEOLOCATION
     </button>
   </div>,
   "debug": [Function],

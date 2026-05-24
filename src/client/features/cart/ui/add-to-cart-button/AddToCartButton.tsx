@@ -1,4 +1,4 @@
-import { useAppStore } from '../../../../shared/zustand/useAppStore';
+import { useAppStore } from '../../../../shared/lib/store';
 import styles from './styles.module.css';
 
 type AddToCartButtonProps = {

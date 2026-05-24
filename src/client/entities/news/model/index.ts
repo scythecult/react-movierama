@@ -1,3 +1,3 @@
-export type { NewsSlice } from './newsSlice';
-export { createNewsSlice } from './newsSlice';
-export type { NewsData } from './types';
+export type { NewsSlice } from './news.slice';
+export { createNewsSlice } from './news.slice';
+export type { NewsData } from './news.types';

@@ -580,6 +580,22 @@ exports[`FilmsList > should correspond default layout 1`] = `
 </div>
 `;
 
+exports[`FilmsList > should correspond error layout 1`] = `
+<div>
+  <div>
+    Error
+  </div>
+</div>
+`;
+
+exports[`FilmsList > should correspond loading layout 1`] = `
+<div>
+  <div>
+    Loading...
+  </div>
+</div>
+`;
+
 exports[`FilmsList > should support the "className" prop 1`] = `
 <div>
   <div

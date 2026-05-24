@@ -1,7 +1,8 @@
+import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
-import { useFilmsQuery } from '../../../../entities/films/api';
 import type { FilmData } from '../../../../entities/films/model';
 import { List } from '../../../../shared/ui/list/List';
+import { filmsQueries } from '../../api';
 import { FilmListItem } from './film-list-item/FilmListItem';
 import styles from './styles.module.css';
 
@@ -10,7 +11,7 @@ export type FilmsListProps = PropsWithClassName<{
 }>;
 
 export const FilmsList = (props: FilmsListProps) => {
-  const { data: films = [], isLoading } = useFilmsQuery();
+  const { data: films = [], isLoading } = useQuery(filmsQueries.list());
   const { onFilmClick, className } = props;
   const classNameFinal = clsx(styles.filmsList, className);
 

@@ -1,3 +1,3 @@
-export type { HallplanSlice } from './hallplanSlice';
-export { createHallplanSlice } from './hallplanSlice';
-export type { SeatData, SeatType, TicketType } from './types';
+export type { HallplanSlice } from './hallplan.slice';
+export { createHallplanSlice } from './hallplan.slice';
+export type { SeatData, SeatType, TicketType } from './hallplan.types';

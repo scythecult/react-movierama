@@ -1,2 +1,2 @@
-export { createLocationsSlice, type LocationsSlice } from './locationsSlice';
-export type { GeolocationData, GeolocationResponse, LocationsData, LocationsResponse } from './types';
+export { createLocationsSlice, type LocationsSlice } from './locations.slice';
+export type { GeolocationData, GeolocationResponse, LocationsData, LocationsResponse } from './locations.types';

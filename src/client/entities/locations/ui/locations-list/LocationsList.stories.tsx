@@ -3,8 +3,8 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { MOCK_GEOLOCATION } from '../../../../../../mocks/data/geolocation';
 import { MOCK_LOCATIONS } from '../../../../../../mocks/data/locations';
 import { AppStore } from '../../../../app/store/AppStore';
-import { queryClient } from '../../../../shared/api/queryClient';
-import { AppStoreProvider } from '../../../../shared/zustand/AppStoreProvider';
+import { queryClient } from '../../../../shared/api/query-client';
+import { AppStoreProvider } from '../../../../shared/lib/store';
 import { LocationsList, type LocationsListProps } from './LocationsList';
 
 export default {
@@ -22,7 +22,7 @@ export default {
 } satisfies Meta<typeof LocationsList>;
 
 const initialState = {
-  location: MOCK_GEOLOCATION,
+  location: MOCK_GEOLOCATION.current,
   locations: MOCK_LOCATIONS,
 };
 

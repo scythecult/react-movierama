@@ -4,16 +4,26 @@ import { BrowserRouter } from 'react-router';
 import { MOCK_NEWS } from '../../../../../../mocks/data/news';
 import { NewsList, type NewsListProps } from './NewsList';
 
+vi.mock('../../api', () => ({
+  newsQueries: {
+    list: vi.fn(),
+  },
+}));
+
+vi.mock('@tanstack/react-query', async () => {
+  const actual = await vi.importActual('@tanstack/react-query');
+  return {
+    ...actual,
+    useQuery: vi.fn(() => ({
+      isLoading: false,
+      data: MOCK_NEWS,
+    })),
+  };
+});
+
 const DEFAULT_PROPS: NewsListProps = {
   className: undefined,
 };
-
-vi.mock('../../../../entities/news/api', () => ({
-  useNewsQuery: () => ({
-    data: MOCK_NEWS,
-    isLoading: false,
-  }),
-}));
 
 const buildWrappedComponent = (props: NewsListProps = DEFAULT_PROPS) => {
   const queryClient = new QueryClient();

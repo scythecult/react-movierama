@@ -230,6 +230,8 @@ exports[`LocationsList > should correspond default layout 1`] = `
 </div>
 `;
 
+exports[`LocationsList > should not appear if there are no locations 1`] = `<div />`;
+
 exports[`LocationsList > should support the "className" prop 1`] = `
 <div>
   <div

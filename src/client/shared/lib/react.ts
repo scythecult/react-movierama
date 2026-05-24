@@ -1,6 +1,6 @@
 import { type Context, createContext, useContext } from 'react';
 
-export const useStrictContext = <T,>(context: Context<T | null>) => {
+export const useStrictContext = <T>(context: Context<T | null>) => {
   const value = useContext(context);
 
   if (value === null) {
@@ -10,4 +10,13 @@ export const useStrictContext = <T,>(context: Context<T | null>) => {
   return value;
 };
 
-export const createStrictContext = <T,>() => createContext<T | null>(null);
+export const createStrictContext = <T>() => createContext<T | null>(null);
+
+export const createRootContainer = () => {
+  const rootNode = document.createElement('div');
+  rootNode.setAttribute('id', 'root');
+
+  document.body.append(rootNode);
+
+  return rootNode;
+};

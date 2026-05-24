@@ -1,5 +1,5 @@
+import { useAppStore } from '../../../../shared/lib/store';
 import { Button } from '../../../../shared/ui/button/Button';
-import { useAppStore } from '../../../../shared/zustand/useAppStore';
 
 export const ClearCartButton = () => {
   const totalPrice = useAppStore((state) => state.cartTotalPrice);

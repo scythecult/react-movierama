@@ -1,4 +1,2 @@
-export { useGeolocationMutation, useGeolocationQuery } from './hooks';
-export { useLocationsQuery } from './hooks';
-export { fetchGeolocation, fetchLocations } from './loaders';
-export { LocationsQueryKey } from './queryKeys';
+export { useGeolocationMutation } from './locations.hooks';
+export { locationsQueries } from './locations.queries';

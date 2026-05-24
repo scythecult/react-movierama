@@ -14,9 +14,10 @@ export const renderPage = async (request: Request, vite: ViteDevServer | undefin
   if (!isProduction && vite) {
     // Dev - always read fresh template
     template = await readFile('./index.html', 'utf-8');
-    template = await vite.transformIndexHtml(Config.baseUrl, template);
+    template = (await vite.transformIndexHtml(Config.baseUrl, template)) || '';
 
     const { renderSsrTemplate } = await vite.ssrLoadModule(`${CLIENT_ENTRY_SOURCE_DIR}/entryServer.tsx`);
+
     render = renderSsrTemplate;
   } else {
     // Prod
@@ -26,6 +27,7 @@ export const renderPage = async (request: Request, vite: ViteDevServer | undefin
       await access(`${SERVER_DIST_DIR}/entryServer.js`, constants.R_OK);
 
       const { renderSsrTemplate } = await import(`${SERVER_DIST_DIR}/entryServer.js`);
+
       render = renderSsrTemplate;
     } catch {
       console.error('⚠️ entryServer.js not found — did you forget to build the project?');

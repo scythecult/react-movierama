@@ -1,4 +1,4 @@
-import type { UserData } from '../../../client/entities/user';
+import type { UserData } from '../../../client/entities/user/model';
 
 export class MockUserDb {
   #users: UserData[] = [];

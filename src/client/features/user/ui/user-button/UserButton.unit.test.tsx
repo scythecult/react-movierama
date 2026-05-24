@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { AppStore } from '../../../../app/store/AppStore';
-import { AppStoreProvider } from '../../../../shared/zustand/AppStoreProvider';
+import { AppStoreProvider } from '../../../../shared/lib/store';
 import { UserButton, type UserButtonProps } from './UserButton';
 
 const buildWrappedComponent = (props: UserButtonProps = {}) => (

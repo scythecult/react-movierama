@@ -1,15 +1,15 @@
-import { CartList } from '../../../../entities/cart/ui';
-import { useHallplanQuery } from '../../../../entities/hallplan/api';
+import { useQuery } from '@tanstack/react-query';
+import { CartListUi } from '../../../../entities/cart/ui';
+import { hallplanQueries } from '../../../../entities/hallplan/api';
 import { Hall, Legend, Seats } from '../../../../entities/hallplan/ui';
 import { AddToCartButton, CartPaymentButton, ClearCartButton, TicketTypeSelect } from '../../../../features/cart/ui';
 import { RemoveFromCartButton } from '../../../../features/cart/ui';
-import { useAppStore } from '../../../../shared/zustand/useAppStore';
+import { useAppStore } from '../../../../shared/lib/store';
 import styles from './styles.module.css';
 
-// TODO Move component to widget
 export const Order = () => {
   const cart = useAppStore((state) => state.cart);
-  const { data, isLoading } = useHallplanQuery();
+  const { data, isLoading } = useQuery(hallplanQueries.getOne());
 
   if (isLoading) {
     // TODO Add skeletons
@@ -37,7 +37,7 @@ export const Order = () => {
 
       <Legend seatTypes={seatTypes} />
 
-      <CartList
+      <CartListUi
         renderRemoveFromCartButton={(itemId) => <RemoveFromCartButton seatId={itemId} />}
         renderTicketTypeSelect={(seatId, ticketTypeId, ticketTypes) => (
           <TicketTypeSelect seatId={seatId} ticketTypeId={ticketTypeId} ticketTypes={ticketTypes} />

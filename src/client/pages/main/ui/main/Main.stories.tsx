@@ -3,8 +3,8 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router';
 import { enableMocks } from '../../../../../../mocks';
 import { AppStore } from '../../../../app/store/AppStore';
-import { queryClient } from '../../../../shared/api/queryClient';
-import { AppStoreProvider } from '../../../../shared/zustand/AppStoreProvider';
+import { queryClient } from '../../../../shared/api/query-client';
+import { AppStoreProvider } from '../../../../shared/lib/store';
 import { Main } from './Main';
 
 export default {
