@@ -22,6 +22,7 @@ const env = {
   ssrPort: process.env.SSR_PORT,
   ssrUrl: process.env.SSR_URL,
   baseUrl: process.env.BASE_URL,
+  isMockGeolocation: process.env.IS_MOCK_GEOLOCATION,
 } as const;
 
 const envSchema = z.object({
@@ -35,6 +36,7 @@ const envSchema = z.object({
   ssrPort: z.coerce.number().default(DEFAULT_SSR_PORT),
   ssrUrl: z.url().default(DEFAULT_SSR_URL),
   baseUrl: z.string().default(DEFAULT_APP_URL),
+  isMockGeolocation: validateBoolean().default(false),
 });
 
 export const Config = envSchema.parse(env);

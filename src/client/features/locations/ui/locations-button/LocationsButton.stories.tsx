@@ -3,8 +3,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MOCK_LOCATIONS } from '../../../../../../mocks/data/locations';
 import { AppStore } from '../../../../app/store/AppStore';
 import { LocationsQueryKey } from '../../../../entities/locations/api';
-import { AppStoreProvider } from '../../../../shared/zustand/AppStoreProvider';
-import { Modals } from '../../../../widgets/modals';
+import { ModalProvider } from '../../../../shared/lib/modal';
+import { AppStoreProvider } from '../../../../shared/lib/store';
 import { LocationsButton } from './LocationsButton';
 
 export default {
@@ -24,9 +24,9 @@ queryClient.setQueryData([LocationsQueryKey.all], { data: MOCK_LOCATIONS });
 const Template: StoryFn = () => (
   <QueryClientProvider client={queryClient}>
     <AppStoreProvider store={AppStore}>
-      <Modals>
+      <ModalProvider>
         <LocationsButton />
-      </Modals>
+      </ModalProvider>
     </AppStoreProvider>
   </QueryClientProvider>
 );

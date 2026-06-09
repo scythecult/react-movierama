@@ -7,7 +7,6 @@ import styles from './styles.module.css';
 
 export type HeaderProps = PropsWithClassName;
 
-// TODO Think about dependency injection through renderProps/slots
 export const Header = (props: HeaderProps) => {
   const { className } = props;
   const classNameFinal = clsx(styles.header, className);

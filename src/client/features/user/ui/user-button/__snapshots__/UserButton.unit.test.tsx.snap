@@ -22,7 +22,7 @@ exports[`UserButton > should correspond default layout 1`] = `
       </svg>
     </div>
      
-    Personal Account
+    Алексей Иванов
   </button>
 </div>
 `;
@@ -49,7 +49,7 @@ exports[`UserButton > should support the "className" prop 1`] = `
       </svg>
     </div>
      
-    Personal Account
+    Алексей Иванов
   </button>
 </div>
 `;

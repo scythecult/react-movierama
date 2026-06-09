@@ -3,8 +3,29 @@ import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_CANVAS_SIZE, MOCK_SEAT_TYPES, MOCK_SEATS_DATA } from '../../../../../../mocks/data/seats';
 import { AppStore } from '../../../../app/store/AppStore';
-import { AppStoreProvider } from '../../../../shared/zustand/AppStoreProvider';
+import { AppStoreProvider } from '../../../../shared/lib/store';
 import { Order } from './Order';
+
+vi.mock('../../../../entities/hallplan/api', () => ({
+  hallplanQueries: {
+    getOne: vi.fn(),
+  },
+}));
+
+vi.mock('@tanstack/react-query', async () => {
+  const actual = await vi.importActual('@tanstack/react-query');
+  return {
+    ...actual,
+    useQuery: vi.fn(() => ({
+      isLoading: false,
+      data: {
+        seats: MOCK_SEATS_DATA,
+        canvas: MOCK_CANVAS_SIZE,
+        seatTypes: MOCK_SEAT_TYPES,
+      },
+    })),
+  };
+});
 
 const buildWrappedComponent = () => {
   const queryClient = new QueryClient();
@@ -19,17 +40,6 @@ const buildWrappedComponent = () => {
     </QueryClientProvider>
   );
 };
-
-vi.mock('../../../../entities/hallplan/api', () => ({
-  useHallplanQuery: () => ({
-    data: {
-      seats: MOCK_SEATS_DATA,
-      canvas: MOCK_CANVAS_SIZE,
-      seatTypes: MOCK_SEAT_TYPES,
-    },
-    isLoading: false,
-  }),
-}));
 
 describe('Order', () => {
   test('should correspond default layout', () => {

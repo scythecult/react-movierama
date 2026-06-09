@@ -1,8 +1,12 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import type { GeolocationUseCaseMap } from '../../../lib/types/useCase';
+import type { GeolocationUseCase } from '../../../lib/use-cases/geolocation/GeolocationUseCase';
 import type { GeolocationService } from '../../../services/geolocation/GeolocationService';
 import type { LocationService } from '../../../services/locations/LocationService';
+
+type GeolocationUseCaseMap = {
+  geolocationUseCase: GeolocationUseCase;
+};
 
 export class GeolocationController {
   #geolocationService;
@@ -20,7 +24,7 @@ export class GeolocationController {
   }
 
   getGeolocation = async (request: Request, response: Response) => {
-    const location = await this.#useCaseMap.getLocationUseCase.execute(request);
+    const location = await this.#useCaseMap.geolocationUseCase.execute(request);
 
     return response.status(StatusCodes.OK).json({ data: { location } });
   };

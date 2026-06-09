@@ -1,6 +1,6 @@
 import type { ChangeEvent } from 'react';
 import type { TicketType } from '../../../../entities/cart/model';
-import { useAppStore } from '../../../../shared/zustand/useAppStore';
+import { useAppStore } from '../../../../shared/lib/store';
 import styles from './styles.module.css';
 
 type TicketTypeSelectProps = {

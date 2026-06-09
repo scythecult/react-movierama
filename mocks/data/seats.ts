@@ -1,6 +1,6 @@
-import type { SeatData, SeatType } from '../../src/client/entities/hallplan/model/types';
-import { Hall } from '../../src/server/services/Hall';
-import { SeatNode } from '../../src/server/services/SeatNode';
+import type { SeatData, SeatType } from '../../src/client/entities/hallplan/model/hallplan.types';
+import { Hall } from '../../src/server/lib/helpers/Hall';
+import { SeatNode } from '../../src/server/lib/helpers/SeatNode';
 
 export const MOCK_SEAT_WIDTH = 40;
 
@@ -20,7 +20,7 @@ export const MOCK_HALL_PLAN_MATRIX =
     // ROW
     [1, 1, 0, 3, 3, 3, 3, 0, 1],
   ];
-// TODO MOVE HALL
+
 export const MOCK_SEAT_TYPES: SeatType[] = [
   {
     id: 1,

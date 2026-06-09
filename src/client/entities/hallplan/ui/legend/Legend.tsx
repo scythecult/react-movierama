@@ -1,6 +1,5 @@
-import type { SeatType } from '../../model/types';
+import type { SeatType } from '../../model/hallplan.types';
 import { SeatStateMap, SeatTypeMap } from '../seats/const';
-// TODO MOVE TO ORDER LAYER
 import { Seat } from '../seats/seat/Seat';
 import styles from './styles.module.css';
 
@@ -8,7 +7,6 @@ export type LegendProps = {
   seatTypes: SeatType[];
 };
 
-// TODO REFACTOR
 export const Legend = (props: LegendProps) => {
   const { seatTypes } = props;
 

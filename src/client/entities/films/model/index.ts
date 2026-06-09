@@ -1,2 +1,1 @@
-export { createFilmsSlice } from './filmsSlice';
-export type { FilmData } from './types';
+export type { FilmData } from './films.types';

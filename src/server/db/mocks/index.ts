@@ -16,6 +16,6 @@ export const mockFilmDb = new MockFilmDb(MOCK_FILMS);
 export const mockNewsDb = new MockNewsDb(MOCK_NEWS);
 export const mockUserDb = new MockUserDb([MOCK_USER]);
 export const mockLocationDb = new MockLocationDb(MOCK_LOCATIONS);
-export const mockGeolocationDb = new MockGeolocationDb(MOCK_GEOLOCATION);
+export const mockGeolocationDb = new MockGeolocationDb(MOCK_GEOLOCATION.current);
 export const mockHallplanMatrixDb = new MockHallplanMatrixDb([{ id: 20, matrix: MOCK_HALL_PLAN_MATRIX }]);
 export const mockSeatTypeDb = new MockSeatTypeDb(MOCK_SEAT_TYPES);

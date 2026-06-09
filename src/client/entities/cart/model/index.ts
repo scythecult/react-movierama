@@ -1,3 +1,3 @@
-export type { CartSlice } from './cartSlice';
-export { createCartSlice } from './cartSlice';
-export type { CartItemData, TicketType } from './types';
+export type { CartSlice } from './cart.slice';
+export { createCartSlice } from './cart.slice';
+export type { CartItemData, TicketType } from './cart.types';

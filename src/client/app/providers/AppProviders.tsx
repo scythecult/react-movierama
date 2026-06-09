@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from 'react';
-import { AppStoreProvider } from '../../shared/zustand/AppStoreProvider';
-import { Modals } from '../../widgets/modals';
+import { ModalProvider } from '../../shared/lib/modal';
+import { AppStoreProvider } from '../../shared/lib/store';
 import { AppStore } from '../store/AppStore';
 
 type ProvidersProps = PropsWithChildren<{ initialState?: Partial<CombinedAppStore> }>;
@@ -10,7 +10,7 @@ export const AppProviders = (props: ProvidersProps) => {
 
   return (
     <AppStoreProvider store={AppStore} initialState={initialState}>
-      <Modals>{children}</Modals>
+      <ModalProvider>{children}</ModalProvider>
     </AppStoreProvider>
   );
 };

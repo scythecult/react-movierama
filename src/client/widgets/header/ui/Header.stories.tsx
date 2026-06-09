@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router';
 import { MOCK_LOCATIONS } from '../../../../../mocks/data/locations';
 import { AppStore } from '../../../app/store/AppStore';
 import { LocationsQueryKey } from '../../../entities/locations/api';
-import { AppStoreProvider } from '../../../shared/zustand/AppStoreProvider';
-import { Modals } from '../../modals';
+import { ModalProvider } from '../../../shared/lib/modal';
+import { AppStoreProvider } from '../../../shared/lib/store';
 import { Header, type HeaderProps } from './Header';
 
 export default {
@@ -33,11 +33,11 @@ queryClient.setQueryData([LocationsQueryKey.all], { data: MOCK_LOCATIONS });
 const Template: StoryFn<HeaderProps> = (props) => (
   <QueryClientProvider client={queryClient}>
     <AppStoreProvider store={AppStore}>
-      <Modals>
+      <ModalProvider>
         <BrowserRouter>
           <Header {...props} />;
         </BrowserRouter>
-      </Modals>
+      </ModalProvider>
     </AppStoreProvider>
   </QueryClientProvider>
 );

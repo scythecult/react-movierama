@@ -71,7 +71,7 @@ export const handlers = [
   http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.GEOLOCATION}`, () => {
     return HttpResponse.json({
       data: {
-        location: MOCK_GEOLOCATION,
+        location: MOCK_GEOLOCATION.current,
       },
     });
   }),
@@ -81,6 +81,9 @@ export const handlers = [
     async ({ request }) => {
       const result = await request.json();
       const location = MOCK_LOCATIONS.find((location) => location.id === result.id);
+
+      // Update default location
+      MOCK_GEOLOCATION.current = location ?? MOCK_GEOLOCATION.current;
 
       return HttpResponse.json({
         data: {

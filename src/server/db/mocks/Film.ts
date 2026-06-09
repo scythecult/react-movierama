@@ -1,4 +1,4 @@
-import type { FilmData } from '../../../client/entities/films';
+import type { FilmData } from '../../../client/entities/films/model';
 
 export class MockFilmDb {
   #films: FilmData[] = [];

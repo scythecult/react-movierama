@@ -1,7 +1,7 @@
 import { hydrateRoot } from 'react-dom/client';
 import { enableMocks } from '../../../../mocks';
-import { queryClient } from '../../shared/api/queryClient';
-import { createRootContainer } from '../../shared/lib/browser';
+import { queryClient } from '../../shared/api/query-client';
+import { createRootContainer } from '../../shared/lib/react';
 import { ClientApp } from './ClientApp';
 
 try {

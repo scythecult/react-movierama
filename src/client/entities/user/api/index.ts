@@ -1,2 +1,1 @@
-export { fetchUser } from './loaders';
-export { UserQueryKey } from './queryKeys';
+export { userQueries } from './user.queries';

@@ -1,3 +1,1 @@
-export { useHallplanQuery } from './hooks';
-export { fetchHallplan } from './loaders';
-export { HallplanQueryKey } from './queryKeys';
+export { hallplanQueries } from './hallplan.queries';
