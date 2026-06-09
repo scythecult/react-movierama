@@ -11,7 +11,7 @@ export type FilmsListProps = PropsWithClassName<{
 }>;
 
 export const FilmsList = (props: FilmsListProps) => {
-  const { data: films = [], isLoading } = useQuery(filmsQueries.list());
+  const { data: films, isLoading } = useQuery(filmsQueries.list());
   const { onFilmClick, className } = props;
   const classNameFinal = clsx(styles.filmsList, className);
 

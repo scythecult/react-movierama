@@ -2,24 +2,56 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_GEOLOCATION } from '../../../../../mocks/data/geolocation';
+import { MOCK_LOCATIONS } from '../../../../../mocks/data/locations';
+import { MOCK_USER } from '../../../../../mocks/data/user';
 import { AppStore } from '../../../app/store/AppStore';
 import { ModalProvider } from '../../../shared/lib/modal';
 import { AppStoreProvider } from '../../../shared/lib/store';
 import { Header, type HeaderProps } from './Header';
 
+const getGeolocationMock = vi.fn().mockResolvedValue(MOCK_GEOLOCATION);
+const getLocationsMock = vi.fn().mockResolvedValue(MOCK_LOCATIONS);
+const getUserMock = vi.fn().mockResolvedValue(MOCK_USER);
+
+vi.mock('../../../entities/locations/api', () => ({
+  locationsQueries: {
+    getOne: () => ({
+      queryKey: ['locations', 'one'],
+      queryFn: getGeolocationMock,
+    }),
+    list: () => ({
+      queryKey: ['locations', 'list'],
+      queryFn: getLocationsMock,
+    }),
+  },
+}));
+
+vi.mock('../../../features/locations/model/locations.hooks', () => ({
+  useChangeLocation: () => vi.fn(),
+}));
+
+vi.mock('../../../entities/user/api', () => ({
+  userQueries: {
+    getOne: () => ({
+      queryKey: ['user', 'one'],
+      queryFn: getUserMock,
+      initialData: {
+        id: 0,
+        phone: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        gender: '',
+        wantsPromotions: false,
+      },
+    }),
+  },
+}));
+
 const DEFAULT_PROPS: HeaderProps = {
   className: '',
 };
-
-vi.mock('../../../entities/locations/api/locations.loaders', () => ({
-  getGeolocation: vi.fn().mockResolvedValue(MOCK_GEOLOCATION),
-}));
-
-vi.mock('../../../entities/locations/api/locations.actions', () => ({
-  useGeolocationMutation: () => ({
-    mutate: vi.fn(),
-  }),
-}));
 
 let queryClient: QueryClient;
 

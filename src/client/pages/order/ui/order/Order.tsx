@@ -17,9 +17,6 @@ export const Order = () => {
   }
 
   // TODO Add proper check or add fallback values to hook
-  if (!data && typeof data !== 'object') {
-    return <div>Error</div>;
-  }
 
   const { seats, canvas, seatTypes } = data;
 
@@ -31,7 +28,7 @@ export const Order = () => {
           cart={cart}
           canvasWidth={canvas.width}
           canvasHeight={canvas.height}
-          renderAddToCartButton={(seatId) => <AddToCartButton seatId={seatId} />}
+          renderAddToCartButton={(seatId) => <AddToCartButton seats={seats} seatId={seatId} />}
         />
       </Hall>
 

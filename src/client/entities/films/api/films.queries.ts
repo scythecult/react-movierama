@@ -9,5 +9,6 @@ export const filmsQueries = {
     queryOptions({
       queryKey: [...filmsQueries.lists()],
       queryFn: getFilms,
+      initialData: [],
     }),
 };

@@ -8,18 +8,13 @@ import styles from './styles.module.css';
 export type NewsListProps = PropsWithClassName;
 
 export const NewsList = (props: NewsListProps) => {
-  const { data: news = [], isLoading } = useQuery(newsQueries.list());
+  const { data: news, isLoading } = useQuery(newsQueries.list());
   const { className } = props;
   const classNameFinal = clsx(styles.newsList, className);
 
   if (isLoading) {
     // TODO Add skeletons
     return <div>Loading...</div>;
-  }
-
-  // TODO Add proper check or add fallback values to hook
-  if (!news.length) {
-    return <div>Error</div>;
   }
 
   return (

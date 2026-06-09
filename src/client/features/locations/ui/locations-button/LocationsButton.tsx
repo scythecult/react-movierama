@@ -1,15 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
 import { locationsQueries } from '../../../../entities/locations/api';
-import { LocationsList } from '../../../../entities/locations/ui';
 import { useRenderModal } from '../../../../shared/lib/modal';
 import { CustomIconName } from '../../../../shared/ui/custom-icon/constants';
 import { IconButton } from '../../../../shared/ui/icon-button/IconButton';
+import { LocationsList } from '../locations-list/LocationsList';
 
 export const LocationsButton = () => {
   const renderModal = useRenderModal();
   const { data: geolocation } = useQuery(locationsQueries.getOne());
 
-  if (!geolocation) {
+  if (!geolocation?.name) {
     return null;
   }
 

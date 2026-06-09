@@ -41,23 +41,12 @@ export const renderSsrTemplate = async (request: Request) => {
   await queryClient.prefetchQuery(locationsQueries.list());
 
   // Get current page data to pass to zustand
-  const hallplanData = queryClient.getQueryData(hallplanQueries.one());
-  const userData = queryClient.getQueryData(userQueries.one());
-  const filmsData = queryClient.getQueryData(filmsQueries.lists());
-  const newsData = queryClient.getQueryData(newsQueries.lists());
-  const geolocationData = queryClient.getQueryData(locationsQueries.one());
-  const locationsData = queryClient.getQueryData(locationsQueries.lists());
   const dehydratedQueryState = dehydrate(queryClient);
 
   const html = renderToString(<ServerApp queryClient={queryClient} url={url} />);
 
   const zustandState = {
-    ...(typeof hallplanData === 'undefined' ? {} : hallplanData),
-    ...(typeof userData === 'undefined' ? {} : { user: userData }),
-    ...(typeof filmsData === 'undefined' ? {} : { films: filmsData }),
-    ...(typeof newsData === 'undefined' ? {} : { news: newsData }),
-    ...(typeof geolocationData === 'undefined' ? {} : { location: geolocationData }),
-    ...(typeof locationsData === 'undefined' ? {} : { locations: locationsData }),
+    // ...(typeof locationsData === 'undefined' ? {} : { locations: locationsData }),
   };
 
   return { html, dehydratedQueryState, zustandState };

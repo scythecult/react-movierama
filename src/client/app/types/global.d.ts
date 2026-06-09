@@ -1,10 +1,6 @@
 import type { DehydratedState } from '@tanstack/react-query';
 import type { StateCreator } from 'zustand';
 import type { CartSlice } from '../../entities/cart/model';
-import type { HallplanSlice } from '../../entities/hallplan/model';
-import type { LocationsSlice } from '../../entities/locations/model';
-import type { NewsSlice } from '../../entities/news/model';
-import type { UserSlice } from '../../entities/user/model';
 
 declare global {
   interface Window {
@@ -12,7 +8,7 @@ declare global {
     __appInitialState__?: Partial<CombinedAppStore>;
   }
 
-  type CombinedAppStore = LocationsSlice & HallplanSlice & CartSlice & NewsSlice & UserSlice;
+  type CombinedAppStore = CartSlice;
 
   type BoundAppStore = UseBoundStore<StoreApi<CombinedAppStore>>;
 

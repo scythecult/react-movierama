@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
-import { locationsQueries, useGeolocationMutation } from '../../../../entities/locations/api';
+import { locationsQueries } from '../../../../entities/locations/api';
 import { List } from '../../../../shared/ui/list/List';
+import { useChangeLocation } from '../../model/locations.hooks';
 import { LocationsItem } from './locations-item/LocationsItem';
 import styles from './styles.module.css';
 
@@ -12,17 +13,15 @@ export const LocationsList = (props: LocationsListProps) => {
   const classNameFinal = clsx(styles.locationsList, className);
   const { data: geolocation } = useQuery(locationsQueries.getOne());
   const { data: locations } = useQuery(locationsQueries.list());
-  const { mutate } = useGeolocationMutation();
+  const changeLocation = useChangeLocation();
 
-  if (!geolocation || !locations) {
+  if (!geolocation?.name) {
     return null;
   }
 
   const { id } = geolocation;
 
-  const handleLocationClick = (id: number) => {
-    mutate(id);
-  };
+  const handleLocationClick = (id: number) => changeLocation(id);
 
   return (
     <List

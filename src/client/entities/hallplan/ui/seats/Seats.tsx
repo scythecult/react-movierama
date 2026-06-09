@@ -23,10 +23,10 @@ export const Seats = (props: SeatsProps) => {
   } = props;
 
   const seatNodes = seats.map((seatNode) => {
-    const { id, state } = seatNode;
+    const { id } = seatNode;
     const targetCartItem = cart.find((cartItem) => cartItem.id === id);
 
-    let nextSeatState = state;
+    let nextSeatState;
 
     if (targetCartItem && targetCartItem.id === id) {
       nextSeatState = SeatStateMap.SELECTED;

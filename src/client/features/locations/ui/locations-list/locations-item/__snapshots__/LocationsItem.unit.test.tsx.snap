@@ -3,11 +3,11 @@
 exports[`LocationItem > should correspond default layout 1`] = `
 <div>
   <div
-    class="_locationsListItem_a3311b"
+    class="_locationsListItem_d79a0b"
     data-test-id="location-list-item"
   >
     <button
-      class="_locationsButton_a3311b _locationsButtonActive_a3311b"
+      class="_locationsButton_d79a0b _locationsButtonActive_d79a0b"
     >
       Москва и МО
     </button>
@@ -18,11 +18,11 @@ exports[`LocationItem > should correspond default layout 1`] = `
 exports[`LocationItem > should support the "currentLocationId" prop 1`] = `
 <div>
   <div
-    class="_locationsListItem_a3311b"
+    class="_locationsListItem_d79a0b"
     data-test-id="location-list-item"
   >
     <button
-      class="_locationsButton_a3311b _locationsButtonActive_a3311b"
+      class="_locationsButton_d79a0b _locationsButtonActive_d79a0b"
     >
       Москва и МО
     </button>
@@ -33,11 +33,11 @@ exports[`LocationItem > should support the "currentLocationId" prop 1`] = `
 exports[`LocationItem > should support the "currentLocationId" prop 2`] = `
 <div>
   <div
-    class="_locationsListItem_a3311b"
+    class="_locationsListItem_d79a0b"
     data-test-id="location-list-item"
   >
     <button
-      class="_locationsButton_a3311b"
+      class="_locationsButton_d79a0b"
     >
       Москва и МО
     </button>
@@ -48,11 +48,11 @@ exports[`LocationItem > should support the "currentLocationId" prop 2`] = `
 exports[`LocationItem > should support the "locationItem" prop 1`] = `
 <div>
   <div
-    class="_locationsListItem_a3311b"
+    class="_locationsListItem_d79a0b"
     data-test-id="location-list-item"
   >
     <button
-      class="_locationsButton_a3311b _locationsButtonActive_a3311b"
+      class="_locationsButton_d79a0b _locationsButtonActive_d79a0b"
     >
       Москва и МО
     </button>
@@ -63,11 +63,11 @@ exports[`LocationItem > should support the "locationItem" prop 1`] = `
 exports[`LocationItem > should support the "locationItem" prop 2`] = `
 <div>
   <div
-    class="_locationsListItem_a3311b"
+    class="_locationsListItem_d79a0b"
     data-test-id="location-list-item"
   >
     <button
-      class="_locationsButton_a3311b"
+      class="_locationsButton_d79a0b"
     >
       Астрахань
     </button>

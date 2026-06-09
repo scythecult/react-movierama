@@ -10,5 +10,13 @@ export const hallplanQueries = {
     queryOptions({
       queryKey: [...hallplanQueries.one()],
       queryFn: getHallplan,
+      initialData: {
+        canvas: {
+          width: 0,
+          height: 0,
+        },
+        seats: [],
+        seatTypes: [],
+      },
     }),
 };

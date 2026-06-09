@@ -10,30 +10,25 @@ import { LocationsList, type LocationsListProps } from './LocationsList';
 const getGeolocationMock = vi.fn().mockResolvedValue(MOCK_GEOLOCATION);
 const getLocationsMock = vi.fn().mockResolvedValue(MOCK_LOCATIONS);
 
-vi.mock('../../api', () => ({
+vi.mock('../../../../entities/locations/api', () => ({
   locationsQueries: {
     getOne: () => ({
-      queryKey: ['geolocation'],
+      queryKey: ['locations', 'one'],
       queryFn: getGeolocationMock,
     }),
     list: () => ({
-      queryKey: ['locations'],
+      queryKey: ['locations', 'list'],
       queryFn: getLocationsMock,
     }),
   },
+}));
 
-  useGeolocationMutation: () => ({
-    mutate: vi.fn(),
-  }),
+vi.mock('../../model/locations.hooks', () => ({
+  useChangeLocation: () => vi.fn(),
 }));
 
 const DEFAULT_PROPS: LocationsListProps = {
   className: '',
-};
-
-const state = {
-  location: MOCK_GEOLOCATION.current,
-  locations: MOCK_LOCATIONS,
 };
 
 let queryClient: QueryClient;
@@ -43,7 +38,7 @@ const buildWrappedComponent = (props: LocationsListProps = DEFAULT_PROPS) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <AppStoreProvider initialState={state} store={AppStore}>
+      <AppStoreProvider store={AppStore}>
         <BrowserRouter>
           <LocationsList {...props} />
         </BrowserRouter>

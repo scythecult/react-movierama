@@ -1,13 +1,14 @@
+import type { SeatData } from '../../../../entities/hallplan/model';
 import { useAppStore } from '../../../../shared/lib/store';
 import styles from './styles.module.css';
 
 type AddToCartButtonProps = {
   seatId: number;
+  seats: SeatData[];
 };
 
 export const AddToCartButton = (props: AddToCartButtonProps) => {
-  const { seatId } = props;
-  const seats = useAppStore((state) => state.seats);
+  const { seatId, seats } = props;
   const addToCart = useAppStore((state) => state.addToCart);
 
   const handleSeatClick = () => {

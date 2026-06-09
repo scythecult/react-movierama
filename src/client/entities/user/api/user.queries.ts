@@ -9,5 +9,15 @@ export const userQueries = {
     queryOptions({
       queryKey: userQueries.one(),
       queryFn: getUser,
+      initialData: {
+        id: 0,
+        phone: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+        gender: '',
+        wantsPromotions: false,
+      },
     }),
 };

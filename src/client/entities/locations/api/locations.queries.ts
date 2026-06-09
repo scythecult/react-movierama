@@ -9,6 +9,7 @@ export const locationsQueries = {
     queryOptions({
       queryKey: [...locationsQueries.lists()],
       queryFn: getLocations,
+      initialData: [],
     }),
 
   one: () => [...locationsQueries.all(), 'one'],
@@ -16,5 +17,9 @@ export const locationsQueries = {
     queryOptions({
       queryKey: [...locationsQueries.one()],
       queryFn: getGeolocation,
+      initialData: {
+        id: 0,
+        name: '',
+      },
     }),
 };

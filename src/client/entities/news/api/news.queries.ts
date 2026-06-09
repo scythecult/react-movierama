@@ -9,5 +9,6 @@ export const newsQueries = {
     queryOptions({
       queryKey: [...newsQueries.lists()],
       queryFn: getNews,
+      initialData: [],
     }),
 };
