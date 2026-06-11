@@ -1,0 +1,36 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UserLoginModal > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_modalContent_82e00f"
+  >
+    <div
+      class="_modalContentHeader_82e00f"
+    >
+      <button
+        class="_userLoginModalButton_84b9d8 _activeButton_84b9d8"
+      >
+        Login
+      </button>
+      <button
+        class="_userLoginModalButton_84b9d8"
+      >
+        Register
+      </button>
+      <button
+        class="_userLoginModalButton_84b9d8"
+      >
+        Info
+      </button>
+    </div>
+    <div
+      class="_modalContentContent_82e00f"
+    >
+      <div>
+        login content
+      </div>
+    </div>
+  </div>
+</div>
+`;

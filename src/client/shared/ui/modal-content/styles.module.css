@@ -1,0 +1,17 @@
+.modalContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.modalContentHeader {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
+    column-gap: 14px;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.modalContentContent {
+    flex-grow: 1;
+}
