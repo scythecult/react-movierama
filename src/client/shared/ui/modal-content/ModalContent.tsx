@@ -1,9 +1,9 @@
-import type { ReactNode } from 'react';
+import type { JSX } from 'react';
 import styles from './styles.module.css';
 
 type ModalContentProps = {
-  header: ReactNode;
-  content: ReactNode;
+  header: JSX.Element | React.ReactNode;
+  content: JSX.Element | React.ReactNode;
 };
 
 export const ModalContent = (props: ModalContentProps) => {

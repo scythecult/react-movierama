@@ -1,0 +1,236 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TextInput > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_0_"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "className" prop 1`] = `
+<div>
+  <div
+    class="test _textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_9_"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "className" prop 2`] = `
+<div>
+  <div
+    class="test 2 _textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_a_"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "error" prop 1`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_7_"
+      />
+    </div>
+    <div
+      class="_textInputError_f74981"
+    >
+      Error
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "error" prop 2`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_8_"
+      />
+    </div>
+    <div
+      class="_textInputError_f74981"
+    >
+      Error 2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "label" prop 1`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <label
+      for="_r_1_"
+    >
+      Test
+    </label>
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_1_"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "label" prop 2`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <label
+      for="_r_2_"
+    >
+      Test 2
+    </label>
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_2_"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "prefix" prop 1`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <span
+        class="_textInputFieldContainerIcon_f74981"
+      >
+        <p>
+          Prefix
+        </p>
+      </span>
+      <input
+        class="_textInputField_f74981"
+        id="_r_3_"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "prefix" prop 2`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <span
+        class="_textInputFieldContainerIcon_f74981"
+      >
+        <p>
+          Prefix 2
+        </p>
+      </span>
+      <input
+        class="_textInputField_f74981"
+        id="_r_4_"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "suffix" prop 1`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_5_"
+      />
+      <span
+        class="_textInputFieldContainerIcon_f74981"
+      >
+        <p>
+          Suffix
+        </p>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput > should support "suffix" prop 2`] = `
+<div>
+  <div
+    class="_textInputContainer_f74981"
+  >
+    <div
+      class="_textInputContainerField_f74981"
+    >
+      <input
+        class="_textInputField_f74981"
+        id="_r_6_"
+      />
+      <span
+        class="_textInputFieldContainerIcon_f74981"
+      >
+        <p>
+          Suffix 2
+        </p>
+      </span>
+    </div>
+  </div>
+</div>
+`;

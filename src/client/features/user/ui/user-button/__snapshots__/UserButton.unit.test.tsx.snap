@@ -4,6 +4,7 @@ exports[`UserButton > should correspond default layout 1`] = `
 <div>
   <button
     class="_iconButton_d28ccf"
+    type="button"
   >
     <div
       class="_customIcon_a7f5a2 _customIcon_a7f5a2--account"
@@ -21,7 +22,6 @@ exports[`UserButton > should correspond default layout 1`] = `
         />
       </svg>
     </div>
-     
     Алексей Иванов
   </button>
 </div>
@@ -31,6 +31,7 @@ exports[`UserButton > should support the "className" prop 1`] = `
 <div>
   <button
     class="_iconButton_d28ccf custom-class"
+    type="button"
   >
     <div
       class="_customIcon_a7f5a2 _customIcon_a7f5a2--account"
@@ -48,7 +49,6 @@ exports[`UserButton > should support the "className" prop 1`] = `
         />
       </svg>
     </div>
-     
     Алексей Иванов
   </button>
 </div>
@@ -58,6 +58,7 @@ exports[`UserButton > should support the "className" prop 2`] = `
 <div>
   <button
     class="_iconButton_d28ccf custom-class-v2"
+    type="button"
   >
     <div
       class="_customIcon_a7f5a2 _customIcon_a7f5a2--account"
@@ -75,7 +76,6 @@ exports[`UserButton > should support the "className" prop 2`] = `
         />
       </svg>
     </div>
-     
     Personal Account
   </button>
 </div>

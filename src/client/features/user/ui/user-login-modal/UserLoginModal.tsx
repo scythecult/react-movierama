@@ -1,44 +1,40 @@
-import clsx from 'clsx';
 import { useState } from 'react';
-import { ModalContent } from '../../../../shared/ui/modal-content/ModalContent';
+import { Tabs } from '../../../../shared/ui/tabs/Tabs';
 import { UserLoginForm } from '../user-login-form/UserLoginForm';
 import { UserRegisterForm } from '../user-register-form/UserRegisterForm';
-import styles from './styles.module.css';
+import { UserRestoreForm } from '../user-restore-form/UserRestoreForm';
 
-const ActionLabel = {
+const Action = {
   LOGIN: 'Login',
   REGISTER: 'Register',
   INFO: 'Info',
+  RESTORE_PASSWORD: 'Restore Password',
 };
 
-const ACTION_BUTTONS = Object.values(ActionLabel);
-
 export const UserLoginModal = () => {
-  const [currentAction, setCurrentAction] = useState(ActionLabel.LOGIN);
+  const [currentAction, setCurrentAction] = useState(Action.LOGIN);
+  const isRestoreFormVisible = currentAction === Action.RESTORE_PASSWORD;
 
-  let bodyContent;
+  const tabs = [
+    {
+      label: Action.LOGIN,
+      content: <UserLoginForm onRestorePassword={() => setCurrentAction(Action.RESTORE_PASSWORD)} />,
+    },
+    {
+      label: Action.REGISTER,
+      content: <UserRegisterForm />,
+    },
+    {
+      label: Action.INFO,
+      content: <div>INFO</div>,
+    },
+  ];
 
-  switch (currentAction) {
-    case ActionLabel.LOGIN:
-      bodyContent = <UserLoginForm />;
-      break;
-    case ActionLabel.REGISTER:
-      bodyContent = <UserRegisterForm />;
-      break;
-    case ActionLabel.INFO:
-      bodyContent = <div>INFO</div>;
-      break;
-  }
+  return (
+    <>
+      {!isRestoreFormVisible && <Tabs items={tabs} />}
 
-  const headerContent = ACTION_BUTTONS.map((label) => (
-    <button
-      key={label}
-      className={clsx(styles.userLoginModalButton, { [styles.activeButton]: label === currentAction })}
-      onClick={() => setCurrentAction(label)}
-    >
-      {label}
-    </button>
-  ));
-
-  return <ModalContent header={headerContent} content={bodyContent} />;
+      {isRestoreFormVisible && <UserRestoreForm onBackToLogin={() => setCurrentAction(Action.LOGIN)} />}
+    </>
+  );
 };

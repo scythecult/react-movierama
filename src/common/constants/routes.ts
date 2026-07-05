@@ -16,6 +16,7 @@ export const AppRoute = {
   LOCATIONS: '/locations',
   LOCATION: '/location',
   GEOLOCATION: '/geolocation',
+  PRIVACY: '/privacy',
 };
 
 export const AppPath = {

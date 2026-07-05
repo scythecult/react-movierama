@@ -1,0 +1,91 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tabs > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_tabs_3f98d2"
+  >
+    <div
+      class="_tabsHeader_3f98d2"
+    >
+      <button
+        class="_tabsButton_3f98d2 _tabsButtonActive_3f98d2"
+      >
+        Tab 1
+      </button>
+      <button
+        class="_tabsButton_3f98d2"
+      >
+        Tab 2
+      </button>
+    </div>
+    <div
+      class="_tabsContent_3f98d2"
+    >
+      <div>
+        Content 1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs > should support "className" prop 1`] = `
+<div>
+  <div
+    class="_tabs_3f98d2 custom-class"
+  >
+    <div
+      class="_tabsHeader_3f98d2"
+    >
+      <button
+        class="_tabsButton_3f98d2 _tabsButtonActive_3f98d2"
+      >
+        Tab 1
+      </button>
+      <button
+        class="_tabsButton_3f98d2"
+      >
+        Tab 2
+      </button>
+    </div>
+    <div
+      class="_tabsContent_3f98d2"
+    >
+      <div>
+        Content 1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tabs > should support "className" prop 2`] = `
+<div>
+  <div
+    class="_tabs_3f98d2"
+  >
+    <div
+      class="_tabsHeader_3f98d2"
+    >
+      <button
+        class="_tabsButton_3f98d2 _tabsButtonActive_3f98d2"
+      >
+        Tab 1
+      </button>
+      <button
+        class="_tabsButton_3f98d2"
+      >
+        Tab 2
+      </button>
+    </div>
+    <div
+      class="_tabsContent_3f98d2"
+    >
+      <div>
+        Content 1
+      </div>
+    </div>
+  </div>
+</div>
+`;

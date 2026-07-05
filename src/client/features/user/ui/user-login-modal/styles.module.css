@@ -2,7 +2,7 @@
     padding: 0;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--app-primary-text-inverse);
+    color: var(--app-primary-text);
     border: 0;
     background-color: transparent;
     transition-property: color;

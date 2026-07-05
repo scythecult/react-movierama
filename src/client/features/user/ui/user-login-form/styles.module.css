@@ -1,0 +1,63 @@
+.userLoginForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    color: var(--app-primary-text);
+}
+
+.userLoginFormFields {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 16px;
+}
+
+.userLoginFormPrivacyLink {
+    color: var(--app-accent-color);
+}
+
+.userLoginFormTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.userLoginFormTabs {
+    gap: 14px;
+}
+
+.userLoginFormActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userLoginFormForgotPasswordButton {
+    color: var(--app-accent-color);
+    font-weight: 600;
+    background-color: transparent;
+}
+
+.userLoginFormForgotPasswordButton:hover:not(:disabled) {
+    background-color: transparent;
+}
+
+.userLoginFormAuthMethod {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24px, max-content));
+    gap: 6px;
+}
+
+.userLoginFormAuthButton {
+    color: var(--app-primary-text);
+    border: 1px solid var(--app-border-color);
+    border-radius: var(--app-border-radius-s);
+}
+
+.userLoginFormAuthButtonActive {
+    color: var(--app-white-color);
+    background-color: var(--app-accent-color);
+}
+
+.userLoginFormAuthButtonIcon {
+    width: 18px;
+    height: 18px;
+}

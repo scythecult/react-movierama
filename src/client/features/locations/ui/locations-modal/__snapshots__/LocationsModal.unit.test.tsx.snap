@@ -8,14 +8,14 @@ exports[`LocationsModal > should correspond default layout 1`] = `
     <div
       class="_modalContentHeader_82e00f"
     >
-      <h3>
-        Location
-      </h3>
+      <h2>
+        Locations
+      </h2>
     </div>
     <div
       class="_modalContentContent_82e00f"
     >
-      mocked child1
+      Locations list
     </div>
   </div>
 </div>

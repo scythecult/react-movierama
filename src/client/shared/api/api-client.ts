@@ -22,11 +22,11 @@ class ApiClient {
     }
 
     try {
-      return (await response.json()) as ServerPayload<ResponseData>;
+      return (await response.json()) satisfies ServerPayload<ResponseData>;
     } catch (error) {
       console.error('Error parsing JSON response:', error);
 
-      return { data: {} } as ServerPayload<ResponseData>;
+      return { data: {} };
     }
   }
 

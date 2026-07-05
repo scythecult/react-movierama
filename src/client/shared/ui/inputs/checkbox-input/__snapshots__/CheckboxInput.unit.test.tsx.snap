@@ -1,0 +1,56 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CheckboxInput > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_checkbox_5ec06c"
+  >
+    <input
+      class="_checkboxInput_5ec06c"
+      id="_r_0_"
+      type="checkbox"
+    />
+    <label
+      for="_r_0_"
+    />
+  </div>
+</div>
+`;
+
+exports[`CheckboxInput > should support "children" prop 1`] = `
+<div>
+  <div
+    class="_checkbox_5ec06c"
+  >
+    <input
+      class="_checkboxInput_5ec06c"
+      id="_r_1_"
+      type="checkbox"
+    />
+    <label
+      for="_r_1_"
+    >
+      Check
+    </label>
+  </div>
+</div>
+`;
+
+exports[`CheckboxInput > should support "children" prop 2`] = `
+<div>
+  <div
+    class="_checkbox_5ec06c"
+  >
+    <input
+      class="_checkboxInput_5ec06c"
+      id="_r_2_"
+      type="checkbox"
+    />
+    <label
+      for="_r_2_"
+    >
+      Check 2
+    </label>
+  </div>
+</div>
+`;
