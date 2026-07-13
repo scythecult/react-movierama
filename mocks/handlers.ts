@@ -52,7 +52,7 @@ export const handlers = [
     });
   }),
 
-  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.USER}`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.USERS}`, () => {
     return HttpResponse.json({
       data: {
         user: MOCK_USER,

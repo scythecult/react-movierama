@@ -1,15 +1,16 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render, waitFor } from '@testing-library/react';
+import { BrowserRouter } from 'react-router';
 import { MOCK_USER } from '../../../../../../mocks/data/user';
 import { UserButton, type UserButtonProps } from './UserButton';
 
-const getUserMock = vi.fn().mockResolvedValue(MOCK_USER);
+const getMeMock = vi.fn().mockResolvedValue(MOCK_USER);
 
-vi.mock('../../../../entities/user/api', () => ({
-  userQueries: {
+vi.mock('../../../../entities/auth/api', () => ({
+  authQueries: {
     getOne: () => ({
-      queryKey: ['user', 'one'],
-      queryFn: getUserMock,
+      queryKey: ['auth', 'one'],
+      queryFn: getMeMock,
       initialData: {
         id: 0,
         phone: '',
@@ -24,6 +25,10 @@ vi.mock('../../../../entities/user/api', () => ({
   },
 }));
 
+vi.mock('../../model/auth.hooks', () => ({
+  useSignIn: () => vi.fn(),
+}));
+
 let queryClient: QueryClient;
 
 const buildWrappedComponent = (props: UserButtonProps = {}) => {
@@ -31,7 +36,9 @@ const buildWrappedComponent = (props: UserButtonProps = {}) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <UserButton {...props} />
+      <BrowserRouter>
+        <UserButton {...props} />
+      </BrowserRouter>
     </QueryClientProvider>
   );
 };

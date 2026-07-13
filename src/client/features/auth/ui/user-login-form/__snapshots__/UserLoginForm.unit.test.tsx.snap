@@ -7,19 +7,19 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
     <div>
       <form
         autocomplete="false"
-        class="_userLoginForm_fe5681"
+        class="_userLoginForm_885e31"
         novalidate=""
       >
         <div
-          class="_userLoginFormFields_fe5681"
+          class="_userLoginFormFields_885e31"
         >
           <h2
-            class="_userLoginFormTitle_fe5681"
+            class="_userLoginFormTitle_885e31"
           >
             Auth method
           </h2>
           <div
-            class="_tabs_3f98d2 _userLoginFormTabs_fe5681"
+            class="_tabs_3f98d2 _userLoginFormTabs_885e31"
           >
             <div
               class="_tabsHeader_3f98d2"
@@ -134,7 +134,7 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
             </div>
           </div>
           <div
-            class="_userLoginFormActions_fe5681"
+            class="_userLoginFormActions_885e31"
           >
             <div
               class="_checkbox_5ec06c"
@@ -152,7 +152,7 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
               </label>
             </div>
             <button
-              class="_userLoginFormForgotPasswordButton_fe5681 _button_545c64"
+              class="_userLoginFormForgotPasswordButton_885e31 _button_545c64"
               type="button"
             >
               Forgot Password?
@@ -167,15 +167,15 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
           </button>
         </div>
         <div
-          class="_userLoginFormPrivacy_fe5681"
+          class="_userLoginFormPrivacy_885e31"
         >
           <p
-            class="_userLoginFormPrivacyText_fe5681"
+            class="_userLoginFormPrivacyText_885e31"
           >
             By clicking the login button, you accept the terms of the
              
             <a
-              class="_userLoginFormPrivacyLink_fe5681"
+              class="_userLoginFormPrivacyLink_885e31"
               data-discover="true"
               href="/privacy"
             >
@@ -185,25 +185,24 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
           </p>
         </div>
       </form>
-      ;
     </div>
   </body>,
   "container": <div>
     <form
       autocomplete="false"
-      class="_userLoginForm_fe5681"
+      class="_userLoginForm_885e31"
       novalidate=""
     >
       <div
-        class="_userLoginFormFields_fe5681"
+        class="_userLoginFormFields_885e31"
       >
         <h2
-          class="_userLoginFormTitle_fe5681"
+          class="_userLoginFormTitle_885e31"
         >
           Auth method
         </h2>
         <div
-          class="_tabs_3f98d2 _userLoginFormTabs_fe5681"
+          class="_tabs_3f98d2 _userLoginFormTabs_885e31"
         >
           <div
             class="_tabsHeader_3f98d2"
@@ -318,7 +317,7 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
           </div>
         </div>
         <div
-          class="_userLoginFormActions_fe5681"
+          class="_userLoginFormActions_885e31"
         >
           <div
             class="_checkbox_5ec06c"
@@ -336,7 +335,7 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
             </label>
           </div>
           <button
-            class="_userLoginFormForgotPasswordButton_fe5681 _button_545c64"
+            class="_userLoginFormForgotPasswordButton_885e31 _button_545c64"
             type="button"
           >
             Forgot Password?
@@ -351,15 +350,15 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
         </button>
       </div>
       <div
-        class="_userLoginFormPrivacy_fe5681"
+        class="_userLoginFormPrivacy_885e31"
       >
         <p
-          class="_userLoginFormPrivacyText_fe5681"
+          class="_userLoginFormPrivacyText_885e31"
         >
           By clicking the login button, you accept the terms of the
            
           <a
-            class="_userLoginFormPrivacyLink_fe5681"
+            class="_userLoginFormPrivacyLink_885e31"
             data-discover="true"
             href="/privacy"
           >
@@ -369,7 +368,6 @@ exports[`UserLoginForm > should correspond default layout 1`] = `
         </p>
       </div>
     </form>
-    ;
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

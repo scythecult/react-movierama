@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
-import { userQueries } from '../../../../entities/user/api';
+import { authQueries } from '../../../../entities/auth/api';
 import { CustomIconName } from '../../../../shared/ui/custom-icon/constants';
 import { IconButton } from '../../../../shared/ui/icon-button/IconButton';
 import { ModalPortal } from '../../../../shared/ui/modal/Modal.portal';
@@ -11,10 +11,11 @@ export type UserButtonProps = PropsWithClassName;
 export const UserButton = (props: UserButtonProps) => {
   const { className } = props;
   const {
-    data: { email, firstName, lastName },
-  } = useQuery(userQueries.getOne());
+    data: { id, email, firstName, lastName },
+  } = useQuery(authQueries.getOne());
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const userTextFinal = email ? `${firstName} ${lastName}` : 'Personal Account';
+  const isLoggedIn = Boolean(id);
+  const userTextFinal = email ? `${firstName} ${lastName}` : 'Load...';
 
   return (
     <>
@@ -24,7 +25,9 @@ export const UserButton = (props: UserButtonProps) => {
 
       {isModalOpen && (
         <ModalPortal onClose={() => setIsModalOpen(false)}>
-          <UserLoginModal />
+          {!isLoggedIn && <UserLoginModal onClose={() => setIsModalOpen(false)} />}
+
+          {isLoggedIn && <div>Loggedin user info {email}l</div>}
         </ModalPortal>
       )}
     </>

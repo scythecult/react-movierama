@@ -11,14 +11,19 @@ const Action = {
   RESTORE_PASSWORD: 'Restore Password',
 };
 
-export const UserLoginModal = () => {
+type UserLoginModalProps = {
+  onClose?: () => void;
+};
+
+export const UserLoginModal = (props: UserLoginModalProps) => {
+  const { onClose } = props;
   const [currentAction, setCurrentAction] = useState(Action.LOGIN);
   const isRestoreFormVisible = currentAction === Action.RESTORE_PASSWORD;
 
   const tabs = [
     {
       label: Action.LOGIN,
-      content: <UserLoginForm onRestorePassword={() => setCurrentAction(Action.RESTORE_PASSWORD)} />,
+      content: <UserLoginForm onSubmit={onClose} onRestorePassword={() => setCurrentAction(Action.RESTORE_PASSWORD)} />,
     },
     {
       label: Action.REGISTER,

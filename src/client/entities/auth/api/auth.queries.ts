@@ -1,16 +1,16 @@
 import { queryOptions } from '@tanstack/react-query';
-import { getUser } from './user.loaders';
+import { getMe } from './auth.loaders';
 
-export const userQueries = {
-  all: () => ['users'],
+export const authQueries = {
+  all: () => ['auth'],
 
-  one: () => [...userQueries.all(), 'one'],
+  one: () => [...authQueries.all(), 'one'],
   getOne: () =>
     queryOptions({
-      queryKey: userQueries.one(),
-      queryFn: getUser,
+      queryKey: authQueries.one(),
+      queryFn: getMe,
       initialData: {
-        id: 0,
+        id: '0',
         phone: '',
         firstName: '',
         lastName: '',

@@ -2,11 +2,11 @@ import { dehydrate } from '@tanstack/react-query';
 import type { Request } from 'express';
 import { renderToString } from 'react-dom/server';
 import { AppRoute } from '../../../common/constants/routes';
+import { authQueries } from '../../entities/auth/api';
 import { filmsQueries } from '../../entities/films/api';
 import { hallplanQueries } from '../../entities/hallplan/api';
 import { locationsQueries } from '../../entities/locations/api';
 import { newsQueries } from '../../entities/news/api';
-import { userQueries } from '../../entities/user/api';
 import { queryClient } from '../../shared/api/query-client';
 import { ServerApp } from './ServerApp';
 
@@ -36,7 +36,7 @@ export const renderSsrTemplate = async (request: Request) => {
       break;
   }
 
-  await queryClient.prefetchQuery(userQueries.getOne());
+  await queryClient.prefetchQuery(authQueries.getOne());
   await queryClient.prefetchQuery(locationsQueries.getOne());
   await queryClient.prefetchQuery(locationsQueries.list());
 

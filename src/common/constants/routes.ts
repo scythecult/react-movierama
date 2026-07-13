@@ -17,6 +17,13 @@ export const AppRoute = {
   LOCATION: '/location',
   GEOLOCATION: '/geolocation',
   PRIVACY: '/privacy',
+  AUTH: '/auth',
+};
+
+export const ApiRoute = {
+  SIGN_IN: '/signin',
+  SIGN_UP: '/signup',
+  ME: '/me',
 };
 
 export const AppPath = {

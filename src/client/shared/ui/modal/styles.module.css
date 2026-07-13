@@ -23,7 +23,7 @@
     width: 100%;
     max-width: 752px;
     min-height: 200px;
-    color: var(--app-primary-text-inverse);
+    color: var(--app-primary-text);
     background-color: var(--app-primary-bg);
     border-radius: 14px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);

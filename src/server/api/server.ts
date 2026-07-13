@@ -1,4 +1,5 @@
 import compression from 'compression';
+import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express, { json, urlencoded } from 'express';
 import { StatusCodes } from 'http-status-codes';
@@ -13,6 +14,7 @@ export const createApiServer = async () => {
   apiServer.disable('x-powered-by');
   apiServer.use(cors({ origin: Config.ssrUrl, credentials: true }));
   apiServer.use(compression());
+  apiServer.use(cookieParser());
   apiServer.use(json());
   apiServer.use(urlencoded({ extended: true }));
 

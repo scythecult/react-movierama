@@ -1,5 +1,5 @@
 export type UserData = {
-  id: number;
+  id: string;
   phone: string;
   firstName: string;
   lastName: string;
@@ -11,4 +11,11 @@ export type UserData = {
 
 export type UserResponse = {
   user: UserData;
+};
+
+export type UserSignInRequest = {
+  password: string;
+  isPersistent: boolean;
+  email?: string | undefined;
+  phone?: string | undefined;
 };

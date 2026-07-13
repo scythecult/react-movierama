@@ -3,17 +3,19 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router';
 import type z from 'zod';
 import { AppRoute } from '../../../../../common/constants/routes';
-import { loginSchema } from '../../../../entities/user/model/user.schema';
+import { loginSchema } from '../../../../entities/auth/model/auth.schema';
 import { Button } from '../../../../shared/ui/button/Button';
 import { CheckboxInput } from '../../../../shared/ui/inputs/checkbox-input/CheckboxInput';
 import { EmailInput } from '../../../../shared/ui/inputs/email-input/EmailInput';
 import { PasswordInput } from '../../../../shared/ui/inputs/password-input/PasswordInput';
 import { PhoneInput } from '../../../../shared/ui/inputs/phone-input/PhoneInput';
 import { Tabs } from '../../../../shared/ui/tabs/Tabs';
+import { useSignIn } from '../../model/auth.hooks';
 import styles from './styles.module.css';
 
 type UserLoginFormProps = {
   onRestorePassword?: () => void;
+  onSubmit?: () => void;
 };
 
 const LoginAuthMethodName = {
@@ -25,7 +27,8 @@ type FormStateInput = z.input<typeof loginSchema>;
 type FormStateOutput = z.output<typeof loginSchema>;
 
 export const UserLoginForm = (props: UserLoginFormProps) => {
-  const { onRestorePassword } = props;
+  const { onRestorePassword, onSubmit } = props;
+  const signIn = useSignIn();
   const {
     register,
     reset,
@@ -39,9 +42,9 @@ export const UserLoginForm = (props: UserLoginFormProps) => {
   });
 
   const handleFormSubmit = (data: FormStateOutput) => {
-    // TODO Temporary
-    console.info({ data, errors });
+    signIn(data);
     reset();
+    onSubmit?.();
   };
 
   const tabs = [
