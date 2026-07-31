@@ -47,6 +47,7 @@ vi.mock('../../../entities/auth/api', () => ({
 
 vi.mock('../../../features/auth/model/auth.hooks', () => ({
   useSignIn: () => vi.fn(),
+  useSignOut: () => vi.fn(),
 }));
 
 vi.mock('../../../features/locations/model/locations.hooks', () => ({

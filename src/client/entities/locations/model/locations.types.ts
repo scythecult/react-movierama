@@ -1,3 +1,4 @@
+// TODO FIX merge to single controller/service
 export type GeolocationData = {
   id: number;
   name: string;

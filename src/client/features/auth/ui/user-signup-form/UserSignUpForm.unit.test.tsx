@@ -1,10 +1,10 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
-import { UserLoginForm } from './UserLoginForm';
+import { UserSignUpForm } from './UserSignUpForm';
 
 vi.mock('../../model/auth.hooks', () => ({
-  useSignIn: () => vi.fn(),
+  useSignUp: () => vi.fn(),
 }));
 
 const buildWrappedComponent = () => {
@@ -13,13 +13,13 @@ const buildWrappedComponent = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <UserLoginForm />
+        <UserSignUpForm />
       </BrowserRouter>
     </QueryClientProvider>
   );
 };
 
-describe('UserLoginForm', () => {
+describe('UserSignUpForm', () => {
   test('should correspond default layout', () => {
     const result = render(buildWrappedComponent());
 

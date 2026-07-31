@@ -1,0 +1,49 @@
+.userSignUpFormContent {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 16px;
+}
+
+.userSignUpFormTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.userSignUpFormLegal {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 16px;
+}
+
+.userSignUpFormFields {
+    display: grid;
+    grid-template-areas:
+        'a b'
+        'c d'
+        'e f';
+    gap: 16px 12px;
+}
+
+.userSignUpFormFieldA {
+    grid-area: a;
+}
+
+.userSignUpFormFieldB {
+    grid-area: b;
+}
+
+.userSignUpFormFieldC {
+    grid-area: c;
+}
+
+.userSignUpFormFieldD {
+    grid-area: d;
+}
+
+.userSignUpFormFieldE {
+    grid-area: e;
+}
+
+.userSignUpFormFieldF {
+    grid-area: f;
+}

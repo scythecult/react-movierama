@@ -5,8 +5,8 @@ export const MOCK_USER = {
   lastName: 'Иванов',
   email: 'test@asd.asd',
   password: 'Qwerty123!', // в реальности — хэш на сервере
-  gender: 'male',
-  wantsPromotions: true,
+  isLegalChecked: true,
+  isPromoChecked: false,
 };
 
 export const MOCK_USER_2 = {
@@ -16,6 +16,6 @@ export const MOCK_USER_2 = {
   lastName: 'Admin',
   email: 'test@asd.asd',
   password: 'Qwerty123!', // в реальности — хэш на сервере
-  gender: 'male',
-  wantsPromotions: false,
+  isLegalChecked: true,
+  isPromoChecked: false,
 };

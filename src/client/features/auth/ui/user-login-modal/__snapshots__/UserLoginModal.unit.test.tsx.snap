@@ -29,19 +29,19 @@ exports[`UserLoginModal > should correspond default layout 1`] = `
     >
       <form
         autocomplete="false"
-        class="_userLoginForm_885e31"
+        class="_userSignInForm_33c5b8"
         novalidate=""
       >
         <div
-          class="_userLoginFormFields_885e31"
+          class="_userSignInFormFields_33c5b8"
         >
           <h2
-            class="_userLoginFormTitle_885e31"
+            class="_userSignInFormTitle_33c5b8"
           >
             Auth method
           </h2>
           <div
-            class="_tabs_3f98d2 _userLoginFormTabs_885e31"
+            class="_tabs_3f98d2 _userSignInFormTabs_33c5b8"
           >
             <div
               class="_tabsHeader_3f98d2"
@@ -156,7 +156,7 @@ exports[`UserLoginModal > should correspond default layout 1`] = `
             </div>
           </div>
           <div
-            class="_userLoginFormActions_885e31"
+            class="_userSignInFormActions_33c5b8"
           >
             <div
               class="_checkbox_5ec06c"
@@ -174,7 +174,7 @@ exports[`UserLoginModal > should correspond default layout 1`] = `
               </label>
             </div>
             <button
-              class="_userLoginFormForgotPasswordButton_885e31 _button_545c64"
+              class="_userSignInFormForgotPasswordButton_33c5b8 _button_545c64"
               type="button"
             >
               Forgot Password?
@@ -189,15 +189,15 @@ exports[`UserLoginModal > should correspond default layout 1`] = `
           </button>
         </div>
         <div
-          class="_userLoginFormPrivacy_885e31"
+          class="_userSignInFormPrivacy_33c5b8"
         >
           <p
-            class="_userLoginFormPrivacyText_885e31"
+            class="_userSignInFormPrivacyText_33c5b8"
           >
             By clicking the login button, you accept the terms of the
              
             <a
-              class="_userLoginFormPrivacyLink_885e31"
+              class="_userSignInFormPrivacyLink_33c5b8"
               data-discover="true"
               href="/privacy"
             >

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router';
 import type z from 'zod';
 import { AppRoute } from '../../../../../common/constants/routes';
-import { loginSchema } from '../../../../entities/auth/model/auth.schema';
+import { signInSchema } from '../../../../entities/auth/model';
 import { Button } from '../../../../shared/ui/button/Button';
 import { CheckboxInput } from '../../../../shared/ui/inputs/checkbox-input/CheckboxInput';
 import { EmailInput } from '../../../../shared/ui/inputs/email-input/EmailInput';
@@ -13,20 +13,20 @@ import { Tabs } from '../../../../shared/ui/tabs/Tabs';
 import { useSignIn } from '../../model/auth.hooks';
 import styles from './styles.module.css';
 
-type UserLoginFormProps = {
+type UserSignInFormProps = {
   onRestorePassword?: () => void;
   onSubmit?: () => void;
 };
 
-const LoginAuthMethodName = {
+const SignInMethodName = {
   EMAIL: 'Email',
   PHONE: 'Phone',
 };
 
-type FormStateInput = z.input<typeof loginSchema>;
-type FormStateOutput = z.output<typeof loginSchema>;
+type FormStateInput = z.input<typeof signInSchema>;
+type FormStateOutput = z.output<typeof signInSchema>;
 
-export const UserLoginForm = (props: UserLoginFormProps) => {
+export const UserSignInForm = (props: UserSignInFormProps) => {
   const { onRestorePassword, onSubmit } = props;
   const signIn = useSignIn();
   const {
@@ -36,7 +36,7 @@ export const UserLoginForm = (props: UserLoginFormProps) => {
     formState: { errors, isValid },
   } = useForm<FormStateInput, unknown, FormStateOutput>({
     mode: 'all',
-    resolver: zodResolver(loginSchema),
+    resolver: zodResolver(signInSchema),
     defaultValues: { isPersistent: false },
     shouldUnregister: true,
   });
@@ -49,7 +49,7 @@ export const UserLoginForm = (props: UserLoginFormProps) => {
 
   const tabs = [
     {
-      label: LoginAuthMethodName.EMAIL,
+      label: SignInMethodName.EMAIL,
       content: (
         <EmailInput
           error={errors.email?.message}
@@ -58,7 +58,7 @@ export const UserLoginForm = (props: UserLoginFormProps) => {
       ),
     },
     {
-      label: LoginAuthMethodName.PHONE,
+      label: SignInMethodName.PHONE,
       content: (
         <PhoneInput
           error={errors.phone?.message}
@@ -69,12 +69,12 @@ export const UserLoginForm = (props: UserLoginFormProps) => {
   ];
 
   return (
-    <form className={styles.userLoginForm} noValidate autoComplete="false" onSubmit={handleSubmit(handleFormSubmit)}>
-      <div className={styles.userLoginFormFields}>
-        <h2 className={styles.userLoginFormTitle}>Auth method</h2>
+    <form className={styles.userSignInForm} noValidate autoComplete="false" onSubmit={handleSubmit(handleFormSubmit)}>
+      <div className={styles.userSignInFormFields}>
+        <h2 className={styles.userSignInFormTitle}>Auth method</h2>
 
         {/*TODO Fix shouldUnregister*/}
-        <Tabs className={styles.userLoginFormTabs} items={tabs} />
+        <Tabs className={styles.userSignInFormTabs} items={tabs} />
 
         <PasswordInput
           error={errors.password?.message}
@@ -84,10 +84,10 @@ export const UserLoginForm = (props: UserLoginFormProps) => {
           }}
         />
 
-        <div className={styles.userLoginFormActions}>
+        <div className={styles.userSignInFormActions}>
           <CheckboxInput {...register('isPersistent')}>Remember Me</CheckboxInput>
 
-          <Button className={styles.userLoginFormForgotPasswordButton} onClick={onRestorePassword} type="button">
+          <Button className={styles.userSignInFormForgotPasswordButton} onClick={onRestorePassword} type="button">
             Forgot Password?
           </Button>
         </div>
@@ -97,10 +97,10 @@ export const UserLoginForm = (props: UserLoginFormProps) => {
         </Button>
       </div>
 
-      <div className={styles.userLoginFormPrivacy}>
-        <p className={styles.userLoginFormPrivacyText}>
+      <div className={styles.userSignInFormPrivacy}>
+        <p className={styles.userSignInFormPrivacyText}>
           By clicking the login button, you accept the terms of the{' '}
-          <Link className={styles.userLoginFormPrivacyLink} to={AppRoute.PRIVACY}>
+          <Link className={styles.userSignInFormPrivacyLink} to={AppRoute.PRIVACY}>
             User Agreement
           </Link>
           .

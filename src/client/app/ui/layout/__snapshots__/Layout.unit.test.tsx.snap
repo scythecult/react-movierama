@@ -86,7 +86,6 @@ exports[`Layout > should correspond default layout 1`] = `
               />
             </svg>
           </div>
-          Load...
         </button>
       </div>
     </div>

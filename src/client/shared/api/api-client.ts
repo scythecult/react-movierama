@@ -1,3 +1,4 @@
+import { StatusCodes } from 'http-status-codes';
 import { ApiVersion } from '../../../common/constants/routes';
 import { Config } from '../../../common/env';
 
@@ -19,6 +20,10 @@ class ApiClient {
   async handleResponse<ResponseData>(response: Response) {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    if (response.status === StatusCodes.NO_CONTENT) {
+      return { data: {} };
     }
 
     try {

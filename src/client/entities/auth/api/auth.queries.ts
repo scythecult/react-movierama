@@ -10,14 +10,14 @@ export const authQueries = {
       queryKey: authQueries.one(),
       queryFn: getMe,
       initialData: {
-        id: '0',
+        id: '',
         phone: '',
         firstName: '',
         lastName: '',
         email: '',
         password: '',
-        gender: '',
-        wantsPromotions: false,
+        isPromoChecked: false,
+        isLegalChecked: false,
       },
     }),
 };

@@ -27,6 +27,7 @@ vi.mock('../../../../entities/auth/api', () => ({
 
 vi.mock('../../model/auth.hooks', () => ({
   useSignIn: () => vi.fn(),
+  useSignOut: () => vi.fn(),
 }));
 
 let queryClient: QueryClient;

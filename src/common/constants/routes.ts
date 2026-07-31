@@ -23,6 +23,7 @@ export const AppRoute = {
 export const ApiRoute = {
   SIGN_IN: '/signin',
   SIGN_UP: '/signup',
+  SIGN_OUT: '/signout',
   ME: '/me',
 };
 

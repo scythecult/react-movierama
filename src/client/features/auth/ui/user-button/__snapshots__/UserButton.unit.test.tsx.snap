@@ -76,7 +76,6 @@ exports[`UserButton > should support the "className" prop 2`] = `
         />
       </svg>
     </div>
-    Load...
   </button>
 </div>
 `;

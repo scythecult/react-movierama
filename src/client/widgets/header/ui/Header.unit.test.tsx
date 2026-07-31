@@ -51,6 +51,7 @@ vi.mock('../../../entities/auth/api', () => ({
 
 vi.mock('../../../features/auth/model/auth.hooks', () => ({
   useSignIn: () => vi.fn(),
+  useSignOut: () => vi.fn(),
 }));
 
 const DEFAULT_PROPS: HeaderProps = {

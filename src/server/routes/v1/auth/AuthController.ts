@@ -15,10 +15,14 @@ export class AuthController {
     const sessionId = cookies[CookieName.AUTH_SESSION_ID];
 
     if (!sessionId) {
-      return response.status(StatusCodes.OK).json({ data: {} });
+      return response.status(StatusCodes.NO_CONTENT).json({ data: {} });
     }
 
     const user = await this.#service.getOne(sessionId);
+
+    if (!user) {
+      return response.status(StatusCodes.NO_CONTENT).json({ data: {} });
+    }
 
     return response.status(StatusCodes.OK).json({ data: { user } });
   };
@@ -41,12 +45,29 @@ export class AuthController {
   };
 
   signIn = async (request: Request, response: Response) => {
-    const { cookies } = request;
+    const { body, cookies } = request;
+
+    // TODO Try find user by email and password??
     const sessionId = cookies[CookieName.AUTH_SESSION_ID];
-    console.info({ sessionId });
     const user = await this.#service.getOne(sessionId);
     const responseData = { user: user ? { ...user } : null };
 
+    console.info({ body, responseData });
     return response.status(StatusCodes.OK).json({ data: responseData });
+  };
+
+  signOut = async (request: Request, response: Response) => {
+    const { body, cookies } = request;
+    const sessionId = cookies[CookieName.AUTH_SESSION_ID];
+
+    console.info({ body });
+    if (sessionId) {
+      // await this.#service.delete(sessionId);
+    }
+
+    response.clearCookie(CookieName.AUTH_SESSION_ID, { httpOnly: true, path: '/' });
+
+    console.info(response.getHeaders());
+    return response.status(StatusCodes.OK).json({ data: null });
   };
 }
