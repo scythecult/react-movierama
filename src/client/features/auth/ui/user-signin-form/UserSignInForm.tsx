@@ -3,7 +3,8 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router';
 import type z from 'zod';
 import { AppRoute } from '../../../../../common/constants/routes';
-import { signInSchema } from '../../../../entities/auth/model';
+import { signInSchema } from '../../../../../common/entities/auth';
+import { ServerValidationError } from '../../../../shared/api/error/error';
 import { Button } from '../../../../shared/ui/button/Button';
 import { CheckboxInput } from '../../../../shared/ui/inputs/checkbox-input/CheckboxInput';
 import { EmailInput } from '../../../../shared/ui/inputs/email-input/EmailInput';
@@ -21,28 +22,43 @@ type UserSignInFormProps = {
 const SignInMethodName = {
   EMAIL: 'Email',
   PHONE: 'Phone',
-};
+} as const;
+
+type SignInMethodValue = (typeof SignInMethodName)[keyof typeof SignInMethodName];
 
 type FormStateInput = z.input<typeof signInSchema>;
 type FormStateOutput = z.output<typeof signInSchema>;
 
 export const UserSignInForm = (props: UserSignInFormProps) => {
   const { onRestorePassword, onSubmit } = props;
-  const signIn = useSignIn();
+  const { mutateAsync: signIn } = useSignIn();
   const {
     register,
     reset,
     handleSubmit,
+    setError,
+    setValue,
+    clearErrors,
     formState: { errors, isValid },
   } = useForm<FormStateInput, unknown, FormStateOutput>({
     mode: 'all',
     resolver: zodResolver(signInSchema),
-    defaultValues: { isPersistent: false },
+    defaultValues: { email: '', phone: '', tab: SignInMethodName.EMAIL, isPersistent: false },
     shouldUnregister: true,
   });
 
-  const handleFormSubmit = (data: FormStateOutput) => {
-    signIn(data);
+  const handleFormSubmit = async (data: FormStateOutput) => {
+    try {
+      await signIn(data);
+    } catch (error) {
+      if (error instanceof ServerValidationError) {
+        console.error(error.errorMap);
+        error.handleFormErrors(setError);
+
+        return;
+      }
+    }
+
     reset();
     onSubmit?.();
   };
@@ -50,7 +66,7 @@ export const UserSignInForm = (props: UserSignInFormProps) => {
   const tabs = [
     {
       label: SignInMethodName.EMAIL,
-      content: (
+      content: () => (
         <EmailInput
           error={errors.email?.message}
           inputProps={{ placeholder: 'Email', ...register('email', { shouldUnregister: true }) }}
@@ -59,7 +75,7 @@ export const UserSignInForm = (props: UserSignInFormProps) => {
     },
     {
       label: SignInMethodName.PHONE,
-      content: (
+      content: () => (
         <PhoneInput
           error={errors.phone?.message}
           inputProps={{ placeholder: 'Phone', ...register('phone', { shouldUnregister: true }) }}
@@ -68,13 +84,20 @@ export const UserSignInForm = (props: UserSignInFormProps) => {
     },
   ];
 
+  const handleTabChange = (label: SignInMethodValue) => {
+    setValue('tab', label, { shouldValidate: true });
+    clearErrors();
+  };
+
   return (
     <form className={styles.userSignInForm} noValidate autoComplete="false" onSubmit={handleSubmit(handleFormSubmit)}>
       <div className={styles.userSignInFormFields}>
         <h2 className={styles.userSignInFormTitle}>Auth method</h2>
 
-        {/*TODO Fix shouldUnregister*/}
-        <Tabs className={styles.userSignInFormTabs} items={tabs} />
+        <Tabs className={styles.userSignInFormTabs} items={tabs} onChange={handleTabChange} />
+
+        {/*For default tab value activation*/}
+        <input type="hidden" {...register('tab')} />
 
         <PasswordInput
           error={errors.password?.message}

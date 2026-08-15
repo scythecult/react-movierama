@@ -2,7 +2,8 @@ import { UserCircleIcon } from '@heroicons/react/24/solid';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import type z from 'zod';
-import { signUpSchema } from '../../../../entities/auth/model';
+import { signUpSchema } from '../../../../../common/entities/auth';
+import { ServerValidationError } from '../../../../shared/api/error/error';
 import { Button } from '../../../../shared/ui/button/Button';
 import { CheckboxInput } from '../../../../shared/ui/inputs/checkbox-input/CheckboxInput';
 import { EmailInput } from '../../../../shared/ui/inputs/email-input/EmailInput';
@@ -21,16 +22,26 @@ type FormStateOutput = z.output<typeof signUpSchema>;
 
 export const UserSignUpForm = (props: UserSignUpFormProps) => {
   const { onSubmit } = props;
-  const signUp = useSignUp();
+  const { mutateAsync: signUp } = useSignUp();
   const {
     register,
     reset,
     handleSubmit,
+    setError,
     formState: { errors, isValid },
   } = useForm<FormStateInput, unknown, FormStateOutput>({ mode: 'all', resolver: zodResolver(signUpSchema) });
 
-  const handleFormSubmit = (data: FormStateOutput) => {
-    signUp(data);
+  const handleFormSubmit = async (data: FormStateOutput) => {
+    try {
+      await signUp(data);
+    } catch (error) {
+      if (error instanceof ServerValidationError) {
+        error.handleFormErrors(setError);
+
+        return;
+      }
+    }
+
     reset();
     onSubmit?.();
   };

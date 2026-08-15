@@ -36,6 +36,7 @@ export const renderSsrTemplate = async (request: Request) => {
       break;
   }
 
+  // TODO Rename
   await queryClient.prefetchQuery(authQueries.getOne());
   await queryClient.prefetchQuery(locationsQueries.getOne());
   await queryClient.prefetchQuery(locationsQueries.list());

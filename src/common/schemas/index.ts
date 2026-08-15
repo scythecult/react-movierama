@@ -1,5 +1,7 @@
 import z from 'zod';
 
+export const validateBoolean = () => z.enum(['true', 'false']).transform((value) => value === 'true');
+
 export const passwordSchema = z
   .string()
   .min(8, 'Password must be at least 8 characters')

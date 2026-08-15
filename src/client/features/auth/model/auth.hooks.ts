@@ -1,7 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
+import type { UserSignOutRequest } from '../../../../common/entities/auth';
 import { signIn, signOut, signUp } from '../../../entities/auth/api/auth.actions';
 import { useInvalidateAuth } from '../../../entities/auth/api/auth.hooks';
-import type { UserSignInRequest, UserSignOutRequest, UserSignUpRequest } from '../../../entities/auth/model/user.types';
 
 export const useSignUp = () => {
   const invalidateAuth = useInvalidateAuth();
@@ -11,7 +11,8 @@ export const useSignUp = () => {
     onSuccess: () => invalidateAuth(),
   });
 
-  return (data: UserSignUpRequest) => authMutation.mutate(data);
+  // return (data: UserSignUpRequest) => authMutation.mutate(data);
+  return authMutation;
 };
 
 export const useSignIn = () => {
@@ -22,7 +23,7 @@ export const useSignIn = () => {
     onSuccess: () => invalidateAuth(),
   });
 
-  return (data: UserSignInRequest) => authMutation.mutate(data);
+  return authMutation;
 };
 
 export const useSignOut = () => {

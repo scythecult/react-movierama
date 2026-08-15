@@ -1,14 +1,16 @@
 import { StatusCodes } from 'http-status-codes';
-import { ApiVersion } from '../../../common/constants/routes';
-import { Config } from '../../../common/env';
+import { ApiVersion } from '../../../../common/constants/routes';
+import { Config } from '../../../../common/env';
+import type { ErrorMap } from '../error/error';
 
 type QueryParams = Record<string, string | number>;
 
-export type ServerPayload<ServerData = unknown> = {
+type ServerPayload<ServerData = unknown> = {
   data: ServerData;
+  errorMap?: ErrorMap;
 };
 
-class ApiClient {
+export class ApiClient {
   #baseUrl: string;
   #apiVersion: string;
 
@@ -18,6 +20,12 @@ class ApiClient {
   }
 
   async handleResponse<ResponseData>(response: Response) {
+    if (response.status === StatusCodes.UNPROCESSABLE_ENTITY) {
+      const errorResponse = await response.json();
+
+      return { data: {}, errorMap: errorResponse.error.errors };
+    }
+
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -44,6 +52,14 @@ class ApiClient {
         'Content-Type': 'application/json',
       },
     });
+  }
+
+  mapErrorResponse(errors: Record<string, string[]>) {
+    return Object.entries(errors).reduce<Record<string, string>>((errorMap, [errorField, errorMessage]) => {
+      errorMap[errorField] = errorMessage[0];
+
+      return errorMap;
+    }, {});
   }
 
   constructUrl(endpoint: string) {

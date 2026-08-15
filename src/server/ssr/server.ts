@@ -6,6 +6,7 @@ import { serverMocks } from '../../../mocks/node';
 import { CLIENT_DIST_DIR } from '../../common/constants/common';
 import { AppRoute } from '../../common/constants/routes';
 import { Config } from '../../common/env';
+import { errorMiddleware } from '../middleware/error-middleware/errorMiddleware';
 import { renderMiddlewareBuilder } from '../middleware/render/renderMiddlewareBuilder';
 
 export const createSsrServer = async () => {
@@ -48,6 +49,8 @@ export const createSsrServer = async () => {
 
   // Render content
   ssrServer.use(AppRoute.ROOT, renderMiddlewareBuilder(vite));
+
+  ssrServer.use(errorMiddleware);
 
   return ssrServer;
 };

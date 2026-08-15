@@ -1,4 +1,4 @@
-import type { UserData } from '../../../client/entities/auth/model';
+import type { UserData, UserSignUpRequest } from '../../../common/entities/auth';
 
 export class MockUserDb {
   #users: UserData[] = [];
@@ -14,7 +14,7 @@ export class MockUserDb {
     return this.#users.find((item) => item.id === id);
   }
 
-  async create(user: UserData) {
+  async create(user: UserSignUpRequest) {
     this.#users.push({ ...user, id: crypto.randomUUID() });
 
     return this.#users[this.#users.length - 1];

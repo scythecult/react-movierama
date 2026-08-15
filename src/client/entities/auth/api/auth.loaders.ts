@@ -1,6 +1,6 @@
 import { ApiRoute, AppRoute } from '../../../../common/constants/routes';
-import { apiClient } from '../../../shared/api/api-client';
-import type { UserResponse } from '../model/user.types';
+import type { UserResponse } from '../../../../common/entities/auth';
+import { apiClient } from '../../../shared/api/api-client/api-client';
 
 export const getMe = async () => {
   const serverPayload = await apiClient.get<UserResponse>(`${AppRoute.AUTH}${ApiRoute.ME}`);

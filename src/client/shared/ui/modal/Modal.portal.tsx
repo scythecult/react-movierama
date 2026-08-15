@@ -11,6 +11,7 @@ export type ModalPortalProps = PropsWithChildren<
   }>
 >;
 
+// TODO Use 'react-focus-lock';
 export const ModalPortal = (props: ModalPortalProps) => {
   const { children, className, onClose } = props;
   const classNameFinal = clsx(styles.modal, className);

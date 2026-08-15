@@ -10,11 +10,13 @@ exports[`Tabs > should correspond default layout 1`] = `
     >
       <button
         class="_tabsButton_3f98d2 _tabsButtonActive_3f98d2"
+        type="button"
       >
         Tab 1
       </button>
       <button
         class="_tabsButton_3f98d2"
+        type="button"
       >
         Tab 2
       </button>
@@ -40,11 +42,13 @@ exports[`Tabs > should support "className" prop 1`] = `
     >
       <button
         class="_tabsButton_3f98d2 _tabsButtonActive_3f98d2"
+        type="button"
       >
         Tab 1
       </button>
       <button
         class="_tabsButton_3f98d2"
+        type="button"
       >
         Tab 2
       </button>
@@ -70,11 +74,13 @@ exports[`Tabs > should support "className" prop 2`] = `
     >
       <button
         class="_tabsButton_3f98d2 _tabsButtonActive_3f98d2"
+        type="button"
       >
         Tab 1
       </button>
       <button
         class="_tabsButton_3f98d2"
+        type="button"
       >
         Tab 2
       </button>

@@ -26,11 +26,13 @@ exports[`UserSignInForm > should correspond default layout 1`] = `
             >
               <button
                 class="_tabsButton_3f98d2 _tabsButtonActive_3f98d2"
+                type="button"
               >
                 Email
               </button>
               <button
                 class="_tabsButton_3f98d2"
+                type="button"
               >
                 Phone
               </button>
@@ -73,6 +75,11 @@ exports[`UserSignInForm > should correspond default layout 1`] = `
               </div>
             </div>
           </div>
+          <input
+            name="tab"
+            type="hidden"
+            value="Email"
+          />
           <div
             class="_textInputContainer_f74981"
           >
@@ -209,11 +216,13 @@ exports[`UserSignInForm > should correspond default layout 1`] = `
           >
             <button
               class="_tabsButton_3f98d2 _tabsButtonActive_3f98d2"
+              type="button"
             >
               Email
             </button>
             <button
               class="_tabsButton_3f98d2"
+              type="button"
             >
               Phone
             </button>
@@ -256,6 +265,11 @@ exports[`UserSignInForm > should correspond default layout 1`] = `
             </div>
           </div>
         </div>
+        <input
+          name="tab"
+          type="hidden"
+          value="Email"
+        />
         <div
           class="_textInputContainer_f74981"
         >

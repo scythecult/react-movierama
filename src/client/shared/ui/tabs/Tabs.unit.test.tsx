@@ -2,8 +2,8 @@ import { render } from '@testing-library/react';
 import { Tabs } from './Tabs';
 
 const items = [
-  { label: 'Tab 1', content: <div>Content 1</div> },
-  { label: 'Tab 2', content: <div>Content 2</div> },
+  { label: 'Tab 1', content: () => <div>Content 1</div> },
+  { label: 'Tab 2', content: () => <div>Content 2</div> },
 ];
 
 describe('Tabs', () => {

@@ -23,17 +23,17 @@ export const UserLoginModal = (props: UserLoginModalProps) => {
   const tabs = [
     {
       label: Action.SIGN_IN,
-      content: (
+      content: () => (
         <UserSignInForm onSubmit={onClose} onRestorePassword={() => setCurrentAction(Action.RESTORE_PASSWORD)} />
       ),
     },
     {
       label: Action.SIGN_UP,
-      content: <UserSignUpForm onSubmit={onClose} />,
+      content: () => <UserSignUpForm onSubmit={onClose} />,
     },
     {
       label: Action.INFO,
-      content: <div>INFO</div>,
+      content: () => <div>INFO</div>,
     },
   ];
 
