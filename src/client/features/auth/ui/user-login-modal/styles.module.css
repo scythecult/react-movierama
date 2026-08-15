@@ -1,0 +1,18 @@
+.userLoginModalButton {
+    padding: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--app-primary-text);
+    border: 0;
+    background-color: transparent;
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+.userLoginModalButton:hover {
+    color: var(--app-accent-color);
+}
+
+.activeButton {
+    color: var(--app-accent-color);
+}

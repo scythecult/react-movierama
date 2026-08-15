@@ -4,6 +4,7 @@ exports[`Location > should correspond default layout 1`] = `
 <div>
   <button
     class="_iconButton_d28ccf"
+    type="button"
   >
     <div
       class="_customIcon_a7f5a2 _customIcon_a7f5a2--pin"
@@ -21,7 +22,6 @@ exports[`Location > should correspond default layout 1`] = `
         />
       </svg>
     </div>
-     
     Current Location
   </button>
 </div>
@@ -31,6 +31,7 @@ exports[`Location > should support the "children" prop 1`] = `
 <div>
   <button
     class="_iconButton_d28ccf"
+    type="button"
   >
     <div
       class="_customIcon_a7f5a2 _customIcon_a7f5a2--pin"
@@ -48,7 +49,6 @@ exports[`Location > should support the "children" prop 1`] = `
         />
       </svg>
     </div>
-     
     check
   </button>
 </div>
@@ -58,6 +58,7 @@ exports[`Location > should support the "children" prop 2`] = `
 <div>
   <button
     class="_iconButton_d28ccf"
+    type="button"
   >
     <div
       class="_customIcon_a7f5a2 _customIcon_a7f5a2--pin"
@@ -75,7 +76,6 @@ exports[`Location > should support the "children" prop 2`] = `
         />
       </svg>
     </div>
-     
     check v2
   </button>
 </div>
@@ -85,6 +85,7 @@ exports[`Location > should support the "name" prop 1`] = `
 <div>
   <button
     class="_iconButton_d28ccf"
+    type="button"
   >
     <div
       class="_customIcon_a7f5a2 _customIcon_a7f5a2--account"
@@ -102,7 +103,6 @@ exports[`Location > should support the "name" prop 1`] = `
         />
       </svg>
     </div>
-     
     Current Location
   </button>
 </div>
@@ -112,6 +112,7 @@ exports[`Location > should support the "name" prop 2`] = `
 <div>
   <button
     class="_iconButton_d28ccf"
+    type="button"
   >
     <div
       class="_customIcon_a7f5a2 _customIcon_a7f5a2--pin"
@@ -129,7 +130,6 @@ exports[`Location > should support the "name" prop 2`] = `
         />
       </svg>
     </div>
-     
     Current Location
   </button>
 </div>

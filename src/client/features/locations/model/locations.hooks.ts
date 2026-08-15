@@ -7,10 +7,7 @@ export const useChangeLocation = () => {
 
   const locationMutation = useMutation({
     mutationFn: postGeolocation,
-    onSuccess: async () => {
-      // Invalidate only necessary queries
-      await invalidateLocations();
-    },
+    onSuccess: () => invalidateLocations(),
   });
 
   return (locationId: number) => locationMutation.mutate(locationId);

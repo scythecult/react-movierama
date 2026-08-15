@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LocationsModal > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_modalContent_82e00f"
+  >
+    <div
+      class="_modalContentHeader_82e00f"
+    >
+      <h2>
+        Locations
+      </h2>
+    </div>
+    <div
+      class="_modalContentContent_82e00f"
+    >
+      Locations list
+    </div>
+  </div>
+</div>
+`;

@@ -11,7 +11,7 @@ import { Layout } from './Layout';
 
 const getGeolocationMock = vi.fn().mockResolvedValue(MOCK_GEOLOCATION);
 const getLocationsMock = vi.fn().mockResolvedValue(MOCK_LOCATIONS);
-const getUserMock = vi.fn().mockResolvedValue(MOCK_USER);
+const getMeMock = vi.fn().mockResolvedValue(MOCK_USER);
 
 vi.mock('../../../entities/locations/api', () => ({
   locationsQueries: {
@@ -26,11 +26,11 @@ vi.mock('../../../entities/locations/api', () => ({
   },
 }));
 
-vi.mock('../../../entities/user/api', () => ({
-  userQueries: {
+vi.mock('../../../entities/auth/api', () => ({
+  authQueries: {
     getOne: () => ({
-      queryKey: ['user', 'one'],
-      queryFn: getUserMock,
+      queryKey: ['auth', 'one'],
+      queryFn: getMeMock,
       initialData: {
         id: 0,
         phone: '',
@@ -43,6 +43,11 @@ vi.mock('../../../entities/user/api', () => ({
       },
     }),
   },
+}));
+
+vi.mock('../../../features/auth/model/auth.hooks', () => ({
+  useSignIn: () => vi.fn(),
+  useSignOut: () => vi.fn(),
 }));
 
 vi.mock('../../../features/locations/model/locations.hooks', () => ({

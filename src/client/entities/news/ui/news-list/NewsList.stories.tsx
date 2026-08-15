@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router';
 import { enableMocks } from '../../../../../../mocks';
 import { MOCK_NEWS } from '../../../../../../mocks/data/news';
-import { NewsQueryKey } from '../../api';
+import { newsQueries } from '../../api';
 import { NewsList, type NewsListProps } from './NewsList';
 
 export default {
@@ -22,7 +22,7 @@ export default {
 
 const queryClient = new QueryClient();
 
-queryClient.setQueryData([NewsQueryKey.all], { data: MOCK_NEWS });
+queryClient.setQueryData([newsQueries.all], { data: MOCK_NEWS });
 
 enableMocks();
 

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
+import { UserButton } from '../../../features/auth/ui';
 import { LocationsButton } from '../../../features/locations/ui';
-import { UserButton } from '../../../features/user/ui';
 import { Logo } from '../../../shared/ui/logo/Logo';
 import { SiteNavigation } from '../../../shared/ui/site-navigation/SiteNavigation';
 import styles from './styles.module.css';
@@ -14,13 +14,17 @@ export const Header = (props: HeaderProps) => {
   return (
     <header className={classNameFinal}>
       <div className={styles.headerContent}>
-        <Logo />
+        <div className={styles.headerNavigation}>
+          <Logo />
 
-        <LocationsButton />
+          <SiteNavigation />
+        </div>
 
-        <SiteNavigation />
+        <div className={styles.headerUserActions}>
+          <UserButton />
 
-        <UserButton />
+          <LocationsButton />
+        </div>
       </div>
     </header>
   );

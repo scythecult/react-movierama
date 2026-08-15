@@ -9,7 +9,7 @@ import {
   DEFAULT_SSR_PORT,
   DEFAULT_SSR_URL,
 } from '../common/constants/defaults';
-import { validateBoolean } from '../common/schemas/common';
+import { validateBoolean } from './schemas';
 
 const env = {
   isE2eTestDebugMode: process.env.IS_E2E_TEST_DEBUG_MODE,

@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router';
 import { MOCK_LOCATIONS } from '../../../../../mocks/data/locations';
 import { AppStore } from '../../../app/store/AppStore';
-import { LocationsQueryKey } from '../../../entities/locations/api';
+import { locationsQueries } from '../../../entities/locations/api';
 import { ModalProvider } from '../../../shared/lib/modal';
 import { AppStoreProvider } from '../../../shared/lib/store';
 import { Header, type HeaderProps } from './Header';
@@ -28,7 +28,7 @@ export default {
 
 const queryClient = new QueryClient();
 
-queryClient.setQueryData([LocationsQueryKey.all], { data: MOCK_LOCATIONS });
+queryClient.setQueryData([locationsQueries.all], { data: MOCK_LOCATIONS });
 
 const Template: StoryFn<HeaderProps> = (props) => (
   <QueryClientProvider client={queryClient}>

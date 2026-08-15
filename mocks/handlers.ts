@@ -1,5 +1,5 @@
 import { http, HttpResponse, type PathParams } from 'msw';
-import { ApiVersion, AppRoute } from '../src/common/constants/routes';
+import { ApiRoute, ApiVersion, AppRoute } from '../src/common/constants/routes';
 import { Config } from '../src/common/env';
 import { MOCK_FILMS } from './data/films';
 import { MOCK_GEOLOCATION } from './data/geolocation';
@@ -52,7 +52,7 @@ export const handlers = [
     });
   }),
 
-  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.USER}`, () => {
+  http.get(`${Config.ssrUrl}${ApiVersion.V1}${AppRoute.AUTH}${ApiRoute.ME}`, () => {
     return HttpResponse.json({
       data: {
         user: MOCK_USER,

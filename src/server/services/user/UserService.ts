@@ -1,3 +1,4 @@
+import type { UserSignUpRequest } from '../../../common/entities/auth';
 import type { MockUserDb } from '../../db/mocks/User';
 
 export class UserService {
@@ -7,7 +8,11 @@ export class UserService {
     this.#db = db;
   }
 
-  getOne = async (id: number) => {
-    return await this.#db.findUnique(id);
+  getOne = async (sessionId: string) => {
+    return await this.#db.findUnique(sessionId);
+  };
+
+  create = async (user: UserSignUpRequest) => {
+    return await this.#db.create(user);
   };
 }

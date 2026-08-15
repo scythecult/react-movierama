@@ -1,0 +1,51 @@
+.textInputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+    color: var(--app-primary-text);
+}
+
+.textInputContainerField {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--app-primary-text);
+    background-color: transparent;
+    border: 2px solid var(--app-border-color);
+    border-radius: 4px;
+    outline: none;
+    transition: border ease;
+}
+
+.textInputContainerField:hover,
+.textInputContainerField:focus-within {
+    border-color: var(--app-accent-color);
+}
+
+.textInputContainerField:focus-within .textInputFieldContainerIcon {
+    color: var(--app-accent-color);
+}
+
+.textInputField {
+    flex-grow: 1;
+    padding-left: 6px;
+    padding-right: 4px;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.textInputError {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--app-error-color);
+}

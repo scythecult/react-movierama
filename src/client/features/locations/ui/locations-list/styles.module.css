@@ -1,8 +1,9 @@
 .locationsList {
-  display: grid;
-  gap: 24px;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+    padding: 0;
+    color: var(--app-primary-text);
+    list-style: none;
 }

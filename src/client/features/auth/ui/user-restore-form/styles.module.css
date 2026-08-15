@@ -1,0 +1,11 @@
+.userRestoreForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--app-primary-text);
+}
+
+.userRestoreFormTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
