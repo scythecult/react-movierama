@@ -8,8 +8,8 @@ import {
   DEFAULT_NODE_ENV,
   DEFAULT_SSR_PORT,
   DEFAULT_SSR_URL,
-} from '../common/constants/defaults';
-import { validateBoolean } from './schemas';
+} from '../common/constants/defaults.ts';
+import { validateBoolean } from './schemas/index.ts';
 
 const env = {
   isE2eTestDebugMode: process.env.IS_E2E_TEST_DEBUG_MODE,

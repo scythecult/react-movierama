@@ -3,7 +3,7 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
-import { Config } from './src/common/env';
+import { Config } from './src/common/env.ts';
 
 const isProduction = Config.nodeEnv === 'production';
 
