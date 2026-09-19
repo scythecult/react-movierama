@@ -8,15 +8,16 @@ const DEFAULT_PROPS: FilmListItemProps = {
   onClick: () => {},
 };
 
-const buildWrappedComponent = (props: FilmListItemProps = DEFAULT_PROPS) => (
-  <BrowserRouter>
-    <FilmListItem {...props} />
-  </BrowserRouter>
-);
+const renderFilmListItem = (props: FilmListItemProps = DEFAULT_PROPS) =>
+  render(
+    <BrowserRouter>
+      <FilmListItem {...props} />
+    </BrowserRouter>,
+  );
 
 describe('FilmListItem', () => {
   test('should correspond default layout', () => {
-    const result = render(buildWrappedComponent());
+    const result = renderFilmListItem();
 
     expect(result.container).toMatchSnapshot();
   });

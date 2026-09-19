@@ -4,8 +4,10 @@ import { authQueries } from '../../../../entities/auth/api';
 import { CustomIconName } from '../../../../shared/ui/custom-icon/constants';
 import { IconButton } from '../../../../shared/ui/icon-button/IconButton';
 import { ModalPortal } from '../../../../shared/ui/modal/Modal.portal';
+import { Skeleton } from '../../../../shared/ui/skeleton/Skeleton';
 import { useSignOut } from '../../model/auth.hooks';
 import { UserLoginModal } from '../user-login-modal/UserLoginModal';
+import styles from './styles.module.css';
 
 export type UserButtonProps = PropsWithClassName;
 
@@ -13,6 +15,7 @@ export const UserButton = (props: UserButtonProps) => {
   const { className } = props;
   const {
     data: { id, email, firstName, lastName },
+    isFetching,
   } = useQuery(authQueries.getOne());
   const signOut = useSignOut();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,11 +30,22 @@ export const UserButton = (props: UserButtonProps) => {
     }
   };
 
+  const handleSignOutButtonClick = () => {
+    signOut({ email });
+    setIsModalOpen(false);
+  };
+
   return (
     <>
-      <IconButton className={className} name={CustomIconName.ACCOUNT} onClick={handleUserButtonClick}>
-        {userTextFinal}
-      </IconButton>
+      <div className={styles.userButton} data-test-id="user-button">
+        {!isFetching && (
+          <IconButton className={className} name={CustomIconName.ACCOUNT} onClick={handleUserButtonClick}>
+            {userTextFinal}
+          </IconButton>
+        )}
+
+        {isFetching && <Skeleton width="100%" height="100%" />}
+      </div>
 
       {isModalOpen && (
         <ModalPortal onClose={() => setIsModalOpen(false)}>
@@ -39,7 +53,7 @@ export const UserButton = (props: UserButtonProps) => {
 
           {isLoggedIn && (
             <div>
-              Loggedin user info {email}l<button onClick={() => signOut({ email })}>Logout</button>
+              Loggedin user info {email}l<button onClick={handleSignOutButtonClick}>Logout</button>
             </div>
           )}
         </ModalPortal>

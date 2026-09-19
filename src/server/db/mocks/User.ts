@@ -1,4 +1,5 @@
-import type { UserData, UserSignUpRequest } from '../../../common/entities/auth';
+import type { UserData } from '../../../common/entities/auth';
+import type { User } from '../../lib/entities/user/User';
 
 export class MockUserDb {
   #users: UserData[] = [];
@@ -10,14 +11,40 @@ export class MockUserDb {
     return this.#users;
   }
 
-  async findUnique(id: string) {
-    return this.#users.find((item) => item.id === id);
+  async findUnique(email: string, omitPassword = false) {
+    const user = this.#users.find((item) => item.email === email);
+
+    if (user && omitPassword) {
+      // @ts-expect-error password is not returned to the client
+      // use prisma omit in future
+      delete user.password;
+    }
+
+    return user;
   }
 
-  async create(user: UserSignUpRequest) {
+  async findUniqueById(id: string, omitPassword = false) {
+    const user = this.#users.find((item) => item.id === id);
+
+    if (user && omitPassword) {
+      // @ts-expect-error password is not returned to the client
+      // use prisma omit in future
+      delete user.password;
+    }
+
+    return user;
+  }
+
+  async create(user: User) {
     this.#users.push({ ...user, id: crypto.randomUUID() });
 
-    return this.#users[this.#users.length - 1];
+    const newUser = this.#users[this.#users.length - 1];
+
+    // @ts-expect-error password is not returned to the client
+    // use prisma omit in future
+    delete newUser.password;
+
+    return newUser;
   }
 
   async update() {

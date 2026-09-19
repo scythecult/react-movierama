@@ -5,6 +5,18 @@ import { ErrorCode } from '../../lib/constants/error';
 import { CustomError } from '../../lib/errors/CustomError';
 import { getErrorMessage } from '../../lib/helpers/error';
 
+/**
+ * CustomError and ZodError contracts:
+ *
+ * - `message`: A human-readable error message.
+ * - `errors`: A dictionary of field-specific errors, if applicable.
+ * - `code`: A custom error code.
+ *
+ * Example:
+ *  {email: ['Please enter a valid email address']}
+ *
+ *
+ */
 export const errorMiddleware = (error: unknown, _request: Request, response: Response, _next: NextFunction) => {
   // TODO Update
   // if (response.headersSent || config.debug) {
@@ -13,8 +25,12 @@ export const errorMiddleware = (error: unknown, _request: Request, response: Res
   //   return;
   // }
 
+  // TODO Continue implement error handling for CustomError
+
   if (error instanceof CustomError) {
-    response.status(error.statusCode).json({ error: { message: error.message, code: error.code } });
+    const errors = { [error.cause ?? '']: error.message };
+
+    response.status(error.statusCode).json({ error: { message: error.message, errors, code: error.code } });
 
     return;
   }

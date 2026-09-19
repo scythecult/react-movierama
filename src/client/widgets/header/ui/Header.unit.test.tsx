@@ -18,6 +18,10 @@ vi.mock('../../../entities/locations/api', () => ({
     getOne: () => ({
       queryKey: ['locations', 'one'],
       queryFn: getGeolocationMock,
+      initialData: {
+        id: 0,
+        name: '',
+      },
     }),
     list: () => ({
       queryKey: ['locations', 'list'],

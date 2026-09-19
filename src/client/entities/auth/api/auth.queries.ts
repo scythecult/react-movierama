@@ -15,7 +15,6 @@ export const authQueries = {
         firstName: '',
         lastName: '',
         email: '',
-        password: '',
         isPromoChecked: false,
         isLegalChecked: false,
       },

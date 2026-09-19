@@ -1,7 +1,6 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { UserSignInRequest, UserSignOutRequest, UserSignUpRequest } from '../../../../common/entities/auth';
-import { CookieName } from '../../../lib/constants/cookies';
 import type { TypedRequest } from '../../../lib/types/request';
 import type { UserService } from '../../../services/user/UserService';
 
@@ -34,67 +33,59 @@ export class AuthController {
   }
 
   get = async (request: Request, response: Response) => {
-    const { cookies } = request;
-    const sessionId = cookies[CookieName.AUTH_SESSION_ID];
+    const { session } = request;
+    const { userId = '' } = session;
 
-    // if (request.session.userId (email)) {
-    // ищем в базе данных по email
-    // вот этой хуйни с проверкой сессии и пользователя в разных ifах не должно быть
-
-    if (!sessionId) {
-      return response.status(StatusCodes.NO_CONTENT).json({ data: {} });
-    }
-
-    const user = await this.#service.getOne(sessionId);
+    const user = await this.#service.getOneById(userId);
 
     if (!user) {
-      return response.status(StatusCodes.NO_CONTENT).json({ data: {} });
+      return response.status(StatusCodes.NO_CONTENT).end();
     }
 
     return response.status(StatusCodes.OK).json({ data: { user } });
   };
 
   signUp = async (request: TypedRequest<UserSignUpRequest>, response: Response) => {
-    const { cookies, body } = request;
-    const sessionId = cookies[CookieName.AUTH_SESSION_ID];
+    const { session, body } = request;
+    const { userId = '' } = session;
 
-    if (!sessionId) {
-      const user = await this.#service.create(body);
+    if (!userId) {
+      const user = await this.#service.signUp(body);
 
-      response.cookie(CookieName.AUTH_SESSION_ID, user.id, { httpOnly: true, path: '/' });
+      // TODO Possibly move?
+      session.userId = user.id;
+
       return response.status(StatusCodes.CREATED).json({ data: { user } });
     }
 
-    const existingUser = await this.#service.getOne(sessionId);
-    const statusCode = existingUser ? StatusCodes.BAD_REQUEST : StatusCodes.UNAUTHORIZED;
-
-    return response.status(statusCode).json({ data: null });
+    return response.status(StatusCodes.UNAUTHORIZED).json({ data: null });
   };
 
   signIn = async (request: TypedRequest<UserSignInRequest>, response: Response) => {
-    const { body, cookies } = request;
+    const { session, body } = request;
+    const { userId = '' } = session;
+    const { email = '', password = '', isPersistent = false } = body;
 
-    // TODO Try find user by email and password??
-    const sessionId = cookies[CookieName.AUTH_SESSION_ID];
-    const user = await this.#service.getOne(sessionId);
-    const responseData = { user: user ? { ...user } : null };
+    if (!userId) {
+      const user = await this.#service.signIn(email, password);
 
-    console.info({ body, responseData });
-    return response.status(StatusCodes.OK).json({ data: responseData });
+      session.userId = user.id;
+      session.isPersistent = isPersistent;
+
+      return response.status(StatusCodes.OK).json({ data: user });
+    }
+
+    return response.status(StatusCodes.UNAUTHORIZED).json({ data: null });
   };
 
   signOut = async (request: TypedRequest<UserSignOutRequest>, response: Response) => {
-    const { body, cookies } = request;
-    const sessionId = cookies[CookieName.AUTH_SESSION_ID];
+    const { session } = request;
+    const { userId = '' } = session;
 
-    console.info({ body });
-    if (sessionId) {
-      // await this.#service.delete(sessionId);
+    if (userId) {
+      session.userId = '';
     }
 
-    response.clearCookie(CookieName.AUTH_SESSION_ID, { httpOnly: true, path: '/' });
-
-    console.info(response.getHeaders());
     return response.status(StatusCodes.OK).json({ data: null });
   };
 }

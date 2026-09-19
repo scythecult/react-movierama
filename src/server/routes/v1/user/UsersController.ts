@@ -2,6 +2,8 @@ import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { UserService } from '../../../services/user/UserService';
 
+// TODO Remove?
+// @deprecated
 export class UsersController {
   #service;
 
@@ -13,7 +15,7 @@ export class UsersController {
     // TODO Temporary
     // const { id } = request.body;
     const { cookies } = request;
-    const user = await this.#service.getOne(cookies['movierama-check']);
+    const user = await this.#service.getOneByEmail(cookies['movierama-check']);
 
     console.info({ user });
     return response.status(StatusCodes.OK).json({ data: { user } });
@@ -32,7 +34,7 @@ export class UsersController {
   signInUser = async (request: Request, response: Response) => {
     const { body } = request;
     const { email, password } = body;
-    const user = await this.#service.getOne(email);
+    const user = await this.#service.getOneByEmail(email);
     const responseData = { user: user ? { ...user } : null };
 
     response.cookie('movierama-check', 'test@asd.asd', { httpOnly: true, path: '/' });

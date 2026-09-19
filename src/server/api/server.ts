@@ -6,6 +6,7 @@ import { StatusCodes } from 'http-status-codes';
 import { ApiVersion, AppRoute } from '../../common/constants/routes';
 import { Config } from '../../common/env';
 import { errorMiddleware } from '../middleware/error-middleware/errorMiddleware';
+import { sessionMiddleware } from '../middleware/session-middleware/sessionMiddleware';
 import { v1 } from '../routes/v1';
 
 export const createApiServer = async () => {
@@ -17,6 +18,7 @@ export const createApiServer = async () => {
   apiServer.use(cookieParser());
   apiServer.use(json());
   apiServer.use(urlencoded({ extended: true }));
+  apiServer.use(sessionMiddleware());
 
   apiServer.get(AppRoute.HEALTH, (_, response) => {
     response.status(StatusCodes.OK).json({ ok: true });

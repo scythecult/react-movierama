@@ -49,3 +49,11 @@ export const signUpSchema = userSchema
 export const signOutSchema = z.object({
   email: emailSchema,
 });
+
+// TODO Check for usage
+export const sessionSchema = z.object({
+  userId: z.string(),
+  userEmail: emailSchema,
+  isLoggedIn: z.boolean(),
+  isPersistent: z.boolean(),
+});

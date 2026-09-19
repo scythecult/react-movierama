@@ -1,0 +1,89 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Skeleton > should correspond default layout 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="_skeletonBase_1b7a29 _circle_1b7a29"
+    data-test-id="skeleton"
+    style="width: 0px; height: 0px;"
+  />
+</div>
+`;
+
+exports[`Skeleton > should support "className" prop 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="_skeletonBase_1b7a29 _circle_1b7a29 custom-class"
+    data-test-id="skeleton"
+    style="width: 0px; height: 0px;"
+  />
+</div>
+`;
+
+exports[`Skeleton > should support "className" prop 2`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="_skeletonBase_1b7a29 _circle_1b7a29 custom-class"
+    data-test-id="skeleton"
+    style="width: 0px; height: 0px;"
+  />
+</div>
+`;
+
+exports[`Skeleton > should support "variant" prop 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="_skeletonBase_1b7a29 _text_1b7a29"
+    data-test-id="skeleton"
+    style="width: 0px; height: 0px;"
+  />
+</div>
+`;
+
+exports[`Skeleton > should support "variant" prop 2`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="_skeletonBase_1b7a29 _circle_1b7a29"
+    data-test-id="skeleton"
+    style="width: 0px; height: 0px;"
+  />
+</div>
+`;
+
+exports[`Skeleton > should support "variant" prop 3`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="_skeletonBase_1b7a29 _rect_1b7a29"
+    data-test-id="skeleton"
+    style="width: 0px; height: 0px;"
+  />
+</div>
+`;
+
+exports[`Skeleton > should support "width" and "height" prop 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="_skeletonBase_1b7a29 _circle_1b7a29"
+    data-test-id="skeleton"
+    style="width: 100px; height: 100px;"
+  />
+</div>
+`;
+
+exports[`Skeleton > should support "width" and "height" prop 2`] = `
+<div>
+  <div
+    aria-hidden="true"
+    class="_skeletonBase_1b7a29 _circle_1b7a29"
+    data-test-id="skeleton"
+    style="width: 200px; height: 200px;"
+  />
+</div>
+`;
