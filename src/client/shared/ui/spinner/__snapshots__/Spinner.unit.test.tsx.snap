@@ -1,0 +1,77 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Spinner > should correspond default layout 1`] = `
+<div>
+  <div
+    class="_spinnerContainer_8b4631"
+    data-test-id="spinner"
+    role="status"
+  >
+    <div
+      class="_loadingSpinner_8b4631 _s_8b4631"
+    />
+    <span
+      class="visually-hidden"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Spinner > should support "size" prop 1`] = `
+<div>
+  <div
+    class="_spinnerContainer_8b4631"
+    data-test-id="spinner"
+    role="status"
+  >
+    <div
+      class="_loadingSpinner_8b4631 _s_8b4631"
+    />
+    <span
+      class="visually-hidden"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Spinner > should support "size" prop 2`] = `
+<div>
+  <div
+    class="_spinnerContainer_8b4631"
+    data-test-id="spinner"
+    role="status"
+  >
+    <div
+      class="_loadingSpinner_8b4631 _m_8b4631"
+    />
+    <span
+      class="visually-hidden"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Spinner > should support "size" prop 3`] = `
+<div>
+  <div
+    class="_spinnerContainer_8b4631"
+    data-test-id="spinner"
+    role="status"
+  >
+    <div
+      class="_loadingSpinner_8b4631 _l_8b4631"
+    />
+    <span
+      class="visually-hidden"
+    >
+      Loading...
+    </span>
+  </div>
+</div>
+`;

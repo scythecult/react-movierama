@@ -23,6 +23,7 @@ const env = {
   ssrUrl: process.env.SSR_URL,
   baseUrl: process.env.BASE_URL,
   isMockGeolocation: process.env.IS_MOCK_GEOLOCATION,
+  bCryptSaltRounds: process.env.BCRYPT_SALT_ROUNDS,
 } as const;
 
 const envSchema = z.object({
@@ -35,6 +36,7 @@ const envSchema = z.object({
   apiUrl: z.url().default(DEFAULT_API_URL),
   ssrPort: z.coerce.number().default(DEFAULT_SSR_PORT),
   ssrUrl: z.url().default(DEFAULT_SSR_URL),
+  bCryptSaltRounds: z.coerce.number().default(10),
   baseUrl: z.string().default(DEFAULT_APP_URL),
   isMockGeolocation: validateBoolean().default(false),
 });

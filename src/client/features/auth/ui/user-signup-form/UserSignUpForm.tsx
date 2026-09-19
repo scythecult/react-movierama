@@ -31,6 +31,7 @@ export const UserSignUpForm = (props: UserSignUpFormProps) => {
     formState: { errors, isValid },
   } = useForm<FormStateInput, unknown, FormStateOutput>({ mode: 'all', resolver: zodResolver(signUpSchema) });
 
+  // TODO Cover e2e/unit tests
   const handleFormSubmit = async (data: FormStateOutput) => {
     try {
       await signUp(data);

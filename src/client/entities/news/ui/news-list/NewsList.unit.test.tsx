@@ -21,35 +21,43 @@ vi.mock('@tanstack/react-query', async () => {
   };
 });
 
-const DEFAULT_PROPS: NewsListProps = {
-  className: undefined,
-};
-
-const buildWrappedComponent = (props: NewsListProps = DEFAULT_PROPS) => {
-  const queryClient = new QueryClient();
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <NewsList {...props} />
-      </BrowserRouter>
-    </QueryClientProvider>
-  );
-};
-
 describe('NewsList', () => {
+  let queryClient: QueryClient;
+
+  beforeEach(() => {
+    // Create a clean client before each test
+    queryClient = new QueryClient({
+      defaultOptions: {
+        queries: {
+          // Disable retries to speed up tests
+          retry: false,
+        },
+      },
+    });
+  });
+
+  const renderNews = (props: NewsListProps = {}) => {
+    return render(
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <NewsList {...props} />
+        </BrowserRouter>
+      </QueryClientProvider>,
+    );
+  };
+
   test('should correspond default layout', () => {
-    const result = render(buildWrappedComponent());
+    const result = renderNews();
 
     expect(result.container).toMatchSnapshot();
   });
 
   test('should support the "className" prop', () => {
-    let result = render(buildWrappedComponent({ ...DEFAULT_PROPS, className: 'custom-class' }));
+    let result = renderNews({ className: 'custom-class' });
 
     expect(result.container).toMatchSnapshot();
 
-    result = render(buildWrappedComponent({ ...DEFAULT_PROPS, className: 'custom-class-v2' }));
+    result = renderNews({ className: 'custom-class-v2' });
 
     expect(result.container).toMatchSnapshot();
   });

@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render } from '@testing-library/react';
+import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_GEOLOCATION } from '../../../../../mocks/data/geolocation';
 import { MOCK_LOCATIONS } from '../../../../../mocks/data/locations';
@@ -18,6 +18,10 @@ vi.mock('../../../entities/locations/api', () => ({
     getOne: () => ({
       queryKey: ['geolocation'],
       queryFn: getGeolocationMock,
+      initialData: {
+        id: 0,
+        name: '',
+      },
     }),
     list: () => ({
       queryKey: ['locations'],
@@ -54,28 +58,40 @@ vi.mock('../../../features/locations/model/locations.hooks', () => ({
   useChangeLocation: () => vi.fn(),
 }));
 
-let queryClient: QueryClient;
-
-const buildWrappedComponent = () => {
-  queryClient = new QueryClient();
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <ModalProvider>
-        <AppStoreProvider store={AppStore}>
-          <BrowserRouter>
-            <Layout />
-          </BrowserRouter>
-        </AppStoreProvider>
-      </ModalProvider>
-    </QueryClientProvider>
-  );
-};
-
 describe('Layout', () => {
-  test('should correspond default layout', () => {
-    const result = render(buildWrappedComponent());
+  let queryClient: QueryClient;
 
-    expect(result.container).toMatchSnapshot();
+  beforeEach(() => {
+    queryClient = new QueryClient({
+      defaultOptions: {
+        queries: {
+          retry: false,
+        },
+      },
+    });
+  });
+
+  const renderLayout = () => {
+    return render(
+      <QueryClientProvider client={queryClient}>
+        <ModalProvider>
+          <AppStoreProvider store={AppStore}>
+            <BrowserRouter>
+              <Layout />
+            </BrowserRouter>
+          </AppStoreProvider>
+        </ModalProvider>
+      </QueryClientProvider>,
+    );
+  };
+
+  test('should correspond default layout', async () => {
+    const { container } = renderLayout();
+
+    // Ожидаем, пока все индикаторы загрузки (например, "Loading...") исчезнут с экрана.
+    // Если ваши лоадеры в Layout называются иначе, замените текст 'Loading...' на актуальный.
+    await waitForElementToBeRemoved(() => screen.queryAllByTestId('skeleton'));
+
+    expect(container).toMatchSnapshot();
   });
 });

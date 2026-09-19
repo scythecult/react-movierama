@@ -3,8 +3,8 @@ export const MOCK_USER = {
   phone: '+79991234567',
   firstName: 'Алексей',
   lastName: 'Иванов',
-  email: 'test@asd.asd',
-  password: 'Qwerty123!', // в реальности — хэш на сервере
+  email: 'test2@asd.asd',
+  password: '$2b$10$LDOl7FrMoNOP5p8PV0ScsOjdB2hyJewRGSkWOEtZhhktcXS4Qd4NW', // в реальности — хэш на сервере
   isLegalChecked: true,
   isPromoChecked: false,
 };

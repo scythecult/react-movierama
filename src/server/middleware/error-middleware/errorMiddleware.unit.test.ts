@@ -34,6 +34,7 @@ describe('errorMiddleware', () => {
       message: ERROR_MESSAGE,
       statusCode: StatusCodes.NOT_FOUND,
       code: ErrorCode.ERR_NF,
+      cause: 'check',
     });
 
     errorMiddleware(customError, mockRequest as Request, mockResponse as Response, mockNext);
@@ -43,6 +44,7 @@ describe('errorMiddleware', () => {
       error: {
         message: ERROR_MESSAGE,
         code: ErrorCode.ERR_NF,
+        errors: { check: ERROR_MESSAGE },
       },
     });
   });

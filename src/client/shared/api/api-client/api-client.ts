@@ -20,18 +20,18 @@ export class ApiClient {
   }
 
   async handleResponse<ResponseData>(response: Response) {
-    if (response.status === StatusCodes.UNPROCESSABLE_ENTITY) {
+    if (response.status === StatusCodes.UNPROCESSABLE_ENTITY || response.status === StatusCodes.UNAUTHORIZED) {
       const errorResponse = await response.json();
 
       return { data: {}, errorMap: errorResponse.error.errors };
     }
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
     if (response.status === StatusCodes.NO_CONTENT) {
       return { data: {} };
+    }
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     try {

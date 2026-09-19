@@ -8,7 +8,7 @@ type ParseWithSchemaOptions = {
   schema: ZodSchema;
 };
 
-type ValidationRequestParts = 'body' | 'query' | 'params' | 'headers';
+type ValidationRequestParts = 'body' | 'query' | 'params' | 'headers' | 'session';
 
 type ValidationMiddlewareBuilderSchemaMap = Partial<Record<ValidationRequestParts, ZodSchema>>;
 

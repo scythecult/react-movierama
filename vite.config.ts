@@ -10,7 +10,6 @@ const isProduction = Config.nodeEnv === 'production';
 export default defineConfig({
   // Expose vars here to use it in /common/env.ts
   define: {
-    global: 'window',
     'process.env.IS_E2E_TEST_DEBUG_MODE': JSON.stringify(process.env.IS_E2E_TEST_DEBUG_MODE),
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     'process.env.APP_MODE': JSON.stringify(process.env.APP_MODE),
@@ -19,6 +18,7 @@ export default defineConfig({
     'process.env.APP_URL': JSON.stringify(process.env.APP_URL),
     'process.env.SSR_URL': JSON.stringify(process.env.SSR_URL),
     'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
+    'process.env.BCRYPT_SALT_ROUNDS': JSON.stringify(process.env.BCRYPT_SALT_ROUNDS),
   },
 
   base: Config.baseUrl,
@@ -55,7 +55,7 @@ export default defineConfig({
     testTimeout: 30 * 1000, // 30 seconds
     clearMocks: true,
     include: ['src/**/*.unit.test.ts(x)?'],
-    setupFiles: 'src/tests/globalSetup.ts',
+    setupFiles: ['src/tests/globalSetup.ts', 'src/tests/vitest.setup.ts'],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],
