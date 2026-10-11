@@ -61,19 +61,14 @@ describe('UserButton', () => {
     expect(result.container).toMatchSnapshot();
   });
 
-  // test('should support the "className" prop', async () => {
-  //   const result = renderUserButton({ className: 'custom-class' });
+  test('should support the "className" prop', async () => {
+    let result = renderUserButton({ className: 'custom-class' });
 
-  //   await waitForElementToBeRemoved(() => screen.getByTestId('Loading...'));
+    await waitForElementToBeRemoved(() => screen.getByTestId('skeleton'));
 
-  //   expect(result.container).toMatchSnapshot();
-  // });
+    expect(result.container).toMatchSnapshot();
 
-  // test('should support another "className" prop variant', async () => {
-  //   const result = renderUserButton({ className: 'custom-class-v2' });
-
-  //   await waitForElementToBeRemoved(() => screen.getByTestId('Loading...'));
-
-  //   expect(result.container).toMatchSnapshot();
-  // });
+    result = renderUserButton({ className: 'custom-class-2' });
+    expect(result.container).toMatchSnapshot();
+  });
 });
