@@ -1,12 +1,13 @@
-import type { SeatData, SeatType } from '../../src/client/entities/hallplan/model/hallplan.types';
-import { Hall } from '../../src/server/lib/helpers/Hall';
-import { SeatNode } from '../../src/server/lib/helpers/SeatNode';
+import type { SeatData, SeatType } from '../../src/common/entities/hallplan';
+import { Hall } from '../../src/server/lib/entities/hallplan/Hall';
+import { mapSeatsToSeatData } from '../../src/server/lib/entities/hallplan/helpers';
+import { SEAT_SIZE } from '../../src/server/lib/entities/hallplan/Seat';
 
-export const MOCK_SEAT_WIDTH = 40;
+export const MOCK_SEAT_WIDTH = SEAT_SIZE.WIDTH;
 
-export const MOCK_SEAT_HEIGHT = 34;
+export const MOCK_SEAT_HEIGHT = SEAT_SIZE.HEIGHT;
 
-export const MOCK_SEAT_OFFSET = 10;
+export const MOCK_SEAT_OFFSET = SEAT_SIZE.OFFSET;
 
 export const MOCK_HALL_PLAN_MATRIX =
   // HALL
@@ -89,22 +90,10 @@ export const MOCK_SEAT_TYPES: SeatType[] = [
 ];
 
 const mockHall = new Hall({
-  Seat: SeatNode,
   hallPlanMatrix: MOCK_HALL_PLAN_MATRIX,
-  seatWidth: MOCK_SEAT_WIDTH,
-  seatHeight: MOCK_SEAT_HEIGHT,
-  seatOffset: MOCK_SEAT_OFFSET,
 });
-
 const mockSeats = mockHall.createSeats();
 
 export const MOCK_CANVAS_SIZE = mockHall.getCanvasSize();
 
-export const MOCK_SEATS_DATA: SeatData[] = mockSeats.map((mockSeat) => {
-  const { type } = mockSeat;
-  const seatType = MOCK_SEAT_TYPES.find((seatType) => seatType.id === type)!;
-  const [defaultTicketType] = seatType.ticketTypes;
-  const { price, id: ticketTypeId } = defaultTicketType;
-
-  return { ...mockSeat, seatType, ticketTypeId, price };
-});
+export const MOCK_SEATS_DATA: SeatData[] = mapSeatsToSeatData(mockSeats, MOCK_SEAT_TYPES);

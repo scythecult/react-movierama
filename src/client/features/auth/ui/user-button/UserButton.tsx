@@ -23,15 +23,15 @@ export const UserButton = (props: UserButtonProps) => {
   const userTextFinal = email ? `${firstName} ${lastName}` : '';
 
   const handleUserButtonClick = () => {
-    if (!isLoggedIn) {
-      setIsModalOpen(true);
-    } else {
+    setIsModalOpen(true);
+
+    if (isLoggedIn) {
       console.info('redirect to /profile');
     }
   };
 
   const handleSignOutButtonClick = () => {
-    signOut({ email });
+    signOut();
     setIsModalOpen(false);
   };
 

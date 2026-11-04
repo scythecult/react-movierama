@@ -26,9 +26,17 @@ export default {
   },
 } satisfies Meta<typeof Header>;
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+      staleTime: Number.POSITIVE_INFINITY,
+    },
+  },
+});
 
-queryClient.setQueryData([locationsQueries.all], { data: MOCK_LOCATIONS });
+queryClient.setQueryData(locationsQueries.getCurrent().queryKey, MOCK_LOCATIONS[0]);
+queryClient.setQueryData(locationsQueries.list().queryKey, MOCK_LOCATIONS);
 
 const Template: StoryFn<HeaderProps> = (props) => (
   <QueryClientProvider client={queryClient}>

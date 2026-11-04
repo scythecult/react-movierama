@@ -13,6 +13,3 @@ export const getErrorMessage = (error: unknown) => {
 
   return 'An error occured';
 };
-
-// TODO write tests
-// Checkout all project and continue to implement auth

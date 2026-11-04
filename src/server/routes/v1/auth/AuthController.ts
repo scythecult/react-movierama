@@ -1,91 +1,111 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import type { UserSignInRequest, UserSignOutRequest, UserSignUpRequest } from '../../../../common/entities/auth';
+import type { UserSignInRequest, UserSignUpRequest } from '../../../../common/entities/auth';
+import {
+  AlreadyAuthenticatedError,
+  AlreadyExistsError,
+  AuthenticationError,
+  InvalidCredentialsError,
+} from '../../../lib/errors/auth/AuthError';
+import { ErrorCode } from '../../../lib/errors/CustomError';
+import { ExpressSessionStore } from '../../../lib/helpers/session';
 import type { TypedRequest } from '../../../lib/types/request';
-import type { UserService } from '../../../services/user/UserService';
+import type { GetCurrentUserUseCase } from '../../../lib/use-cases/auth/GetCurrentUserUseCase';
+import type { SignInUseCase } from '../../../lib/use-cases/auth/SignInUseCase';
+import type { SignUpUseCase } from '../../../lib/use-cases/auth/SignUpUseCase';
 
-// Авторизация по входу (sign in) обычно ищет пользователя по уникальному идентификатору вроде email или имени пользователя.
-// Система сверяет хэш введенного пароля с сохраненным в базе. Если они равны, создается сессия или токен для доступа.
-// Основной алгоритм
-// Пользователь вводит логин (email) и пароль.
-// Клиент отправляет POST-запрос на сервер.
-// Сервер ищет запись в базе данных.
-// Сервер проверяет правильность пароля.
-// Сервер возвращает токен или ставит куку.
-// По какому признаку ищут в базе
-// Email (почта): Самый частый вариант, так как он уникален у каждого человека и его легко вспомнить.
-// Username (никнейм): Используется на форумах, в играх или соцсетях, где реальная почта скрыта.
-// Телефон: Популярен в мобильных приложениях и сервисах быстрой доставки, где вход идет по SMS или номеру.
-// Проверка пароля
-// База хранит не сам пароль, а его хэш (например, через алгоритм bcrypt или Argon2).
-// Сервер берет введенный пароль, превращает его в хэш по тому же правилу.
-// Сервер сравнивает новый хэш с тем, что лежал в базе.
-// Что происходит после успеха
-// Сервер создает сессию на бэкенде.
-// Или сервер выдает клиенту JWT (JSON Web Token).
-// Клиент сохраняет токен и передает его в заголовках для следующих запросов.
+type AuthUseCaseMap = {
+  getCurrentUser: GetCurrentUserUseCase;
+  signIn: SignInUseCase;
+  signUp: SignUpUseCase;
+};
 
 export class AuthController {
-  #service;
+  #useCaseMap;
 
-  constructor(service: UserService) {
-    this.#service = service;
+  constructor(useCaseMap: AuthUseCaseMap) {
+    this.#useCaseMap = useCaseMap;
+  }
+
+  private toAuthHttpError(error: unknown) {
+    if (error instanceof InvalidCredentialsError) {
+      return new AuthenticationError({
+        statusCode: StatusCodes.UNAUTHORIZED,
+        message: error.message,
+        code: ErrorCode.ERR_AUTH,
+        cause: 'root.serverError',
+      });
+    }
+
+    if (error instanceof AlreadyAuthenticatedError) {
+      return new AuthenticationError({
+        statusCode: StatusCodes.CONFLICT,
+        message: error.message,
+        code: ErrorCode.ERR_AUTH,
+        cause: 'root.serverError',
+      });
+    }
+
+    if (error instanceof AlreadyExistsError) {
+      return new AuthenticationError({
+        statusCode: StatusCodes.CONFLICT,
+        message: error.message,
+        code: ErrorCode.ERR_EXISTS,
+        cause: 'email',
+      });
+    }
+
+    return error;
   }
 
   get = async (request: Request, response: Response) => {
-    const { session } = request;
-    const { userId = '' } = session;
-
-    const user = await this.#service.getOneById(userId);
-
-    if (!user) {
-      return response.status(StatusCodes.NO_CONTENT).end();
-    }
+    const user = await this.#useCaseMap.getCurrentUser.execute(request.session.userId);
 
     return response.status(StatusCodes.OK).json({ data: { user } });
   };
 
   signUp = async (request: TypedRequest<UserSignUpRequest>, response: Response) => {
-    const { session, body } = request;
-    const { userId = '' } = session;
-
-    if (!userId) {
-      const user = await this.#service.signUp(body);
-
-      // TODO Possibly move?
-      session.userId = user.id;
+    try {
+      const session = new ExpressSessionStore(request, response);
+      const user = await this.#useCaseMap.signUp.execute(
+        {
+          user: request.body,
+          currentUserId: request.session.userId,
+        },
+        session,
+      );
 
       return response.status(StatusCodes.CREATED).json({ data: { user } });
+    } catch (error) {
+      throw this.toAuthHttpError(error);
     }
-
-    return response.status(StatusCodes.UNAUTHORIZED).json({ data: null });
   };
 
   signIn = async (request: TypedRequest<UserSignInRequest>, response: Response) => {
-    const { session, body } = request;
-    const { userId = '' } = session;
-    const { email = '', password = '', isPersistent = false } = body;
+    try {
+      const session = new ExpressSessionStore(request, response);
+      const user = await this.#useCaseMap.signIn.execute(
+        {
+          email: request.body.email,
+          phone: request.body.phone,
+          password: request.body.password,
+          isPersistent: request.body.isPersistent ?? false,
+          currentUserId: request.session.userId,
+        },
+        session,
+      );
 
-    if (!userId) {
-      const user = await this.#service.signIn(email, password);
-
-      session.userId = user.id;
-      session.isPersistent = isPersistent;
-
-      return response.status(StatusCodes.OK).json({ data: user });
+      return response.status(StatusCodes.OK).json({ data: { user } });
+    } catch (error) {
+      throw this.toAuthHttpError(error);
     }
-
-    return response.status(StatusCodes.UNAUTHORIZED).json({ data: null });
   };
 
-  signOut = async (request: TypedRequest<UserSignOutRequest>, response: Response) => {
-    const { session } = request;
-    const { userId = '' } = session;
+  signOut = async (request: Request, response: Response) => {
+    const session = new ExpressSessionStore(request, response);
 
-    if (userId) {
-      session.userId = '';
-    }
+    await session.destroy();
 
-    return response.status(StatusCodes.OK).json({ data: null });
+    return response.status(StatusCodes.OK).json({ data: { user: null } });
   };
 }

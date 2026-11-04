@@ -1,4 +1,4 @@
-import type { HallplanMatrix } from '../../../common/types/hallplan-matrix';
+import type { HallplanMatrix } from '../../../common/entities/hallplan';
 
 export class MockHallplanMatrixDb {
   #hallplanMatrixes: HallplanMatrix[];

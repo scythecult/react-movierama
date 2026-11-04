@@ -5,6 +5,13 @@
     color: var(--app-primary-text);
 }
 
+.userSignInFormErrors {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--app-error-color);
+}
+
 .userSignInFormFields {
     display: grid;
     grid-template-columns: 100%;

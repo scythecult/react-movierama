@@ -1,10 +1,10 @@
 import { AppRoute } from '../../../../common/constants/routes';
+import type { LocationResponse } from '../../../../common/entities/locations';
 import { apiClient } from '../../../shared/api/api-client/api-client';
-import type { GeolocationResponse } from '../model/locations.types';
 
-export const postGeolocation = async (id: number) => {
-  const serverPayload = await apiClient.post<GeolocationResponse>(AppRoute.GEOLOCATION, { id });
+export const setCurrentLocation = async (locationId: number) => {
+  const serverPayload = await apiClient.put<LocationResponse>(AppRoute.LOCATION, { locationId });
   const { data } = serverPayload;
 
-  return data.location ?? {};
+  return data.location ?? null;
 };

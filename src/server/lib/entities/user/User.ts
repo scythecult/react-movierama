@@ -1,4 +1,4 @@
-import type { UserSignUpRequest } from '../../../../common/entities/auth';
+import type { UserData, UserSignUpRequest } from '../../../../common/entities/auth';
 import { comparePasswords, hashPassword } from '../../helpers/auth';
 
 export class User {
@@ -22,6 +22,12 @@ export class User {
 
   static async comparePasswords(userPassword: string, hashedPassword: string) {
     return await comparePasswords(userPassword, hashedPassword);
+  }
+
+  static toPublicUser(user: UserData) {
+    const { password: _, ...publicUser } = user;
+
+    return publicUser;
   }
 
   async hashPassword() {

@@ -1,9 +1,8 @@
 import type { Meta, StoryFn } from '@storybook/react-vite';
-import { QueryClientProvider } from '@tanstack/react-query';
-import { MOCK_GEOLOCATION } from '../../../../../../mocks/data/geolocation';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MOCK_LOCATIONS } from '../../../../../../mocks/data/locations';
 import { AppStore } from '../../../../app/store/AppStore';
-import { queryClient } from '../../../../shared/api/query-client';
+import { locationsQueries } from '../../../../entities/locations/api';
 import { AppStoreProvider } from '../../../../shared/lib/store';
 import { LocationsList, type LocationsListProps } from './LocationsList';
 
@@ -21,14 +20,21 @@ export default {
   component: LocationsList,
 } satisfies Meta<typeof LocationsList>;
 
-const initialState = {
-  location: MOCK_GEOLOCATION.current,
-  locations: MOCK_LOCATIONS,
-};
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+      staleTime: Number.POSITIVE_INFINITY,
+    },
+  },
+});
+
+queryClient.setQueryData(locationsQueries.getCurrent().queryKey, MOCK_LOCATIONS[0]);
+queryClient.setQueryData(locationsQueries.list().queryKey, MOCK_LOCATIONS);
 
 const Template: StoryFn<LocationsListProps> = (props) => (
   <QueryClientProvider client={queryClient}>
-    <AppStoreProvider initialState={initialState} store={AppStore}>
+    <AppStoreProvider store={AppStore}>
       <LocationsList {...props} />
     </AppStoreProvider>
   </QueryClientProvider>

@@ -1,20 +1,34 @@
-import type { LocationsData } from '../../../client/entities/locations/model';
+import type { LocationData } from '../../../common/entities/locations';
+
+export type LocationRecord = LocationData & {
+  alias?: string;
+};
+
+const toLocation = (record: LocationRecord): LocationData => ({
+  id: record.id,
+  name: record.name,
+});
 
 export class MockLocationDb {
-  #locations: LocationsData[] = [];
-  constructor(locations: LocationsData[]) {
+  #locations: LocationRecord[];
+
+  constructor(locations: LocationRecord[]) {
     this.#locations = locations;
   }
 
   async findMany() {
-    return this.#locations;
+    return this.#locations.map(toLocation);
   }
 
   async findUnique(id: number) {
-    return this.#locations.find((item) => item.id === id);
+    const location = this.#locations.find((item) => item.id === id);
+
+    return location ? toLocation(location) : undefined;
   }
 
-  async update() {
-    return this.#locations;
+  async findByCityName(cityName: string) {
+    const location = this.#locations.find(({ alias }) => alias === cityName);
+
+    return location ? toLocation(location) : undefined;
   }
 }

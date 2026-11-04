@@ -1,8 +1,7 @@
-import type { CityToIdMapKey } from '../../constants/locations';
-import type { GeolocationInterface } from '../../types/geolocation';
+import type { IpGeocoder } from './IpGeocoder';
 
-export class GeolocationMockApi implements GeolocationInterface {
-  async getLocation(_: string): Promise<CityToIdMapKey> {
+export class GeolocationMockApi implements IpGeocoder {
+  async resolveCityName(_ip: string) {
     return 'Astrakhan';
   }
 }

@@ -3,10 +3,6 @@ import { render } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { UserSignUpForm } from './UserSignUpForm';
 
-vi.mock('../../model/auth.hooks', () => ({
-  useSignUp: () => vi.fn(),
-}));
-
 const buildWrappedComponent = () => {
   const queryClient = new QueryClient();
 

@@ -12,7 +12,7 @@ const getLocationsMock = vi.fn().mockResolvedValue(MOCK_LOCATIONS);
 
 vi.mock('../../../../entities/locations/api', () => ({
   locationsQueries: {
-    getOne: () => ({
+    getCurrent: () => ({
       queryKey: ['locations', 'one'],
       queryFn: getGeolocationMock,
     }),
@@ -21,10 +21,6 @@ vi.mock('../../../../entities/locations/api', () => ({
       queryFn: getLocationsMock,
     }),
   },
-}));
-
-vi.mock('../../model/locations.hooks', () => ({
-  useChangeLocation: () => vi.fn(),
 }));
 
 const DEFAULT_PROPS: LocationsListProps = {

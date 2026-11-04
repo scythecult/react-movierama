@@ -8,7 +8,7 @@ export type ListProps<ItemType> = HTMLAttributes<HTMLDivElement> &
   }>;
 
 export const List = <ItemType,>(props: ListProps<ItemType>) => {
-  const { renderItem, items, className, ...restProps } = props;
+  const { renderItem, items = [], className, ...restProps } = props;
   const classNameFinal = clsx(className);
 
   return (

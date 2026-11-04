@@ -3,7 +3,7 @@ import { MOCK_LOCATIONS } from '../../../../../../../mocks/data/locations';
 import { LocationsItem, type LocationsItemProps } from './LocationsItem';
 
 const DEFAULT_PROPS: LocationsItemProps = {
-  locationsItem: MOCK_LOCATIONS[0],
+  location: MOCK_LOCATIONS[0],
   currentLocationId: 1,
   onClick: () => {},
 };
@@ -16,11 +16,11 @@ describe('LocationItem', () => {
   });
 
   test('should support the "locationItem" prop', () => {
-    let result = render(<LocationsItem {...DEFAULT_PROPS} locationsItem={MOCK_LOCATIONS[0]} />);
+    let result = render(<LocationsItem {...DEFAULT_PROPS} location={MOCK_LOCATIONS[0]} />);
 
     expect(result.container).toMatchSnapshot();
 
-    result = render(<LocationsItem {...DEFAULT_PROPS} locationsItem={MOCK_LOCATIONS[1]} />);
+    result = render(<LocationsItem {...DEFAULT_PROPS} location={MOCK_LOCATIONS[1]} />);
 
     expect(result.container).toMatchSnapshot();
   });

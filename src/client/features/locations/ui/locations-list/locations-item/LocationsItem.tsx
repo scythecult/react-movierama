@@ -1,16 +1,16 @@
 import clsx from 'clsx';
-import type { LocationsData } from '../../../../../entities/locations/model';
+import type { LocationData } from '../../../../../entities/locations/model';
 import styles from './styles.module.css';
 
 export type LocationsItemProps = {
-  locationsItem: LocationsData;
+  location: LocationData;
   currentLocationId: number;
   onClick: (id: number) => void;
 };
 
 export const LocationsItem = (props: LocationsItemProps) => {
-  const { locationsItem, currentLocationId, onClick } = props;
-  const { id, name } = locationsItem;
+  const { location, currentLocationId, onClick } = props;
+  const { id, name } = location;
 
   return (
     <div className={styles.locationsListItem} key={id} data-test-id="location-list-item">

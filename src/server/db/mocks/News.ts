@@ -1,4 +1,4 @@
-import type { NewsData } from '../../../client/entities/news/model';
+import type { NewsData } from '../../../common/entities/news';
 
 export class MockNewsDb {
   #news: NewsData[] = [];

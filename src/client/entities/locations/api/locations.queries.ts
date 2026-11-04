@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
-import { getGeolocation, getLocations } from './locations.loaders';
+import { detectCurrentLocation, getCurrentLocation, getLocations } from './locations.loaders';
 
 export const locationsQueries = {
   all: () => ['locations'],
@@ -12,14 +12,17 @@ export const locationsQueries = {
       initialData: [],
     }),
 
-  one: () => [...locationsQueries.all(), 'one'],
-  getOne: () =>
+  current: () => ['location', 'current'],
+  getCurrent: () =>
     queryOptions({
-      queryKey: [...locationsQueries.one()],
-      queryFn: getGeolocation,
-      initialData: {
-        id: 0,
-        name: '',
-      },
+      queryKey: locationsQueries.current(),
+      queryFn: getCurrentLocation,
+    }),
+
+  detect: () => ['location', 'detect'],
+  detectCurrent: () =>
+    queryOptions({
+      queryKey: locationsQueries.detect(),
+      queryFn: detectCurrentLocation,
     }),
 };

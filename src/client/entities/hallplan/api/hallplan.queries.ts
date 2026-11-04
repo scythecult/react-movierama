@@ -6,17 +6,10 @@ export const hallplanQueries = {
 
   one: () => [...hallplanQueries.all(), 'one'],
 
-  getOne: () =>
+  getOne: (locationId?: number) =>
     queryOptions({
-      queryKey: [...hallplanQueries.one()],
-      queryFn: getHallplan,
-      initialData: {
-        canvas: {
-          width: 0,
-          height: 0,
-        },
-        seats: [],
-        seatTypes: [],
-      },
+      queryKey: [...hallplanQueries.one(), locationId ?? null],
+      queryFn: () => getHallplan(locationId),
+      enabled: typeof locationId === 'number' && locationId > 0,
     }),
 };

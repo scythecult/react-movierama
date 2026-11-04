@@ -1,16 +1,20 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import type { NewsService } from '../../../services/news/NewsService';
+import type { ListNewsUseCase } from '../../../lib/use-cases/news/ListNewsUseCase';
+
+type NewsUseCaseMap = {
+  listNews: ListNewsUseCase;
+};
 
 export class NewsController {
-  #service;
+  #useCaseMap;
 
-  constructor(service: NewsService) {
-    this.#service = service;
+  constructor(useCaseMap: NewsUseCaseMap) {
+    this.#useCaseMap = useCaseMap;
   }
 
-  listNews = async (_: Request, response: Response) => {
-    const news = await this.#service.getAll();
+  list = async (_request: Request, response: Response) => {
+    const news = await this.#useCaseMap.listNews.execute();
 
     return response.status(StatusCodes.OK).json({ data: { news } });
   };

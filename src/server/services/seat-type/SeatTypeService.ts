@@ -1,6 +1,7 @@
 import type { MockSeatTypeDb } from '../../db/mocks/SeatType';
+import type { SeatTypeRepository } from '../../lib/ports/hallplan/SeatTypeRepository';
 
-export class SeatTypeService {
+export class SeatTypeService implements SeatTypeRepository {
   #db;
 
   constructor(db: MockSeatTypeDb) {

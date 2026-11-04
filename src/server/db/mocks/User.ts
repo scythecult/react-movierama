@@ -11,40 +11,22 @@ export class MockUserDb {
     return this.#users;
   }
 
-  async findUnique(email: string, omitPassword = false) {
-    const user = this.#users.find((item) => item.email === email);
-
-    if (user && omitPassword) {
-      // @ts-expect-error password is not returned to the client
-      // use prisma omit in future
-      delete user.password;
-    }
-
-    return user;
+  async findUnique(email: string) {
+    return this.#users.find((item) => item.email === email);
   }
 
-  async findUniqueById(id: string, omitPassword = false) {
-    const user = this.#users.find((item) => item.id === id);
+  async findUniqueByPhone(phone: string) {
+    return this.#users.find((item) => item.phone === phone);
+  }
 
-    if (user && omitPassword) {
-      // @ts-expect-error password is not returned to the client
-      // use prisma omit in future
-      delete user.password;
-    }
-
-    return user;
+  async findUniqueById(id: string) {
+    return this.#users.find((item) => item.id === id);
   }
 
   async create(user: User) {
     this.#users.push({ ...user, id: crypto.randomUUID() });
 
-    const newUser = this.#users[this.#users.length - 1];
-
-    // @ts-expect-error password is not returned to the client
-    // use prisma omit in future
-    delete newUser.password;
-
-    return newUser;
+    return this.#users[this.#users.length - 1];
   }
 
   async update() {

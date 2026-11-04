@@ -7,7 +7,7 @@ const getGeolocationMock = vi.fn().mockResolvedValue(MOCK_GEOLOCATION.current);
 
 vi.mock('../../../../entities/locations/api', () => ({
   locationsQueries: {
-    getOne: () => ({
+    getCurrent: () => ({
       queryKey: ['locations', 'one'],
       queryFn: getGeolocationMock,
       initialData: {
@@ -15,16 +15,11 @@ vi.mock('../../../../entities/locations/api', () => ({
         name: '',
       },
     }),
+    detectCurrent: () => ({
+      queryKey: ['locations', 'detect'],
+      queryFn: vi.fn().mockResolvedValue(null),
+    }),
   },
-}));
-
-vi.mock('../../../../shared/lib/modal', async () => {
-  const actual = await import('../../../../shared/lib/modal');
-  return { ...actual, useRenderModal: () => vi.fn() };
-});
-
-vi.mock('../../model/locations.hooks', () => ({
-  useChangeLocation: () => vi.fn(),
 }));
 
 describe('LocationsButton', () => {

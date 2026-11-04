@@ -1,6 +1,6 @@
 import { AppRoute } from '../../../../common/constants/routes';
+import type { NewsResponse } from '../../../../common/entities/news';
 import { apiClient } from '../../../shared/api/api-client/api-client';
-import type { NewsResponse } from '../model/news.types';
 
 export const getNews = async () => {
   const serverPayload = await apiClient.get<NewsResponse>(AppRoute.NEWS);

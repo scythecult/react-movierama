@@ -1,5 +1,14 @@
 import type { StatusCodes } from 'http-status-codes';
-import type { ErrorCode } from '../constants/error';
+
+export const ErrorCode = {
+  ERR_NF: 'ERR_NF',
+  ERR_VALID: 'ERR_VALID',
+  ERR_DB: 'ERR_DB',
+  ERR_AUTH: 'ERR_AUTH',
+  ERR_EXISTS: 'ERR_EXISTS',
+} as const;
+
+type ErrorCode = (typeof ErrorCode)[keyof typeof ErrorCode];
 
 type CustomErrorType = {
   message: string;

@@ -5,14 +5,6 @@ import { MOCK_FILMS } from '../../../../../../mocks/data/films';
 import { MOCK_NEWS } from '../../../../../../mocks/data/news';
 import { Main } from './Main';
 
-// vi.mock('../../../../entities/news/api/news.loaders', () => ({
-//   getNews: vi.fn().mockResolvedValue(MOCK_NEWS),
-// }));
-
-// vi.mock('../../../../entities/films/api/films.loaders', () => ({
-//   getFilms: vi.fn().mockResolvedValue(MOCK_FILMS),
-// }));
-
 const getNewsMock = vi.fn().mockResolvedValue(MOCK_NEWS);
 const getFilmsMock = vi.fn().mockResolvedValue(MOCK_FILMS);
 
