@@ -11,15 +11,10 @@ export type LocationsListProps = PropsWithClassName;
 export const LocationsList = (props: LocationsListProps) => {
   const { className } = props;
   const classNameFinal = clsx(styles.locationsList, className);
-  const { data: geolocation } = useQuery(locationsQueries.getOne());
+  const { data: currentLocation } = useQuery(locationsQueries.getCurrent());
   const { data: locations } = useQuery(locationsQueries.list());
   const changeLocation = useChangeLocation();
-
-  if (!geolocation?.name) {
-    return null;
-  }
-
-  const { id } = geolocation;
+  const currentLocationId = currentLocation?.id ?? 0;
 
   const handleLocationClick = (id: number) => changeLocation(id);
 
@@ -27,11 +22,11 @@ export const LocationsList = (props: LocationsListProps) => {
     <List
       className={classNameFinal}
       items={locations}
-      renderItem={(locationItem) => (
+      renderItem={(location) => (
         <LocationsItem
-          key={locationItem.id}
-          locationsItem={locationItem}
-          currentLocationId={id}
+          key={location.id}
+          location={location}
+          currentLocationId={currentLocationId}
           onClick={handleLocationClick}
         />
       )}

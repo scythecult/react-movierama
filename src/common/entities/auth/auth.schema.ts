@@ -46,10 +46,6 @@ export const signUpSchema = userSchema
     path: ['confirmPassword'],
   });
 
-export const signOutSchema = z.object({
-  email: emailSchema,
-});
-
 // TODO Check for usage
 export const sessionSchema = z.object({
   userId: z.string(),

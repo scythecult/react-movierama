@@ -1,13 +1,14 @@
 import type { MockHallplanMatrixDb } from '../../db/mocks/HallplanMatrix';
+import type { HallplanRepository } from '../../lib/ports/hallplan/HallplanRepository';
 
-export class HallplanMatrixService {
+export class HallplanMatrixService implements HallplanRepository {
   #db;
 
   constructor(db: MockHallplanMatrixDb) {
     this.#db = db;
   }
 
-  getOne = async (id: number) => {
-    return await this.#db.findUnique(id);
+  getByLocationId = async (locationId: number) => {
+    return await this.#db.findUnique(locationId);
   };
 }

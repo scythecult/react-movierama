@@ -8,10 +8,10 @@ exports[`Seats > should correspond default layout 1`] = `
     style="width: 400px; height: 400px;"
   >
     <div
-      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="false"
+      data-test-selected="true"
       style="left: 0px; top: 0px; width: 40px; height: 34px;"
     >
       <span
@@ -40,7 +40,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 0px; width: 40px; height: 34px;"
+      style="left: 170px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -54,7 +54,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 0px; width: 40px; height: 34px;"
+      style="left: 220px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -68,7 +68,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 0px; width: 40px; height: 34px;"
+      style="left: 270px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -82,7 +82,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 0px; width: 40px; height: 34px;"
+      style="left: 320px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -96,7 +96,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 0px; width: 40px; height: 34px;"
+      style="left: 440px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -110,7 +110,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 450px; top: 0px; width: 40px; height: 34px;"
+      style="left: 490px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -124,7 +124,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 500px; top: 0px; width: 40px; height: 34px;"
+      style="left: 540px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -138,7 +138,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 550px; top: 0px; width: 40px; height: 34px;"
+      style="left: 590px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -152,7 +152,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 600px; top: 0px; width: 40px; height: 34px;"
+      style="left: 640px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -194,7 +194,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 44px; width: 40px; height: 34px;"
+      style="left: 170px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -208,7 +208,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 44px; width: 40px; height: 34px;"
+      style="left: 220px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -222,7 +222,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 44px; width: 40px; height: 34px;"
+      style="left: 270px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -236,7 +236,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 44px; width: 40px; height: 34px;"
+      style="left: 320px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -250,7 +250,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 44px; width: 40px; height: 34px;"
+      style="left: 440px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -292,7 +292,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 88px; width: 40px; height: 34px;"
+      style="left: 170px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -306,7 +306,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 88px; width: 40px; height: 34px;"
+      style="left: 220px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -320,7 +320,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 88px; width: 40px; height: 34px;"
+      style="left: 270px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -334,7 +334,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 88px; width: 40px; height: 34px;"
+      style="left: 320px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -348,7 +348,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 88px; width: 40px; height: 34px;"
+      style="left: 440px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -390,7 +390,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 132px; width: 40px; height: 34px;"
+      style="left: 170px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -404,7 +404,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 132px; width: 40px; height: 34px;"
+      style="left: 220px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -418,7 +418,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 132px; width: 40px; height: 34px;"
+      style="left: 270px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -432,7 +432,7 @@ exports[`Seats > should correspond default layout 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 132px; width: 40px; height: 34px;"
+      style="left: 320px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -442,11 +442,11 @@ exports[`Seats > should correspond default layout 1`] = `
       </span>
     </div>
     <div
-      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="true"
-      style="left: 400px; top: 132px; width: 40px; height: 34px;"
+      data-test-selected="false"
+      style="left: 440px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -467,10 +467,10 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
     style="width: 400px; height: 100px;"
   >
     <div
-      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="false"
+      data-test-selected="true"
       style="left: 0px; top: 0px; width: 40px; height: 34px;"
     >
       <span
@@ -499,7 +499,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 0px; width: 40px; height: 34px;"
+      style="left: 170px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -513,7 +513,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 0px; width: 40px; height: 34px;"
+      style="left: 220px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -527,7 +527,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 0px; width: 40px; height: 34px;"
+      style="left: 270px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -541,7 +541,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 0px; width: 40px; height: 34px;"
+      style="left: 320px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -555,7 +555,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 0px; width: 40px; height: 34px;"
+      style="left: 440px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -569,7 +569,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 450px; top: 0px; width: 40px; height: 34px;"
+      style="left: 490px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -583,7 +583,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 500px; top: 0px; width: 40px; height: 34px;"
+      style="left: 540px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -597,7 +597,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 550px; top: 0px; width: 40px; height: 34px;"
+      style="left: 590px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -611,7 +611,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 600px; top: 0px; width: 40px; height: 34px;"
+      style="left: 640px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -653,7 +653,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 44px; width: 40px; height: 34px;"
+      style="left: 170px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -667,7 +667,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 44px; width: 40px; height: 34px;"
+      style="left: 220px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -681,7 +681,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 44px; width: 40px; height: 34px;"
+      style="left: 270px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -695,7 +695,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 44px; width: 40px; height: 34px;"
+      style="left: 320px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -709,7 +709,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 44px; width: 40px; height: 34px;"
+      style="left: 440px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -751,7 +751,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 88px; width: 40px; height: 34px;"
+      style="left: 170px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -765,7 +765,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 88px; width: 40px; height: 34px;"
+      style="left: 220px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -779,7 +779,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 88px; width: 40px; height: 34px;"
+      style="left: 270px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -793,7 +793,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 88px; width: 40px; height: 34px;"
+      style="left: 320px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -807,7 +807,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 88px; width: 40px; height: 34px;"
+      style="left: 440px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -849,7 +849,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 132px; width: 40px; height: 34px;"
+      style="left: 170px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -863,7 +863,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 132px; width: 40px; height: 34px;"
+      style="left: 220px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -877,7 +877,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 132px; width: 40px; height: 34px;"
+      style="left: 270px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -891,7 +891,7 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 132px; width: 40px; height: 34px;"
+      style="left: 320px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -901,11 +901,11 @@ exports[`Seats > should support the "canvasHeight" prop 1`] = `
       </span>
     </div>
     <div
-      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="true"
-      style="left: 400px; top: 132px; width: 40px; height: 34px;"
+      data-test-selected="false"
+      style="left: 440px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -926,10 +926,10 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
     style="width: 400px; height: 200px;"
   >
     <div
-      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="false"
+      data-test-selected="true"
       style="left: 0px; top: 0px; width: 40px; height: 34px;"
     >
       <span
@@ -958,7 +958,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 0px; width: 40px; height: 34px;"
+      style="left: 170px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -972,7 +972,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 0px; width: 40px; height: 34px;"
+      style="left: 220px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -986,7 +986,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 0px; width: 40px; height: 34px;"
+      style="left: 270px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1000,7 +1000,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 0px; width: 40px; height: 34px;"
+      style="left: 320px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1014,7 +1014,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 0px; width: 40px; height: 34px;"
+      style="left: 440px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1028,7 +1028,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 450px; top: 0px; width: 40px; height: 34px;"
+      style="left: 490px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1042,7 +1042,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 500px; top: 0px; width: 40px; height: 34px;"
+      style="left: 540px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1056,7 +1056,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 550px; top: 0px; width: 40px; height: 34px;"
+      style="left: 590px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1070,7 +1070,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 600px; top: 0px; width: 40px; height: 34px;"
+      style="left: 640px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1112,7 +1112,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 44px; width: 40px; height: 34px;"
+      style="left: 170px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1126,7 +1126,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 44px; width: 40px; height: 34px;"
+      style="left: 220px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1140,7 +1140,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 44px; width: 40px; height: 34px;"
+      style="left: 270px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1154,7 +1154,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 44px; width: 40px; height: 34px;"
+      style="left: 320px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1168,7 +1168,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 44px; width: 40px; height: 34px;"
+      style="left: 440px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1210,7 +1210,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 88px; width: 40px; height: 34px;"
+      style="left: 170px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1224,7 +1224,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 88px; width: 40px; height: 34px;"
+      style="left: 220px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1238,7 +1238,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 88px; width: 40px; height: 34px;"
+      style="left: 270px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1252,7 +1252,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 88px; width: 40px; height: 34px;"
+      style="left: 320px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1266,7 +1266,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 88px; width: 40px; height: 34px;"
+      style="left: 440px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1308,7 +1308,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 132px; width: 40px; height: 34px;"
+      style="left: 170px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1322,7 +1322,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 132px; width: 40px; height: 34px;"
+      style="left: 220px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1336,7 +1336,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 132px; width: 40px; height: 34px;"
+      style="left: 270px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1350,7 +1350,7 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 132px; width: 40px; height: 34px;"
+      style="left: 320px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1360,11 +1360,11 @@ exports[`Seats > should support the "canvasHeight" prop 2`] = `
       </span>
     </div>
     <div
-      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="true"
-      style="left: 400px; top: 132px; width: 40px; height: 34px;"
+      data-test-selected="false"
+      style="left: 440px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1385,10 +1385,10 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
     style="width: 100px; height: 400px;"
   >
     <div
-      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="false"
+      data-test-selected="true"
       style="left: 0px; top: 0px; width: 40px; height: 34px;"
     >
       <span
@@ -1417,7 +1417,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 0px; width: 40px; height: 34px;"
+      style="left: 170px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1431,7 +1431,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 0px; width: 40px; height: 34px;"
+      style="left: 220px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1445,7 +1445,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 0px; width: 40px; height: 34px;"
+      style="left: 270px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1459,7 +1459,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 0px; width: 40px; height: 34px;"
+      style="left: 320px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1473,7 +1473,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 0px; width: 40px; height: 34px;"
+      style="left: 440px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1487,7 +1487,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 450px; top: 0px; width: 40px; height: 34px;"
+      style="left: 490px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1501,7 +1501,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 500px; top: 0px; width: 40px; height: 34px;"
+      style="left: 540px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1515,7 +1515,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 550px; top: 0px; width: 40px; height: 34px;"
+      style="left: 590px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1529,7 +1529,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 600px; top: 0px; width: 40px; height: 34px;"
+      style="left: 640px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1571,7 +1571,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 44px; width: 40px; height: 34px;"
+      style="left: 170px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1585,7 +1585,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 44px; width: 40px; height: 34px;"
+      style="left: 220px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1599,7 +1599,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 44px; width: 40px; height: 34px;"
+      style="left: 270px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1613,7 +1613,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 44px; width: 40px; height: 34px;"
+      style="left: 320px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1627,7 +1627,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 44px; width: 40px; height: 34px;"
+      style="left: 440px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1669,7 +1669,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 88px; width: 40px; height: 34px;"
+      style="left: 170px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1683,7 +1683,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 88px; width: 40px; height: 34px;"
+      style="left: 220px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1697,7 +1697,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 88px; width: 40px; height: 34px;"
+      style="left: 270px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1711,7 +1711,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 88px; width: 40px; height: 34px;"
+      style="left: 320px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1725,7 +1725,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 88px; width: 40px; height: 34px;"
+      style="left: 440px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1767,7 +1767,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 132px; width: 40px; height: 34px;"
+      style="left: 170px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1781,7 +1781,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 132px; width: 40px; height: 34px;"
+      style="left: 220px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1795,7 +1795,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 132px; width: 40px; height: 34px;"
+      style="left: 270px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1809,7 +1809,7 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 132px; width: 40px; height: 34px;"
+      style="left: 320px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1819,11 +1819,11 @@ exports[`Seats > should support the "canvasWidth" prop 1`] = `
       </span>
     </div>
     <div
-      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="true"
-      style="left: 400px; top: 132px; width: 40px; height: 34px;"
+      data-test-selected="false"
+      style="left: 440px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1844,10 +1844,10 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
     style="width: 200px; height: 400px;"
   >
     <div
-      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="false"
+      data-test-selected="true"
       style="left: 0px; top: 0px; width: 40px; height: 34px;"
     >
       <span
@@ -1876,7 +1876,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 0px; width: 40px; height: 34px;"
+      style="left: 170px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1890,7 +1890,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 0px; width: 40px; height: 34px;"
+      style="left: 220px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1904,7 +1904,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 0px; width: 40px; height: 34px;"
+      style="left: 270px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1918,7 +1918,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 0px; width: 40px; height: 34px;"
+      style="left: 320px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1932,7 +1932,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 0px; width: 40px; height: 34px;"
+      style="left: 440px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1946,7 +1946,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 450px; top: 0px; width: 40px; height: 34px;"
+      style="left: 490px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1960,7 +1960,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 500px; top: 0px; width: 40px; height: 34px;"
+      style="left: 540px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1974,7 +1974,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 550px; top: 0px; width: 40px; height: 34px;"
+      style="left: 590px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -1988,7 +1988,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 600px; top: 0px; width: 40px; height: 34px;"
+      style="left: 640px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2030,7 +2030,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 44px; width: 40px; height: 34px;"
+      style="left: 170px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2044,7 +2044,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 44px; width: 40px; height: 34px;"
+      style="left: 220px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2058,7 +2058,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 44px; width: 40px; height: 34px;"
+      style="left: 270px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2072,7 +2072,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 44px; width: 40px; height: 34px;"
+      style="left: 320px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2086,7 +2086,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 44px; width: 40px; height: 34px;"
+      style="left: 440px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2128,7 +2128,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 88px; width: 40px; height: 34px;"
+      style="left: 170px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2142,7 +2142,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 88px; width: 40px; height: 34px;"
+      style="left: 220px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2156,7 +2156,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 88px; width: 40px; height: 34px;"
+      style="left: 270px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2170,7 +2170,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 88px; width: 40px; height: 34px;"
+      style="left: 320px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2184,7 +2184,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 88px; width: 40px; height: 34px;"
+      style="left: 440px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2226,7 +2226,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 132px; width: 40px; height: 34px;"
+      style="left: 170px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2240,7 +2240,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 132px; width: 40px; height: 34px;"
+      style="left: 220px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2254,7 +2254,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 132px; width: 40px; height: 34px;"
+      style="left: 270px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2268,7 +2268,7 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 132px; width: 40px; height: 34px;"
+      style="left: 320px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2278,11 +2278,11 @@ exports[`Seats > should support the "canvasWidth" prop 2`] = `
       </span>
     </div>
     <div
-      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="true"
-      style="left: 400px; top: 132px; width: 40px; height: 34px;"
+      data-test-selected="false"
+      style="left: 440px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2335,7 +2335,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 0px; width: 40px; height: 34px;"
+      style="left: 170px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2349,7 +2349,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 0px; width: 40px; height: 34px;"
+      style="left: 220px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2363,7 +2363,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 0px; width: 40px; height: 34px;"
+      style="left: 270px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2377,7 +2377,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 0px; width: 40px; height: 34px;"
+      style="left: 320px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2391,7 +2391,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 0px; width: 40px; height: 34px;"
+      style="left: 440px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2405,7 +2405,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 450px; top: 0px; width: 40px; height: 34px;"
+      style="left: 490px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2419,7 +2419,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 500px; top: 0px; width: 40px; height: 34px;"
+      style="left: 540px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2433,7 +2433,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 550px; top: 0px; width: 40px; height: 34px;"
+      style="left: 590px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2447,7 +2447,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 600px; top: 0px; width: 40px; height: 34px;"
+      style="left: 640px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2489,7 +2489,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 44px; width: 40px; height: 34px;"
+      style="left: 170px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2503,7 +2503,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 44px; width: 40px; height: 34px;"
+      style="left: 220px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2517,7 +2517,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 44px; width: 40px; height: 34px;"
+      style="left: 270px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2531,7 +2531,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 44px; width: 40px; height: 34px;"
+      style="left: 320px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2545,7 +2545,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 44px; width: 40px; height: 34px;"
+      style="left: 440px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2587,7 +2587,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 88px; width: 40px; height: 34px;"
+      style="left: 170px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2601,7 +2601,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 88px; width: 40px; height: 34px;"
+      style="left: 220px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2615,7 +2615,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 88px; width: 40px; height: 34px;"
+      style="left: 270px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2629,7 +2629,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 88px; width: 40px; height: 34px;"
+      style="left: 320px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2643,7 +2643,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 88px; width: 40px; height: 34px;"
+      style="left: 440px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2685,7 +2685,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 132px; width: 40px; height: 34px;"
+      style="left: 170px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2699,7 +2699,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 132px; width: 40px; height: 34px;"
+      style="left: 220px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2713,7 +2713,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 132px; width: 40px; height: 34px;"
+      style="left: 270px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2727,7 +2727,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 132px; width: 40px; height: 34px;"
+      style="left: 320px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2741,7 +2741,7 @@ exports[`Seats > should support the "cart" prop 1`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 132px; width: 40px; height: 34px;"
+      style="left: 440px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2762,10 +2762,10 @@ exports[`Seats > should support the "cart" prop 2`] = `
     style="width: 400px; height: 400px;"
   >
     <div
-      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="false"
+      data-test-selected="true"
       style="left: 0px; top: 0px; width: 40px; height: 34px;"
     >
       <span
@@ -2794,7 +2794,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 0px; width: 40px; height: 34px;"
+      style="left: 170px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2808,7 +2808,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 0px; width: 40px; height: 34px;"
+      style="left: 220px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2822,7 +2822,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 0px; width: 40px; height: 34px;"
+      style="left: 270px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2836,7 +2836,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 0px; width: 40px; height: 34px;"
+      style="left: 320px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2850,7 +2850,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 0px; width: 40px; height: 34px;"
+      style="left: 440px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2864,7 +2864,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 450px; top: 0px; width: 40px; height: 34px;"
+      style="left: 490px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2878,7 +2878,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 500px; top: 0px; width: 40px; height: 34px;"
+      style="left: 540px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2892,7 +2892,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 550px; top: 0px; width: 40px; height: 34px;"
+      style="left: 590px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2906,7 +2906,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 600px; top: 0px; width: 40px; height: 34px;"
+      style="left: 640px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2948,7 +2948,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 44px; width: 40px; height: 34px;"
+      style="left: 170px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2962,7 +2962,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 44px; width: 40px; height: 34px;"
+      style="left: 220px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2976,7 +2976,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 44px; width: 40px; height: 34px;"
+      style="left: 270px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -2990,7 +2990,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 44px; width: 40px; height: 34px;"
+      style="left: 320px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3004,7 +3004,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 44px; width: 40px; height: 34px;"
+      style="left: 440px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3046,7 +3046,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 88px; width: 40px; height: 34px;"
+      style="left: 170px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3060,7 +3060,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 88px; width: 40px; height: 34px;"
+      style="left: 220px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3074,7 +3074,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 88px; width: 40px; height: 34px;"
+      style="left: 270px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3088,7 +3088,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 88px; width: 40px; height: 34px;"
+      style="left: 320px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3102,7 +3102,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 88px; width: 40px; height: 34px;"
+      style="left: 440px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3144,7 +3144,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 132px; width: 40px; height: 34px;"
+      style="left: 170px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3158,7 +3158,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 132px; width: 40px; height: 34px;"
+      style="left: 220px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3172,7 +3172,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 132px; width: 40px; height: 34px;"
+      style="left: 270px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3186,7 +3186,7 @@ exports[`Seats > should support the "cart" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 132px; width: 40px; height: 34px;"
+      style="left: 320px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3196,11 +3196,11 @@ exports[`Seats > should support the "cart" prop 2`] = `
       </span>
     </div>
     <div
-      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="true"
-      style="left: 400px; top: 132px; width: 40px; height: 34px;"
+      data-test-selected="false"
+      style="left: 440px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3231,10 +3231,10 @@ exports[`Seats > should support the "seats" prop 2`] = `
     style="width: 400px; height: 400px;"
   >
     <div
-      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="false"
+      data-test-selected="true"
       style="left: 0px; top: 0px; width: 40px; height: 34px;"
     >
       <span
@@ -3263,7 +3263,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 0px; width: 40px; height: 34px;"
+      style="left: 170px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3277,7 +3277,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 0px; width: 40px; height: 34px;"
+      style="left: 220px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3291,7 +3291,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 0px; width: 40px; height: 34px;"
+      style="left: 270px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3305,7 +3305,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 0px; width: 40px; height: 34px;"
+      style="left: 320px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3319,7 +3319,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 0px; width: 40px; height: 34px;"
+      style="left: 440px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3333,7 +3333,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 450px; top: 0px; width: 40px; height: 34px;"
+      style="left: 490px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3347,7 +3347,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 500px; top: 0px; width: 40px; height: 34px;"
+      style="left: 540px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3361,7 +3361,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 550px; top: 0px; width: 40px; height: 34px;"
+      style="left: 590px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3375,7 +3375,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 600px; top: 0px; width: 40px; height: 34px;"
+      style="left: 640px; top: 0px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3417,7 +3417,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 44px; width: 40px; height: 34px;"
+      style="left: 170px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3431,7 +3431,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 44px; width: 40px; height: 34px;"
+      style="left: 220px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3445,7 +3445,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 44px; width: 40px; height: 34px;"
+      style="left: 270px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3459,7 +3459,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 44px; width: 40px; height: 34px;"
+      style="left: 320px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3473,7 +3473,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 44px; width: 40px; height: 34px;"
+      style="left: 440px; top: 44px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3515,7 +3515,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 88px; width: 40px; height: 34px;"
+      style="left: 170px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3529,7 +3529,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 88px; width: 40px; height: 34px;"
+      style="left: 220px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3543,7 +3543,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 88px; width: 40px; height: 34px;"
+      style="left: 270px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3557,7 +3557,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 88px; width: 40px; height: 34px;"
+      style="left: 320px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3571,7 +3571,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 400px; top: 88px; width: 40px; height: 34px;"
+      style="left: 440px; top: 88px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3613,7 +3613,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 150px; top: 132px; width: 40px; height: 34px;"
+      style="left: 170px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3627,7 +3627,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 200px; top: 132px; width: 40px; height: 34px;"
+      style="left: 220px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3641,7 +3641,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 250px; top: 132px; width: 40px; height: 34px;"
+      style="left: 270px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3655,7 +3655,7 @@ exports[`Seats > should support the "seats" prop 2`] = `
       data-test-disabled="false"
       data-test-id="seat"
       data-test-selected="false"
-      style="left: 300px; top: 132px; width: 40px; height: 34px;"
+      style="left: 320px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"
@@ -3665,11 +3665,11 @@ exports[`Seats > should support the "seats" prop 2`] = `
       </span>
     </div>
     <div
-      class="_seat_e52c81 _regular_e52c81 _selected_e52c81"
+      class="_seat_e52c81 _regular_e52c81 _free_e52c81"
       data-test-disabled="false"
       data-test-id="seat"
-      data-test-selected="true"
-      style="left: 400px; top: 132px; width: 40px; height: 34px;"
+      data-test-selected="false"
+      style="left: 440px; top: 132px; width: 40px; height: 34px;"
     >
       <span
         class="_seatPlace_e52c81"

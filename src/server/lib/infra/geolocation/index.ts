@@ -1,11 +1,12 @@
 import { Config } from '../../../../common/env';
 import { GeolocationApi } from './GeolocationApi';
 import { GeolocationMockApi } from './GeolocationMockApi';
+import type { IpGeocoder } from './IpGeocoder';
 
-let geolocationApi = new GeolocationApi();
+let ipGeocoder: IpGeocoder = new GeolocationApi();
 
 if (Config.isMockGeolocation) {
-  geolocationApi = new GeolocationMockApi();
+  ipGeocoder = new GeolocationMockApi();
 }
 
-export { geolocationApi };
+export { ipGeocoder };

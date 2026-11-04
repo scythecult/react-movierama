@@ -99,6 +99,7 @@ export default defineConfig([
         {
           caughtErrors: 'none',
           argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
         },
       ],
 

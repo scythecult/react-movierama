@@ -3,6 +3,8 @@ import { ApiVersion } from '../../../../common/constants/routes';
 import { Config } from '../../../../common/env';
 import type { ErrorMap } from '../error/error';
 
+const ERROR_STATUSES = [StatusCodes.UNPROCESSABLE_ENTITY, StatusCodes.UNAUTHORIZED, StatusCodes.CONFLICT];
+
 type QueryParams = Record<string, string | number>;
 
 type ServerPayload<ServerData = unknown> = {
@@ -20,7 +22,7 @@ export class ApiClient {
   }
 
   async handleResponse<ResponseData>(response: Response) {
-    if (response.status === StatusCodes.UNPROCESSABLE_ENTITY || response.status === StatusCodes.UNAUTHORIZED) {
+    if (ERROR_STATUSES.includes(response.status)) {
       const errorResponse = await response.json();
 
       return { data: {}, errorMap: errorResponse.error.errors };
@@ -84,6 +86,14 @@ export class ApiClient {
     const url = this.constructUrl(endpoint);
 
     const response = await this.send('POST', url.toString(), body);
+
+    return this.handleResponse<ResponseData>(response);
+  }
+
+  public async put<ResponseData>(endpoint: string, body: unknown): Promise<ServerPayload<ResponseData>> {
+    const url = this.constructUrl(endpoint);
+
+    const response = await this.send('PUT', url.toString(), body);
 
     return this.handleResponse<ResponseData>(response);
   }

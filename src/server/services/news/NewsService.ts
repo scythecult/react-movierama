@@ -1,6 +1,7 @@
 import type { MockNewsDb } from '../../db/mocks/News';
+import type { NewsRepository } from '../../lib/ports/news/NewsRepository';
 
-export class NewsService {
+export class NewsService implements NewsRepository {
   #db;
 
   constructor(db: MockNewsDb) {

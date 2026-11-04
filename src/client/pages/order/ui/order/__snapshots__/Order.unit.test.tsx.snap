@@ -17,7 +17,7 @@ exports[`Order > should correspond default layout 1`] = `
       <div
         class="_canvas_c34224"
         data-test-id="seats-container"
-        style="width: 640px; height: 166px;"
+        style="width: 680px; height: 166px;"
       >
         <div
           class="_seat_e52c81 _regular_e52c81 _free_e52c81"
@@ -94,7 +94,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 150px; top: 0px; width: 40px; height: 34px;"
+          style="left: 170px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -129,7 +129,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 200px; top: 0px; width: 40px; height: 34px;"
+          style="left: 220px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -164,7 +164,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 250px; top: 0px; width: 40px; height: 34px;"
+          style="left: 270px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -199,7 +199,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 300px; top: 0px; width: 40px; height: 34px;"
+          style="left: 320px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -234,7 +234,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 400px; top: 0px; width: 40px; height: 34px;"
+          style="left: 440px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -269,7 +269,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 450px; top: 0px; width: 40px; height: 34px;"
+          style="left: 490px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -304,7 +304,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 500px; top: 0px; width: 40px; height: 34px;"
+          style="left: 540px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -339,7 +339,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 550px; top: 0px; width: 40px; height: 34px;"
+          style="left: 590px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -374,7 +374,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 600px; top: 0px; width: 40px; height: 34px;"
+          style="left: 640px; top: 0px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -479,7 +479,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 150px; top: 44px; width: 40px; height: 34px;"
+          style="left: 170px; top: 44px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -514,7 +514,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 200px; top: 44px; width: 40px; height: 34px;"
+          style="left: 220px; top: 44px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -549,7 +549,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 250px; top: 44px; width: 40px; height: 34px;"
+          style="left: 270px; top: 44px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -584,7 +584,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 300px; top: 44px; width: 40px; height: 34px;"
+          style="left: 320px; top: 44px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -619,7 +619,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 400px; top: 44px; width: 40px; height: 34px;"
+          style="left: 440px; top: 44px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -724,7 +724,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 150px; top: 88px; width: 40px; height: 34px;"
+          style="left: 170px; top: 88px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -759,7 +759,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 200px; top: 88px; width: 40px; height: 34px;"
+          style="left: 220px; top: 88px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -794,7 +794,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 250px; top: 88px; width: 40px; height: 34px;"
+          style="left: 270px; top: 88px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -829,7 +829,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 300px; top: 88px; width: 40px; height: 34px;"
+          style="left: 320px; top: 88px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -864,7 +864,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 400px; top: 88px; width: 40px; height: 34px;"
+          style="left: 440px; top: 88px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -969,7 +969,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 150px; top: 132px; width: 40px; height: 34px;"
+          style="left: 170px; top: 132px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -1004,7 +1004,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 200px; top: 132px; width: 40px; height: 34px;"
+          style="left: 220px; top: 132px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -1039,7 +1039,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 250px; top: 132px; width: 40px; height: 34px;"
+          style="left: 270px; top: 132px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -1074,7 +1074,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 300px; top: 132px; width: 40px; height: 34px;"
+          style="left: 320px; top: 132px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"
@@ -1109,7 +1109,7 @@ exports[`Order > should correspond default layout 1`] = `
           data-test-disabled="false"
           data-test-id="seat"
           data-test-selected="false"
-          style="left: 400px; top: 132px; width: 40px; height: 34px;"
+          style="left: 440px; top: 132px; width: 40px; height: 34px;"
         >
           <span
             class="_seatPlace_e52c81"

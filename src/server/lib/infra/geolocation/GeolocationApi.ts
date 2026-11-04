@@ -1,18 +1,20 @@
-import type { CityToIdMapKey } from '../../constants/locations';
-import type { GeolocationInterface } from '../../types/geolocation';
+import type { IpGeocoder } from './IpGeocoder';
 
-export class GeolocationApi implements GeolocationInterface {
-  async getLocation(clientIp: string): Promise<CityToIdMapKey> {
-    // TODO Refactor
-    const response = await fetch('http://ip-api.com/json/');
+const DEFAULT_CITY_NAME = 'Moscow';
+
+export class GeolocationApi implements IpGeocoder {
+  async resolveCityName(clientIp: string): Promise<string> {
+    // TODO clientIp - now is detecting like localhost, api doesn't provide correct location
+    // const url = clientIp ? `http://ip-api.com/json/${encodeURIComponent(clientIp)}` : 'http://ip-api.com/json/';
+    const url = 'http://ip-api.com/json/';
+    const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error(`Ip-detection service network response was not ok, clientIp: ${clientIp}`);
     }
 
-    const result = await response.json();
-    const { city = 'Moscow' }: { city: CityToIdMapKey } = result;
+    const result: { city?: string } = await response.json();
 
-    return city;
+    return result.city || DEFAULT_CITY_NAME;
   }
 }

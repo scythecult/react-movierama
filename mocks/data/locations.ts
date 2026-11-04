@@ -1,124 +1,62 @@
-import type { GeolocationData } from '../../src/client/entities/locations/model';
-
-export const MOCK_CITY_TO_ID_MAP = {
-  Yaroslavl: 20,
-  Moscow: 1,
-  Astrakhan: 23,
-  Vladivostok: 30,
-  Vladimir: 3,
-  Volgograd: 5,
-  Ekaterinburg: 6,
-  Izhevsk: 21,
-  Irkutsk: 29,
-  Kazan: 7,
-  Krasnodar: 8,
-  Krasnoyarsk: 9,
-  Perm: 10,
-} as const;
-
-export type MockCityToIdMapKey = keyof typeof MOCK_CITY_TO_ID_MAP;
-
-export const MOCK_CURRENT_LOCATION = {
-  location: {
-    id: -1,
-    name: '',
-  },
-  setLocation(location: GeolocationData) {
-    this.location = location;
-  },
-
-  getLocation() {
-    return this.location;
-  },
-};
-
 export const MOCK_LOCATIONS = [
   {
     id: 1,
     name: 'Москва и МО',
+    alias: 'Moscow',
   },
   {
     id: 23,
     name: 'Астрахань',
+    alias: 'Astrakhan',
   },
   {
     id: 30,
     name: 'Владивосток',
+    alias: 'Vladivostok',
   },
   {
     id: 3,
     name: 'Владимир',
+    alias: 'Vladimir',
   },
   {
     id: 5,
     name: 'Волгоград',
-  },
-  {
-    id: 25,
-    name: 'Волжский',
+    alias: 'Volgograd',
   },
   {
     id: 6,
     name: 'Екатеринбург',
+    alias: 'Ekaterinburg',
   },
   {
     id: 21,
     name: 'Ижевск',
+    alias: 'Izhevsk',
   },
   {
     id: 29,
     name: 'Иркутск',
+    alias: 'Irkutsk',
   },
   {
     id: 7,
     name: 'Казань',
+    alias: 'Kazan',
   },
   {
     id: 18,
     name: 'Красноярск',
-  },
-  {
-    id: 28,
-    name: 'Липецк',
+    alias: 'Krasnoyarsk',
   },
   {
     id: 9,
     name: 'Пермь',
-  },
-  {
-    id: 10,
-    name: 'Ростов-на-Дону',
-  },
-  {
-    id: 24,
-    name: 'Рязань',
-  },
-  {
-    id: 27,
-    name: 'Самара',
-  },
-  {
-    id: 13,
-    name: 'Тамбов',
-  },
-  {
-    id: 16,
-    name: 'Томск',
-  },
-  {
-    id: 11,
-    name: 'Тюмень',
-  },
-  {
-    id: 26,
-    name: 'Уфа',
-  },
-  {
-    id: 12,
-    name: 'Челябинск',
+    alias: 'Perm',
   },
   {
     id: 20,
     name: 'Ярославль',
+    alias: 'Yaroslavl',
   },
 ];

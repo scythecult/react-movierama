@@ -1,1 +1,6 @@
-export type { GeolocationData, GeolocationResponse, LocationsData, LocationsResponse } from './locations.types';
+export type {
+  LocationData,
+  LocationResponse,
+  LocationsResponse,
+  SetCurrentLocationRequest,
+} from '../../../../common/entities/locations';

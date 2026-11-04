@@ -46,6 +46,7 @@ export const UserSignInForm = (props: UserSignInFormProps) => {
     defaultValues: { email: '', phone: '', tab: SignInMethodName.EMAIL, isPersistent: false },
     shouldUnregister: true,
   });
+  const isFormErrorsVisible = Boolean(errors?.root?.serverError);
 
   const handleFormSubmit = async (data: FormStateOutput) => {
     try {
@@ -93,6 +94,8 @@ export const UserSignInForm = (props: UserSignInFormProps) => {
     <form className={styles.userSignInForm} noValidate autoComplete="false" onSubmit={handleSubmit(handleFormSubmit)}>
       <div className={styles.userSignInFormFields}>
         <h2 className={styles.userSignInFormTitle}>Auth method</h2>
+
+        {isFormErrorsVisible && <p className={styles.userSignInFormErrors}>{errors?.root?.serverError.message}</p>}
 
         <Tabs className={styles.userSignInFormTabs} items={tabs} onChange={handleTabChange} />
 

@@ -2,7 +2,7 @@ import type { Meta, StoryFn } from '@storybook/react-vite';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { MOCK_LOCATIONS } from '../../../../../../mocks/data/locations';
 import { AppStore } from '../../../../app/store/AppStore';
-import { LocationsQueryKey } from '../../../../entities/locations/api';
+import { locationsQueries } from '../../../../entities/locations/api';
 import { ModalProvider } from '../../../../shared/lib/modal';
 import { AppStoreProvider } from '../../../../shared/lib/store';
 import { LocationsButton } from './LocationsButton';
@@ -17,9 +17,16 @@ export default {
   },
 } satisfies Meta<typeof LocationsButton>;
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+      staleTime: Number.POSITIVE_INFINITY,
+    },
+  },
+});
 
-queryClient.setQueryData([LocationsQueryKey.all], { data: MOCK_LOCATIONS });
+queryClient.setQueryData(locationsQueries.getCurrent().queryKey, MOCK_LOCATIONS[0]);
 
 const Template: StoryFn = () => (
   <QueryClientProvider client={queryClient}>

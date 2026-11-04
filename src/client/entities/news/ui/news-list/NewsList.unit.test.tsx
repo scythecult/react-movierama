@@ -1,42 +1,30 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render } from '@testing-library/react';
+import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_NEWS } from '../../../../../../mocks/data/news';
 import { NewsList, type NewsListProps } from './NewsList';
 
+const getNewsMock = vi.fn().mockResolvedValue(MOCK_NEWS);
+
 vi.mock('../../api', () => ({
   newsQueries: {
-    list: vi.fn(),
+    list: () => ({
+      queryKey: ['news'],
+      queryFn: getNewsMock,
+    }),
   },
 }));
 
-vi.mock('@tanstack/react-query', async () => {
-  const actual = await vi.importActual('@tanstack/react-query');
-  return {
-    ...actual,
-    useQuery: vi.fn(() => ({
-      isLoading: false,
-      data: MOCK_NEWS,
-    })),
-  };
-});
-
 describe('NewsList', () => {
-  let queryClient: QueryClient;
-
-  beforeEach(() => {
-    // Create a clean client before each test
-    queryClient = new QueryClient({
+  const renderNews = (props: NewsListProps = {}) => {
+    const queryClient = new QueryClient({
       defaultOptions: {
         queries: {
-          // Disable retries to speed up tests
           retry: false,
         },
       },
     });
-  });
 
-  const renderNews = (props: NewsListProps = {}) => {
     return render(
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
@@ -46,18 +34,24 @@ describe('NewsList', () => {
     );
   };
 
-  test('should correspond default layout', () => {
+  test('should correspond default layout', async () => {
     const result = renderNews();
+
+    await waitForElementToBeRemoved(() => screen.queryByText('Loading...'));
 
     expect(result.container).toMatchSnapshot();
   });
 
-  test('should support the "className" prop', () => {
+  test('should support the "className" prop', async () => {
     let result = renderNews({ className: 'custom-class' });
+
+    await waitForElementToBeRemoved(() => screen.queryByText('Loading...'));
 
     expect(result.container).toMatchSnapshot();
 
     result = renderNews({ className: 'custom-class-v2' });
+
+    await waitForElementToBeRemoved(() => screen.queryByText('Loading...'));
 
     expect(result.container).toMatchSnapshot();
   });

@@ -1,9 +1,10 @@
 export const MOCK_USER = {
   id: '1',
-  phone: '+79991234567',
+  phone: '123123123123',
   firstName: 'Алексей',
   lastName: 'Иванов',
   email: 'test2@asd.asd',
+  // asdASD123
   password: '$2b$10$LDOl7FrMoNOP5p8PV0ScsOjdB2hyJewRGSkWOEtZhhktcXS4Qd4NW', // в реальности — хэш на сервере
   isLegalChecked: true,
   isPromoChecked: false,

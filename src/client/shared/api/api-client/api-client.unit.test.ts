@@ -71,7 +71,45 @@ describe('ApiClient', () => {
       });
     });
 
-    test('should throw error if response.ok is false (except 422)', async () => {
+    test('should handle UNAUTHORIZED (401) and return errorMap', async () => {
+      const mockErrorResponse = {
+        error: {
+          errors: { 'root.serverError': 'Email, Phone or password is incorrect' },
+        },
+      };
+
+      const response = new Response(JSON.stringify(mockErrorResponse), {
+        status: StatusCodes.UNAUTHORIZED,
+      });
+
+      const result = await client.handleResponse(response);
+
+      expect(result).toEqual({
+        data: {},
+        errorMap: mockErrorResponse.error.errors,
+      });
+    });
+
+    test('should handle CONFLICT (409) and return errorMap', async () => {
+      const mockErrorResponse = {
+        error: {
+          errors: { email: 'Already exists' },
+        },
+      };
+
+      const response = new Response(JSON.stringify(mockErrorResponse), {
+        status: StatusCodes.CONFLICT,
+      });
+
+      const result = await client.handleResponse(response);
+
+      expect(result).toEqual({
+        data: {},
+        errorMap: mockErrorResponse.error.errors,
+      });
+    });
+
+    test('should throw error if response status is not a mapped client error', async () => {
       const response = new Response(null, {
         status: StatusCodes.INTERNAL_SERVER_ERROR,
       });

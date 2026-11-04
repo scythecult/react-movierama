@@ -15,7 +15,6 @@ export const AppRoute = {
   GIFT_CARD: '/giftcard',
   LOCATIONS: '/locations',
   LOCATION: '/location',
-  GEOLOCATION: '/geolocation',
   PRIVACY: '/privacy',
   AUTH: '/auth',
 };
@@ -25,6 +24,7 @@ export const ApiRoute = {
   SIGN_UP: '/signup',
   SIGN_OUT: '/signout',
   ME: '/me',
+  DETECT: '/detect',
 };
 
 export const AppPath = {

@@ -116,6 +116,7 @@ exports[`Layout > should correspond default layout 1`] = `
                 />
               </svg>
             </div>
+            Choose Location
           </button>
         </div>
       </div>

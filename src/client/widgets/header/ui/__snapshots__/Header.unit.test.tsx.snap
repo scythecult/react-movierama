@@ -116,6 +116,7 @@ exports[`Header > should correspond default layout 1`] = `
                 />
               </svg>
             </div>
+            Choose Location
           </button>
         </div>
       </div>
@@ -240,6 +241,7 @@ exports[`Header > should support the "className" prop 1`] = `
                 />
               </svg>
             </div>
+            Choose Location
           </button>
         </div>
       </div>
@@ -364,6 +366,7 @@ exports[`Header > should support the "className" prop 2`] = `
                 />
               </svg>
             </div>
+            Choose Location
           </button>
         </div>
       </div>

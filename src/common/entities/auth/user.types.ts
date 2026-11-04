@@ -1,5 +1,5 @@
 import type z from 'zod';
-import type { signInSchema, signOutSchema, signUpSchema, userSchema } from './auth.schema';
+import type { signInSchema, signUpSchema, userSchema } from './auth.schema';
 
 // TODO Possibly rename whole module
 export type UserData = z.infer<typeof userSchema>;
@@ -11,5 +11,3 @@ export type UserResponse = {
 export type UserSignInRequest = z.infer<typeof signInSchema>;
 
 export type UserSignUpRequest = z.infer<typeof signUpSchema>;
-
-export type UserSignOutRequest = z.infer<typeof signOutSchema>;
