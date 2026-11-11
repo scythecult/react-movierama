@@ -1,7 +1,9 @@
 import { hydrateRoot } from 'react-dom/client';
+import { createBrowserRouter } from 'react-router';
 import { enableMocks } from '../../../../mocks';
 import { queryClient } from '../../shared/api/query-client';
 import { createRootContainer } from '../../shared/lib/react';
+import { appRoutes } from '../routers/appRoutes';
 import { ClientApp } from './ClientApp';
 
 try {
@@ -11,9 +13,10 @@ try {
     hydrateRoot(
       root,
       <ClientApp
+        initialState={window.__appInitialState__}
         queryClient={queryClient}
         queryState={window.__pageQueryData__}
-        initialState={window.__appInitialState__}
+        router={createBrowserRouter(appRoutes)}
       />,
     );
   });

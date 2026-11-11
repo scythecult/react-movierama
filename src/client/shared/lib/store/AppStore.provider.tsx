@@ -6,11 +6,13 @@ type AppStoreProviderProps = PropsWithChildren<{ initialState?: Partial<Combined
 
 export const AppStoreProvider = (props: AppStoreProviderProps) => {
   const { store, children, initialState } = props;
-  const [appStore] = useState<BoundAppStore>(() => store);
+  const [appStore] = useState<BoundAppStore>(() => {
+    if (initialState) {
+      store.setState(initialState);
+    }
 
-  if (initialState) {
-    appStore.setState(initialState);
-  }
+    return store;
+  });
 
   return <AppStoreContext value={appStore}>{children}</AppStoreContext>;
 };

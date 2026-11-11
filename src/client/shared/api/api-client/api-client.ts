@@ -2,8 +2,35 @@ import { StatusCodes } from 'http-status-codes';
 import { ApiVersion } from '../../../../common/constants/routes';
 import { Config } from '../../../../common/env';
 import type { ErrorMap } from '../error/error';
+import { getRequestContext } from '../request-context';
 
 const ERROR_STATUSES = [StatusCodes.UNPROCESSABLE_ENTITY, StatusCodes.UNAUTHORIZED, StatusCodes.CONFLICT];
+
+const buildHeaders = () => {
+  const headers: Record<string, string> = {
+    'Content-Type': 'application/json',
+  };
+  const requestContext = getRequestContext();
+
+  if (!requestContext) {
+    return headers;
+  }
+
+  const forwardedHeaders = {
+    cookie: requestContext.cookie,
+    'x-forwarded-for': requestContext.forwardedFor,
+    'user-agent': requestContext.userAgent,
+    'accept-language': requestContext.acceptLanguage,
+  };
+
+  for (const [name, value] of Object.entries(forwardedHeaders)) {
+    if (value) {
+      headers[name] = value;
+    }
+  }
+
+  return headers;
+};
 
 type QueryParams = Record<string, string | number>;
 
@@ -46,13 +73,14 @@ export class ApiClient {
   }
 
   async send(method: string, url: string, body?: unknown) {
+    const requestContext = getRequestContext();
+
     return await fetch(url, {
       method,
       ...(body ? { body: JSON.stringify(body) } : {}),
+      ...(requestContext?.signal ? { signal: requestContext.signal } : {}),
       credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: buildHeaders(),
     });
   }
 

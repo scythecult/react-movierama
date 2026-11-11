@@ -1,4 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
+import { STALE_INITIAL_DATA_UPDATED_AT } from '../../../shared/api/query-client';
 import { detectCurrentLocation, getCurrentLocation, getLocations } from './locations.loaders';
 
 export const locationsQueries = {
@@ -10,6 +11,7 @@ export const locationsQueries = {
       queryKey: [...locationsQueries.lists()],
       queryFn: getLocations,
       initialData: [],
+      initialDataUpdatedAt: STALE_INITIAL_DATA_UPDATED_AT,
     }),
 
   current: () => ['location', 'current'],

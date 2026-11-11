@@ -1,4 +1,5 @@
 import { queryOptions } from '@tanstack/react-query';
+import { STALE_INITIAL_DATA_UPDATED_AT } from '../../../shared/api/query-client';
 import { getMe } from './auth.loaders';
 
 export const authQueries = {
@@ -18,5 +19,6 @@ export const authQueries = {
         isPromoChecked: false,
         isLegalChecked: false,
       },
+      initialDataUpdatedAt: STALE_INITIAL_DATA_UPDATED_AT,
     }),
 };

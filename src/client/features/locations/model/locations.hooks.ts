@@ -18,13 +18,13 @@ export const useChangeLocation = () => {
 
 export const useLocationCheck = () => {
   // 1. Current location request
-  const { data, isSuccess, isFetching } = useQuery(locationsQueries.getCurrent());
+  const { data, isSuccess, isLoading } = useQuery(locationsQueries.getCurrent());
   const isMissingLocation = isSuccess && !isSelectedLocation(data);
 
   // 2. Detection request (fires if current location is missing)
   const {
     data: detectData,
-    isFetching: detectFetching,
+    isLoading: isDetecting,
     isSuccess: detectIsSuccess,
   } = useQuery({
     ...locationsQueries.detectCurrent(),
@@ -34,7 +34,8 @@ export const useLocationCheck = () => {
 
   return {
     location: [data, detectData].find(isSelectedLocation) ?? null,
-    isResolving: isFetching || detectFetching,
+    // isLoading is the first fetch. A later refetch keeps the city that is already on screen.
+    isResolving: isLoading || (isMissingLocation && isDetecting),
     isSuccess: isSuccess && (!isMissingLocation || detectIsSuccess),
   };
 };

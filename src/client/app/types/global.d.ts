@@ -6,6 +6,11 @@ declare global {
   interface Window {
     __pageQueryData__?: DehydratedState;
     __appInitialState__?: Partial<CombinedAppStore>;
+    __staticRouterHydrationData?: {
+      loaderData: Record<string, unknown>;
+      actionData: Record<string, unknown> | null;
+      errors: Record<string, unknown> | null;
+    };
   }
 
   type CombinedAppStore = CartSlice;

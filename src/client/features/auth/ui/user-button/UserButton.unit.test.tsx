@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { fireEvent, render, screen, waitForElementToBeRemoved } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { MOCK_USER } from '../../../../../../mocks/data/user';
 import { UserButton, type UserButtonProps } from './UserButton';
 
@@ -67,8 +67,7 @@ describe('UserButton', () => {
   test('should correspond default layout', async () => {
     const result = renderUserButton();
 
-    // Ждем, пока исчезнет лоадер. Это гарантирует, что данные загрузились и разметка обновилась
-    await waitForElementToBeRemoved(() => screen.getByTestId('skeleton'));
+    await within(result.container).findByRole('button', { name: /Алексей Иванов/ });
 
     expect(result.container).toMatchSnapshot();
   });
@@ -76,18 +75,21 @@ describe('UserButton', () => {
   test('should support the "className" prop', async () => {
     let result = renderUserButton({ className: 'custom-class' });
 
-    await waitForElementToBeRemoved(() => screen.getByTestId('skeleton'));
+    await within(result.container).findByRole('button', { name: /Алексей Иванов/ });
 
     expect(result.container).toMatchSnapshot();
 
     result = renderUserButton({ className: 'custom-class-2' });
+
+    await within(result.container).findByRole('button', { name: /Алексей Иванов/ });
+
     expect(result.container).toMatchSnapshot();
   });
 
   test('should call signOut without arguments', async () => {
-    renderUserButton();
+    const result = renderUserButton();
 
-    await waitForElementToBeRemoved(() => screen.getByTestId('skeleton'));
+    await within(result.container).findByRole('button', { name: /Алексей Иванов/ });
 
     fireEvent.click(screen.getByRole('button', { name: /Алексей Иванов/ }));
     fireEvent.click(screen.getByRole('button', { name: 'Logout' }));

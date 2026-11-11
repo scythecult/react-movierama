@@ -13,10 +13,11 @@ export type UserButtonProps = PropsWithClassName;
 
 export const UserButton = (props: UserButtonProps) => {
   const { className } = props;
-  const {
-    data: { id, email, firstName, lastName },
-    isFetching,
-  } = useQuery(authQueries.getOne());
+  const { data, isPending } = useQuery(authQueries.getOne());
+  const id = data?.id ?? '';
+  const email = data?.email ?? '';
+  const firstName = data?.firstName ?? '';
+  const lastName = data?.lastName ?? '';
   const signOut = useSignOut();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const isLoggedIn = Boolean(id);
@@ -38,13 +39,13 @@ export const UserButton = (props: UserButtonProps) => {
   return (
     <>
       <div className={styles.userButton} data-test-id="user-button">
-        {!isFetching && (
+        {isPending ? (
+          <Skeleton width="100%" height="100%" />
+        ) : (
           <IconButton className={className} name={CustomIconName.ACCOUNT} onClick={handleUserButtonClick}>
             {userTextFinal}
           </IconButton>
         )}
-
-        {isFetching && <Skeleton width="100%" height="100%" />}
       </div>
 
       {isModalOpen && (
