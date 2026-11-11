@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import clsx from 'clsx';
-import type { FilmData } from '../../../../entities/films/model';
+import type { FilmData } from '../../../../../common/entities/films';
 import { List } from '../../../../shared/ui/list/List';
 import { filmsQueries } from '../../api';
 import { FilmListItem } from './film-list-item/FilmListItem';
@@ -21,7 +21,7 @@ export const FilmsList = (props: FilmsListProps) => {
   }
 
   // TODO Add proper check or add fallback values to hook
-  if (!films.length) {
+  if (!films?.length) {
     return <div>Error</div>;
   }
 

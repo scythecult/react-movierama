@@ -1,57 +1,96 @@
-import { dehydrate } from '@tanstack/react-query';
+import { defaultShouldDehydrateQuery, dehydrate } from '@tanstack/react-query';
 import type { Request } from 'express';
+import { AsyncLocalStorage } from 'node:async_hooks';
 import { renderToString } from 'react-dom/server';
-import { AppRoute } from '../../../common/constants/routes';
-import { authQueries } from '../../entities/auth/api';
-import { filmsQueries } from '../../entities/films/api';
-import { locationsQueries } from '../../entities/locations/api';
-import { newsQueries } from '../../entities/news/api';
-import { ensureResolvedLocation } from '../../features/locations/model/locations.resolvers';
-import { prefetchOrder } from '../../pages/order/model/order.loaders';
-import { queryClient } from '../../shared/api/query-client';
+import { createStaticHandler, createStaticRouter, type StaticHandlerContext } from 'react-router';
+import { createQueryClient } from '../../shared/api/query-client';
+import type { SsrRequestContext } from '../../shared/api/request-context';
+import { runWithRequestContext, setRequestContextStorage, toSsrRequestContext } from '../../shared/api/request-context';
+import { appRoutes } from '../routers/appRoutes';
+import { createAppStore, toPersistedAppState } from '../store/AppStore';
+import { createDocumentRequest } from './document-request';
 import { ServerApp } from './ServerApp';
+
+const requestContextStorage = new AsyncLocalStorage<SsrRequestContext>();
+
+setRequestContextStorage(requestContextStorage);
+
+const staticHandler = createStaticHandler(appRoutes);
 
 export type RenderSsrTemplate = typeof renderSsrTemplate;
 
-const prefetchPage = async (url: string) => {
-  switch (url) {
-    case AppRoute.ROOT:
-      await Promise.all([queryClient.query(filmsQueries.list()), queryClient.query(newsQueries.list())]);
-      break;
-    case AppRoute.ORDER:
-      await prefetchOrder(queryClient);
-      break;
-  }
+export type RouterHydrationState = {
+  loaderData: StaticHandlerContext['loaderData'];
+  actionData: StaticHandlerContext['actionData'];
+  errors: StaticHandlerContext['errors'];
 };
-// On the server, we need to prefetch data before we generate/render the markup,
-// we need to dehydrate that data into a serializable format we can embed in the markup,
-// and on the client we need to hydrate that data into a React Query cache
-// so we can avoid doing a new fetch on the client.
-export const renderSsrTemplate = async (request: Request) => {
-  const { path } = request;
-  const url = path === AppRoute.ROOT ? path : request.path.replace(/\/$/, '');
 
-  // TODO Think about pass query params to prefetch
-  // console.log(request.query);
-  console.info({ url });
+const readRouteError = (context: StaticHandlerContext) => {
+  if (!context.errors) {
+    return undefined;
+  }
 
-  // Auth, the location list, and the resolved location feed the header on every page.
-  await Promise.all([
-    queryClient.query(authQueries.getOne()),
-    queryClient.query(locationsQueries.list()),
-    ensureResolvedLocation(queryClient),
-    prefetchPage(url),
-  ]);
+  return Object.values(context.errors)[0];
+};
 
-  // Get current page data to pass to zustand
-  const dehydratedQueryState = dehydrate(queryClient);
+const emptyHydrationState = (): RouterHydrationState => ({
+  loaderData: {},
+  actionData: null,
+  errors: null,
+});
 
-  const html = renderToString(<ServerApp queryClient={queryClient} url={url} />);
+export const renderSsrTemplate = async (request: Request, signal?: AbortSignal) => {
+  // Retries would hold the document open. The browser retries after hydration.
+  const queryClient = createQueryClient({ retry: false });
+  const store = createAppStore();
 
-  const zustandState = {
-    // Example:
-    // ...(typeof locationsData === 'undefined' ? {} : { locations: locationsData }),
-  };
+  return runWithRequestContext({ ...toSsrRequestContext(request), signal, queryClient }, async () => {
+    const context = await staticHandler.query(createDocumentRequest(request, signal));
 
-  return { html, dehydratedQueryState, zustandState };
+    if (context instanceof Response) {
+      const location = context.headers.get('location');
+
+      if (!location) {
+        throw new Error('SSR redirect is missing a location');
+      }
+
+      return {
+        html: '',
+        dehydratedQueryState: dehydrate(queryClient),
+        routerHydrationState: emptyHydrationState(),
+        zustandState: toPersistedAppState(store.getState()),
+        statusCode: context.status,
+        location,
+      };
+    }
+
+    const error = readRouteError(context);
+
+    if (error) {
+      throw error;
+    }
+
+    if (signal?.aborted) {
+      throw signal.reason ?? new DOMException('The SSR render was aborted', 'AbortError');
+    }
+
+    const router = createStaticRouter(staticHandler.dataRoutes, context);
+    const dehydratedQueryState = dehydrate(queryClient, {
+      shouldDehydrateQuery: (query) => defaultShouldDehydrateQuery(query) || query.state.status === 'error',
+    });
+    const html = renderToString(<ServerApp context={context} queryClient={queryClient} router={router} store={store} />);
+    const routerHydrationState: RouterHydrationState = {
+      loaderData: context.loaderData,
+      actionData: context.actionData ?? null,
+      errors: context.errors ?? null,
+    };
+
+    return {
+      html,
+      dehydratedQueryState,
+      routerHydrationState,
+      zustandState: toPersistedAppState(store.getState()),
+      statusCode: context.statusCode,
+    };
+  });
 };

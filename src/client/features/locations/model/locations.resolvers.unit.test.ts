@@ -49,6 +49,21 @@ describe('ensureResolvedLocation', () => {
     expect(detectCurrent).toHaveBeenCalledTimes(1);
   });
 
+  test('should detect a location when the current request fails', async () => {
+    getCurrent.mockRejectedValue(new Error('location unavailable'));
+    detectCurrent.mockResolvedValue(moscow);
+
+    await expect(ensureResolvedLocation(queryClient)).resolves.toEqual(moscow);
+  });
+
+  test('should stop when the request is aborted', async () => {
+    const abort = new DOMException('The SSR render timed out', 'TimeoutError');
+    getCurrent.mockRejectedValue(abort);
+
+    await expect(ensureResolvedLocation(queryClient)).rejects.toBe(abort);
+    expect(detectCurrent).not.toHaveBeenCalled();
+  });
+
   test('should return null when no location can be resolved', async () => {
     getCurrent.mockResolvedValue({ id: 0, name: '' });
     detectCurrent.mockResolvedValue(null);

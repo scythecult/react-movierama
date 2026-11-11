@@ -13,6 +13,8 @@ export const createApiServer = async () => {
   const apiServer = express();
 
   apiServer.disable('x-powered-by');
+  // SSR forwards the viewer address in X-Forwarded-For. Browsers cannot set that header.
+  apiServer.set('trust proxy', true);
   apiServer.use(cors({ origin: Config.ssrUrl, credentials: true }));
   apiServer.use(compression());
   apiServer.use(cookieParser());

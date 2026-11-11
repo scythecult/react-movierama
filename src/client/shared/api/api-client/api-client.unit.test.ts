@@ -1,5 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 import { ApiVersion } from '../../../../common/constants/routes';
+import { runWithRequestContext, setRequestContextStorage } from '../request-context';
 import { ApiClient } from './api-client';
 
 const fetchMock = vi.fn();
@@ -26,6 +27,7 @@ describe('ApiClient', () => {
   });
 
   afterEach(() => {
+    setRequestContextStorage(undefined);
     vi.restoreAllMocks();
   });
 
@@ -191,6 +193,80 @@ describe('ApiClient', () => {
         },
       });
       expect(result).toEqual({ data: mockData });
+    });
+
+    test('GET: should forward the SSR request context', async () => {
+      let currentContext: Parameters<typeof runWithRequestContext>[0] | undefined;
+
+      setRequestContextStorage({
+        run: (context, callback) => {
+          currentContext = context;
+
+          try {
+            return callback();
+          } finally {
+            currentContext = undefined;
+          }
+        },
+        getStore: () => currentContext,
+      });
+
+      fetchMock.mockResolvedValueOnce(new Response(JSON.stringify({ data: {} }), { status: StatusCodes.OK }));
+
+      await runWithRequestContext(
+        {
+          cookie: 'connect.sid=abc',
+          forwardedFor: '203.0.113.5',
+          userAgent: 'TestAgent',
+          acceptLanguage: 'ru',
+        },
+        () => client.get('/items'),
+      );
+
+      expect(fetchMock).toHaveBeenCalledWith(`${mockBaseUrl}${ApiVersion.V1}/items`, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+          cookie: 'connect.sid=abc',
+          'x-forwarded-for': '203.0.113.5',
+          'user-agent': 'TestAgent',
+          'accept-language': 'ru',
+        },
+      });
+
+      setRequestContextStorage(undefined);
+    });
+
+    test('GET: should abort the SSR fetch with the request signal', async () => {
+      const controller = new AbortController();
+      let currentContext: Parameters<typeof runWithRequestContext>[0] | undefined;
+
+      setRequestContextStorage({
+        run: (context, callback) => {
+          currentContext = context;
+
+          try {
+            return callback();
+          } finally {
+            currentContext = undefined;
+          }
+        },
+        getStore: () => currentContext,
+      });
+
+      fetchMock.mockResolvedValueOnce(new Response(JSON.stringify({ data: {} }), { status: StatusCodes.OK }));
+
+      await runWithRequestContext({ signal: controller.signal }, () => client.get('/items'));
+
+      expect(fetchMock).toHaveBeenCalledWith(`${mockBaseUrl}${ApiVersion.V1}/items`, {
+        method: 'GET',
+        credentials: 'include',
+        signal: controller.signal,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
     });
   });
 });
