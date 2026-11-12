@@ -1,7 +1,8 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { type QueryClient,QueryClientProvider } from '@tanstack/react-query';
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_FILMS } from '../../../../../../mocks/data/films';
+import { createTestQueryClient } from '../../../../../tests/unit/helpers';
 import { FilmsList, type FilmsListProps } from './FilmsList';
 
 const getFilmsMock = vi.fn().mockResolvedValue(MOCK_FILMS);
@@ -23,15 +24,7 @@ describe('FilmsList', () => {
   let queryClient: QueryClient;
 
   beforeEach(() => {
-    // Create a clean client before each test
-    queryClient = new QueryClient({
-      defaultOptions: {
-        queries: {
-          // Disable retries to speed up tests
-          retry: false,
-        },
-      },
-    });
+    queryClient = createTestQueryClient();
   });
 
   const renderFilmsList = (props: FilmsListProps = DEFAULT_PROPS) => {

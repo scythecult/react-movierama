@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
+import { createMockResponse } from '../../../../tests/unit/helpers';
 import type { ListFilmsUseCase } from '../../../lib/use-cases/films/ListFilmsUseCase';
 import { FilmsController } from './FilmsController';
 
@@ -15,10 +16,7 @@ describe('FilmsController', () => {
       listFilms: listFilms as unknown as ListFilmsUseCase,
     });
 
-    mockResponse = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn().mockReturnThis(),
-    };
+    mockResponse = createMockResponse();
   });
 
   test('should return the film catalog', async () => {

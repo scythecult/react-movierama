@@ -1,6 +1,7 @@
 import type { NextFunction, Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { z, type ZodError } from 'zod';
+import { createMockResponse } from '../../../tests/unit/helpers';
 import { ErrorCode } from '../../lib/errors/CustomError';
 import { CustomError } from '../../lib/errors/CustomError';
 import * as errorHelpers from '../../lib/helpers/error';
@@ -18,10 +19,7 @@ describe('errorMiddleware', () => {
   beforeEach(() => {
     mockRequest = {};
 
-    mockResponse = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn().mockReturnThis(),
-    };
+    mockResponse = createMockResponse();
 
     mockNext = vi.fn();
     vi.clearAllMocks();

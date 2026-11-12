@@ -1,8 +1,9 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { type QueryClient,QueryClientProvider } from '@tanstack/react-query';
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_GEOLOCATION } from '../../../../../mocks/data/geolocation';
 import { MOCK_USER } from '../../../../../mocks/data/user';
+import { createTestQueryClient,TEST_EMPTY_LOCATION, TEST_EMPTY_USER } from '../../../../tests/unit/helpers';
 import { ModalProvider } from '../../../shared/lib/modal';
 import { AppStoreProvider } from '../../../shared/lib/store';
 import { AppStore } from '../../store/AppStore';
@@ -16,10 +17,7 @@ vi.mock('../../../entities/locations/api', () => ({
     getCurrent: () => ({
       queryKey: ['geolocation'],
       queryFn: getGeolocationMock,
-      initialData: {
-        id: 0,
-        name: '',
-      },
+      initialData: TEST_EMPTY_LOCATION,
     }),
     detectCurrent: () => ({
       queryKey: ['locations', 'detect'],
@@ -33,16 +31,7 @@ vi.mock('../../../entities/auth/api', () => ({
     getOne: () => ({
       queryKey: ['auth', 'one'],
       queryFn: getMeMock,
-      initialData: {
-        id: 0,
-        phone: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        gender: '',
-        wantsPromotions: false,
-      },
+      initialData: TEST_EMPTY_USER,
     }),
   },
 }));
@@ -51,13 +40,7 @@ describe('Layout', () => {
   let queryClient: QueryClient;
 
   beforeEach(() => {
-    queryClient = new QueryClient({
-      defaultOptions: {
-        queries: {
-          retry: false,
-        },
-      },
-    });
+    queryClient = createTestQueryClient();
   });
 
   const renderLayout = () => {

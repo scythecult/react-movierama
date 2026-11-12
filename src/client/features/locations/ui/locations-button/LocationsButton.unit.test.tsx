@@ -1,6 +1,7 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { type QueryClient,QueryClientProvider } from '@tanstack/react-query';
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { MOCK_GEOLOCATION } from '../../../../../../mocks/data/geolocation';
+import { createTestQueryClient,TEST_EMPTY_LOCATION } from '../../../../../tests/unit/helpers';
 import { LocationsButton } from './LocationsButton';
 
 const getGeolocationMock = vi.fn().mockResolvedValue(MOCK_GEOLOCATION.current);
@@ -10,10 +11,7 @@ vi.mock('../../../../entities/locations/api', () => ({
     getCurrent: () => ({
       queryKey: ['locations', 'one'],
       queryFn: getGeolocationMock,
-      initialData: {
-        id: 0,
-        name: '',
-      },
+      initialData: TEST_EMPTY_LOCATION,
     }),
     detectCurrent: () => ({
       queryKey: ['locations', 'detect'],
@@ -26,13 +24,7 @@ describe('LocationsButton', () => {
   let queryClient: QueryClient;
 
   beforeEach(() => {
-    queryClient = new QueryClient({
-      defaultOptions: {
-        queries: {
-          retry: false,
-        },
-      },
-    });
+    queryClient = createTestQueryClient();
   });
 
   const renderLocationsButton = () => {

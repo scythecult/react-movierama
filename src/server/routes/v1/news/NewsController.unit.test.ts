@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
+import { createMockResponse } from '../../../../tests/unit/helpers';
 import type { ListNewsUseCase } from '../../../lib/use-cases/news/ListNewsUseCase';
 import { NewsController } from './NewsController';
 
@@ -15,10 +16,7 @@ describe('NewsController', () => {
       listNews: listNews as unknown as ListNewsUseCase,
     });
 
-    mockResponse = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn().mockReturnThis(),
-    };
+    mockResponse = createMockResponse();
   });
 
   test('should return the news catalog', async () => {

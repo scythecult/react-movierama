@@ -1,19 +1,10 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
+import { captureError, createMockResponse } from '../../../../tests/unit/helpers';
 import { ErrorCode } from '../../../lib/errors/CustomError';
 import { HallplanError, HallplanNotFoundError } from '../../../lib/errors/hallplan/HallplanError';
 import type { GetHallplanUseCase } from '../../../lib/use-cases/hallplan/GetHallplanUseCase';
 import { HallplanController } from './HallplanController';
-
-const captureError = async (action: () => Promise<unknown>) => {
-  try {
-    await action();
-  } catch (error) {
-    return error;
-  }
-
-  throw new Error('Expected the action to throw');
-};
 
 describe('HallplanController', () => {
   const execute = vi.fn();
@@ -23,10 +14,7 @@ describe('HallplanController', () => {
   beforeEach(() => {
     execute.mockReset();
     controller = new HallplanController({ getHallplan: { execute } as unknown as GetHallplanUseCase });
-    mockResponse = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn().mockReturnThis(),
-    };
+    mockResponse = createMockResponse();
   });
 
   test('should return the hallplan for a location query', async () => {

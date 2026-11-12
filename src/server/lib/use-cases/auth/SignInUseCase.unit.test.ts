@@ -1,35 +1,13 @@
-import type { UserData } from '../../../../common/entities/auth';
+import { buildUser, createSession } from '../../../../tests/unit/helpers';
 import type { UserService } from '../../../services/user/UserService';
 import { AlreadyAuthenticatedError, InvalidCredentialsError } from '../../errors/auth/AuthError';
 import { comparePasswords } from '../../helpers/auth';
-import type { SessionStore } from '../../helpers/session';
 import { SignInUseCase } from './SignInUseCase';
 
 vi.mock('../../helpers/auth', () => ({
   comparePasswords: vi.fn(),
   hashPassword: vi.fn(),
 }));
-
-const buildUser = (): UserData => ({
-  id: 'user-1',
-  phone: '123123123123',
-  firstName: 'Alex',
-  lastName: 'Ivanov',
-  email: 'test@asd.asd',
-  password: 'hashed-password',
-  isLegalChecked: true,
-  isPromoChecked: false,
-});
-
-const createSession = () => {
-  const session = {
-    regenerate: vi.fn().mockResolvedValue(undefined),
-    setUser: vi.fn(),
-    destroy: vi.fn().mockResolvedValue(undefined),
-  };
-
-  return session satisfies SessionStore;
-};
 
 describe('SignInUseCase', () => {
   const findByEmail = vi.fn();

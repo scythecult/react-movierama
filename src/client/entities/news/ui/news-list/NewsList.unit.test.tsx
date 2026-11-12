@@ -1,7 +1,8 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_NEWS } from '../../../../../../mocks/data/news';
+import { createTestQueryClient } from '../../../../../tests/unit/helpers';
 import { NewsList, type NewsListProps } from './NewsList';
 
 const getNewsMock = vi.fn().mockResolvedValue(MOCK_NEWS);
@@ -17,13 +18,7 @@ vi.mock('../../api', () => ({
 
 describe('NewsList', () => {
   const renderNews = (props: NewsListProps = {}) => {
-    const queryClient = new QueryClient({
-      defaultOptions: {
-        queries: {
-          retry: false,
-        },
-      },
-    });
+    const queryClient = createTestQueryClient();
 
     return render(
       <QueryClientProvider client={queryClient}>

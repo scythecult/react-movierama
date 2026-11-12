@@ -1,6 +1,7 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { type QueryClient,QueryClientProvider } from '@tanstack/react-query';
 import { fireEvent, render, screen, within } from '@testing-library/react';
 import { MOCK_USER } from '../../../../../../mocks/data/user';
+import { createTestQueryClient,TEST_EMPTY_USER } from '../../../../../tests/unit/helpers';
 import { UserButton, type UserButtonProps } from './UserButton';
 
 const signOutMock = vi.hoisted(() => vi.fn());
@@ -12,16 +13,7 @@ vi.mock('../../../../entities/auth/api', () => ({
     getOne: () => ({
       queryKey: ['auth', 'one'],
       queryFn: getMeMock,
-      initialData: {
-        id: 0,
-        phone: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        gender: '',
-        wantsPromotions: false,
-      },
+      initialData: TEST_EMPTY_USER,
     }),
   },
 }));
@@ -35,15 +27,7 @@ describe('UserButton', () => {
   let modalRoot: HTMLDivElement;
 
   beforeEach(() => {
-    // Create a clean client before each test
-    queryClient = new QueryClient({
-      defaultOptions: {
-        queries: {
-          // Disable retries to speed up tests
-          retry: false,
-        },
-      },
-    });
+    queryClient = createTestQueryClient();
 
     modalRoot = document.createElement('div');
     modalRoot.id = 'modals';
