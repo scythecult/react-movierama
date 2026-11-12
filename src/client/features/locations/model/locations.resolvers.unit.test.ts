@@ -1,4 +1,5 @@
-import { QueryClient } from '@tanstack/react-query';
+import type { QueryClient } from '@tanstack/react-query';
+import { createTestQueryClient,TEST_EMPTY_LOCATION, TEST_MOSCOW_LOCATION } from '../../../../tests/unit/helpers';
 import { ensureResolvedLocation } from './locations.resolvers';
 
 const getCurrent = vi.fn();
@@ -17,43 +18,35 @@ vi.mock('../../../entities/locations/api', () => ({
   },
 }));
 
-const moscow = { id: 1, name: 'Москва и МО' };
-
 describe('ensureResolvedLocation', () => {
   let queryClient: QueryClient;
 
   beforeEach(() => {
-    queryClient = new QueryClient({
-      defaultOptions: {
-        queries: {
-          retry: false,
-        },
-      },
-    });
+    queryClient = createTestQueryClient();
     getCurrent.mockReset();
     detectCurrent.mockReset();
   });
 
   test('should return the current location when it is selected', async () => {
-    getCurrent.mockResolvedValue(moscow);
+    getCurrent.mockResolvedValue(TEST_MOSCOW_LOCATION);
 
-    await expect(ensureResolvedLocation(queryClient)).resolves.toEqual(moscow);
+    await expect(ensureResolvedLocation(queryClient)).resolves.toEqual(TEST_MOSCOW_LOCATION);
     expect(detectCurrent).not.toHaveBeenCalled();
   });
 
   test('should detect a location when the current one is missing', async () => {
     getCurrent.mockResolvedValue(null);
-    detectCurrent.mockResolvedValue(moscow);
+    detectCurrent.mockResolvedValue(TEST_MOSCOW_LOCATION);
 
-    await expect(ensureResolvedLocation(queryClient)).resolves.toEqual(moscow);
+    await expect(ensureResolvedLocation(queryClient)).resolves.toEqual(TEST_MOSCOW_LOCATION);
     expect(detectCurrent).toHaveBeenCalledTimes(1);
   });
 
   test('should detect a location when the current request fails', async () => {
     getCurrent.mockRejectedValue(new Error('location unavailable'));
-    detectCurrent.mockResolvedValue(moscow);
+    detectCurrent.mockResolvedValue(TEST_MOSCOW_LOCATION);
 
-    await expect(ensureResolvedLocation(queryClient)).resolves.toEqual(moscow);
+    await expect(ensureResolvedLocation(queryClient)).resolves.toEqual(TEST_MOSCOW_LOCATION);
   });
 
   test('should stop when the request is aborted', async () => {
@@ -65,7 +58,7 @@ describe('ensureResolvedLocation', () => {
   });
 
   test('should return null when no location can be resolved', async () => {
-    getCurrent.mockResolvedValue({ id: 0, name: '' });
+    getCurrent.mockResolvedValue(TEST_EMPTY_LOCATION);
     detectCurrent.mockResolvedValue(null);
 
     await expect(ensureResolvedLocation(queryClient)).resolves.toBeNull();
@@ -73,7 +66,7 @@ describe('ensureResolvedLocation', () => {
 
   test('should reuse the cached resolution', async () => {
     getCurrent.mockResolvedValue(null);
-    detectCurrent.mockResolvedValue(moscow);
+    detectCurrent.mockResolvedValue(TEST_MOSCOW_LOCATION);
 
     await ensureResolvedLocation(queryClient);
     await ensureResolvedLocation(queryClient);

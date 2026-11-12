@@ -1,8 +1,6 @@
-import type { LocationData } from '../../../../common/entities/locations';
+import { TEST_MOSCOW_LOCATION } from '../../../../tests/unit/helpers';
 import type { CurrentLocationService } from '../../../services/current-location/CurrentLocationService';
 import { GetCurrentLocationUseCase } from './GetCurrentLocationUseCase';
-
-const moscow: LocationData = { id: 1, name: 'Москва и МО' };
 
 describe('GetCurrentLocationUseCase', () => {
   const getOne = vi.fn();
@@ -26,8 +24,8 @@ describe('GetCurrentLocationUseCase', () => {
   });
 
   test('should return the selected location', async () => {
-    getOne.mockResolvedValue(moscow);
+    getOne.mockResolvedValue(TEST_MOSCOW_LOCATION);
 
-    await expect(useCase.execute()).resolves.toEqual(moscow);
+    await expect(useCase.execute()).resolves.toEqual(TEST_MOSCOW_LOCATION);
   });
 });

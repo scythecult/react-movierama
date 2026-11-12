@@ -1,20 +1,11 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
+import { captureError, createMockResponse,TEST_MOSCOW_LOCATION } from '../../../../tests/unit/helpers';
 import { ErrorCode } from '../../../lib/errors/CustomError';
 import { LocationError, LocationNotFoundError } from '../../../lib/errors/locations/LocationError';
 import type { GetLocationUseCase } from '../../../lib/use-cases/locations/GetLocationUseCase';
 import type { ListLocationsUseCase } from '../../../lib/use-cases/locations/ListLocationsUseCase';
 import { LocationsController } from './LocationsController';
-
-const captureError = async (action: () => Promise<unknown>) => {
-  try {
-    await action();
-  } catch (error) {
-    return error;
-  }
-
-  throw new Error('Expected the action to throw');
-};
 
 describe('LocationsController', () => {
   const listLocations = { execute: vi.fn() };
@@ -31,14 +22,11 @@ describe('LocationsController', () => {
       getLocation: getLocation as unknown as GetLocationUseCase,
     });
 
-    mockResponse = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn().mockReturnThis(),
-    };
+    mockResponse = createMockResponse();
   });
 
   test('should return the location catalog', async () => {
-    const locations = [{ id: 1, name: 'Москва и МО' }];
+    const locations = [TEST_MOSCOW_LOCATION];
     listLocations.execute.mockResolvedValue(locations);
 
     await controller.list({} as Request, mockResponse as Response);
@@ -49,7 +37,7 @@ describe('LocationsController', () => {
   });
 
   test('should return one location', async () => {
-    const location = { id: 1, name: 'Москва и МО' };
+    const location = TEST_MOSCOW_LOCATION;
     const request = { params: { id: '1' } } as unknown as Request;
     getLocation.execute.mockResolvedValue(location);
 

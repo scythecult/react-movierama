@@ -1,7 +1,8 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClientProvider } from '@tanstack/react-query';
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
 import { BrowserRouter } from 'react-router';
 import { MOCK_CANVAS_SIZE, MOCK_SEAT_TYPES, MOCK_SEATS_DATA } from '../../../../../../mocks/data/seats';
+import { createTestQueryClient } from '../../../../../tests/unit/helpers';
 import { AppStore } from '../../../../app/store/AppStore';
 import { AppStoreProvider } from '../../../../shared/lib/store';
 import { Order } from './Order';
@@ -36,13 +37,7 @@ vi.mock('../../../../entities/locations/api', () => ({
 }));
 
 const buildWrappedComponent = () => {
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        retry: false,
-      },
-    },
-  });
+  const queryClient = createTestQueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>

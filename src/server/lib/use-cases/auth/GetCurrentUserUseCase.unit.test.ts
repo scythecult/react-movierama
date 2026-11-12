@@ -1,17 +1,6 @@
-import type { UserData } from '../../../../common/entities/auth';
+import { buildUser } from '../../../../tests/unit/helpers';
 import type { UserService } from '../../../services/user/UserService';
 import { GetCurrentUserUseCase } from './GetCurrentUserUseCase';
-
-const buildUser = (): UserData => ({
-  id: 'user-1',
-  phone: '123123123123',
-  firstName: 'Alex',
-  lastName: 'Ivanov',
-  email: 'test@asd.asd',
-  password: 'hashed-password',
-  isLegalChecked: true,
-  isPromoChecked: false,
-});
 
 describe('GetCurrentUserUseCase', () => {
   const getOneById = vi.fn();

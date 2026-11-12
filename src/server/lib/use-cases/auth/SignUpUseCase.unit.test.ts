@@ -1,9 +1,9 @@
 import type { UserSignUpRequest } from '../../../../common/entities/auth';
+import { createSession } from '../../../../tests/unit/helpers';
 import type { UserService } from '../../../services/user/UserService';
 import type { User } from '../../entities/user/User';
 import { AlreadyAuthenticatedError, AlreadyExistsError } from '../../errors/auth/AuthError';
 import { hashPassword } from '../../helpers/auth';
-import type { SessionStore } from '../../helpers/session';
 import { SignUpUseCase } from './SignUpUseCase';
 
 vi.mock('../../helpers/auth', () => ({
@@ -20,16 +20,6 @@ const signUpRequest: UserSignUpRequest = {
   confirmPassword: 'Asd12345',
   isLegalChecked: true,
   isPromoChecked: false,
-};
-
-const createSession = () => {
-  const session = {
-    regenerate: vi.fn().mockResolvedValue(undefined),
-    setUser: vi.fn(),
-    destroy: vi.fn().mockResolvedValue(undefined),
-  };
-
-  return session satisfies SessionStore;
 };
 
 describe('SignUpUseCase', () => {

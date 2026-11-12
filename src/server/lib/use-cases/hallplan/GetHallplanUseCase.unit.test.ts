@@ -1,4 +1,5 @@
 import type { SeatType } from '../../../../common/entities/hallplan';
+import { TEST_ASTRAKHAN_LOCATION } from '../../../../tests/unit/helpers';
 import type { CurrentLocationService } from '../../../services/current-location/CurrentLocationService';
 import { HallplanNotFoundError } from '../../errors/hallplan/HallplanError';
 import type { HallplanRepository } from '../../ports/hallplan/HallplanRepository';
@@ -52,7 +53,7 @@ describe('GetHallplanUseCase', () => {
   });
 
   test('should use the current location when the request does not name one', async () => {
-    getOne.mockResolvedValue({ id: 23, name: 'Астрахань' });
+    getOne.mockResolvedValue(TEST_ASTRAKHAN_LOCATION);
     getByLocationId.mockResolvedValue({ id: 23, matrix: [[1]] });
 
     await useCase.execute();

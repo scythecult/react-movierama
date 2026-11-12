@@ -1,5 +1,6 @@
 import type { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
+import { captureError, createMockResponse } from '../../../../tests/unit/helpers';
 import {
   AlreadyAuthenticatedError,
   AlreadyExistsError,
@@ -29,16 +30,6 @@ vi.mock('../../../lib/helpers/session', () => ({
   }),
 }));
 
-const captureError = async (action: () => Promise<unknown>) => {
-  try {
-    await action();
-  } catch (error) {
-    return error;
-  }
-
-  throw new Error('Expected the action to throw');
-};
-
 describe('AuthController', () => {
   const getCurrentUser = { execute: vi.fn() };
   const signIn = { execute: vi.fn() };
@@ -62,10 +53,7 @@ describe('AuthController', () => {
       signUp: signUp as unknown as SignUpUseCase,
     });
 
-    mockResponse = {
-      status: vi.fn().mockReturnThis(),
-      json: vi.fn().mockReturnThis(),
-    };
+    mockResponse = createMockResponse();
   });
 
   test('should return the current user', async () => {
