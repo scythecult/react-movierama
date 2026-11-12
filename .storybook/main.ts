@@ -1,6 +1,33 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import { readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import type { Plugin } from 'vite';
 
-// https://www.google.com/search?q=storybook+run+msw+before+initialization&sca_esv=fecb66123620f6bf&sxsrf=ANbL-n6PurzwSFSfc2r-Ba4kHITnfbtlGA%3A1772386002871&ei=0nakaZ3mNLzm7_UP9_e4wQU&biw=2560&bih=1288&oq=storybook+run+msw+before+ini&gs_lp=Egxnd3Mtd2l6LXNlcnAiHHN0b3J5Ym9vayBydW4gbXN3IGJlZm9yZSBpbmkqAggAMgcQIRigARgKMgcQIRigARgKMgcQIRigARgKSOUyUKgWWLQscAN4AJABApgBuAKgAccZqgEHMC43LjguMbgBA8gBAPgBAZgCEaACrRXCAgsQABiABBiwAxiiBMICCBAAGLADGO8FwgIGEAAYFhgewgIIEAAYgAQYogTCAgUQIRigAcICBRAhGJ8FwgIEECEYFZgDAIgGAZAGBZIHBTMuNi44oAekR7IHBTAuNi44uAedFcIHBjEuMTEuNcgHK4AIAA&sclient=gws-wiz-serp
+const workerPath = resolve(dirname(fileURLToPath(import.meta.url)), '../mockServiceWorker.js');
+
+const serveMswWorker = (): Plugin => ({
+  name: 'storybook-msw-worker',
+  configureServer(server) {
+    server.middlewares.use((request, response, next) => {
+      if (request.url?.split('?')[0] !== '/mockServiceWorker.js') {
+        next();
+        return;
+      }
+
+      response.setHeader('Content-Type', 'application/javascript');
+      response.end(readFileSync(workerPath));
+    });
+  },
+  generateBundle() {
+    this.emitFile({
+      type: 'asset',
+      fileName: 'mockServiceWorker.js',
+      source: readFileSync(workerPath),
+    });
+  },
+});
+
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
 
@@ -17,6 +44,14 @@ const config: StorybookConfig = {
 
   typescript: {
     reactDocgen: 'react-docgen-typescript',
+  },
+
+  async viteFinal(viteConfig) {
+    const { mergeConfig } = await import('vite');
+
+    return mergeConfig(viteConfig, {
+      plugins: [serveMswWorker()],
+    });
   },
 };
 

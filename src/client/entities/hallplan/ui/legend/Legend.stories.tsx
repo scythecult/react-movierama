@@ -1,29 +1,22 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../../.storybook/helpers';
 import { MOCK_SEAT_TYPES } from '../../../../../../mocks/data/seats';
-import { Legend, type LegendProps } from './Legend';
+import { Legend } from './Legend';
 
-export default {
+const meta = {
   title: 'Pages/OrderPage/Legend',
   component: Legend,
-  argTypes: {
-    seatTypes: {
-      table: {
-        disable: true,
-      },
-    },
+  args: {
+    seatTypes: MOCK_SEAT_TYPES,
   },
+  argTypes: hideControls('seatTypes'),
   parameters: {
     layout: 'fullscreen',
   },
 } satisfies Meta<typeof Legend>;
 
-const Template: StoryFn<LegendProps> = (props) => (
-  <div style={{ padding: '2rem' }}>
-    <Legend {...props} />
-  </div>
-);
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {
-  seatTypes: MOCK_SEAT_TYPES,
-};
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

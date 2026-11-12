@@ -1,19 +1,15 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { BrowserRouter } from 'react-router';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { withProviders } from '../../../../../.storybook/helpers';
 import { SiteNavigation } from './SiteNavigation';
 
-export default {
+const meta = {
   title: 'Components/SiteNavigation',
-
   component: SiteNavigation,
+  decorators: [withProviders({ router: true })],
 } satisfies Meta<typeof SiteNavigation>;
 
-const Template: StoryFn = () => (
-  <BrowserRouter>
-    <div style={{ backgroundColor: 'black' }}>
-      <SiteNavigation />
-    </div>
-  </BrowserRouter>
-);
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

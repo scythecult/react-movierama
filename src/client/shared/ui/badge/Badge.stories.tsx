@@ -1,30 +1,18 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { Badge, type BadgeProps } from './Badge';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../.storybook/helpers';
+import { Badge } from './Badge';
 
-export default {
+const meta = {
   title: 'Components/Badge',
-
+  component: Badge,
   args: {
     children: 22,
   },
-
-  argTypes: {
-    children: {
-      table: {
-        disable: true,
-      },
-    },
-
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-
-  component: Badge,
+  argTypes: hideControls('children', 'className'),
 } satisfies Meta<typeof Badge>;
 
-const Template: StoryFn<BadgeProps> = (props) => <Badge {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

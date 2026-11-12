@@ -1,11 +1,16 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { Hall, type HallProps } from './Hall';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Hall } from './Hall';
 
-export default {
+const meta = {
   title: 'Pages/OrderPage/Hall',
   component: Hall,
+  args: {
+    children: 'Hall Content',
+  },
 } satisfies Meta<typeof Hall>;
 
-const Template: StoryFn<HallProps> = (props) => <Hall {...props}>Hall Content</Hall>;
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

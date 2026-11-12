@@ -1,43 +1,26 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../.storybook/helpers';
 import { SkeletonVariant } from './constants';
-import { Skeleton, type SkeletonProps } from './Skeleton';
+import { Skeleton } from './Skeleton';
 
-export default {
+const meta = {
   title: 'Components/Skeleton',
-
   component: Skeleton,
-
+  args: {
+    width: '120px',
+    height: '120px',
+  },
   argTypes: {
+    ...hideControls('className'),
     variant: {
       options: Object.values(SkeletonVariant),
       control: { type: 'select' },
     },
-
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-
-    width: {
-      table: {
-        disable: true,
-      },
-    },
-
-    height: {
-      table: {
-        disable: true,
-      },
-    },
   },
 } satisfies Meta<typeof Skeleton>;
 
-const Template: StoryFn<SkeletonProps> = (props) => (
-  <div style={{ minHeight: '300px', width: '300px' }}>
-    <Skeleton {...props} />
-  </div>
-);
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {};
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

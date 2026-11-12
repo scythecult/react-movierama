@@ -1,48 +1,22 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter } from 'react-router';
-import { enableMocks } from '../../../../../../mocks';
-import { MOCK_FILMS } from '../../../../../../mocks/data/films';
-import { filmsQueries } from '../../api';
-import { FilmsList, type FilmsListProps } from './FilmsList';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { createStoryQueryClient, hideControls, seedFilms, withProviders } from '../../../../../../.storybook/helpers';
+import { FilmsList } from './FilmsList';
 
-export default {
+const queryClient = createStoryQueryClient();
+seedFilms(queryClient);
+
+const meta = {
   title: 'Pages/MainPage/FilmsList',
-
+  component: FilmsList,
   args: {
     onFilmClick: () => {},
   },
-
-  argTypes: {
-    onFilmClick: {
-      table: {
-        disable: true,
-      },
-    },
-
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-
-  component: FilmsList,
+  argTypes: hideControls('onFilmClick', 'className'),
+  decorators: [withProviders({ queryClient, router: true })],
 } satisfies Meta<typeof FilmsList>;
 
-const queryClient = new QueryClient();
+export default meta;
 
-queryClient.setQueryData([filmsQueries.all()], { data: MOCK_FILMS });
+type Story = StoryObj<typeof meta>;
 
-// TODO Replace by: https://storybook.js.org/addons/msw-storybook-addon
-enableMocks();
-
-const Template: StoryFn<FilmsListProps> = (props) => (
-  <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <FilmsList {...props} />
-    </BrowserRouter>
-  </QueryClientProvider>
-);
-
-export const Default = Template.bind(null);
+export const Default: Story = {};

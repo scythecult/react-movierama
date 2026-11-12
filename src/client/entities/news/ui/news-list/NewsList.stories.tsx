@@ -1,37 +1,19 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter } from 'react-router';
-import { enableMocks } from '../../../../../../mocks';
-import { MOCK_NEWS } from '../../../../../../mocks/data/news';
-import { newsQueries } from '../../api';
-import { NewsList, type NewsListProps } from './NewsList';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { createStoryQueryClient, hideControls, seedNews, withProviders } from '../../../../../../.storybook/helpers';
+import { NewsList } from './NewsList';
 
-export default {
+const queryClient = createStoryQueryClient();
+seedNews(queryClient);
+
+const meta = {
   title: 'Pages/MainPage/NewsList',
-
-  argTypes: {
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-
   component: NewsList,
+  argTypes: hideControls('className'),
+  decorators: [withProviders({ queryClient, router: true })],
 } satisfies Meta<typeof NewsList>;
 
-const queryClient = new QueryClient();
+export default meta;
 
-queryClient.setQueryData([newsQueries.all], { data: MOCK_NEWS });
+type Story = StoryObj<typeof meta>;
 
-enableMocks();
-
-const Template: StoryFn<NewsListProps> = (props) => (
-  <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <NewsList {...props} />
-    </BrowserRouter>
-  </QueryClientProvider>
-);
-
-export const Default = Template.bind(null);
+export const Default: Story = {};

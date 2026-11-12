@@ -9,7 +9,14 @@ export const enableMocks = async () => {
   // We could init here worker events listeners.
 
   return worker.start({
-    onUnhandledRequest(request, print) {
+    onUnhandledFrame({ frame, defaults }) {
+      if (frame.protocol !== 'http') {
+        defaults.warn();
+        return;
+      }
+
+      const { request } = frame.data as { request: Request };
+
       if (
         request.url.includes('kinomax') ||
         request.url.includes('static') ||
@@ -19,8 +26,7 @@ export const enableMocks = async () => {
         return;
       }
 
-      // For other unhandled requests, print a warning
-      print.warning();
+      defaults.warn();
     },
   });
 };

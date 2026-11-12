@@ -1,60 +1,44 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { TextInput, type TextInputProps } from './TextInput';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../../.storybook/helpers';
+import { TextInput } from './TextInput';
 
-export default {
+const meta = {
   title: 'Components/Inputs/TextInput',
-
   component: TextInput,
-
-  argTypes: {
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-
+  args: {
     inputProps: {
-      table: {
-        disable: true,
-      },
+      placeholder: 'Placeholder',
     },
   },
+  argTypes: hideControls('className', 'inputProps'),
 } satisfies Meta<typeof TextInput>;
 
-const Template: StoryFn<TextInputProps> = (props) => <TextInput {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {
-  error: 'Error',
-  prefix: 'Prefix',
-  suffix: 'Suffix',
-  inputProps: {
-    placeholder: 'Placeholder',
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+
+export const WithLabel: Story = {
+  args: {
+    label: 'Label',
   },
 };
 
-export const WithLabel = Template.bind(null);
-WithLabel.args = {
-  ...Default.args,
-  label: 'Label',
+export const WithError: Story = {
+  args: {
+    error: 'Error',
+  },
 };
 
-export const WithError = Template.bind(null);
-WithError.args = {
-  ...Default.args,
-  error: 'Error',
+export const WithPrefix: Story = {
+  args: {
+    prefix: 'Prefix',
+  },
 };
 
-export const WithPrefix = Template.bind(null);
-WithPrefix.args = {
-  ...Default.args,
-  prefix: 'Prefix',
-  suffix: '',
-};
-
-export const WithSuffix = Template.bind(null);
-WithSuffix.args = {
-  ...Default.args,
-  suffix: 'Suffix',
-  prefix: '',
+export const WithSuffix: Story = {
+  args: {
+    suffix: 'Suffix',
+  },
 };

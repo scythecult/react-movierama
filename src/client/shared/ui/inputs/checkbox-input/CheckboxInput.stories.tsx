@@ -1,15 +1,16 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { CheckboxInput, type CheckboxInputProps } from './CheckboxInput';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { CheckboxInput } from './CheckboxInput';
 
-export default {
+const meta = {
   title: 'Components/Inputs/CheckboxInput',
-
   component: CheckboxInput,
+  args: {
+    children: 'Check',
+  },
 } satisfies Meta<typeof CheckboxInput>;
 
-const Template: StoryFn<CheckboxInputProps> = (props) => <CheckboxInput {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {
-  children: 'Check',
-};
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

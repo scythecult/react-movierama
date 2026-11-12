@@ -1,12 +1,11 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../../.storybook/helpers';
 import { MOCK_CANVAS_SIZE, MOCK_SEATS_DATA } from '../../../../../../mocks/data/seats';
-import { Seats, type SeatsProps } from './Seats';
+import { Seats } from './Seats';
 
-export default {
+const meta = {
   title: 'Pages/OrderPage/Seats',
-
   component: Seats,
-
   args: {
     seats: MOCK_SEATS_DATA,
     cart: [],
@@ -14,46 +13,11 @@ export default {
     canvasHeight: MOCK_CANVAS_SIZE.height,
     renderAddToCartButton: () => <div>Add To Cart Button</div>,
   },
+  argTypes: hideControls('seats', 'cart', 'canvasWidth', 'canvasHeight', 'onClick', 'renderAddToCartButton'),
+} satisfies Meta<typeof Seats>;
 
-  argTypes: {
-    seats: {
-      table: {
-        disable: true,
-      },
-    },
+export default meta;
 
-    cart: {
-      table: {
-        disable: true,
-      },
-    },
+type Story = StoryObj<typeof meta>;
 
-    canvasWidth: {
-      table: {
-        disable: true,
-      },
-    },
-
-    canvasHeight: {
-      table: {
-        disable: true,
-      },
-    },
-
-    onClick: {
-      table: {
-        disable: true,
-      },
-    },
-
-    renderAddToCartButton: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-} satisfies Meta<SeatsProps>;
-
-const Template: StoryFn<SeatsProps> = (props) => <Seats {...props} />;
-
-export const Default = Template.bind(null);
+export const Default: Story = {};

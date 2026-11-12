@@ -1,45 +1,37 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../.storybook/helpers';
 import { CustomIconName } from './constants';
-import { CustomIcon, type CustomIconProps } from './CustomIcon';
+import { CustomIcon } from './CustomIcon';
 
-export default {
+const meta = {
   title: 'Components/CustomIcon',
-
   component: CustomIcon,
-
   args: {
     name: CustomIconName.ACCOUNT,
   },
-
-  argTypes: {
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-
-  parameters: {
-    layout: 'fullscreen',
-  },
+  argTypes: hideControls('className'),
 } satisfies Meta<typeof CustomIcon>;
 
-const Template: StoryFn<CustomIconProps> = (props) => <CustomIcon {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {};
+type Story = StoryObj<typeof meta>;
 
-export const Account = Template.bind(null);
-Account.args = {
-  name: CustomIconName.ACCOUNT,
+export const Default: Story = {};
+
+export const Account: Story = {
+  args: {
+    name: CustomIconName.ACCOUNT,
+  },
 };
 
-export const Pin = Template.bind(null);
-Pin.args = {
-  name: CustomIconName.PIN,
+export const Pin: Story = {
+  args: {
+    name: CustomIconName.PIN,
+  },
 };
 
-export const Cross = Template.bind(null);
-Cross.args = {
-  name: CustomIconName.CROSS,
+export const Cross: Story = {
+  args: {
+    name: CustomIconName.CROSS,
+  },
 };

@@ -1,32 +1,23 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../../../.storybook/helpers';
 import { MOCK_LOCATIONS } from '../../../../../../../mocks/data/locations';
-import { LocationsItem, type LocationsItemProps } from './LocationsItem';
+import { LocationsItem } from './LocationsItem';
 
-export default {
-  title: 'Components/LocationItem',
+const [location] = MOCK_LOCATIONS;
 
-  args: {
-    locationsItem: MOCK_LOCATIONS[0],
-    currentLocationId: 1,
-  },
-
-  argTypes: {
-    locationsItem: {
-      table: {
-        disable: true,
-      },
-    },
-
-    currentLocationId: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-
+const meta = {
+  title: 'Components/LocationsItem',
   component: LocationsItem,
+  args: {
+    location,
+    currentLocationId: location.id,
+    onClick: () => {},
+  },
+  argTypes: hideControls('location', 'currentLocationId', 'onClick'),
 } satisfies Meta<typeof LocationsItem>;
 
-const Template: StoryFn<LocationsItemProps> = (props) => <LocationsItem {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

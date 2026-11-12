@@ -1,30 +1,20 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { BrowserRouter } from 'react-router';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls, withProviders } from '../../../../../../../.storybook/helpers';
 import { MOCK_FILMS } from '../../../../../../../mocks/data/films';
-import { FilmListItem, type FilmListItemProps } from './FilmListItem';
+import { FilmListItem } from './FilmListItem';
 
-export default {
+const meta = {
   title: 'Pages/MainPage/FilmListItem',
-
+  component: FilmListItem,
   args: {
     film: MOCK_FILMS[0],
   },
-
-  argTypes: {
-    film: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-
-  component: FilmListItem,
+  argTypes: hideControls('film'),
+  decorators: [withProviders({ router: true })],
 } satisfies Meta<typeof FilmListItem>;
 
-const Template: StoryFn<FilmListItemProps> = (props) => (
-  <BrowserRouter>
-    <FilmListItem {...props} />
-  </BrowserRouter>
-);
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

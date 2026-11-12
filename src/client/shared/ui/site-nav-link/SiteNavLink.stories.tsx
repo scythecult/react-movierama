@@ -1,40 +1,21 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { BrowserRouter } from 'react-router';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls, withProviders } from '../../../../../.storybook/helpers';
 import { AppRoute } from '../../../../common/constants/routes';
 import { SiteNavLink } from './SiteNavLink';
 
-export default {
+const meta = {
   title: 'Components/SiteNavLink',
-
   component: SiteNavLink,
-
-  argTypes: {
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-
-    children: {
-      table: {
-        disable: true,
-      },
-    },
-
-    to: {
-      table: {
-        disable: true,
-      },
-    },
+  args: {
+    to: AppRoute.ROOT,
+    children: 'Check Link',
   },
+  argTypes: hideControls('className', 'children', 'to'),
+  decorators: [withProviders({ router: true })],
 } satisfies Meta<typeof SiteNavLink>;
 
-const Template: StoryFn = () => (
-  <BrowserRouter>
-    <div style={{ backgroundColor: 'black' }}>
-      <SiteNavLink to={AppRoute.ROOT}>Check Link</SiteNavLink>
-    </div>
-  </BrowserRouter>
-);
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
