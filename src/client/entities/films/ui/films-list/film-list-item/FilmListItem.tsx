@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { AppRoute } from '../../../../../../common/constants/routes';
-import type { FilmData } from '../../../../../entities/films/model';
+import type { FilmData } from '../../../../../../common/entities/films';
 import { Badge } from '../../../../../shared/ui/badge/Badge';
 import styles from './styles.module.css';
 

@@ -1,41 +1,21 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { MOCK_LOCATIONS } from '../../../../../../mocks/data/locations';
-import { AppStore } from '../../../../app/store/AppStore';
-import { locationsQueries } from '../../../../entities/locations/api';
-import { ModalProvider } from '../../../../shared/lib/modal';
-import { AppStoreProvider } from '../../../../shared/lib/store';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { createStoryQueryClient, seedLocations, withProviders } from '../../../../../../.storybook/helpers';
 import { LocationsButton } from './LocationsButton';
 
-export default {
+const queryClient = createStoryQueryClient();
+seedLocations(queryClient);
+
+const meta = {
   title: 'Components/LocationsButton',
-
   component: LocationsButton,
-
   parameters: {
     layout: 'fullscreen',
   },
+  decorators: [withProviders({ queryClient })],
 } satisfies Meta<typeof LocationsButton>;
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      retry: false,
-      staleTime: Number.POSITIVE_INFINITY,
-    },
-  },
-});
+export default meta;
 
-queryClient.setQueryData(locationsQueries.getCurrent().queryKey, MOCK_LOCATIONS[0]);
+type Story = StoryObj<typeof meta>;
 
-const Template: StoryFn = () => (
-  <QueryClientProvider client={queryClient}>
-    <AppStoreProvider store={AppStore}>
-      <ModalProvider>
-        <LocationsButton />
-      </ModalProvider>
-    </AppStoreProvider>
-  </QueryClientProvider>
-);
-
-export const Default = Template.bind(null);
+export const Default: Story = {};

@@ -1,9 +1,15 @@
 import '../static/css/common.css';
 import type { Preview } from '@storybook/react-vite';
+import { startStorybookMocks, withStorybookDocument } from './helpers';
 
 const preview: Preview = {
+  decorators: [withStorybookDocument],
+  loaders: [
+    async () => {
+      await startStorybookMocks();
+    },
+  ],
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
     controls: {
       matchers: {

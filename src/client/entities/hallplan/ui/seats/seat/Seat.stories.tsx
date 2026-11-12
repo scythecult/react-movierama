@@ -1,96 +1,49 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { Seat, type SeatProps } from './Seat';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../../../.storybook/helpers';
+import { SeatStateMap, SeatTypeMap } from '../const';
+import { Seat } from './Seat';
 
-export default {
+const meta = {
   title: 'Pages/OrderPage/Seat',
-
   component: Seat,
-
   args: {
     place: 1,
   },
+  argTypes: hideControls('onClick', 'place', 'className', 'x', 'y', 'w', 'h'),
+} satisfies Meta<typeof Seat>;
 
-  argTypes: {
-    onClick: {
-      table: {
-        disable: true,
-      },
-    },
+export default meta;
 
-    place: {
-      table: {
-        disable: true,
-      },
-    },
+type Story = StoryObj<typeof meta>;
 
-    className: {
-      table: {
-        disable: true,
-      },
-    },
+export const Default: Story = {};
 
-    state: {
-      table: {
-        disable: true,
-      },
-    },
-
-    type: {
-      table: {
-        disable: true,
-      },
-    },
-
-    x: {
-      table: {
-        disable: true,
-      },
-    },
-
-    y: {
-      table: {
-        disable: true,
-      },
-    },
-
-    w: {
-      table: {
-        disable: true,
-      },
-    },
-
-    h: {
-      table: {
-        disable: true,
-      },
-    },
+export const Comfort: Story = {
+  args: {
+    type: SeatTypeMap.COMFORT,
   },
-} satisfies Meta<SeatProps>;
-
-const Template: StoryFn<SeatProps> = (props) => <Seat {...props} />;
-export const Default = Template.bind(null);
-
-export const Comfort = Template.bind(null);
-Comfort.args = {
-  type: 2,
 };
 
-export const Vip = Template.bind(null);
-Vip.args = {
-  type: 3,
+export const Vip: Story = {
+  args: {
+    type: SeatTypeMap.VIP,
+  },
 };
 
-export const Wheelchair = Template.bind(null);
-Wheelchair.args = {
-  type: 4,
+export const Wheelchair: Story = {
+  args: {
+    type: SeatTypeMap.WHEELCHAIR,
+  },
 };
 
-export const Occupied = Template.bind(null);
-Occupied.args = {
-  state: 2,
+export const Occupied: Story = {
+  args: {
+    type: SeatTypeMap.OCCUPIED,
+  },
 };
 
-export const Selected = Template.bind(null);
-Selected.args = {
-  state: 3,
+export const Selected: Story = {
+  args: {
+    state: SeatStateMap.SELECTED,
+  },
 };

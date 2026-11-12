@@ -1,26 +1,22 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { Spinner, type SpinnerProps } from './Spinner';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../.storybook/helpers';
+import { SpinnerSize } from './constants';
+import { Spinner } from './Spinner';
 
-export default {
+const meta = {
   title: 'Components/Spinner',
-
   component: Spinner,
-
   argTypes: {
+    ...hideControls('className'),
     size: {
-      options: ['s', 'm', 'l'],
+      options: Object.values(SpinnerSize),
       control: { type: 'select' },
-    },
-
-    className: {
-      table: {
-        disable: true,
-      },
     },
   },
 } satisfies Meta<typeof Spinner>;
 
-const Template: StoryFn<SpinnerProps> = (props) => <Spinner {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {};
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

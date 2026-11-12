@@ -1,47 +1,37 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import type { TextInputProps } from '../text-input/TextInput';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../../.storybook/helpers';
 import { PasswordInput } from './PasswordInput';
 
-export default {
+const meta = {
   title: 'Components/Inputs/PasswordInput',
-
   component: PasswordInput,
-
-  argTypes: {
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-
-    inputProps: {
-      table: {
-        disable: true,
-      },
-    },
-  },
+  argTypes: hideControls('className', 'inputProps'),
 } satisfies Meta<typeof PasswordInput>;
 
-const Template: StoryFn<TextInputProps> = (props) => <PasswordInput {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {};
+type Story = StoryObj<typeof meta>;
 
-export const WithLabel = Template.bind(null);
-WithLabel.args = {
-  label: 'Password',
-};
+export const Default: Story = {};
 
-export const WithPlaceholder = Template.bind(null);
-WithPlaceholder.args = {
-  label: 'Password',
-  inputProps: {
-    placeholder: 'Password',
+export const WithLabel: Story = {
+  args: {
+    label: 'Password',
   },
 };
 
-export const WithError = Template.bind(null);
-WithError.args = {
-  label: 'Password',
-  error: 'Invalid password',
+export const WithPlaceholder: Story = {
+  args: {
+    label: 'Password',
+    inputProps: {
+      placeholder: 'Password',
+    },
+  },
+};
+
+export const WithError: Story = {
+  args: {
+    label: 'Password',
+    error: 'Invalid password',
+  },
 };

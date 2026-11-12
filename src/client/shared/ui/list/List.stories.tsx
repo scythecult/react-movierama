@@ -1,6 +1,7 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../.storybook/helpers';
 import { MOCK_LOCATIONS } from '../../../../../mocks/data/locations';
-import { List, type ListProps } from './List';
+import { List } from './List';
 
 type ItemProps = {
   id: number;
@@ -9,31 +10,18 @@ type ItemProps = {
 
 const renderItem = (item: ItemProps) => <span key={item.id}>{item.name}</span>;
 
-export default {
+const meta = {
   title: 'Components/List',
-
+  component: List,
   args: {
     items: MOCK_LOCATIONS,
     renderItem: (item) => renderItem(item as ItemProps),
   },
-
-  argTypes: {
-    items: {
-      table: {
-        disable: true,
-      },
-    },
-
-    renderItem: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-
-  component: List,
+  argTypes: hideControls('items', 'renderItem'),
 } satisfies Meta<typeof List>;
 
-const Template: StoryFn<ListProps<ItemProps>> = (props) => <List {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

@@ -31,5 +31,5 @@
     "alwaysStrict": true,
     "resolveJsonModule": true
   },
-  "include": ["src", "src/tests", "mocks"]
+  "include": ["src", "src/tests", "mocks", ".storybook"]
 }

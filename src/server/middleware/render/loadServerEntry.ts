@@ -5,26 +5,21 @@ export type ServerEntryModule = {
   renderSsrTemplate?: unknown;
 };
 
-const toServerEntryModule = (loaded: unknown): ServerEntryModule => {
-  if (typeof loaded !== 'object' || loaded === null || !('renderSsrTemplate' in loaded)) {
-    return {};
+const importBuiltEntry = async (): Promise<ServerEntryModule> => {
+  const loaded: unknown = await import(pathToFileURL(SERVER_ENTRY_PATH).href);
+
+  if (typeof loaded === 'object' && loaded !== null && 'renderSsrTemplate' in loaded) {
+    return { renderSsrTemplate: loaded.renderSsrTemplate };
   }
 
-  return {
-    renderSsrTemplate: loaded.renderSsrTemplate,
-  };
+  return {};
 };
-
-const importBuiltEntry = async () => toServerEntryModule(await import(pathToFileURL(SERVER_ENTRY_PATH).href));
-
-const isModuleNotFound = (error: unknown) =>
-  typeof error === 'object' && error !== null && 'code' in error && error.code === 'ERR_MODULE_NOT_FOUND';
 
 export const loadServerEntry = async (load: () => Promise<ServerEntryModule> = importBuiltEntry) => {
   try {
     return await load();
   } catch (error) {
-    if (isModuleNotFound(error)) {
+    if (typeof error === 'object' && error !== null && 'code' in error && error.code === 'ERR_MODULE_NOT_FOUND') {
       throw new Error(`SSR entry was not found at ${SERVER_ENTRY_PATH}`, { cause: error });
     }
 

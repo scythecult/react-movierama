@@ -1,46 +1,36 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import type { TextInputProps } from '../text-input/TextInput';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../../.storybook/helpers';
 import { EmailInput } from './EmailInput';
 
-export default {
+const meta = {
   title: 'Components/Inputs/EmailInput',
-
   component: EmailInput,
-
-  argTypes: {
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-
-    inputProps: {
-      table: {
-        disable: true,
-      },
-    },
-  },
+  argTypes: hideControls('className', 'inputProps'),
 } satisfies Meta<typeof EmailInput>;
 
-const Template: StoryFn<TextInputProps> = (props) => <EmailInput {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {};
+type Story = StoryObj<typeof meta>;
 
-export const WithLabel = Template.bind(null);
-WithLabel.args = {
-  label: 'Label',
-};
+export const Default: Story = {};
 
-export const WithPlaceholder = Template.bind(null);
-WithPlaceholder.args = {
-  label: 'Email',
-  inputProps: {
-    placeholder: 'Email',
+export const WithLabel: Story = {
+  args: {
+    label: 'Label',
   },
 };
 
-export const WithError = Template.bind(null);
-WithError.args = {
-  error: 'Error',
+export const WithPlaceholder: Story = {
+  args: {
+    label: 'Email',
+    inputProps: {
+      placeholder: 'Email',
+    },
+  },
+};
+
+export const WithError: Story = {
+  args: {
+    error: 'Error',
+  },
 };

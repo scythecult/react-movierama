@@ -1,45 +1,31 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../.storybook/helpers';
 import { CustomIconName } from '../custom-icon/constants';
-import { IconButton, type IconButtonProps } from './IconButton';
+import { IconButton } from './IconButton';
 
-export default {
+const meta = {
   title: 'Components/IconButton',
-
   component: IconButton,
-
-  parameters: {
-    layout: 'fullscreen',
-  },
-
   args: {
     name: CustomIconName.ACCOUNT,
   },
-
-  argTypes: {
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-
-    onClick: {
-      table: {
-        disable: true,
-      },
-    },
-  },
+  argTypes: hideControls('className', 'onClick'),
 } satisfies Meta<typeof IconButton>;
 
-const Template: StoryFn<IconButtonProps> = (props) => <IconButton {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {
-  name: CustomIconName.PIN,
-  children: 'Current Location',
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    name: CustomIconName.PIN,
+    children: 'Current Location',
+  },
 };
 
-export const Login = Template.bind(null);
-Login.args = {
-  name: CustomIconName.ACCOUNT,
-  children: 'User Name',
+export const Login: Story = {
+  args: {
+    name: CustomIconName.ACCOUNT,
+    children: 'User Name',
+  },
 };

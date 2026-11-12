@@ -1,17 +1,15 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { BrowserRouter } from 'react-router';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { withProviders } from '../../../../../.storybook/helpers';
 import { Logo } from './Logo';
 
-export default {
+const meta = {
   title: 'Components/Logo',
-
   component: Logo,
+  decorators: [withProviders({ router: true })],
 } satisfies Meta<typeof Logo>;
 
-const Template: StoryFn = () => (
-  <BrowserRouter>
-    <Logo />
-  </BrowserRouter>
-);
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

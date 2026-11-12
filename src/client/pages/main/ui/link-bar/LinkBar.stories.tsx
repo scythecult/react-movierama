@@ -1,32 +1,25 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { BrowserRouter } from 'react-router';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../../.storybook/helpers';
 import { LinkBar } from './LinkBar';
 
-export default {
+const meta = {
   title: 'Pages/MainPage/LinkBar',
-
   component: LinkBar,
-
-  argTypes: {
-    children: {
-      table: {
-        disable: true,
-      },
-    },
+  args: {
+    children: (
+      <>
+        <span>Check Link Bar</span>
+        <span>Check Link Bar</span>
+        <span>Check Link Bar</span>
+        <span>Check Link Bar</span>
+      </>
+    ),
   },
+  argTypes: hideControls('children'),
 } satisfies Meta<typeof LinkBar>;
 
-const Template: StoryFn = () => (
-  <BrowserRouter>
-    <div style={{ backgroundColor: 'black' }}>
-      <LinkBar>
-        <span>Check Link Bar</span>
-        <span>Check Link Bar</span>
-        <span>Check Link Bar</span>
-        <span>Check Link Bar</span>
-      </LinkBar>
-    </div>
-  </BrowserRouter>
-);
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

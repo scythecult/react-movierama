@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { AppRoute } from '../../../../../../common/constants/routes';
-import type { NewsData } from '../../../../../entities/news/model';
+import type { NewsData } from '../../../../../../common/entities/news';
 import styles from './styles.module.css';
 
 export type NewsListItemProps = { newsItem: NewsData };

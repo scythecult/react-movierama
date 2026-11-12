@@ -1,34 +1,22 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter } from 'react-router';
-import { enableMocks } from '../../../../../../mocks';
-import { AppStore } from '../../../../app/store/AppStore';
-import { queryClient } from '../../../../shared/api/query-client';
-import { AppStoreProvider } from '../../../../shared/lib/store';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { createStoryQueryClient, seedFilms, seedNews, withProviders } from '../../../../../../.storybook/helpers';
 import { Main } from './Main';
 
-export default {
+const queryClient = createStoryQueryClient();
+seedFilms(queryClient);
+seedNews(queryClient);
+
+const meta = {
   title: 'Pages/MainPage/Main',
-
   component: Main,
-
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta;
+  decorators: [withProviders({ queryClient, router: true })],
+} satisfies Meta<typeof Main>;
 
-// TODO Temporary
-// TODO Remove whole story?
+export default meta;
 
-enableMocks();
-const Template: StoryFn = (props) => (
-  <QueryClientProvider client={queryClient}>
-    <AppStoreProvider store={AppStore}>
-      <BrowserRouter>
-        <Main {...props} />
-      </BrowserRouter>
-    </AppStoreProvider>
-  </QueryClientProvider>
-);
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind(null);
+export const Default: Story = {};

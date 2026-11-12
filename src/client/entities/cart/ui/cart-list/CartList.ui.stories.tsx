@@ -1,37 +1,21 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls, withProviders } from '../../../../../../.storybook/helpers';
 import { MOCK_SEATS_DATA } from '../../../../../../mocks/data/seats';
-import { AppStore } from '../../../../app/store/AppStore';
-import { AppStoreProvider } from '../../../../shared/lib/store';
-import { CartListUi, type CartListUiProps } from './CartList.ui';
+import { CartListUi } from './CartList.ui';
 
-export default {
+const meta = {
   title: 'Pages/OrderPage/CartListUi',
   component: CartListUi,
-
   args: {
     renderRemoveFromCartButton: () => <div>Remove Button</div>,
     renderTicketTypeSelect: () => <div>--Ticket type select--</div>,
   },
-  argTypes: {
-    renderRemoveFromCartButton: {
-      table: {
-        disable: true,
-      },
-    },
-    renderTicketTypeSelect: {
-      table: {
-        disable: true,
-      },
-    },
-  },
-} satisfies Meta<CartListUiProps>;
+  argTypes: hideControls('renderRemoveFromCartButton', 'renderTicketTypeSelect'),
+  decorators: [withProviders({ store: { cart: MOCK_SEATS_DATA } })],
+} satisfies Meta<typeof CartListUi>;
 
-const Template: StoryFn<CartListUiProps> = (props) => {
-  return (
-    <AppStoreProvider initialState={{ cart: MOCK_SEATS_DATA }} store={AppStore}>
-      <CartListUi {...props} />
-    </AppStoreProvider>
-  );
-};
+export default meta;
 
-export const Default = Template.bind(null);
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};

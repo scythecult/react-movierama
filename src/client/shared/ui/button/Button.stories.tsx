@@ -1,33 +1,24 @@
-import type { Meta, StoryFn } from '@storybook/react-vite';
-import { Button, type ButtonProps } from './Button';
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { hideControls } from '../../../../../.storybook/helpers';
+import { Button } from './Button';
 
-export default {
+const meta = {
   title: 'Components/Button',
-
   component: Button,
-
   args: {
     children: 'Check',
   },
-
-  argTypes: {
-    onClick: {
-      table: {
-        disable: true,
-      },
-    },
-
-    className: {
-      table: {
-        disable: true,
-      },
-    },
-  },
+  argTypes: hideControls('onClick', 'className'),
 } satisfies Meta<typeof Button>;
 
-const Template: StoryFn<ButtonProps> = (props) => <Button {...props} />;
+export default meta;
 
-export const Default = Template.bind(null);
-Default.args = {
-  disabled: true,
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
 };
