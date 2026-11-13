@@ -45,14 +45,14 @@ describe('request context', () => {
     });
   });
 
-  test('should prefer an incoming forwarded-for chain', () => {
+  test('should forward the trusted client ip when a forwarded-for header is present', () => {
     expect(
       toSsrRequestContext({
-        ip: '127.0.0.1',
+        ip: '203.0.113.5',
         headers: {
-          'x-forwarded-for': '203.0.113.5, 198.51.100.1',
+          'x-forwarded-for': '198.51.100.1, 203.0.113.5',
         },
       }).forwardedFor,
-    ).toBe('203.0.113.5, 198.51.100.1');
+    ).toBe('203.0.113.5');
   });
 });

@@ -53,7 +53,8 @@ const readHeader = (value: HeaderValue) => {
 
 export const toSsrRequestContext = (request: SsrRequestLike): SsrRequestContext => ({
   cookie: readHeader(request.headers.cookie),
-  forwardedFor: readHeader(request.headers['x-forwarded-for']) ?? request.ip,
+  // Express resolves the viewer address from the trusted proxy hop.
+  forwardedFor: request.ip,
   userAgent: readHeader(request.headers['user-agent']),
   acceptLanguage: readHeader(request.headers['accept-language']),
 });

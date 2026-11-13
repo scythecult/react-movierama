@@ -127,6 +127,6 @@ export class ApiClient {
   }
 }
 
-const baseUrl = Config.appMode === 'watch' ? Config.apiUrl : Config.ssrUrl;
+const baseUrl = Config.appMode === 'watch' || Config.appMode === 'prod' ? Config.apiUrl : Config.ssrUrl;
 
 export const apiClient = new ApiClient(baseUrl, ApiVersion.V1);

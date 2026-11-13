@@ -12,4 +12,4 @@ process.env.API_URL = 'http://localhost:4000';
 process.env.SSR_PORT = '5000';
 process.env.SSR_URL = 'http://localhost:5000';
 process.env.BCRYPT_SALT_ROUNDS = '10';
-process.env.BASE_URL = 'http://localhost:3000';
+process.env.BASE_URL = '/';
