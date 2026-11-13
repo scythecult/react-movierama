@@ -15,7 +15,7 @@ export const LocationsButton = () => {
 
   return (
     <>
-      <div className={styles.locationsButton}>
+      <div className={styles.locationsButton} data-test-id="locations-button">
         {!isResolving && (
           <IconButton name={CustomIconName.PIN} onClick={() => setIsModalOpen(true)}>
             {locationName}

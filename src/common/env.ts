@@ -5,6 +5,7 @@ import {
   DEFAULT_APP_MODE,
   DEFAULT_APP_PORT,
   DEFAULT_APP_URL,
+  DEFAULT_BASE_URL,
   DEFAULT_NODE_ENV,
   DEFAULT_SSR_PORT,
   DEFAULT_SSR_URL,
@@ -29,7 +30,7 @@ const env = {
 const envSchema = z.object({
   isE2eTestDebugMode: validateBoolean().default(false),
   nodeEnv: z.enum(['development', 'test', 'production']).default(DEFAULT_NODE_ENV),
-  appMode: z.enum(['local', 'watch', 'test']).default(DEFAULT_APP_MODE),
+  appMode: z.enum(['local', 'watch', 'prod', 'test']).default(DEFAULT_APP_MODE),
   appPort: z.coerce.number().default(DEFAULT_APP_PORT),
   appUrl: z.url().default(DEFAULT_APP_URL),
   apiPort: z.coerce.number().default(DEFAULT_API_PORT),
@@ -37,7 +38,10 @@ const envSchema = z.object({
   ssrPort: z.coerce.number().default(DEFAULT_SSR_PORT),
   ssrUrl: z.url().default(DEFAULT_SSR_URL),
   bCryptSaltRounds: z.coerce.number().default(10),
-  baseUrl: z.string().default(DEFAULT_APP_URL),
+  baseUrl: z
+    .string()
+    .regex(/^\/(?:.*\/)?$/, 'BASE_URL must be a path that starts and ends with /')
+    .default(DEFAULT_BASE_URL),
   isMockGeolocation: validateBoolean().default(false),
 });
 

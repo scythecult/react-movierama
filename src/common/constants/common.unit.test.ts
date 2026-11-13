@@ -17,7 +17,7 @@ describe('project paths', () => {
     expect(CLIENT_ENTRY_SOURCE_DIR).toBe(path.join(CLIENT_SOURCE_DIR, 'app/entrypoint'));
     expect(CLIENT_DIST_DIR).toBe(path.join(BASE_DIR, 'dist/client'));
     expect(CLIENT_TEMPLATE_PATH).toBe(path.join(CLIENT_DIST_DIR, 'index.html'));
-    expect(SERVER_ENTRY_PATH).toBe(path.join(BASE_DIR, 'dist/server/entryServer.js'));
+    expect(SERVER_ENTRY_PATH).toBe(path.join(BASE_DIR, 'dist/ssr/entryServer.js'));
     expect(INDEX_HTML_PATH).toBe(path.join(BASE_DIR, 'index.html'));
     expect(existsSync(INDEX_HTML_PATH)).toBe(true);
     expect(existsSync(CLIENT_ENTRY_SOURCE_DIR)).toBe(true);

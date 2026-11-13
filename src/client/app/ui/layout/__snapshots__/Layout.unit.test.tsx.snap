@@ -95,6 +95,7 @@ exports[`Layout > should correspond default layout 1`] = `
         </div>
         <div
           class="_locationsButton_d2a9d4"
+          data-test-id="locations-button"
         >
           <button
             class="_iconButton_d28ccf"
