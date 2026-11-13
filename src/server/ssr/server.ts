@@ -2,7 +2,7 @@ import compression from 'compression';
 import express from 'express';
 import { StatusCodes } from 'http-status-codes';
 import type { ViteDevServer } from 'vite';
-import { serverMocks } from '../../../mocks/node';
+import { listenMockServer } from '../../../mocks/node';
 import { CLIENT_DIST_DIR } from '../../common/constants/common';
 import { AppRoute } from '../../common/constants/routes';
 import { Config } from '../../common/env';
@@ -22,7 +22,7 @@ export const createSsrServer = async () => {
 
   // Init mocks
   if (isMockServerEnabled) {
-    serverMocks.listen();
+    listenMockServer();
   }
 
   if (isProduction) {
