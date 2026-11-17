@@ -22,7 +22,6 @@ describe('errorMiddleware', () => {
     mockResponse = createMockResponse();
 
     mockNext = vi.fn();
-    vi.clearAllMocks();
   });
 
   test('should handle CustomError and return the corresponding status and code', () => {

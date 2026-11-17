@@ -1,8 +1,12 @@
 import { MOCK_SEATS_DATA } from '../../../../../mocks/data/seats';
-import { TEST_CART_ITEMS, TEST_SEAT_ID } from '../../../../tests/constants';
+import { TEST_SEAT_ID } from '../../../../tests/constants';
 import { AppStore } from '../../../app/store/AppStore';
 
 describe('cartSlice', () => {
+  beforeEach(() => {
+    AppStore.setState({ cart: [], cartTotalPrice: 0 });
+  });
+
   test('should have expected initial values', () => {
     const state = AppStore.getState();
 
@@ -10,78 +14,43 @@ describe('cartSlice', () => {
     expect(state.cart).toEqual([]);
   });
 
-  describe('common actions', () => {
-    test('should correctly set the "cartTotalPrice" value', () => {
-      let nextCartTotalPrice = 20;
+  test('should correctly update cart on "addToCart" action', () => {
+    AppStore.getState().addToCart(MOCK_SEATS_DATA, TEST_SEAT_ID);
 
-      AppStore.getState().cartTotalPrice = nextCartTotalPrice;
-      expect(AppStore.getState().cartTotalPrice).toEqual(nextCartTotalPrice);
+    const updatedCart = AppStore.getState().cart.find((cartItem) => cartItem.id === TEST_SEAT_ID)!;
 
-      nextCartTotalPrice = 0;
-
-      AppStore.getState().cartTotalPrice = nextCartTotalPrice;
-      expect(AppStore.getState().cartTotalPrice).toEqual(nextCartTotalPrice);
-    });
-
-    test('should correctly set the "cart" value', () => {
-      let nextCart = TEST_CART_ITEMS;
-
-      AppStore.getState().cart = nextCart;
-      expect(AppStore.getState().cart).toEqual(nextCart);
-
-      nextCart = [];
-
-      AppStore.getState().cart = nextCart;
-      expect(AppStore.getState().cart).toEqual(nextCart);
-    });
+    expect(AppStore.getState().cart.length).toBe(1);
+    expect(updatedCart.id).toBe(TEST_SEAT_ID);
+    expect(AppStore.getState().cartTotalPrice).toBe(updatedCart.price);
   });
 
-  describe('page actions', () => {
-    let state: CombinedAppStore;
+  test('should correctly update cart on "removeFromCart" action', () => {
+    AppStore.getState().addToCart(MOCK_SEATS_DATA, TEST_SEAT_ID);
+    AppStore.getState().removeFromCart(TEST_SEAT_ID);
 
-    beforeEach(() => {
-      state = AppStore.getState();
-    });
+    expect(AppStore.getState().cart).toEqual([]);
+    expect(AppStore.getState().cartTotalPrice).toBe(0);
+  });
 
-    test('should correctly update cart on "addToCart" action', () => {
-      state.addToCart(MOCK_SEATS_DATA, TEST_SEAT_ID);
+  test('should correctly update cart on "clearCart" action', () => {
+    AppStore.getState().addToCart(MOCK_SEATS_DATA, TEST_SEAT_ID);
+    AppStore.getState().clearCart();
 
-      const updatedCart = AppStore.getState().cart.find((cartItem) => cartItem.id === TEST_SEAT_ID)!;
-      const updatedCartTotalPrice = AppStore.getState().cartTotalPrice;
+    expect(AppStore.getState().cart).toEqual([]);
+    expect(AppStore.getState().cartTotalPrice).toBe(0);
+  });
 
-      expect(AppStore.getState().cart.length).toBe(1);
-      expect(updatedCart.id).toBe(TEST_SEAT_ID);
-      expect(updatedCartTotalPrice).toBe(updatedCart.price);
-    });
+  test('should correctly update cart ticket type', () => {
+    const nextTicketTypeId = 2;
 
-    test('should correctly update cart on "removeFromCart" action', () => {
-      state.addToCart(MOCK_SEATS_DATA, TEST_SEAT_ID);
-      state.removeFromCart(TEST_SEAT_ID);
+    AppStore.getState().addToCart(MOCK_SEATS_DATA, TEST_SEAT_ID);
+    AppStore.getState().updateCartTicketType(TEST_SEAT_ID, nextTicketTypeId);
 
-      const updatedCartTotalPrice = AppStore.getState().cartTotalPrice;
+    const updatedCartItem = AppStore.getState().cart.find((cartItem) => cartItem.id === TEST_SEAT_ID)!;
+    const nextTicket = updatedCartItem.seatType.ticketTypes.find((ticketType) => ticketType.id === nextTicketTypeId)!;
 
-      expect(AppStore.getState().cart.length).toBe(0);
-      expect(updatedCartTotalPrice).toBe(0);
-    });
-
-    test('should correctly update cart on "clearCart" action', () => {
-      state.clearCart();
-
-      const updatedCartTotalPrice = AppStore.getState().cartTotalPrice;
-
-      expect(AppStore.getState().cart.length).toBe(0);
-      expect(updatedCartTotalPrice).toBe(0);
-    });
-
-    test('should correctly update cart ticket type', () => {
-      const NEXT_TICKET_TYPE_ID = 2;
-      state.addToCart(MOCK_SEATS_DATA, TEST_SEAT_ID);
-      state.updateCartTicketType(TEST_SEAT_ID, NEXT_TICKET_TYPE_ID);
-
-      const updatedCartItem = AppStore.getState().cart.find((cartItem) => cartItem.id === TEST_SEAT_ID)!;
-
-      expect(AppStore.getState().cart.length).toBe(1);
-      expect(updatedCartItem.ticketTypeId).toBe(NEXT_TICKET_TYPE_ID);
-    });
+    expect(updatedCartItem.ticketTypeId).toBe(nextTicketTypeId);
+    expect(updatedCartItem.price).toBe(nextTicket.price);
+    expect(AppStore.getState().cartTotalPrice).toBe(nextTicket.price);
   });
 });

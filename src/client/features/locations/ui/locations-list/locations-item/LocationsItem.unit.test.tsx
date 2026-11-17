@@ -1,37 +1,30 @@
-import { render } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { MOCK_LOCATIONS } from '../../../../../../../mocks/data/locations';
-import { LocationsItem, type LocationsItemProps } from './LocationsItem';
+import { LocationsItem } from './LocationsItem';
+import styles from './styles.module.css';
 
-const DEFAULT_PROPS: LocationsItemProps = {
-  location: MOCK_LOCATIONS[0],
-  currentLocationId: 1,
-  onClick: () => {},
-};
+const moscow = MOCK_LOCATIONS[0];
 
-describe('LocationItem', () => {
-  test('should correspond default layout', () => {
-    const result = render(<LocationsItem {...DEFAULT_PROPS} />);
+describe('LocationsItem', () => {
+  test('should mark the current city and report its id', () => {
+    const onClick = vi.fn();
 
-    expect(result.container).toMatchSnapshot();
+    render(<LocationsItem location={moscow} currentLocationId={moscow.id} onClick={onClick} />);
+
+    const button = screen.getByRole('button', { name: moscow.name });
+
+    expect(button.classList.contains(styles.locationsButtonActive)).toBe(true);
+
+    fireEvent.click(button);
+
+    expect(onClick).toHaveBeenCalledWith(moscow.id);
   });
 
-  test('should support the "locationItem" prop', () => {
-    let result = render(<LocationsItem {...DEFAULT_PROPS} location={MOCK_LOCATIONS[0]} />);
+  test('should not mark a city that is not current', () => {
+    render(<LocationsItem location={moscow} currentLocationId={moscow.id + 1} onClick={vi.fn()} />);
 
-    expect(result.container).toMatchSnapshot();
-
-    result = render(<LocationsItem {...DEFAULT_PROPS} location={MOCK_LOCATIONS[1]} />);
-
-    expect(result.container).toMatchSnapshot();
-  });
-
-  test('should support the "currentLocationId" prop', () => {
-    let result = render(<LocationsItem {...DEFAULT_PROPS} currentLocationId={1} />);
-
-    expect(result.container).toMatchSnapshot();
-
-    result = render(<LocationsItem {...DEFAULT_PROPS} currentLocationId={2} />);
-
-    expect(result.container).toMatchSnapshot();
+    expect(screen.getByRole('button', { name: moscow.name }).classList.contains(styles.locationsButtonActive)).toBe(
+      false,
+    );
   });
 });

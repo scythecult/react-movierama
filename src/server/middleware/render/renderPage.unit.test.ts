@@ -66,7 +66,6 @@ describe('renderPage', () => {
   const nodeEnv = Config.nodeEnv;
 
   beforeEach(() => {
-    vi.clearAllMocks();
     Config.nodeEnv = nodeEnv;
     vi.mocked(readTextFile).mockImplementation((filePath: string) => {
       if (!readTextFileFromDisk.holder.current) {

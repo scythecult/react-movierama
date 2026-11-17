@@ -13,10 +13,6 @@ vi.mock('../../../features/locations/model/locations.resolvers', () => ({
 }));
 
 describe('orderLoader', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
   test('should load the hall plan for the resolved city', async () => {
     vi.mocked(ensureResolvedLocation).mockResolvedValue({ id: 23 });
     vi.mocked(loadQuery).mockResolvedValue({ seats: [] });

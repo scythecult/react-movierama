@@ -1,20 +1,19 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render, waitFor } from '@testing-library/react';
-import { BrowserRouter } from 'react-router';
-import { MOCK_GEOLOCATION } from '../../../../../../mocks/data/geolocation';
+import { type QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MOCK_LOCATIONS } from '../../../../../../mocks/data/locations';
-import { AppStore } from '../../../../app/store/AppStore';
-import { AppStoreProvider } from '../../../../shared/lib/store';
-import { LocationsList, type LocationsListProps } from './LocationsList';
+import { createTestQueryClient } from '../../../../../tests/unit/helpers';
+import { LocationsList } from './LocationsList';
 
-const getGeolocationMock = vi.fn().mockResolvedValue(MOCK_GEOLOCATION);
-const getLocationsMock = vi.fn().mockResolvedValue(MOCK_LOCATIONS);
+const getCurrentLocationMock = vi.fn();
+const getLocationsMock = vi.fn();
+const setCurrentLocationMock = vi.hoisted(() => vi.fn());
 
 vi.mock('../../../../entities/locations/api', () => ({
   locationsQueries: {
+    current: () => ['location', 'current'],
     getCurrent: () => ({
-      queryKey: ['locations', 'one'],
-      queryFn: getGeolocationMock,
+      queryKey: ['location', 'current'],
+      queryFn: getCurrentLocationMock,
     }),
     list: () => ({
       queryKey: ['locations', 'list'],
@@ -23,64 +22,52 @@ vi.mock('../../../../entities/locations/api', () => ({
   },
 }));
 
-const DEFAULT_PROPS: LocationsListProps = {
-  className: '',
-};
-
-let queryClient: QueryClient;
-
-const buildWrappedComponent = (props: LocationsListProps = DEFAULT_PROPS) => {
-  queryClient = new QueryClient();
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <AppStoreProvider store={AppStore}>
-        <BrowserRouter>
-          <LocationsList {...props} />
-        </BrowserRouter>
-      </AppStoreProvider>
-    </QueryClientProvider>
-  );
-};
+vi.mock('../../../../entities/locations/api/locations.actions', () => ({
+  setCurrentLocation: setCurrentLocationMock,
+}));
 
 describe('LocationsList', () => {
-  test('should correspond default layout', async () => {
-    const result = render(buildWrappedComponent());
+  let queryClient: QueryClient;
 
-    await waitFor(() => {
-      expect(queryClient.isFetching()).toBe(0);
-    });
-
-    expect(result.container).toMatchSnapshot();
+  beforeEach(() => {
+    getCurrentLocationMock.mockResolvedValue(MOCK_LOCATIONS[0]);
+    getLocationsMock.mockResolvedValue(MOCK_LOCATIONS);
+    setCurrentLocationMock.mockReset();
+    setCurrentLocationMock.mockResolvedValue(MOCK_LOCATIONS[1]);
   });
 
-  test('should support the "className" prop', async () => {
-    let result = render(buildWrappedComponent({ className: 'custom-class' }));
+  const renderList = () => {
+    queryClient = createTestQueryClient();
+
+    return render(
+      <QueryClientProvider client={queryClient}>
+        <LocationsList />
+      </QueryClientProvider>,
+    );
+  };
+
+  test('should select the clicked city', async () => {
+    renderList();
+
+    fireEvent.click(await screen.findByRole('button', { name: 'Астрахань' }));
 
     await waitFor(() => {
-      expect(queryClient.isFetching()).toBe(0);
+      expect(setCurrentLocationMock).toHaveBeenCalled();
     });
 
-    expect(result.container).toMatchSnapshot();
-
-    result = render(buildWrappedComponent({ className: 'custom-class-v2' }));
-
-    await waitFor(() => {
-      expect(queryClient.isFetching()).toBe(0);
-    });
-
-    expect(result.container).toMatchSnapshot();
+    expect(setCurrentLocationMock.mock.calls[0][0]).toBe(23);
   });
 
-  test('should not appear if there are no locations', async () => {
-    getGeolocationMock.mockResolvedValueOnce(null);
+  test('should render no cities when the list is empty', async () => {
+    getLocationsMock.mockResolvedValueOnce([]);
 
-    const result = render(buildWrappedComponent());
+    renderList();
 
     await waitFor(() => {
+      expect(getLocationsMock).toHaveBeenCalled();
       expect(queryClient.isFetching()).toBe(0);
     });
 
-    expect(result.container).toMatchSnapshot();
+    expect(screen.queryByRole('button')).toBeNull();
   });
 });
