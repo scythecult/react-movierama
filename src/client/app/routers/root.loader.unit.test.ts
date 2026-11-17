@@ -14,10 +14,6 @@ vi.mock('../../features/locations/model/locations.resolvers', () => ({
 }));
 
 describe('rootLoader', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
   test('should prefetch the header queries and return their data', async () => {
     vi.mocked(loadQuery).mockResolvedValueOnce({ id: '1' }).mockResolvedValueOnce([{ id: 23 }]);
     vi.mocked(ensureResolvedLocation).mockResolvedValue({ id: 23 });

@@ -2,6 +2,8 @@ import { configure } from '@testing-library/react';
 
 configure({ testIdAttribute: 'data-test-id' });
 
+// Single source of process.env for unit tests. vite.config.ts does not `define`
+// these while Vitest is running, so src/common/env.ts reads the strings below.
 process.env.IS_E2E_TEST_DEBUG_MODE = 'false';
 process.env.NODE_ENV = 'test';
 process.env.APP_MODE = 'test';
@@ -11,5 +13,6 @@ process.env.API_PORT = '4000';
 process.env.API_URL = 'http://localhost:4000';
 process.env.SSR_PORT = '5000';
 process.env.SSR_URL = 'http://localhost:5000';
-process.env.BCRYPT_SALT_ROUNDS = '10';
 process.env.BASE_URL = '/';
+process.env.IS_MOCK_GEOLOCATION = 'false';
+process.env.BCRYPT_SALT_ROUNDS = '10';

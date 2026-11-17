@@ -31,10 +31,6 @@ const queryPage = async (path: string) => {
 };
 
 describe('appRoutes', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
   test('should load the shell and the home page', async () => {
     const context = await queryPage(AppRoute.ROOT);
 

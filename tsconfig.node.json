@@ -24,7 +24,7 @@
     "noImplicitAny": true,
     "allowJs": true,
     "alwaysStrict": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "vitest.config.ts", "playwright.config.ts"],
 }

@@ -9,10 +9,6 @@ vi.mock('../../../shared/api/load-query', () => ({
 }));
 
 describe('mainLoader', () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
   test('should prefetch films and news', async () => {
     vi.mocked(loadQuery).mockResolvedValueOnce([{ id: 8 }]).mockResolvedValueOnce([{ id: 3 }]);
 
