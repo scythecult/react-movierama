@@ -5,7 +5,9 @@ import express, { json, urlencoded } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { ApiVersion, AppRoute } from '../../common/constants/routes';
 import { Config } from '../../common/env';
+import { LogModule } from '../lib/infra/logger';
 import { errorMiddleware } from '../middleware/error-middleware/errorMiddleware';
+import { httpLoggerMiddleware } from '../middleware/http-logger-middleware/httpLoggerMiddleware';
 import { sessionMiddleware } from '../middleware/session-middleware/sessionMiddleware';
 import { v1 } from '../routes/v1';
 
@@ -17,6 +19,7 @@ export const createApiServer = async () => {
   apiServer.set('trust proxy', true);
   apiServer.use(cors({ origin: Config.ssrUrl, credentials: true }));
   apiServer.use(compression());
+  apiServer.use(httpLoggerMiddleware(LogModule.api));
   apiServer.use(cookieParser());
   apiServer.use(json());
   apiServer.use(urlencoded({ extended: true }));

@@ -4,6 +4,9 @@ import { StatusCodes } from 'http-status-codes';
 import type { ViteDevServer } from 'vite';
 import { isRequestAborted, isTimeoutError } from '../../../client/shared/api/request-abort';
 import { AppRoute } from '../../../common/constants/routes';
+import { toError } from '../../lib/helpers/error';
+import { isStaticRequest } from '../../lib/helpers/isStaticRequest';
+import { getRequestLogger, LogModule } from '../../lib/infra/logger';
 import { beginRenderAbort } from './renderAbort';
 import { renderPage } from './renderPage';
 
@@ -15,9 +18,7 @@ type RenderMiddlewareOptions = {
 
 const renderErrorDocument = (status: number) => {
   const message =
-    status === StatusCodes.GATEWAY_TIMEOUT
-      ? 'The page took too long to render.'
-      : 'The page could not be rendered.';
+    status === StatusCodes.GATEWAY_TIMEOUT ? 'The page took too long to render.' : 'The page could not be rendered.';
 
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${status}</title></head><body><p>${message}</p></body></html>`;
 };
@@ -41,16 +42,7 @@ export const renderMiddlewareBuilder = (vite: ViteDevServer | undefined, options
     try {
       const url = request.originalUrl;
 
-      if (
-        url.includes('/static/') ||
-        url.includes('/src/') ||
-        url.includes('/v1') ||
-        url.endsWith('.css') ||
-        url.endsWith('.js') ||
-        url.endsWith('.svg') ||
-        url.endsWith('.ico') ||
-        url.endsWith('.map')
-      ) {
+      if (isStaticRequest(url) || url.includes('/v1')) {
         return next();
       }
 
@@ -78,7 +70,13 @@ export const renderMiddlewareBuilder = (vite: ViteDevServer | undefined, options
         vite.ssrFixStacktrace(error);
       }
 
-      console.error(error);
+      const isClientDisconnected = isRequestAborted(abort.signal.reason) && !isTimeoutError(abort.signal.reason);
+
+      if (!isClientDisconnected) {
+        const err = toError(error, 'SSR render failed');
+
+        getRequestLogger(request, LogModule.ssr).error({ err }, 'Ошибка рендеринга страницы');
+      }
 
       if (response.headersSent) {
         next(error);

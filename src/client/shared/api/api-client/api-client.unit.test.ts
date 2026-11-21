@@ -1,4 +1,5 @@
 import { StatusCodes } from 'http-status-codes';
+import { REQUEST_ID_HEADER } from '../../../../common/constants/http';
 import { ApiVersion } from '../../../../common/constants/routes';
 import { runWithRequestContext, setRequestContextStorage } from '../request-context';
 import { ApiClient } from './api-client';
@@ -232,6 +233,38 @@ describe('ApiClient', () => {
           'x-forwarded-for': '203.0.113.5',
           'user-agent': 'TestAgent',
           'accept-language': 'ru',
+        },
+      });
+
+      setRequestContextStorage(undefined);
+    });
+
+    test('GET: should forward the SSR request id', async () => {
+      let currentContext: Parameters<typeof runWithRequestContext>[0] | undefined;
+
+      setRequestContextStorage({
+        run: (context, callback) => {
+          currentContext = context;
+
+          try {
+            return callback();
+          } finally {
+            currentContext = undefined;
+          }
+        },
+        getStore: () => currentContext,
+      });
+
+      fetchMock.mockResolvedValueOnce(new Response(JSON.stringify({ data: {} }), { status: StatusCodes.OK }));
+
+      await runWithRequestContext({ requestId: 'ssr-req-1' }, () => client.get('/items'));
+
+      expect(fetchMock).toHaveBeenCalledWith(`${mockBaseUrl}${ApiVersion.V1}/items`, {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          'Content-Type': 'application/json',
+          [REQUEST_ID_HEADER]: 'ssr-req-1',
         },
       });
 

@@ -25,6 +25,7 @@ const env = {
   baseUrl: process.env.BASE_URL,
   isMockGeolocation: process.env.IS_MOCK_GEOLOCATION,
   bCryptSaltRounds: process.env.BCRYPT_SALT_ROUNDS,
+  logLevel: process.env.LOG_LEVEL || undefined,
 } as const;
 
 const envSchema = z.object({
@@ -43,6 +44,7 @@ const envSchema = z.object({
     .regex(/^\/(?:.*\/)?$/, 'BASE_URL must be a path that starts and ends with /')
     .default(DEFAULT_BASE_URL),
   isMockGeolocation: validateBoolean().default(false),
+  logLevel: z.enum(['fatal', 'error', 'warn', 'info', 'debug', 'trace', 'silent']).optional(),
 });
 
 export const Config = envSchema.parse(env);

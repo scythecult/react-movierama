@@ -1,6 +1,8 @@
 import type { QueryClient } from '@tanstack/react-query';
+import { readRequestId } from '../../../common/helpers/logger';
 
 export type SsrRequestContext = {
+  requestId?: string;
   cookie?: string;
   forwardedFor?: string;
   userAgent?: string;
@@ -12,6 +14,7 @@ export type SsrRequestContext = {
 type HeaderValue = string | string[] | undefined;
 
 type SsrRequestLike = {
+  id?: unknown;
   ip?: string;
   headers: {
     cookie?: HeaderValue;
@@ -51,10 +54,15 @@ const readHeader = (value: HeaderValue) => {
   return value;
 };
 
-export const toSsrRequestContext = (request: SsrRequestLike): SsrRequestContext => ({
-  cookie: readHeader(request.headers.cookie),
-  // Express resolves the viewer address from the trusted proxy hop.
-  forwardedFor: request.ip,
-  userAgent: readHeader(request.headers['user-agent']),
-  acceptLanguage: readHeader(request.headers['accept-language']),
-});
+export const toSsrRequestContext = (request: SsrRequestLike): SsrRequestContext => {
+  const requestId = readRequestId(request.id);
+
+  return {
+    ...(requestId ? { requestId } : {}),
+    cookie: readHeader(request.headers.cookie),
+    // Express resolves the viewer address from the trusted proxy hop.
+    forwardedFor: request.ip,
+    userAgent: readHeader(request.headers['user-agent']),
+    acceptLanguage: readHeader(request.headers['accept-language']),
+  };
+};

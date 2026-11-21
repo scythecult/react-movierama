@@ -5,7 +5,9 @@ import type { ViteDevServer } from 'vite';
 import { CLIENT_DIST_DIR } from '../../common/constants/common';
 import { AppRoute } from '../../common/constants/routes';
 import { Config } from '../../common/env';
+import { LogModule } from '../lib/infra/logger';
 import { errorMiddleware } from '../middleware/error-middleware/errorMiddleware';
+import { httpLoggerMiddleware } from '../middleware/http-logger-middleware/httpLoggerMiddleware';
 import { renderMiddlewareBuilder } from '../middleware/render/renderMiddlewareBuilder';
 
 export const createSsrServer = async () => {
@@ -18,10 +20,6 @@ export const createSsrServer = async () => {
   // One proxy hop. req.ip is the viewer address forwarded to the API.
   ssrServer.set('trust proxy', 1);
   ssrServer.use(compression());
-
-  ssrServer.get(AppRoute.HEALTH, (_, response) => {
-    response.status(StatusCodes.OK).json({ ok: true });
-  });
 
   if (isMockServerEnabled) {
     const { listenMockServer } = await import('../../../mocks/node');
@@ -58,6 +56,13 @@ export const createSsrServer = async () => {
 
     ssrServer.use(vite.middlewares);
   }
+
+  // After asset middleware so JS, CSS, and images never reach the access log.
+  ssrServer.use(httpLoggerMiddleware(LogModule.ssr));
+
+  ssrServer.get(AppRoute.HEALTH, (_, response) => {
+    response.status(StatusCodes.OK).json({ ok: true });
+  });
 
   ssrServer.use(AppRoute.ROOT, renderMiddlewareBuilder(vite));
 

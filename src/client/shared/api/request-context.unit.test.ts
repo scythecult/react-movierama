@@ -45,6 +45,22 @@ describe('request context', () => {
     });
   });
 
+  test('should keep a safe request id for the api call chain', () => {
+    expect(
+      toSsrRequestContext({
+        id: 'ssr-req-1',
+        headers: {},
+      }).requestId,
+    ).toBe('ssr-req-1');
+
+    expect(
+      toSsrRequestContext({
+        id: 'bad id',
+        headers: {},
+      }).requestId,
+    ).toBeUndefined();
+  });
+
   test('should forward the trusted client ip when a forwarded-for header is present', () => {
     expect(
       toSsrRequestContext({

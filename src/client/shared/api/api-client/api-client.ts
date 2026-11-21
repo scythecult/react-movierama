@@ -1,4 +1,5 @@
 import { StatusCodes } from 'http-status-codes';
+import { REQUEST_ID_HEADER } from '../../../../common/constants/http';
 import { ApiVersion } from '../../../../common/constants/routes';
 import { Config } from '../../../../common/env';
 import type { ErrorMap } from '../error/error';
@@ -21,6 +22,7 @@ const buildHeaders = () => {
     'x-forwarded-for': requestContext.forwardedFor,
     'user-agent': requestContext.userAgent,
     'accept-language': requestContext.acceptLanguage,
+    [REQUEST_ID_HEADER]: requestContext.requestId,
   };
 
   for (const [name, value] of Object.entries(forwardedHeaders)) {
