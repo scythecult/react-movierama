@@ -45,7 +45,6 @@ describe('renderMiddlewareBuilder', () => {
   let port: number;
 
   beforeEach(() => {
-    vi.spyOn(console, 'error').mockImplementation(() => {});
     vi.mocked(renderPage).mockReset();
     vi.mocked(renderPage).mockResolvedValue({ html: '<!doctype html><html></html>', statusCode: StatusCodes.OK });
 

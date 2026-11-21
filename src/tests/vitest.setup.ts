@@ -16,3 +16,4 @@ process.env.SSR_URL = 'http://localhost:5000';
 process.env.BASE_URL = '/';
 process.env.IS_MOCK_GEOLOCATION = 'false';
 process.env.BCRYPT_SALT_ROUNDS = '10';
+process.env.LOG_LEVEL = 'silent';

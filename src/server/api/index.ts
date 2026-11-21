@@ -1,7 +1,9 @@
 import { StatusCodes } from 'http-status-codes';
-import { styleText } from 'node:util';
 import { Config } from '../../common/env';
+import { getModuleLogger, installFatalHandlers, LogModule } from '../lib/infra/logger';
 import { createApiServer } from './server';
+
+installFatalHandlers();
 
 const apiServer = await createApiServer();
 
@@ -10,13 +12,12 @@ apiServer.use('*not-found', (_, response) => {
 });
 
 apiServer.listen(Config.apiPort, () => {
-  console.info(
-    styleText(
-      ['red', 'bold'],
-      `Api server is running on:
-
-      HOST: ${Config.apiUrl}
-      ENV: ${Config.nodeEnv}`,
-    ),
+  getModuleLogger(LogModule.api).info(
+    {
+      host: Config.apiUrl,
+      env: Config.nodeEnv,
+      mode: Config.appMode,
+    },
+    'API server is listening',
   );
 });

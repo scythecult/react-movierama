@@ -7,9 +7,19 @@ import { CustomError } from '../../lib/errors/CustomError';
 import * as errorHelpers from '../../lib/helpers/error';
 import { errorMiddleware } from './errorMiddleware';
 
-vi.mock('../../lib/helpers/error', () => ({
-  getErrorMessage: vi.fn(),
-}));
+type ErrorHelpers = {
+  getErrorMessage: (error: unknown) => string;
+  toError: (reason: unknown, fallback: string) => Error;
+};
+
+vi.mock('../../lib/helpers/error', async () => {
+  const actual = await vi.importActual<ErrorHelpers>('../../lib/helpers/error');
+
+  return {
+    ...actual,
+    getErrorMessage: vi.fn(),
+  };
+});
 
 describe('errorMiddleware', () => {
   let mockRequest: Partial<Request>;
@@ -85,6 +95,37 @@ describe('errorMiddleware', () => {
         message: ERROR_MESSAGE,
       },
     });
+  });
+
+  test('should log an unknown error with the error object first', () => {
+    const errorLog = vi.fn();
+    const unknownError = new Error('boom');
+
+    mockRequest.log = { error: errorLog } as unknown as Request['log'];
+    vi.mocked(errorHelpers.getErrorMessage).mockReturnValue('boom');
+
+    errorMiddleware(unknownError, mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(errorLog).toHaveBeenCalledWith({ err: unknownError }, 'Unhandled error');
+  });
+
+  test('should log a validation error without the submitted values', () => {
+    const warnLog = vi.fn();
+    const schema = z.object({
+      password: z.string().min(20),
+    });
+    const result = schema.safeParse({ password: 'secret-pass' });
+    const zodError = result.error as ZodError;
+
+    mockRequest.log = { warn: warnLog } as unknown as Request['log'];
+
+    errorMiddleware(zodError, mockRequest as Request, mockResponse as Response, mockNext);
+
+    expect(warnLog).toHaveBeenCalledWith(
+      { err: expect.objectContaining({ message: 'Validation error' }) },
+      'Validation error',
+    );
+    expect(JSON.stringify(warnLog.mock.calls)).not.toContain('secret-pass');
   });
 
   test('should return default 500 message if getErrorMessage returns empty string', () => {

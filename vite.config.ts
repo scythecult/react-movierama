@@ -22,6 +22,7 @@ const PROCESS_ENV_KEYS = [
   'BASE_URL',
   'IS_MOCK_GEOLOCATION',
   'BCRYPT_SALT_ROUNDS',
+  'LOG_LEVEL',
 ] as const;
 
 const processEnvDefine: Record<string, string> = {};

@@ -13,3 +13,15 @@ export const getErrorMessage = (error: unknown) => {
 
   return 'An error occured';
 };
+
+export const toError = (reason: unknown, fallback: string) => {
+  if (reason instanceof Error) {
+    return reason;
+  }
+
+  if (typeof reason === 'string' && reason) {
+    return new Error(reason);
+  }
+
+  return new Error(fallback);
+};
